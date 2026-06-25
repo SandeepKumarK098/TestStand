@@ -1,0 +1,21 @@
+[DEF, %OBJROOT]
+PersistedBreakpointArray = Objs
+PersistedWatchpointArray = Objs
+
+[DEF, PersistedBreakpointArray]
+%NAME = ""
+
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.5.0.725
+CompatibleProdVersion = 3.5.0.0
+Version = 355
+Type = "TEPersisted"
+Path = "C:\\WebPages\\TestCases\\LVBuildValidation\\Media\\XControl\\testXControl.opt"
+ProductVersionString = "3.5 (3.5.0.725)"
+Description = ""
+CharEncoding = ""
+
+[DEF, PersistedWatchpointArray]
+%NAME = ""
+

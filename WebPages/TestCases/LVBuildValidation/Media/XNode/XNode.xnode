@@ -1,0 +1,25 @@
+<?xml version='1.0'?>
+<XNode LVVersion="8008005">
+   <Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+   <Property Name="NI.XClass.Flags" Type="Int">0</Property>
+   <Property Name="NI.XItem.DeclaredLeakProof" Type="Bool">false</Property>
+   <Property Name="NI.XItem.Name" Type="Str">XNode 2</Property>
+   <Item Name="XNodeState.ctl" Type="Ability VI" URL="XNodeState.ctl">
+      <Property Name="NI.XItem.Name" Type="Str">State</Property>
+   </Item>
+   <Item Name="XNodeBounds.vi" Type="Ability VI" URL="XNodeBounds.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Bounds</Property>
+   </Item>
+   <Item Name="XNodeDisplayName.vi" Type="Ability VI" URL="XNodeDisplayName.vi">
+      <Property Name="NI.XItem.Name" Type="Str">DisplayName</Property>
+   </Item>
+   <Item Name="XNodeGenerateCode.vi" Type="Ability VI" URL="XNodeGenerateCode.vi">
+      <Property Name="NI.XItem.Name" Type="Str">GenerateCode</Property>
+   </Item>
+   <Item Name="XNodeImage.vi" Type="Ability VI" URL="XNodeImage.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Image</Property>
+   </Item>
+   <Item Name="XNodeInitialize.vi" Type="Ability VI" URL="XNodeInitialize.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Initialize</Property>
+   </Item>
+</XNode>

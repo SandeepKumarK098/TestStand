@@ -1,0 +1,117 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.5.0.725
+CompatibleProdVersion = 3.5.0.0
+Version = 355
+Type = "TSProjectFile"
+Path = "C:\\WebPages\\TestCases\\LVBuildValidation\\Media\\XControl\\testXControl.tpj"
+ProductVersionString = "3.5 (3.5.0.725)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+PF = Obj
+WorkSpaceObject = WorkSpaceObject
+Path = PathValue
+
+[DEF, PF]
+SccProjectName = Str
+SccProjectPath = Str
+SccProviderName = Str
+SccUseDefaultProvider = Bool
+Requirements = Obj
+ObjDisplayName = Str
+PrjObj = "TYPE, WorkSpaceObject"
+%NAME = "Data"
+
+[PF]
+SccProjectName = "\"//TestStand/WebPages/TestCases/LVBuildValidation/Media/XControl\""
+%FLG: SccProjectName = 8
+SccProjectPath = "."
+%FLG: SccProjectPath = 8
+SccProviderName = "Perforce SCM"
+%FLG: SccProviderName = 8
+SccUseDefaultProvider = True
+%FLG: SccUseDefaultProvider = 8
+%FLG: Requirements = 4194305
+ObjDisplayName = "testXControl"
+
+[DEF, PF.Requirements]
+Links = Strs
+
+[PF.Requirements]
+%FLG: Links = 71303168
+
+[PF.PrjObj]
+%HI: Objs = [0]
+Type = 2
+Path = "testXControl.tpj"
+
+[DEF, PF.PrjObj.Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0]]
+%HI: Objs = [0]
+Type = 4
+Path = "testXControl.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0].Objs[0]]
+%HI: Objs = [0]
+Type = 3
+CodeModSeqFilePath = "testXControl.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0].Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0].Objs[0].Objs[0]]
+Type = 5
+Path = "VI with XControl.vi"
+CodeModSeqFilePath = "testXControl.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0].Objs[0]]
+%NAME = "VI with XControl.vi"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0]]
+%NAME = "CodeModules"
+
+[DEF, PF.PrjObj.Objs[0]]
+%NAME = "testXControl.seq"
+
+[%TYPES]
+WorkSpaceObject = "WorkSpaceObject"
+Path = "Path"
+
+[DEF, WorkSpaceObject]
+%LOCATION = "StdTypes"
+Objs = Objs
+Type = Num
+Path = "TYPE, Path"
+CodeModSeqFilePath = "TYPE, Path"
+OwnedProjectFile = Obj
+%FLG: OwnedProjectFile = 2097152
+%ROOT_TYPE = True
+
+[WorkSpaceObject]
+Type = -1
+%TIMESTAMP = 1129308726
+%VERSION = "3.5.0.725"
+%TYPELASTMOD = "3.5.0.725"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+%INSTFLG = 524312
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1129696397
+%VERSION = "3.5.0.725"
+%TYPELASTMOD = "3.5.0.725"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+

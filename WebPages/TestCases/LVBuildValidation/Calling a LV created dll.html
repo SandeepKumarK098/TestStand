@@ -1,0 +1,118 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+  
+  <title>Calling a LabVIEW Created dll</title>
+</head>
+
+
+<body>
+
+<div style="text-align: right;"><img style="width: 273px; height: 65px;" alt="TestStand Logo" src="../TestStandLogo.jpg"><br>
+
+<small style="font-weight: bold;">Test
+Case Scenario<br>
+
+National Instruments Confidential<br>
+
+</small>
+<h1 style="text-align: justify;">Calling
+a LabVIEW Created DLL</h1>
+
+<hr style="width: 100%; height: 2px;">
+<div style="text-align: justify;"><span style="font-weight: bold;">LabVIEW
+Build Validation<br>
+
+</span><span style="font-weight: bold;"></span>
+<h2>Test Description</h2>
+
+<hr style="width: 100%; height: 2px;">
+<p>Making sure that calling an LV
+created DLL works as expected.</p>
+
+<h2>Test Procedure</h2>
+
+<hr style="width: 100%; height: 2px;">
+<p><span style="font-weight: bold;">NOTE</span>:
+This test has already been automated &amp; the files can be found
+under <span style="font-weight: bold;">//TestStand/Tests/TS
+Automated Tests/4.5/LV Built DLLs/</span>.&nbsp;
+The manual test plan is to test the latest LV versions and&nbsp;to add
+test files to the automated test. Add files for the current LV version
+to Perforce <span style="font-weight: bold;">ONLY</span>
+if it the LabVIEW is a released version (do not add files that were
+created in a pre-release build since the DLL created will not run with
+later builds of the same version.)<br>
+</p>
+
+<ol>
+
+  <li>Install the latest build of
+LabVIEW&nbsp;on a clean machine.</li>
+
+  <li>Install the latest version
+of TestStand.</li>
+
+  <li>Sync the files under
+//TestStand/Tests/TS Automated Tests/4.5/LV Built DLLs/ &amp; check
+that a folder coressponding to the latest LV version that you are
+testing exists. (Ex: If you are testing LabVIEW 2010, ensure there is a
+folder called "10.0" under&nbsp; ../4.5/LV Built DLLs/. </li>
+
+  <ul>
+
+    <li>If it does and you are testing a released version of LabVIEW skip to step 8.</li>
+
+    
+  </ul>
+
+  <li>Make a&nbsp; copy of the
+previous LabVIEW version's folder &amp; rename it to the current
+LabVIEW version (LabVIEW 2011 should be 11.0). Make this folder
+writeable, &amp; mass compile it with the latest LabVIEW. </li>
+
+  <li>Currently the test calls LV
+DLLs that pass simple numbers, strings &amp; arrays. If you require
+another data type to be tested, create a VI that takes this type as
+input/output. Add this VI to the project &amp; also to the Build
+Spec for the DLL. Also add a step that calls this new function to
+../4.5/LV Built DLLs/&lt;LV Version&gt;/CallLVBuiltDll.seq with
+an appropriate validation check. Ensure that you retain the sequence
+files in TS 4.5 when saving.</li>
+
+  <li>Open the project
+called&nbsp; "CreateLVDll.lvproj" &amp; build the Build Spec for the
+DLL. Correct the destination path of the build to the folder where the
+project is present &amp; build it. (<span style="font-weight: bold;">For
+LabVIEW 13.0 and greater, be sure to update both the 32-Bit and
+64-Bit projects accordingly.</span>)</li>
+
+  <li>Check in these files to
+perforce under //TestStand/Tests/TS Automated Tests/4.5/LV Built DLLs/. (<span style="font-weight: bold;">Do this only if you are testing with a released LV version</span>).</li>
+
+  <li>Run //TestStand/Tests/TS
+Automated Tests/4.5/LV Built DLLs/CallDllSequences.seq and validate
+that it passes.</li>
+
+</ol>
+
+<h5><u>Challenge:<br>
+
+<br>
+
+</u>If you think you can come up with a better test case please don't hesitate
+and update this one.<br>
+
+<br>
+
+Also while you're testing please think about how to automate this test and do
+it. Please follow these guidelines: <a href="..%5CWritingAutomatedTests.doc">Writing
+Automated Tests For TestStand</a> </h5>
+
+</div>
+
+</div>
+
+</body>
+</html>

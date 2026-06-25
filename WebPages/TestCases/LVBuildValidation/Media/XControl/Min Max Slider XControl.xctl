@@ -1,0 +1,19 @@
+<?xml version='1.0'?>
+<XControl LVVersion="8008005">
+   <Property Name="NI.Lib.Version" Type="Str">1.0.0.0</Property>
+   <Property Name="NI.XClass.Flags" Type="Int">0</Property>
+   <Property Name="NI.XItem.DeclaredLeakProof" Type="Bool">false</Property>
+   <Property Name="NI.XItem.Name" Type="Str">XControl 1</Property>
+   <Item Name="Min Max Slider Data.ctl" Type="Ability VI" URL="Min Max Slider Data.ctl">
+      <Property Name="NI.XItem.Name" Type="Str">Data</Property>
+   </Item>
+   <Item Name="Min Max Slider State.ctl" Type="Ability VI" URL="Min Max Slider State.ctl">
+      <Property Name="NI.XItem.Name" Type="Str">State</Property>
+   </Item>
+   <Item Name="Min Max Slider Facade.vi" Type="Ability VI" URL="Min Max Slider Facade.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Facade</Property>
+   </Item>
+   <Item Name="Min Max Slider Init.vi" Type="Ability VI" URL="Min Max Slider Init.vi">
+      <Property Name="NI.XItem.Name" Type="Str">Init</Property>
+   </Item>
+</XControl>

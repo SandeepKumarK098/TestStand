@@ -1,0 +1,126 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.5.0.725
+CompatibleProdVersion = 3.5.0.0
+Version = 355
+Type = "TSProjectFile"
+Path = "C:\\WebPages\\TestCases\\LVBuildValidation\\Media\\PolymorphicVI\\test polymorphic.tpj"
+ProductVersionString = "3.5 (3.5.0.725)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+PF = Obj
+WorkSpaceObject = WorkSpaceObject
+Path = PathValue
+
+[DEF, PF]
+SccProjectName = Str
+SccProjectPath = Str
+SccProviderName = Str
+SccUseDefaultProvider = Bool
+Requirements = Obj
+ObjDisplayName = Str
+PrjObj = "TYPE, WorkSpaceObject"
+%NAME = "Data"
+
+[PF]
+SccProjectName = "\"//TestStand/WebPages/TestCases/LVBuildValidation/Media/PolymorphicVI\""
+%FLG: SccProjectName = 8
+SccProjectPath = "."
+%FLG: SccProjectPath = 8
+SccProviderName = "Perforce SCM"
+%FLG: SccProviderName = 8
+SccUseDefaultProvider = True
+%FLG: SccUseDefaultProvider = 8
+%FLG: Requirements = 4194305
+ObjDisplayName = "test polymorphic"
+
+[DEF, PF.Requirements]
+Links = Strs
+
+[PF.Requirements]
+%FLG: Links = 71303168
+
+[PF.PrjObj]
+%HI: Objs = [0]
+Type = 2
+Path = "test polymorphic.tpj"
+
+[DEF, PF.PrjObj.Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0]]
+%HI: Objs = [0]
+Type = 4
+Path = "Test Polymorphic VI.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0].Objs[0]]
+%HI: Objs = [1]
+Type = 3
+CodeModSeqFilePath = "Test Polymorphic VI.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0].Objs]
+%[0] = "TYPE, WorkSpaceObject"
+%[1] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0].Objs[0].Objs[0]]
+Type = 5
+Path = "poly test (string).vi"
+CodeModSeqFilePath = "Test Polymorphic VI.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0].Objs[0]]
+%NAME = "poly test (string).vi"
+
+[PF.PrjObj.Objs[0].Objs[0].Objs[1]]
+Type = 5
+Path = "test poly test.vi"
+CodeModSeqFilePath = "Test Polymorphic VI.seq"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0].Objs[1]]
+%NAME = "test poly test.vi"
+
+[DEF, PF.PrjObj.Objs[0].Objs[0]]
+%NAME = "CodeModules"
+
+[DEF, PF.PrjObj.Objs[0]]
+%NAME = "Test Polymorphic VI.seq"
+
+[%TYPES]
+WorkSpaceObject = "WorkSpaceObject"
+Path = "Path"
+
+[DEF, WorkSpaceObject]
+%LOCATION = "StdTypes"
+Objs = Objs
+Type = Num
+Path = "TYPE, Path"
+CodeModSeqFilePath = "TYPE, Path"
+OwnedProjectFile = Obj
+%FLG: OwnedProjectFile = 2097152
+%ROOT_TYPE = True
+
+[WorkSpaceObject]
+Type = -1
+%TIMESTAMP = 1129308726
+%VERSION = "3.5.0.725"
+%TYPELASTMOD = "3.5.0.725"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+%INSTFLG = 524312
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1129696397
+%VERSION = "3.5.0.725"
+%TYPELASTMOD = "3.5.0.725"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+
