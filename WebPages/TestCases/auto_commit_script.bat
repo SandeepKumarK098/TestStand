@@ -5,7 +5,6 @@ set "REPO_DIR=C:\Users\spkumar\Desktop\TestStand"
 set "COUNTER_FILE=%REPO_DIR%\commit_counter.txt"
 
 cd /d "%REPO_DIR%"
-icacls "%REPO_DIR%" /grant Everyone:F /T
 
 REM Create the counter file starting at 0 if it doesn't exist yet
 if not exist "%COUNTER_FILE%" (
