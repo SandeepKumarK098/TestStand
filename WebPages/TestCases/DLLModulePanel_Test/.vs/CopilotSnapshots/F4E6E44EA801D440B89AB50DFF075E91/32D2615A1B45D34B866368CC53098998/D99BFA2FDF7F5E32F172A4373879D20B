@@ -1,0 +1,25 @@
+﻿using System;
+
+namespace DLLMOdulePanel_Test
+{
+    public class Measurements
+    {
+        public static double MeasureVoltage(double inputVoltage)
+        {
+            return inputVoltage * 1.02;
+        }
+
+        public static double MeasureCurrent(double inputCurrent)
+        {
+            return inputCurrent * 0.98;
+        }
+
+        public static double MeasureResistance(double voltage, double current)
+        {
+            if (current == 0)
+                return 0;
+
+            return voltage / current;
+        }
+    }
+}
