@@ -1,0 +1,59 @@
+[
+	uuid(FBC87B8C-C738-395A-A08E-0EF3FAB5B544), // UUID doesn't matter to TestStand
+]
+library TypeLibTest
+{
+	importlib("stdole32.tlb" );
+    importlib("stdole2.tlb" ) ;
+
+	typedef struct StructType_64BitNumbers {
+	__int64 int64;
+	unsigned __int64 uint64;
+	} StructType_64BitNumbers;
+
+	typedef struct StructType_64BitArrays {
+	__int64 int64Array[3];
+	unsigned __int64 uint64Array[3];
+	} StructType_64BitArrays;
+
+	typedef struct StructType_64BitNumbersL {
+	long long int64;
+	unsigned long long uint64;
+	} StructType_64BitNumbersL;
+
+	typedef struct StructType_64BitArraysL {
+	long long int64Array[3];
+	unsigned long long uint64Array[3];
+	} StructType_64BitArraysL;
+	
+	[
+		dllname("") // name doesn't matter to TestStand
+	]
+	module TLFunctions
+	{
+		[entry("")]void Pass64BitNumberStruct([in]StructType_64BitNumbers val1,[out]StructType_64BitNumbers *val2);
+		[entry("")]void Pass64BitArraysStruct(StructType_64BitArrays val1, StructType_64BitArrays *val2);
+		[entry("")]__int64 TestSimple64BitCall([in]__int64 val);
+		[entry("")]void TestSimple64BitPtrCallMin([out]__int64 *val);
+		[entry("")]void TestSimple64BitPtrCallMax([out]__int64 *val);
+		[entry("")]unsigned __int64 __stdcall TestSimpleUnsigned64BitCall([in]unsigned __int64 val);
+		[entry("")]void TestSimpleUnsigned64BitPtrCallMin([out]unsigned __int64 *val);
+		[entry("")]void TestSimpleUnsigned64BitPtrCallMax([out]unsigned __int64 *val);
+		[entry("")]char Signed64BitIntegerSingleArrayValues([in,out]__int64 array[3]);
+		[entry("")]char Unsigned64BitIntegerSingleArrayValues([in,out]unsigned __int64 array[3]);
+		[entry("")]char Signed64BitIntegerMultiArrayValues(__int64 array[2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]);
+		[entry("")]char Unsigned64BitIntegerMultiArrayValues(unsigned __int64 array[2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]);
+		[entry("")]void Pass64BitNumberStructL([in]StructType_64BitNumbersL val1,[out]StructType_64BitNumbersL *val2);
+		[entry("")]void Pass64BitArraysStructL(StructType_64BitArraysL val1, StructType_64BitArraysL *val2);
+		[entry("")]long long TestSimple64BitCallL([in]long long val);
+		[entry("")]void TestSimple64BitPtrCallMinL([out]long long *val);
+		[entry("")]void TestSimple64BitPtrCallMaxL([out]long long *val);
+		[entry("")]unsigned long long __stdcall TestSimpleUnsigned64BitCallL([in]unsigned long long val);
+		[entry("")]void TestSimpleUnsigned64BitPtrCallMinL([out]unsigned long long *val);
+		[entry("")]void TestSimpleUnsigned64BitPtrCallMaxL([out]unsigned long long *val);
+		[entry("")]char Signed64BitIntegerSingleArrayValuesL([in,out]long long array[3]);
+		[entry("")]char Unsigned64BitIntegerSingleArrayValuesL([in,out]unsigned long long array[3]);
+		[entry("")]char Signed64BitIntegerMultiArrayValuesL(long long array[2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]);
+		[entry("")]char Unsigned64BitIntegerMultiArrayValuesL(unsigned long long array[2][2][2][2][2][2][2][2][2][2][2][2][2][2][2][2]);
+	}
+}

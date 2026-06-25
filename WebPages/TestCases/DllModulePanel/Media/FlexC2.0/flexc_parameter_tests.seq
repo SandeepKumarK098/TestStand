@@ -1,0 +1,5201 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 2.0.0.260
+Version = 127
+Type = "SequenceFile"
+Path = "\\\\fun\\C$\\TSDev\\Tests\\2.0\\FlexC\\flexc_parameter_tests.seq"
+ProductVersionString = "2.0"
+CharEncoding = "SBCS"
+
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+PassOnRTE = StepType
+SequenceCall = StepType
+SeqCallStepAdditions = Obj
+Statement = StepType
+Label = StepType
+SequenceArgument = Argument
+NoneStepAdditions = Obj
+PassFailTest = StepType
+EditSubstep = StepType
+PostSubstep = StepType
+StepTypeSubstepsArray = Objs
+MessagePopup = StepType
+Goto = StepType
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Type = Num
+ModelOption = Num
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [6]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+%[2] = Sequence
+%[3] = Sequence
+%[4] = Sequence
+%[5] = Sequence
+%[6] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [2]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Main]
+%[0] = SequenceCall
+%TYPE: %[0] = "SequenceCall"
+%[1] = SequenceCall
+%TYPE: %[1] = "SequenceCall"
+%[2] = SequenceCall
+%TYPE: %[2] = "SequenceCall"
+
+[SF.Seq[0].Main[0].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData]
+SeqName = "Numeric Parameter Tests"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Numeric Parameter Tests"
+
+[SF.Seq[0].Main[1].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[1].TS.SData]
+SeqName = "Array Tests"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Array Tests"
+
+[SF.Seq[0].Main[2].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[2].TS.SData]
+SeqName = "Test Return Values And Errors"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "TestErrors"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "Numeric Parameter Tests"
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [17]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[1].Locals]
+ResultList = Objs
+Result = Num
+Expected = Num
+
+[DEF, SF.Seq[1].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[1].Main]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+%[1] = FlexCStep
+%TYPE: %[1] = "Action"
+%[2] = FlexCStep
+%TYPE: %[2] = "Action"
+%[3] = FlexCStep
+%TYPE: %[3] = "Action"
+%[4] = FlexCStep
+%TYPE: %[4] = "Action"
+%[5] = FlexCStep
+%TYPE: %[5] = "Action"
+%[6] = FlexCStep
+%TYPE: %[6] = "Action"
+%[7] = FlexCStep
+%TYPE: %[7] = "Action"
+%[8] = FlexCStep
+%TYPE: %[8] = "Action"
+%[9] = FlexCStep
+%TYPE: %[9] = "Action"
+%[10] = FlexCStep
+%TYPE: %[10] = "Action"
+%[11] = FlexCStep
+%TYPE: %[11] = "Action"
+%[12] = FlexCStep
+%TYPE: %[12] = "Action"
+%[13] = FlexCStep
+%TYPE: %[13] = "Action"
+%[14] = FlexCStep
+%TYPE: %[14] = "Action"
+%[15] = FlexCStep
+%TYPE: %[15] = "Action"
+%[16] = FlexCStep
+%TYPE: %[16] = "Action"
+%[17] = FlexCStep
+%TYPE: %[17] = "Action"
+
+[SF.Seq[1].Main[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.expected = locals.result = runState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[0].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeDouble"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 7
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[0].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 7
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Test Passing double Reference"
+
+[SF.Seq[1].Main[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.expected = locals.result = runState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[1].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeFloat"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 6
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[1].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 6
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "Test Passing float Reference"
+
+[SF.Seq[1].Main[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.expected = locals.result = runState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[2].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[2].TS.SData.Call.Parms[1]]
+Name = "input"
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Test Passing int Reference"
+
+[SF.Seq[1].Main[3].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.expected = locals.result = runState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[3].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[3].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[3].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[3].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 2
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[3].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[3]]
+%NAME = "Test Passing short Reference"
+
+[SF.Seq[1].Main[4].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.expected = locals.result = runState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[4].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[4].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[4].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[4].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 0
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[4].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 0
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[4]]
+%NAME = "Test Passing char Reference"
+
+[SF.Seq[1].Main[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr Line0001 = "locals.result = runState.loopIndex, locals.expected = runState.loopIndex <  -1 ? 0xFFFFFFFF + runState.loopIndex + 1 : r"
+PreExpr Line0002 = "unState.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[5].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 5
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[5].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 5
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[5]]
+%NAME = "Test Passing unsigned int Reference"
+
+[SF.Seq[1].Main[6].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr Line0001 = "locals.result = runState.loopIndex, locals.expected = runState.loopIndex <  -1 ? 0xFFFF + runState.loopIndex + 1 : runSt"
+PreExpr Line0002 = "ate.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[6].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[6].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[6].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[6].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 5
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[6].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 3
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[6]]
+%NAME = "Test Passing unsigned short Reference"
+
+[SF.Seq[1].Main[7].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr Line0001 = "locals.result = runState.loopIndex, locals.expected = runState.loopIndex <  -1 ? 0xFF + runState.loopIndex + 1 : runStat"
+PreExpr Line0002 = "e.loopIndex"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[7].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[7].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[7].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[7].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+NumType = 5
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[7].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 1
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[7]]
+%NAME = "Test Passing unsigned char Reference"
+
+[SF.Seq[1].Main[8].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PreExpr = "locals.result = 1, locals.expected = 1"
+PostExpr Line0001 = "locals.result == (locals.expected + 1) ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result"
+PostExpr Line0002 = ") + \", Expected: \" +str(locals.expected + 1)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[8].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[8].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeEnum"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[8].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[8].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ArgVal = "Locals.Result"
+
+[SF.Seq[1].Main[8].TS.SData.Call.Parms[1]]
+Name = "input"
+NumPass = 1
+ArgVal = "locals.result"
+ArgDisplayVal = "locals.result"
+
+[DEF, SF.Seq[1].Main[8]]
+%NAME = "Test Passing Enum"
+
+[SF.Seq[1].Main[9].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.result == runState.loopIndex ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result) +"
+PostExpr Line0002 = " \", Expected: \" +str(runState.LoopIndex)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[9].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[9].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeDouble"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 7
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[9].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 7
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[9]]
+%NAME = "Test Passing and Returning doubles"
+
+[SF.Seq[1].Main[10].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.result == runState.loopIndex ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result) +"
+PostExpr Line0002 = " \", Expected: \" +str(runState.LoopIndex)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[10].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[10].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeFloat"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[10].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[10].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 6
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[10].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 6
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[10]]
+%NAME = "Test Passing and Returning float"
+
+[SF.Seq[1].Main[11].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.result == runState.loopIndex ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result) +"
+PostExpr Line0002 = " \", Expected: \" +str(runState.LoopIndex)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[11].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[11].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[11].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[11].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[11].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[11]]
+%NAME = "Test Passing and Returning int"
+
+[SF.Seq[1].Main[12].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.result == runState.loopIndex ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result) +"
+PostExpr Line0002 = " \", Expected: \" +str(runState.LoopIndex)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[12].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[12].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[12].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[12].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 2
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[12].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[12]]
+%NAME = "Test Passing and Returning short"
+
+[SF.Seq[1].Main[13].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.result == runState.loopIndex ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result) +"
+PostExpr Line0002 = " \", Expected: \" +str(runState.LoopIndex)), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[13].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[13].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[13].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[13].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[13].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 0
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[13]]
+%NAME = "Test Passing and Returning char"
+
+[SF.Seq[1].Main[14].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.expected = runState.loopIndex <  0 ? 0xFFFFFFFF + runState.loopIndex + 1 : runState.loopIndex,\n\nlocals.expected"
+PostExpr Line0002 = " == locals.result ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result, \"%f\") + \"(\" + s"
+PostExpr Line0003 = "tr(locals.result, \"%d\") + \")\" + \", Expected: \" + str(locals.expected, \"%f\") + \"(\" + str(locals.expected, \"%d\"
+PostExpr Line0004 = "") + \")\" ), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[14].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[14].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 5
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[14].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 5
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[14]]
+%NAME = "Test Passing and Returning unsigned int"
+
+[SF.Seq[1].Main[15].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.expected = runState.loopIndex <  0 ? 0xFFFF + runState.loopIndex + 1 : runState.loopIndex,\n\nlocals.expected == "
+PostExpr Line0002 = "locals.result ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result, \"%f\") + \"(\" + str(l"
+PostExpr Line0003 = "ocals.result, \"%d\") + \")\" + \", Expected: \" + str(locals.expected, \"%f\") + \"(\" + str(locals.expected, \"%d\") +"
+PostExpr Line0004 = " \")\" ), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[15].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[15].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[15].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[15].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 3
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[15].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 3
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[15]]
+%NAME = "Test Passing and Returning unsigned short"
+
+[SF.Seq[1].Main[16].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.expected = runState.loopIndex <  0 ? 0xFF + runState.loopIndex + 1 : runState.loopIndex,\n\nlocals.expected == lo"
+PostExpr Line0002 = "cals.result ? 0 : ((step.result.error.msg = \"Error, function returned \" + str(locals.result, \"%f\") + \"(\" + str(loc"
+PostExpr Line0003 = "als.result, \"%d\") + \")\" + \", Expected: \" + str(locals.expected, \"%f\") + \"(\" + str(locals.expected, \"%d\") + \"
+PostExpr Line0004 = "")\" ), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[16].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[16].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[16].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[16].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 1
+ArgVal = "Locals.Result"
+ArgDisplayVal = "Locals.Result"
+
+[SF.Seq[1].Main[16].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 1
+ArgVal = "RunState.LoopIndex"
+ArgDisplayVal = "RunState.LoopIndex"
+
+[DEF, SF.Seq[1].Main[16]]
+%NAME = "Test Passing and Returning unsigned char"
+
+[SF.Seq[1].Main[17].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus = "\"done\""
+LoopInitialize = "RunState.LoopIndex = -10"
+PostExpr Line0001 = "locals.expected = 1,\n\nlocals.expected == locals.result ? 0 : ((step.result.error.msg = \"Error, function returned \" +"
+PostExpr Line0002 = " str(locals.result, \"%f\") + \"(\" + str(locals.result, \"%d\") + \")\" + \", Expected: \" + str(locals.expected, \"%f\"
+PostExpr Line0003 = "") + \"(\" + str(locals.expected, \"%d\") + \")\" ), step.result.error.occurred = true)"
+
+[DEF, SF.Seq[1].Main[17].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[17].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeEnum"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[17].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[1].Main[17].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ArgVal = "Locals.Result"
+
+[SF.Seq[1].Main[17].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "1"
+
+[DEF, SF.Seq[1].Main[17]]
+%NAME = "Test Passing and Returning Enum"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[2]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "Array Tests"
+
+[SF.Seq[2]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [31]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[2].Locals]
+ResultList = Objs
+array = Nums
+base = Num
+
+[DEF, SF.Seq[2].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[2].Locals]
+%LO: array = [0]
+%HI: array = [99]
+
+[DEF, SF.Seq[2].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Statement"
+%[1] = FlexCStep
+%TYPE: %[1] = "Action"
+%[2] = FlexCStep
+%TYPE: %[2] = "Action"
+%[3] = SequenceCall
+%TYPE: %[3] = "SequenceCall"
+%[4] = NoneStep
+%TYPE: %[4] = "Statement"
+%[5] = FlexCStep
+%TYPE: %[5] = "Action"
+%[6] = FlexCStep
+%TYPE: %[6] = "Action"
+%[7] = SequenceCall
+%TYPE: %[7] = "SequenceCall"
+%[8] = NoneStep
+%TYPE: %[8] = "Statement"
+%[9] = FlexCStep
+%TYPE: %[9] = "Action"
+%[10] = FlexCStep
+%TYPE: %[10] = "Action"
+%[11] = SequenceCall
+%TYPE: %[11] = "SequenceCall"
+%[12] = NoneStep
+%TYPE: %[12] = "Statement"
+%[13] = FlexCStep
+%TYPE: %[13] = "Action"
+%[14] = FlexCStep
+%TYPE: %[14] = "Action"
+%[15] = SequenceCall
+%TYPE: %[15] = "SequenceCall"
+%[16] = NoneStep
+%TYPE: %[16] = "Statement"
+%[17] = FlexCStep
+%TYPE: %[17] = "Action"
+%[18] = FlexCStep
+%TYPE: %[18] = "Action"
+%[19] = SequenceCall
+%TYPE: %[19] = "SequenceCall"
+%[20] = NoneStep
+%TYPE: %[20] = "Statement"
+%[21] = FlexCStep
+%TYPE: %[21] = "Action"
+%[22] = FlexCStep
+%TYPE: %[22] = "Action"
+%[23] = SequenceCall
+%TYPE: %[23] = "SequenceCall"
+%[24] = NoneStep
+%TYPE: %[24] = "Statement"
+%[25] = FlexCStep
+%TYPE: %[25] = "Action"
+%[26] = FlexCStep
+%TYPE: %[26] = "Action"
+%[27] = SequenceCall
+%TYPE: %[27] = "SequenceCall"
+%[28] = NoneStep
+%TYPE: %[28] = "Statement"
+%[29] = FlexCStep
+%TYPE: %[29] = "Action"
+%[30] = FlexCStep
+%TYPE: %[30] = "Action"
+%[31] = SequenceCall
+%TYPE: %[31] = "SequenceCall"
+
+[SF.Seq[2].Main[0].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base = -10"
+
+[DEF, SF.Seq[2].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[0]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[1].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesDouble"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 7
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[1]]
+%NAME = "Set Doubles"
+
+[SF.Seq[2].Main[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[2].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesDouble"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 7
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[2]]
+%NAME = "Verify Doubles"
+
+[SF.Seq[2].Main[3].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[3].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[3].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[3].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[3].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[3].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[3].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[3].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[DEF, SF.Seq[2].Main[3]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[4].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[4].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[4]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[5].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesFloat"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[5].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[5].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[5].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 6
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[5]]
+%NAME = "Set Floats"
+
+[SF.Seq[2].Main[6].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[6].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[6].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesFloat"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[6].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[6].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[6].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[6].TS.SData.Call.Parms[2]]
+Name = "numElements"
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[6].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[6].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 6
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[6]]
+%NAME = "Verify Floats"
+
+[SF.Seq[2].Main[7].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[7].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[7].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[7].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[7].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[7].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[7].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[7].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[DEF, SF.Seq[2].Main[7]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[8].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[8]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[9].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[9].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[9].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesInt"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[9].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[9].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[9].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[9]]
+%NAME = "Set Ints"
+
+[SF.Seq[2].Main[10].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[10].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[10].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesInt"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[10].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[10].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[10].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[10].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[10].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[10].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[10]]
+%NAME = "Verify Ints"
+
+[SF.Seq[2].Main[11].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[11].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[11].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[11].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[11].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[11].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[11].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[11].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[DEF, SF.Seq[2].Main[11]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[12].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[12].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[12]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[13].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[13].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[13].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesShort"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[13].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[13].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[13].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[13].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[13].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 2
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[13]]
+%NAME = "Set Shorts"
+
+[SF.Seq[2].Main[14].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[14].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[14].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesShort"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[14].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[14].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[14].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[14].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 2
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[14]]
+%NAME = "Verify Shorts"
+
+[SF.Seq[2].Main[15].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[15].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[15].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[15].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[15].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[15].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[15].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[15].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[DEF, SF.Seq[2].Main[15]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[16].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[16].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[16]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[17].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[17].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[17].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesChar"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[17].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[17].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[17].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[17].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[17].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 0
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[17]]
+%NAME = "Set Chars"
+
+[SF.Seq[2].Main[18].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[18].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[18].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesChar"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[18].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[18].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[18].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[18].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[18].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[18].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 0
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[18]]
+%NAME = "Verify Chars"
+
+[SF.Seq[2].Main[19].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[19].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[19].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[19].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[19].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[19].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[19].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[19].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[DEF, SF.Seq[2].Main[19]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[20].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[20].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[20]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[21].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[21].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[21].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesUInt"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[21].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[21].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[21].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[21].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[21].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 5
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[21]]
+%NAME = "Set UInts"
+
+[SF.Seq[2].Main[22].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[22].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[22].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesUInt"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[22].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[22].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[22].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[22].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[22].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[22].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 5
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[22]]
+%NAME = "Verify UInts"
+
+[SF.Seq[2].Main[23].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[23].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[23].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[23].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[23].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+unsignedOffset = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[23].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[23].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[23].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[SF.Seq[2].Main[23].TS.SData.ActualArgs.unsignedOffset]
+UseDef = False
+Expr = "0xFFFFFFFF + 1"
+
+[DEF, SF.Seq[2].Main[23]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[24].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[24].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[24]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[25].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[25].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[25].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesUShort"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[25].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[25].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[25].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[25].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[25].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 3
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[25]]
+%NAME = "Set UShorts"
+
+[SF.Seq[2].Main[26].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[26].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[26].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesUShort"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[26].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[26].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[26].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[26].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[26].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[26].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 3
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[26]]
+%NAME = "Verify UShorts"
+
+[SF.Seq[2].Main[27].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[27].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[27].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+
+[DEF, SF.Seq[2].Main[27].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[27].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+unsignedOffset = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[27].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[27].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[27].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[SF.Seq[2].Main[27].TS.SData.ActualArgs.unsignedOffset]
+UseDef = False
+Expr = "0xFFFF + 1"
+
+[DEF, SF.Seq[2].Main[27]]
+%NAME = "Verify in sequence"
+
+[SF.Seq[2].Main[28].TS]
+Adapter = "None Adapter"
+PostExpr = "locals.base += 1"
+
+[DEF, SF.Seq[2].Main[28].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[28]]
+%NAME = "Statement"
+
+[SF.Seq[2].Main[29].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[29].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[29].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "SetArrayValuesUChar"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, SF.Seq[2].Main[29].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[29].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[2].Main[29].TS.SData.Call.Parms[1]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[29].TS.SData.Call.Parms[2]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[29].TS.SData.Call.Parms[3]]
+Name = "array"
+Type = 1
+NumType = 1
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[29]]
+%NAME = "Set UChars"
+
+[SF.Seq[2].Main[30].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[2].Main[30].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[30].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "VerifyArrayValuesUChar"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, SF.Seq[2].Main[30].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[SF.Seq[2].Main[30].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[2].Main[30].TS.SData.Call.Parms[1]]
+Type = 4
+ObjType = 1
+ArgVal = "thisContext"
+ArgDisplayVal = "thisContext"
+
+[SF.Seq[2].Main[30].TS.SData.Call.Parms[2]]
+Name = "numElements"
+ArgVal = "GetNumElements(locals.array)"
+ArgDisplayVal = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[30].TS.SData.Call.Parms[3]]
+Name = "base"
+NumType = 7
+ArgVal = "locals.base"
+ArgDisplayVal = "locals.base"
+
+[SF.Seq[2].Main[30].TS.SData.Call.Parms[4]]
+Name = "array"
+Type = 1
+NumType = 1
+NumPass = 1
+NumEls = "GetNumElements(locals.array)"
+ArgVal = "locals.array"
+ArgDisplayVal = "locals.array"
+
+[DEF, SF.Seq[2].Main[30]]
+%NAME = "Verify UChars"
+
+[SF.Seq[2].Main[31].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[2].Main[31].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[2].Main[31].TS.SData]
+SeqName = "VerifyArray"
+UseCurFile = True
+Trace = "Off"
+
+[DEF, SF.Seq[2].Main[31].TS.SData]
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+
+[DEF, SF.Seq[2].Main[31].TS.SData.ActualArgs]
+NumElements = "TYPE, SequenceArgument"
+Base = "TYPE, SequenceArgument"
+array = "TYPE, SequenceArgument"
+unsignedOffset = "TYPE, SequenceArgument"
+
+[SF.Seq[2].Main[31].TS.SData.ActualArgs.NumElements]
+UseDef = False
+Expr = "GetNumElements(locals.array)"
+
+[SF.Seq[2].Main[31].TS.SData.ActualArgs.Base]
+UseDef = False
+Expr = "locals.base"
+
+[SF.Seq[2].Main[31].TS.SData.ActualArgs.array]
+UseDef = False
+Expr = "locals.array"
+
+[SF.Seq[2].Main[31].TS.SData.ActualArgs.unsignedOffset]
+UseDef = False
+Expr = "0xFF + 1"
+
+[DEF, SF.Seq[2].Main[31]]
+%NAME = "Verify in sequence"
+
+[DEF, SF.Seq[2].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[2].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[3]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "VerifyArray"
+
+[DEF, SF.Seq[3].Parameters]
+NumElements = Num
+Base = Num
+array = Nums
+unsignedOffset = Num
+
+[SF.Seq[3].Parameters]
+%FLG: NumElements = 4
+%FLG: Base = 4
+%FLG: array = 4
+%FLG: unsignedOffset = 128
+
+[SF.Seq[3]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [0]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[3].Locals]
+ResultList = Objs
+expected = Num
+
+[DEF, SF.Seq[3].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[3].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Label"
+
+[SF.Seq[3].Main[0].TS]
+Adapter = "None Adapter"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < Parameters.numElements"
+LoopStatus = "\"Passed\""
+PreExpr Line0001 = "locals.expected =  parameters.base + runstate.loopindex < 0 ? parameters.base + runstate.loopindex + parameters.unsigned"
+PreExpr Line0002 = "Offset : parameters.base + runstate.loopindex"
+PostExpr Line0001 = "parameters.array[runstate.loopindex] == locals.expected ? 0 : (step.result.error.occurred = true, step.result.error.msg "
+PostExpr Line0002 = "= \"Error in element: \" + str(runstate.loopindex) + \", expected \" + str(locals.expected) + \", found \" + str(paramet"
+PostExpr Line0003 = "ers.array[runstate.loopindex]) )"
+
+[DEF, SF.Seq[3].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[3].Main[0]]
+%NAME = "Label"
+
+[DEF, SF.Seq[3].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[3].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[4]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "Test Return Values And Errors"
+
+[SF.Seq[4]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [29]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[4].Locals]
+ResultList = Objs
+error_greater_0 = Num
+error_less_0 = Num
+error_not_0_a = Num
+error_not_0_b = Num
+errorcode = Num
+Path = Str
+Found = Bool
+
+[DEF, SF.Seq[4].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[4].Locals]
+error_greater_0 = 3576
+error_less_0 = -443
+error_not_0_a = -24097
+error_not_0_b = 6789
+errorcode = 100
+
+[DEF, SF.Seq[4].Main]
+%[0] = FlexCStep
+%TYPE: %[0] = "PassFailTest"
+%[1] = FlexCStep
+%TYPE: %[1] = "PassFailTest"
+%[2] = FlexCStep
+%TYPE: %[2] = "PassFailTest"
+%[3] = FlexCStep
+%TYPE: %[3] = "PassFailTest"
+%[4] = FlexCStep
+%TYPE: %[4] = "PassFailTest"
+%[5] = FlexCStep
+%TYPE: %[5] = "PassFailTest"
+%[6] = FlexCStep
+%TYPE: %[6] = "PassFailTest"
+%[7] = FlexCStep
+%TYPE: %[7] = "PassFailTest"
+%[8] = FlexCStep
+%TYPE: %[8] = "PassFailTest"
+%[9] = FlexCStep
+%TYPE: %[9] = "PassFailTest"
+%[10] = FlexCStep
+%TYPE: %[10] = "PassFailTest"
+%[11] = FlexCStep
+%TYPE: %[11] = "PassFailTest"
+%[12] = FlexCStep
+%TYPE: %[12] = "PassFailTest"
+%[13] = FlexCStep
+%TYPE: %[13] = "PassFailTest"
+%[14] = FlexCStep
+%TYPE: %[14] = "PassFailTest"
+%[15] = FlexCStep
+%TYPE: %[15] = "PassFailTest"
+%[16] = NoneStep
+%TYPE: %[16] = "Statement"
+%[17] = NoneStep
+%TYPE: %[17] = "Goto"
+%[18] = FlexCStep
+%TYPE: %[18] = "PassOnRTE"
+%[19] = FlexCStep
+%TYPE: %[19] = "PassOnRTE"
+%[20] = FlexCStep
+%TYPE: %[20] = "PassOnRTE"
+%[21] = FlexCStep
+%TYPE: %[21] = "PassOnRTE"
+%[22] = FlexCStep
+%TYPE: %[22] = "PassOnRTE"
+%[23] = NoneStep
+%TYPE: %[23] = "Label"
+%[24] = FlexCStep
+%TYPE: %[24] = "Action"
+%[25] = FlexCStep
+%TYPE: %[25] = "Action"
+%[26] = FlexCStep
+%TYPE: %[26] = "Action"
+%[27] = FlexCStep
+%TYPE: %[27] = "Action"
+%[28] = FlexCStep
+%TYPE: %[28] = "Action"
+%[29] = FlexCStep
+%TYPE: %[29] = "Action"
+
+[SF.Seq[4].Main[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[0].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeDouble"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 7
+Flags = 2
+
+[SF.Seq[4].Main[0].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 7
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[0]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[0]]
+%NAME = "Check Error Code Double"
+
+[SF.Seq[4].Main[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[1].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeDouble"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 7
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[1]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[1]]
+%NAME = "Check Error Code RefDouble"
+
+[SF.Seq[4].Main[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[2].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeFloat"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 6
+Flags = 2
+
+[SF.Seq[4].Main[2].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 6
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[2]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[2]]
+%NAME = "Check Error Code Float"
+
+[SF.Seq[4].Main[3].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[3].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[3].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeFloat"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[3].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[3].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[3].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 6
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[3]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[3]]
+%NAME = "Check Error Code RefFloat"
+
+[SF.Seq[4].Main[4].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 1000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[4].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[4].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[4].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[4].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Flags = 2
+
+[SF.Seq[4].Main[4].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[4]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[4]]
+%NAME = "Check Error Code UInt"
+
+[SF.Seq[4].Main[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[5].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[5].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 5
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[5]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[5]]
+%NAME = "Check Error Code RefUInt"
+
+[SF.Seq[4].Main[6].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50) * 1000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[6].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[6].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[6].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[6].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Flags = 2
+
+[SF.Seq[4].Main[6].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[6]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[6]]
+%NAME = "Check Error Code Int"
+
+[SF.Seq[4].Main[7].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50)* 10000"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[7].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[7].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[7].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[7].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[7].TS.SData.Call.Parms[1]]
+Name = "input"
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[7]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[7]]
+%NAME = "Check Error Code RefInt"
+
+[SF.Seq[4].Main[8].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex * 100"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[8].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[8].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[8].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[8].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 2
+Flags = 2
+
+[SF.Seq[4].Main[8].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[8]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[8]]
+%NAME = "Check Error Code UShort"
+
+[SF.Seq[4].Main[9].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex* 100"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[9].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[9].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[9].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[9]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[9]]
+%NAME = "Check Error Code RefUShort"
+
+[SF.Seq[4].Main[10].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50)* 100"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[10].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[10].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[10].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[10].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 2
+Flags = 2
+
+[SF.Seq[4].Main[10].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[10]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[10]]
+%NAME = "Check Error Code Short"
+
+[SF.Seq[4].Main[11].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "PassFailCount"
+LoopWhile = "RunState.LoopIndex < 100 && RunState.LoopNumPassed < 100"
+LoopStatus = "RunState.LoopNumPassed >= 100 ? \"Passed\" : \"Failed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50)* 100"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[11].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[11].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeShort"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[11].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[11].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[11].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 2
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[11]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[11]]
+%NAME = "Check Error Code RefShort"
+
+[SF.Seq[4].Main[12].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex "
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[12].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[12].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeUChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[12].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[12].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 1
+Flags = 2
+
+[SF.Seq[4].Main[12].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[12]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[12]]
+%NAME = "Check Error Code UChar"
+
+[SF.Seq[4].Main[13].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = RunState.LoopIndex"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[13].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[13].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeUChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[13].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[13].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[13].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 1
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[13]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[13]]
+%NAME = "Check Error Code RefUChar"
+
+[SF.Seq[4].Main[14].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50)"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[14].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[14].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+Flags = 2
+
+[SF.Seq[4].Main[14].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 0
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+
+[SF.Seq[4].Main[14]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[14]]
+%NAME = "Check Error Code Char"
+
+[SF.Seq[4].Main[15].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+LoopType = "FixedNumLoops"
+LoopWhile = "RunState.LoopIndex < 100"
+LoopStatus = "RunState.LoopNumPassed / RunState.LoopIndex < 1 ? \"Failed\" : \"Passed\""
+PreExpr = "Locals.errorcode = (RunState.LoopIndex-50)"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[4].Main[15].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[15].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IIncrementWhatYouPassMeChar"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[15].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[15].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[4].Main[15].TS.SData.Call.Parms[1]]
+Name = "input"
+NumType = 0
+NumPass = 1
+ArgVal = "Locals.errorcode"
+ArgDisplayVal = "Locals.errorcode"
+Flags = 2
+
+[SF.Seq[4].Main[15]]
+DataSource = "Step.Result.Error.Code == Locals.errorcode"
+
+[DEF, SF.Seq[4].Main[15]]
+%NAME = "Check Error Code RefChar"
+
+[SF.Seq[4].Main[16].TS]
+Adapter = "None Adapter"
+PostExpr = "Locals.Found = FindFile(\"flexctests.dll\", False, Locals.Path, 3)"
+
+[DEF, SF.Seq[4].Main[16].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[4].Main[16]]
+%NAME = "Find flexctests.dll"
+
+[SF.Seq[4].Main[17].TS]
+Adapter = "None Adapter"
+PreCond = "Locals.Found == False"
+CustTrueActTarget = "\"Skip RTE Tests\""
+
+[DEF, SF.Seq[4].Main[17].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[4].Main[17]]
+%NAME = "Goto"
+
+[SF.Seq[4].Main[18].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[18].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[18].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[18].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[18].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 2
+Flags = 2
+
+[SF.Seq[4].Main[18].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.error_greater_0"
+ArgDisplayVal = "Locals.error_greater_0"
+
+[DEF, SF.Seq[4].Main[18]]
+%NAME = "RTE GreaterThan0"
+
+[SF.Seq[4].Main[19].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[19].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[19].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[19].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[19].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[4].Main[19].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.error_less_0"
+ArgDisplayVal = "Locals.error_less_0"
+
+[DEF, SF.Seq[4].Main[19]]
+%NAME = "RTE LessThan0"
+
+[SF.Seq[4].Main[20].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[20].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[20].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[20].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[20].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 3
+Flags = 2
+
+[SF.Seq[4].Main[20].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "0"
+ArgDisplayVal = "0"
+
+[DEF, SF.Seq[4].Main[20]]
+%NAME = "RTE EqualTo0"
+
+[SF.Seq[4].Main[21].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[21].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[21].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[21].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[21].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 4
+Flags = 2
+
+[SF.Seq[4].Main[21].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.error_not_0_a"
+ArgDisplayVal = "Locals.error_not_0_a"
+
+[DEF, SF.Seq[4].Main[21]]
+%NAME = "RTE NotEqual0_a"
+
+[SF.Seq[4].Main[22].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[22].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[22].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[22].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[22].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 4
+Flags = 2
+
+[SF.Seq[4].Main[22].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "Locals.error_not_0_b"
+ArgDisplayVal = "Locals.error_not_0_b"
+
+[DEF, SF.Seq[4].Main[22]]
+%NAME = "RTE NotEqual0_b"
+
+[SF.Seq[4].Main[23].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[4].Main[23].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[4].Main[23]]
+%NAME = "Skip RTE Tests"
+
+[SF.Seq[4].Main[24].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[24].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[24].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[24].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[24].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 2
+Flags = 2
+
+[SF.Seq[4].Main[24].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "-123"
+ArgDisplayVal = "-123"
+
+[DEF, SF.Seq[4].Main[24]]
+%NAME = "NO RTE GreaterThan0"
+
+[SF.Seq[4].Main[25].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[25].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[25].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[25].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[25].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 2
+Flags = 2
+
+[SF.Seq[4].Main[25].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "0"
+ArgDisplayVal = "0"
+
+[DEF, SF.Seq[4].Main[25]]
+%NAME = "NO RTE GreaterThan0"
+
+[SF.Seq[4].Main[26].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[26].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[26].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[26].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[26].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[4].Main[26].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "24"
+ArgDisplayVal = "24"
+
+[DEF, SF.Seq[4].Main[26]]
+%NAME = "NO RTE LessThan0"
+
+[SF.Seq[4].Main[27].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[27].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[27].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[27].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[27].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[SF.Seq[4].Main[27].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "0"
+ArgDisplayVal = "0"
+
+[DEF, SF.Seq[4].Main[27]]
+%NAME = "NO RTE LessThan0"
+
+[SF.Seq[4].Main[28].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[28].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[28].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[28].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[28].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 3
+Flags = 2
+
+[SF.Seq[4].Main[28].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "2344"
+ArgDisplayVal = "2344"
+
+[DEF, SF.Seq[4].Main[28]]
+%NAME = "NO RTE EqualTo0"
+
+[SF.Seq[4].Main[29].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[4].Main[29].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[4].Main[29].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "IReturnWhatYouPassMeInt"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[4].Main[29].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[4].Main[29].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 4
+Flags = 2
+
+[SF.Seq[4].Main[29].TS.SData.Call.Parms[1]]
+Name = "input"
+ArgVal = "0"
+ArgDisplayVal = "0"
+
+[DEF, SF.Seq[4].Main[29]]
+%NAME = "NO RTE NotEqual0"
+
+[DEF, SF.Seq[4].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[4].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[5]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "TestSpecifyModule"
+
+[SF.Seq[5]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [0]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[5].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[5].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[5].Main]
+%[0] = FlexCStep
+%TYPE: %[0] = "Action"
+
+[SF.Seq[5].Main[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+CustExpr Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+CustExpr Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+CustExpr Line0003 = "yyyyyyyyyyaaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkk"
+CustExpr Line0004 = "llllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwww"
+CustExpr Line0005 = "xxxxxxxxxxyyyyyyyyyy2aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjj"
+CustExpr Line0006 = "jkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvv"
+CustExpr Line0007 = "vwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy3aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiii"
+CustExpr Line0008 = "iijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuu"
+CustExpr Line0009 = "uuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy4aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhh"
+CustExpr Line0010 = "hhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttt"
+CustExpr Line0011 = "tttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy5aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggg"
+CustExpr Line0012 = "gggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssss"
+CustExpr Line0013 = "ssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy6aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeefffff"
+CustExpr Line0014 = "fffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrr"
+CustExpr Line0015 = "rrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy7aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeee"
+CustExpr Line0016 = "eeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqq"
+CustExpr Line0017 = "qqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy8aaaaaaaaaabbbbbbbbbbccccccccccddd"
+CustExpr Line0018 = "dddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppp"
+CustExpr Line0019 = "pppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy9"
+LoopType = "Custom"
+LoopWhile = "RunState.LoopIndex < 10"
+LoopStatus Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+LoopStatus Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+LoopStatus Line0003 = "yyyyyyyyyyaaaaaa"
+PreExpr Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+PreExpr Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+PreExpr Line0003 = "yyyyyyyyyyaaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkk"
+PreExpr Line0004 = "llllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwww"
+PreExpr Line0005 = "xxxxxxxxxxyyyyyyyyyy2aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjj"
+PreExpr Line0006 = "jkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvv"
+PreExpr Line0007 = "vwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy3aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiii"
+PreExpr Line0008 = "iijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuu"
+PreExpr Line0009 = "uuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy4aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhh"
+PreExpr Line0010 = "hhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttt"
+PreExpr Line0011 = "tttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy5aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggg"
+PreExpr Line0012 = "gggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssss"
+PreExpr Line0013 = "ssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy6aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeefffff"
+PreExpr Line0014 = "fffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrr"
+PreExpr Line0015 = "rrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy7aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeee"
+PreExpr Line0016 = "eeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqq"
+PreExpr Line0017 = "qqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy8aaaaaaaaaabbbbbbbbbbccccccccccddd"
+PreExpr Line0018 = "dddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppp"
+PreExpr Line0019 = "pppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy9"
+PostExpr Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+PostExpr Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+PostExpr Line0003 = "yyyyyyyyyyaaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkk"
+PostExpr Line0004 = "llllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwww"
+PostExpr Line0005 = "xxxxxxxxxxyyyyyyyyyy2aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjj"
+PostExpr Line0006 = "jkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvv"
+PostExpr Line0007 = "vwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy3aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiii"
+PostExpr Line0008 = "iijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuu"
+PostExpr Line0009 = "uuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy4aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhh"
+PostExpr Line0010 = "hhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttt"
+PostExpr Line0011 = "tttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy5aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggg"
+PostExpr Line0012 = "gggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssss"
+PostExpr Line0013 = "ssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy6aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeefffff"
+PostExpr Line0014 = "fffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrr"
+PostExpr Line0015 = "rrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy7aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeee"
+PostExpr Line0016 = "eeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqq"
+PostExpr Line0017 = "qqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy8aaaaaaaaaabbbbbbbbbbccccccccccddd"
+PostExpr Line0018 = "dddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppp"
+PostExpr Line0019 = "pppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy9"
+StatusExpr Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+StatusExpr Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+StatusExpr Line0003 = "yyyyyyyyyyaaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkk"
+StatusExpr Line0004 = "llllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwww"
+StatusExpr Line0005 = "xxxxxxxxxxyyyyyyyyyy2aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjj"
+StatusExpr Line0006 = "jkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvv"
+StatusExpr Line0007 = "vwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy3aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiii"
+StatusExpr Line0008 = "iijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuu"
+StatusExpr Line0009 = "uuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy4aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhh"
+StatusExpr Line0010 = "hhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttt"
+StatusExpr Line0011 = "tttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy5aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggg"
+StatusExpr Line0012 = "gggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssss"
+StatusExpr Line0013 = "ssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy6aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeefffff"
+StatusExpr Line0014 = "fffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrr"
+StatusExpr Line0015 = "rrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy7aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeee"
+StatusExpr Line0016 = "eeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqq"
+StatusExpr Line0017 = "qqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy8aaaaaaaaaabbbbbbbbbbccccccccccddd"
+StatusExpr Line0018 = "dddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppp"
+StatusExpr Line0019 = "pppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy9"
+
+[DEF, SF.Seq[5].Main[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[5].Main[0].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "NotAFunction1"
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[5].Main[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[1]]
+Name = "inMatrix"
+NumType = 7
+NumPass = 1
+ArgVal Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+ArgVal Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+ArgVal Line0003 = "yyyyyyyyyyaaaa"
+ArgDisplayVal Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+ArgDisplayVal Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+ArgDisplayVal Line0003 = "yyyyyyyyyyaaaa"
+Flags = 2
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parms[2]]
+Name = "outMatrix"
+NumType = 7
+NumPass = 1
+ArgVal = "asdf"
+ArgDisplayVal = "asdf"
+Flags = 2
+
+[SF.Seq[5].Main[0]]
+%COMMENT Line0001 = "aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllll"
+%COMMENT Line0002 = "mmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxx"
+%COMMENT Line0003 = "yyyyyyyyyyaaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkk"
+%COMMENT Line0004 = "llllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwww"
+%COMMENT Line0005 = "xxxxxxxxxxyyyyyyyyyy2aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjj"
+%COMMENT Line0006 = "jkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvv"
+%COMMENT Line0007 = "vwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy3aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiii"
+%COMMENT Line0008 = "iijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuu"
+%COMMENT Line0009 = "uuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy4aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggggggghhhhhhh"
+%COMMENT Line0010 = "hhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttt"
+%COMMENT Line0011 = "tttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy5aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeeffffffffffgggggg"
+%COMMENT Line0012 = "gggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrrrrrrrssssss"
+%COMMENT Line0013 = "ssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy6aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeeeeeeeeefffff"
+%COMMENT Line0014 = "fffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqqqqqqqqrrrrr"
+%COMMENT Line0015 = "rrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy7aaaaaaaaaabbbbbbbbbbccccccccccddddddddddeeee"
+%COMMENT Line0016 = "eeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppppppppppqqqq"
+%COMMENT Line0017 = "qqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy8aaaaaaaaaabbbbbbbbbbccccccccccddd"
+%COMMENT Line0018 = "dddddddeeeeeeeeeeffffffffffgggggggggghhhhhhhhhhiiiiiiiiiijjjjjjjjjjkkkkkkkkkkllllllllllmmmmmmmmmmnnnnnnnnnnooooooooooppp"
+%COMMENT Line0019 = "pppppppqqqqqqqqqqrrrrrrrrrrssssssssssttttttttttuuuuuuuuuuvvvvvvvvvvwwwwwwwwwwxxxxxxxxxxyyyyyyyyyy9"
+
+[DEF, SF.Seq[5].Main[0]]
+%NAME = "Action"
+
+[DEF, SF.Seq[5].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[5].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[6]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "SequenceFileLoad"
+
+[SF.Seq[6]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [2]
+%FLG: GotoCleanupOnFail = 8
+StoreResults = True
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[6].Locals]
+ResultList = Objs
+Path = Str
+Found = Bool
+
+[DEF, SF.Seq[6].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[6].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Statement"
+%[1] = NoneStep
+%TYPE: %[1] = "MessagePopup"
+%[2] = NoneStep
+%TYPE: %[2] = "Statement"
+
+[SF.Seq[6].Main[0].TS]
+Adapter = "None Adapter"
+PostExpr = "Locals.Found = FindFile(\"flexctests.dll\", True, Locals.Path, 3)"
+
+[DEF, SF.Seq[6].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[6].Main[0]]
+%NAME = "Find flexctests.dll"
+
+[SF.Seq[6].Main[1].TS]
+Adapter = "None Adapter"
+PreCond = "!Locals.Found"
+
+[DEF, SF.Seq[6].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[6].Main[1]]
+TitleExpr = "\"Warning\""
+%FLG: TitleExpr = 0
+MessageExpr Line0001 = "\"You must add the '\\\\Tests\\\\2.0\\\\Flexc' directory\nto the search paths for TestStand in order\nfor the Flexc Test"
+MessageExpr Line0002 = "s to completely run.\""
+Button1Label = "\"Find File\""
+Button2Label = "\"Skip Tests\""
+
+[DEF, SF.Seq[6].Main[1]]
+%NAME = "Message Popup"
+
+[SF.Seq[6].Main[2].TS]
+Adapter = "None Adapter"
+PreCond = "RunState.PreviousStep.Result.ButtonHit == 1"
+PostExpr = "Locals.Found = FindFile(\"flexctests.dll\", False, Locals.Path, 2)"
+
+[DEF, SF.Seq[6].Main[2].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[6].Main[2]]
+%NAME = "Find flexctests.dll"
+
+[DEF, SF.Seq[6].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[6].RTS]
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+PassOnRTE = "PassOnRTE"
+SequenceCall = "SequenceCall"
+SeqCallStepAdditions = "SeqCallStepAdditions"
+Statement = "Statement"
+Label = "Label"
+SequenceArgument = "SequenceArgument"
+NoneStepAdditions = "NoneStepAdditions"
+PassFailTest = "PassFailTest"
+EditSubstep = "EditSubstep"
+PostSubstep = "PostSubstep"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+MessagePopup = "MessagePopup"
+Goto = "Goto"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748736
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates = "Default_Template|DefaultHTB72_Template|DefaultHTB80_Template|DefaultVC++_Template|DefaultMFC_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395112
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJECTS]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+Adapter = Str
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Adapter = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+HasModule = Bool
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+LoadOpt = "PreloadWhenExecuted"
+UnloadOpt = "UnloadWithFile"
+Mode = "Normal"
+WindowActivation = "None"
+StepFCSeqF = True
+PassAct = "Next"
+FailAct = "Next"
+CustTrueAct = "Next"
+CustFalseAct = "Next"
+LoopType = "NoLooping"
+LoopIncrement = "RunState.LoopIndex += 1"
+LoopInitialize = "RunState.LoopIndex = 0"
+HasModule = True
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+%INSTFLG = 262168
+%INSTOVRD = 262168
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748736
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748736
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 1010443575
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+NumEls = Str
+StrPass = Num
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+NumEls = "1024"
+%TIMESTAMP = 1010443575
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+
+[DEF, PassOnRTE]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[PassOnRTE]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "\"PassOnRTE\" + ((\"%adapter\" == \"\") ? \"\" : \",  %adapter\")"
+DefaultNameFormat = "\"PassOnRTE\""
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates = "Default_Template|DefaultMFC_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 1002138792
+%FLG = 67108864
+%TYPE_FLG = 2
+
+[DEF, PassOnRTE.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "PostSubstep"
+
+[PassOnRTE.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, PassOnRTE.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassOnRTE.Substeps[0].TS.SData.Call]
+LibPath = "flexctests.dll"
+Func = "GetAndClearErrorOccurred"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, PassOnRTE.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[PassOnRTE.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ArgVal = "Step.Result.ErrorOccurred"
+
+[PassOnRTE.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[DEF, PassOnRTE.Substeps[0]]
+%NAME = "Post"
+
+[PassOnRTE.Menu]
+ItemName = "\"PassOnRTE\""
+Group = "Tests"
+
+[DEF, PassOnRTE.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassOnRTE.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr = "Step.Result.ErrorOccurred? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+
+[DEF, PassOnRTE.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+ErrorOccurred = Bool
+
+[PassOnRTE.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, SequenceCall]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[SequenceCall]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"SC_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395111
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[SequenceCall.Menu]
+Adapter = "Sequence Adapter"
+ItemName = "ResStr(\"NI_STEPTYPES\", \"SC_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[SequenceCall.TS]
+Icon = "NI_SeqCall.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "(Step.Result.Status == \"Done\" && (Step.TS.SData.ThreadOpt == 0 || Step.TS.SData.ThreadOpt == 3)) ? \"Passed\" : Step.R"
+StatusExpr Line0002 = "esult.Status"
+%INSTFLG: StatusExpr = 1
+
+[DEF, SequenceCall.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, SequenceCall.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[SequenceCall.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, SeqCallStepAdditions]
+%LOCATION = "StdTypes"
+SFPath = "TYPE, Path"
+SFPathExpr = Str
+SeqName = Str
+SeqNameExpr = Str
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+UseCurFile = Bool
+SpecifyByExpr = Bool
+Prototype = Obj
+%FLG: Prototype = 2097152
+UsePrototype = Bool
+SpecifyHostByExpr = Bool
+RemoteExecution = Bool
+RemoteHost = Str
+RemoteHostExpr = Str
+AutoWaitAsync = Bool
+CreateThreadSuspended = Bool
+AsyncThreadExpr = Str
+ThreadOpt = Num
+ExecModelOpt = Num
+ExecTypeMask = Num
+ExecTypeMaskExpr = Str
+ExecBreakOnEntryExpr = Str
+ExecModelPath = "TYPE, Path"
+ExecModelPathExpr = Str
+ExecSync = Bool
+Trace = Str
+IgnoreTerminate = Bool
+%ROOT_TYPE = True
+
+[SeqCallStepAdditions]
+AutoWaitAsync = True
+ExecModelOpt = 1
+ExecBreakOnEntryExpr = "False"
+Trace = "Don't Change"
+%TIMESTAMP = 999209585
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+
+[DEF, Statement]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Statement]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "LocalizeExpression(Step.TS.PostExpr)"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395112
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Statement.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Statement.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Statement.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Statement.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStatementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Statement.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Statement.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Statement.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Statement.Substeps[0]]
+%NAME = "Edit"
+
+[Statement.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Statement.TS]
+Icon = "Statement.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PostExpr = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Statement.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Statement.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Statement.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, Label]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+Description = Str
+%ROOT_TYPE = True
+
+[Label]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "Step.Description"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"LABEL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395111
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Label.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Label.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Label.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Label.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditLabelStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Label.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Label.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[Label.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Label.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Label.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Label.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"LABEL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Label.Substeps[0]]
+%NAME = "Edit"
+
+[Label.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_STEPTYPES\", \"LABEL_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Label.TS]
+Adapter = "DLL Flexible Prototype Adapter"
+Icon = "label.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+NoResult = True
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Label.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Label.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Label.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, SequenceArgument]
+%LOCATION = "StdTypes"
+UseDef = Bool
+Expr = Str
+%ROOT_TYPE = True
+
+[SequenceArgument]
+UseDef = True
+%TIMESTAMP = 999209111
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 999209868
+%VERSION = "2.0.0.260"
+%FLG = 33554456
+
+[DEF, PassFailTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[PassFailTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescrip"
+DescriptionFormat Line0002 = "tion\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.Result.PassFail"
+CodeTemplates = "PassFail_Template|PassFailVC++_Template|PassFailMFC_Template|PassFailHTB80_Template|PassFailHTB72_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395089
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, PassFailTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[PassFailTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, PassFailTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassFailTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditPassFailStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, PassFailTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[PassFailTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, PassFailTest.Substeps[0]]
+%NAME = "Edit"
+
+[PassFailTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, PassFailTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassFailTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+
+[DEF, PassFailTest.Result]
+Error = "TYPE, Error"
+Status = Str
+PassFail = Bool
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PassFailTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+PassFail = True
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, PostSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+
+[PostSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"POST_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[PostSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"POST_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "ExecSubsteps"
+
+[DEF, PostSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PostSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1019680146
+%VERSION = "2.0.0.260"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 655384
+
+[DEF, MessagePopup]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+TitleExpr = Str
+MessageExpr = Str
+Button1Label = Str
+Button2Label = Str
+Button3Label = Str
+Button4Label = Str
+CenterDialog = Bool
+Position = Obj
+Modal = Bool
+ShowResponse = Bool
+MaxResponseLength = Num
+DefaultResponse = Str
+ButtonLocation = Num
+ActiveCtrl = Num
+DefaultButton = Num
+CancelButton = Num
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TimerButton = Num
+TimeToWait = Num
+%ROOT_TYPE = True
+
+[MessagePopup]
+%LO: Substeps = [0]
+%HI: Substeps = [1]
+DescriptionFormat = "LocalizeExpression(Step.TitleExpr)"
+DefaultNameFormat = "ResStr(\"MSG_BOX_STEP_TYPE\", \"DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+TitleExpr = "\"untitled\""
+%FLG: TitleExpr = 262144
+MessageExpr = "\"Your message here\""
+Button1Label = "\"OK\""
+Button2Label = "\"\""
+Button3Label = "\"\""
+Button4Label = "\"\""
+CenterDialog = True
+MaxResponseLength = 4096
+ActiveCtrl = 1
+DefaultButton = 1
+CancelButton = 1
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395110
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, MessagePopup.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "PostSubstep"
+%[1] = FlexCStep
+%TYPE: %[1] = "EditSubstep"
+
+[MessagePopup.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, MessagePopup.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[MessagePopup.Substeps[0].TS.SData.Call]
+LibPath = "msgbox.dll"
+Func = "DisplayTimerMsgPopup"
+%LO: Parms = [0]
+%HI: Parms = [19]
+
+[DEF, MessagePopup.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+%[5] = "TYPE, FCParameter"
+%[6] = "TYPE, FCParameter"
+%[7] = "TYPE, FCParameter"
+%[8] = "TYPE, FCParameter"
+%[9] = "TYPE, FCParameter"
+%[10] = "TYPE, FCParameter"
+%[11] = "TYPE, FCParameter"
+%[12] = "TYPE, FCParameter"
+%[13] = "TYPE, FCParameter"
+%[14] = "TYPE, FCParameter"
+%[15] = "TYPE, FCParameter"
+%[16] = "TYPE, FCParameter"
+%[17] = "TYPE, FCParameter"
+%[18] = "TYPE, FCParameter"
+%[19] = "TYPE, FCParameter"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "titleExpr"
+Type = 2
+ArgVal = "Step.TitleExpr"
+ArgDisplayVal = "Step.TitleExpr"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "msgExpr"
+Type = 2
+ArgVal = "Step.MessageExpr"
+ArgDisplayVal = "Step.MessageExpr"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[4]]
+Name = "button1Label"
+Type = 2
+ArgVal = "Step.Button1Label"
+ArgDisplayVal = "Step.Button1Label"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[5]]
+Name = "button2Label"
+Type = 2
+ArgVal = "Step.Button2Label"
+ArgDisplayVal = "Step.Button2Label"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[6]]
+Name = "button3Label"
+Type = 2
+ArgVal = "Step.Button3Label"
+ArgDisplayVal = "Step.Button3Label"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[7]]
+Name = "button4Label"
+Type = 2
+ArgVal = "Step.Button4Label"
+ArgDisplayVal = "Step.Button4Label"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[8]]
+Name = "showResponseTextBox"
+ArgVal = "Step.ShowResponse"
+ArgDisplayVal = "Step.ShowResponse"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[9]]
+Name = "initialResponseBuf"
+Type = 2
+ArgVal = "Step.DefaultResponse"
+ArgDisplayVal = "Step.DefaultResponse"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[10]]
+Name = "responseBufResult"
+Type = 4
+ObjType = 1
+NumEls = "Step.MaxResponseLength + 1"
+StrPass = 2
+ArgVal = "Step.Result.Response"
+ArgDisplayVal = "Step.Result.Response"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[11]]
+Name = "maxResponseBufLength"
+ArgVal = "Step.MaxResponseLength"
+ArgDisplayVal = "Step.MaxResponseLength"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[12]]
+Name = "buttonLoc"
+ArgVal = "Step.ButtonLocation"
+ArgDisplayVal = "Step.ButtonLocation"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[13]]
+Name = "activeCtrl"
+ArgVal = "Step.ActiveCtrl"
+ArgDisplayVal = "Step.ActiveCtrl"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[14]]
+Name = "defaultButton"
+ArgVal = "Step.DefaultButton"
+ArgDisplayVal = "Step.DefaultButton"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[15]]
+Name = "cancelButton"
+ArgVal = "Step.CancelButton"
+ArgDisplayVal = "Step.CancelButton"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[16]]
+Name = "timerBtn"
+ArgVal = "Step.TimerButton"
+ArgDisplayVal = "Step.TimerButton"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[17]]
+Name = "timeToWait"
+NumType = 7
+ArgVal = "Step.TimeToWait"
+ArgDisplayVal = "Step.TimeToWait"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[18]]
+Name = "buttonHit"
+NumPass = 1
+ArgVal = "Step.Result.ButtonHit"
+ArgDisplayVal = "Step.Result.ButtonHit"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[19]]
+Name = "errMsg"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.Error.Msg"
+ArgDisplayVal = "Step.Result.Error.Msg"
+
+[DEF, MessagePopup.Substeps[0]]
+%NAME = "Post"
+
+[MessagePopup.Substeps[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, MessagePopup.Substeps[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[MessagePopup.Substeps[1].TS.SData.Call]
+LibPath = "msgbox.dll"
+Func = "EditMessageBoxStep"
+%LO: Parms = [0]
+%HI: Parms = [4]
+
+[DEF, MessagePopup.Substeps[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[2]]
+Name = "engine"
+Type = 4
+ObjType = 1
+ArgVal = "RunState.Engine"
+ArgDisplayVal = "RunState.Engine"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[3]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[4]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[MessagePopup.Substeps[1]]
+MenuName = "ResStr(\"MSG_BOX_STEP_TYPE\", \"EDIT_STEP_NAME\")"
+
+[DEF, MessagePopup.Substeps[1]]
+%NAME = "Edit"
+
+[MessagePopup.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"MSG_BOX_STEP_TYPE\", \"MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[MessagePopup.TS]
+Icon = "MsgBox.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+LoopIncrement = ""
+LoopInitialize = ""
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, MessagePopup.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, MessagePopup.Result]
+Error = "TYPE, Error"
+Status = Str
+ButtonHit = Num
+Response = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[MessagePopup.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ButtonHit = 8192
+%INSTFLG: ButtonHit = 8192
+%FLG: Response = 10240
+%INSTFLG: Response = 10240
+
+[DEF, MessagePopup.Position]
+Top = Str
+Left = Str
+
+[DEF, Goto]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Goto]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DESCR_PREFIX\", \"Goto\") + \" \" +  (Step.TS.CustTrueActTarget == \"\\\"<End>\\\"\" ? Re"
+DescriptionFormat Line0002 = "sStr(\"NI_SUBSTEPS\", \"END_STEP_NAME\", \"<END>\") : (Step.TS.CustTrueActTarget == \"\\\"<Cleanup>\\\"\" ? ResStr(\"NI_"
+DescriptionFormat Line0003 = "SUBSTEPS\", \"CLEANUP_STEP_NAME\", \"<CLEANUP>\") : LocalizeExpression(Step.TS.CustTrueActTarget)))"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 985395111
+%VERSION = "2.0.0.260"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Goto.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Goto.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Goto.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Goto.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditGotoStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Goto.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Goto.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Goto.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Goto.Substeps[0]]
+%NAME = "Edit"
+
+[Goto.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Goto.TS]
+Icon = "goto.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+CustExpr = "True"
+%INSTFLG: CustExpr = 1
+CustTrueAct = "Goto"
+%INSTFLG: CustTrueAct = 1
+%INSTFLG: CustFalseAct = 1
+CustTrueActTarget = "\"<End>\""
+%INSTFLG: CustTrueActTarget = 1
+%INSTFLG: LoopType = 1
+%INSTFLG: LoopWhile = 1
+%INSTFLG: LoopStatus = 1
+%INSTFLG: LoopIncrement = 1
+%INSTFLG: LoopInitialize = 1
+%INSTFLG: LoopOpt = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Goto.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Goto.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Goto.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+

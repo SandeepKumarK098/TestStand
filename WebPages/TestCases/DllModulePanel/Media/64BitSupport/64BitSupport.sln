@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "64BitSupport", "64BitSupport\64BitSupport.vcproj", "{DA023C31-2B77-4CFA-B557-86EF32F2BCA8}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "64BitSupportTL", "64BitSupportTL\64BitSupportTL.vcproj", "{ED9F32FE-2360-41F3-95A9-F7D7AFC60D34}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DA023C31-2B77-4CFA-B557-86EF32F2BCA8}.Debug|Win32.ActiveCfg = Debug|Win32
+		{DA023C31-2B77-4CFA-B557-86EF32F2BCA8}.Debug|Win32.Build.0 = Debug|Win32
+		{DA023C31-2B77-4CFA-B557-86EF32F2BCA8}.Release|Win32.ActiveCfg = Release|Win32
+		{DA023C31-2B77-4CFA-B557-86EF32F2BCA8}.Release|Win32.Build.0 = Release|Win32
+		{ED9F32FE-2360-41F3-95A9-F7D7AFC60D34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{ED9F32FE-2360-41F3-95A9-F7D7AFC60D34}.Debug|Win32.Build.0 = Debug|Win32
+		{ED9F32FE-2360-41F3-95A9-F7D7AFC60D34}.Release|Win32.ActiveCfg = Release|Win32
+		{ED9F32FE-2360-41F3-95A9-F7D7AFC60D34}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

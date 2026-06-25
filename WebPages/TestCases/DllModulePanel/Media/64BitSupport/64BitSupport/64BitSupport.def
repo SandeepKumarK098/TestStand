@@ -1,0 +1,6 @@
+; 64BitSupport.def : Declares the module parameters for the DLL.
+
+LIBRARY      "64BitSupport"
+
+EXPORTS
+    ; Explicit exports can go here
