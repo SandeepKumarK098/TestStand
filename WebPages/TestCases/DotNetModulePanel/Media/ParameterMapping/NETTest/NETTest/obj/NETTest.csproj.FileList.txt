@@ -1,0 +1,5 @@
+bin\Debug\NETTest.dll
+bin\Debug\NETTest.pdb
+obj\Debug\ResolveAssemblyReference.cache
+obj\Debug\NETTest.dll
+obj\Debug\NETTest.pdb

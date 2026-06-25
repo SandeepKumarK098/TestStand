@@ -1,0 +1,183 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>DotNetMultipleSelection</name>
+    </assembly>
+    <members>
+        <member name="T:DotNetMultipleSelection.TestMultipleSelection">
+            <summary>
+            This class is for testing multiple selections
+            </summary>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.#ctor">
+            <summary>
+            Default Constructor
+            </summary>
+        </member>
+        <member name="F:DotNetMultipleSelection.TestMultipleSelection.mNumericProperty">
+            <summary>
+            Numeric Field
+            </summary>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.GetNewObject">
+            <summary>
+            Returns new TestMultipleSelection object.
+            </summary>
+            <returns>New TestMultipleSelection object.</returns>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.GetDifferentClassObject">
+            <summary>
+            Returns new DifferentClass object.
+            </summary>
+            <returns>New DifferentClass object.</returns>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.VariousNumbers(System.Int32,System.Single,System.Int16,System.Double)">
+            <summary>
+            Method with different types of numeric parameters
+            </summary>
+            <param name="number1">Int32</param>
+            <param name="number2">Float</param>
+            <param name="number3">Short</param>
+            <param name="number4">Double</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.VariousTypes(System.Int32,System.String,System.Char,System.Single,System.Char[])">
+            <summary>
+            Method with different types of parameters
+            </summary>
+            <param name="type1">Int32</param>
+            <param name="type2">String</param>
+            <param name="type3">Char</param>
+            <param name="type4">Float</param>
+            <param name="type5">Char array</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest1(System.Int32)">
+            <summary>
+            Num Test with 1 param
+            </summary>
+            <param name="number1">param 1</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest2(System.Int32,System.Int32)">
+            <summary>
+            Num Test with 2 params
+            </summary>
+            <param name="number1">param 1</param>
+            <param name="number2">param 2</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest3(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Num Test with 3 params
+            </summary>
+            <param name="number1">param 1</param>
+            <param name="number2">param 2</param>
+            <param name="number3">param 3</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest4(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Num Test with 4 params
+            </summary>
+            <param name="number1">param 1</param>
+            <param name="number2">param 2</param>
+            <param name="number3">param 3</param>
+            <param name="number4">param 4</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest5(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Num Test with 5 params
+            </summary>
+            <param name="number1">param 1</param>
+            <param name="number2">param 2</param>
+            <param name="number3">param 3</param>
+            <param name="number4">param 4</param>
+            <param name="number5">param 5</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.NumericTest6(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Num Test with 6 params
+            </summary>
+            <param name="number1">param 1</param>
+            <param name="number2">param 2</param>
+            <param name="number3">param 3</param>
+            <param name="number4">param 4</param>
+            <param name="number5">param 5</param>
+            <param name="number6">param 6</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest1(System.String)">
+            <summary>
+            String Test with 1 param
+            </summary>
+            <param name="string1">param 1</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest2(System.String,System.String)">
+            <summary>
+            String Test with 2 params
+            </summary>
+            <param name="string1">param 1</param>
+            <param name="string2">param 2</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest3(System.String,System.String,System.String)">
+            <summary>
+            String Test with 3 params
+            </summary>
+            <param name="string1">param 1</param>
+            <param name="string2">param 2</param>
+            <param name="string3">param 3</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest4(System.String,System.String,System.String,System.String)">
+            <summary>
+            String Test with 4 params
+            </summary>
+            <param name="string1">param 1</param>
+            <param name="string2">param 2</param>
+            <param name="string3">param 3</param>
+            <param name="string4">param 4</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest5(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            String Test with 5 params
+            </summary>
+            <param name="string1">param 1</param>
+            <param name="string2">param 2</param>
+            <param name="string3">param 3</param>
+            <param name="string4">param 4</param>
+            <param name="string5">param 5</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.TestMultipleSelection.StringTest6(System.String,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            String Test with 6 params
+            </summary>
+            <param name="string1">param 1</param>
+            <param name="string2">param 2</param>
+            <param name="string3">param 3</param>
+            <param name="string4">param 4</param>
+            <param name="string5">param 5</param>
+            <param name="string6">param 6</param>
+        </member>
+        <member name="P:DotNetMultipleSelection.TestMultipleSelection.NumericProperty">
+            <summary>
+            Numeric Property - accessor to private field mNumericProperty
+            </summary>
+        </member>
+        <member name="T:DotNetMultipleSelection.DifferentClass">
+            <summary>
+            Different Class
+            </summary>
+        </member>
+        <member name="M:DotNetMultipleSelection.DifferentClass.#ctor">
+            <summary>
+            Default constructor
+            </summary>
+        </member>
+        <member name="M:DotNetMultipleSelection.DifferentClass.DifferentMethod(System.Int32)">
+            <summary>
+            Method with int param
+            </summary>
+            <param name="number">int32 param</param>
+        </member>
+        <member name="M:DotNetMultipleSelection.DifferentClass.GetTestMultipleSelectionObject">
+            <summary>
+            Returns new TestMultipleSelection object.
+            </summary>
+            <returns>New TestMultipleSelection object</returns>
+        </member>
+    </members>
+</doc>

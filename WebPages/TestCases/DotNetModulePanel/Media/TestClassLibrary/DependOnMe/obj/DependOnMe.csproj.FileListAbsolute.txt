@@ -1,0 +1,5 @@
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\DependOnMe\obj\Release\ResolveAssemblyReference.cache
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\DependOnMe\obj\Release\DependOnMe.dll
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\DependOnMe\obj\Release\DependOnMe.pdb
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\DependOnMe.dll
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\DependOnMe.pdb

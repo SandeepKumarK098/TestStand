@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 9.00
+# Visual Studio 2005
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ClassLibrary1", "ClassLibrary1\ClassLibrary1.csproj", "{5855FD31-F7D0-4D34-B9D5-E9408C880C9B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DependOnMe", "DependOnMe\DependOnMe.csproj", "{031CBD67-B834-4755-8A79-2106C0E25583}"
+EndProject
+Global
+	GlobalSection(SourceCodeControl) = preSolution
+		SccNumberOfProjects = 2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = ClassLibrary1\\ClassLibrary1.csproj
+		SccLocalPath1 = .
+		SccProjectFilePathRelativizedFromConnection1 = ClassLibrary1\\
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5855FD31-F7D0-4D34-B9D5-E9408C880C9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5855FD31-F7D0-4D34-B9D5-E9408C880C9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5855FD31-F7D0-4D34-B9D5-E9408C880C9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5855FD31-F7D0-4D34-B9D5-E9408C880C9B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{031CBD67-B834-4755-8A79-2106C0E25583}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{031CBD67-B834-4755-8A79-2106C0E25583}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{031CBD67-B834-4755-8A79-2106C0E25583}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{031CBD67-B834-4755-8A79-2106C0E25583}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

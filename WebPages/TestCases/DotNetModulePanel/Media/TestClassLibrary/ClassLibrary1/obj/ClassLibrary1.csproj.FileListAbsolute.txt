@@ -1,0 +1,10 @@
+D:\perforce\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+D:\perforce\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ClassLibraryTest.dll
+D:\perforce\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ClassLibraryTest.pdb
+D:\perforce\WebPages\TestCases\DotNetModulePanel\Media\ClassLibraryTest.dll
+D:\perforce\WebPages\TestCases\DotNetModulePanel\Media\ClassLibraryTest.pdb
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ResolveAssemblyReference.cache
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ClassLibraryTest.dll
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\TestClassLibrary\ClassLibrary1\obj\Release\ClassLibraryTest.pdb
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\ClassLibraryTest.dll
+D:\TSDev\WebPages\TestCases\DotNetModulePanel\Media\ClassLibraryTest.pdb
