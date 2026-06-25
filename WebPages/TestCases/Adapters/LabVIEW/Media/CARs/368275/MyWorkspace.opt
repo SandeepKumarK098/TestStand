@@ -1,0 +1,21 @@
+[DEF, %OBJROOT]
+PersistedBreakpointArray = Objs
+PersistedWatchpointArray = Objs
+
+[DEF, PersistedBreakpointArray]
+%NAME = ""
+
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 5.1.0.19
+CompatibleProdVersion = 5.1.0.0
+Version = 752
+Type = "TEPersisted"
+Path = "C:\\Users\\flaborde\\Desktop\\Deploy\\MyWorkspace.opt"
+ProductVersionString = "2013 (5.1.0.19)"
+Description = ""
+CharEncoding = ""
+
+[DEF, PersistedWatchpointArray]
+%NAME = ""
+

@@ -1,0 +1,1226 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:w="urn:schemas-microsoft-com:office:word" xmlns:m="http://schemas.microsoft.com/office/2004/12/omml" xmlns="http://www.w3.org/TR/REC-html40">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+
+  <meta name="ProgId" content="Word.Document">
+
+  <meta name="Generator" content="Microsoft Word 12">
+
+  <meta name="Originator" content="Microsoft Word 12">
+
+  <link rel="File-List" href="CandDLL_files/filelist.xml">
+
+  <link rel="Edit-Time-Data" href="CandDLL_files/editdata.mso">
+<!--[if !mso]>
+<style>
+v\:* {behavior:url(#default#VML);}
+o\:* {behavior:url(#default#VML);}
+w\:* {behavior:url(#default#VML);}
+.shape {behavior:url(#default#VML);}
+</style>
+<![endif]-->
+
+
+
+  <title>C\C++ DLL Adapter</title>
+<!--[if gte mso 9]><xml>
+ <o:DocumentProperties>
+  <o:Author>Erik Crank</o:Author>
+  <o:LastAuthor>Jed Beach</o:LastAuthor>
+  <o:Revision>23</o:Revision>
+  <o:TotalTime>75</o:TotalTime>
+  <o:Created>2004-01-26T16:28:00Z</o:Created>
+  <o:LastSaved>2013-03-11T18:08:00Z</o:LastSaved>
+  <o:Pages>2</o:Pages>
+  <o:Words>1454</o:Words>
+  <o:Characters>8293</o:Characters>
+  <o:Company>National Instruments</o:Company>
+  <o:Lines>69</o:Lines>
+  <o:Paragraphs>19</o:Paragraphs>
+  <o:CharactersWithSpaces>9728</o:CharactersWithSpaces>
+  <o:Version>12.00</o:Version>
+ </o:DocumentProperties>
+</xml><![endif]-->
+  <link rel="themeData" href="CandDLL_files/themedata.thmx">
+
+  <link rel="colorSchemeMapping" href="CandDLL_files/colorschememapping.xml">
+<!--[if gte mso 9]><xml>
+ <w:WordDocument>
+  <w:Zoom>84</w:Zoom>
+  <w:SpellingState>Clean</w:SpellingState>
+  <w:GrammarState>Clean</w:GrammarState>
+  <w:TrackMoves>false</w:TrackMoves>
+  <w:TrackFormatting/>
+  <w:ValidateAgainstSchemas/>
+  <w:SaveIfXMLInvalid>false</w:SaveIfXMLInvalid>
+  <w:IgnoreMixedContent>false</w:IgnoreMixedContent>
+  <w:AlwaysShowPlaceholderText>false</w:AlwaysShowPlaceholderText>
+  <w:DoNotPromoteQF/>
+  <w:LidThemeOther>EN-US</w:LidThemeOther>
+  <w:LidThemeAsian>ZH-CN</w:LidThemeAsian>
+  <w:LidThemeComplexScript>HE</w:LidThemeComplexScript>
+  <w:Compatibility>
+   <w:BreakWrappedTables/>
+   <w:SnapToGridInCell/>
+   <w:WrapTextWithPunct/>
+   <w:UseAsianBreakRules/>
+   <w:DontGrowAutofit/>
+   <w:SplitPgBreakAndParaMark/>
+   <w:DontVertAlignCellWithSp/>
+   <w:DontBreakConstrainedForcedTables/>
+   <w:DontVertAlignInTxbx/>
+   <w:Word11KerningPairs/>
+   <w:CachedColBalance/>
+  </w:Compatibility>
+  <w:BrowserLevel>MicrosoftInternetExplorer4</w:BrowserLevel>
+  <m:mathPr>
+   <m:mathFont m:val="Cambria Math"/>
+   <m:brkBin m:val="before"/>
+   <m:brkBinSub m:val="&#45;-"/>
+   <m:smallFrac m:val="off"/>
+   <m:dispDef/>
+   <m:lMargin m:val="0"/>
+   <m:rMargin m:val="0"/>
+   <m:defJc m:val="centerGroup"/>
+   <m:wrapIndent m:val="1440"/>
+   <m:intLim m:val="subSup"/>
+   <m:naryLim m:val="undOvr"/>
+  </m:mathPr></w:WordDocument>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <w:LatentStyles DefLockedState="false" DefUnhideWhenUsed="false"
+  DefSemiHidden="false" DefQFormat="false" LatentStyleCount="267">
+  <w:LsdException Locked="false" QFormat="true" Name="Normal"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 1"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 2"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 3"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 4"/>
+  <w:LsdException Locked="false" QFormat="true" Name="heading 5"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 6"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 7"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 8"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="heading 9"/>
+  <w:LsdException Locked="false" SemiHidden="true" UnhideWhenUsed="true"
+   QFormat="true" Name="caption"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Title"/>
+  <w:LsdException Locked="false" Priority="1" Name="Default Paragraph Font"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Subtitle"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Strong"/>
+  <w:LsdException Locked="false" QFormat="true" Name="Emphasis"/>
+  <w:LsdException Locked="false" Priority="99" Name="No List"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true"
+   Name="Placeholder Text"/>
+  <w:LsdException Locked="false" Priority="1" QFormat="true" Name="No Spacing"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 1"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="99" SemiHidden="true" Name="Revision"/>
+  <w:LsdException Locked="false" Priority="34" QFormat="true"
+   Name="List Paragraph"/>
+  <w:LsdException Locked="false" Priority="29" QFormat="true" Name="Quote"/>
+  <w:LsdException Locked="false" Priority="30" QFormat="true"
+   Name="Intense Quote"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 1"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 1"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 1"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 1"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 1"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 1"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 1"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 2"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 2"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 2"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 2"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 2"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 2"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 2"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 2"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 3"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 3"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 3"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 3"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 3"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 3"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 3"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 3"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 4"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 4"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 4"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 4"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 4"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 4"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 4"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 4"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 5"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 5"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 5"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 5"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 5"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 5"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 5"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 5"/>
+  <w:LsdException Locked="false" Priority="60" Name="Light Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="61" Name="Light List Accent 6"/>
+  <w:LsdException Locked="false" Priority="62" Name="Light Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="63" Name="Medium Shading 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="64" Name="Medium Shading 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="65" Name="Medium List 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="66" Name="Medium List 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="67" Name="Medium Grid 1 Accent 6"/>
+  <w:LsdException Locked="false" Priority="68" Name="Medium Grid 2 Accent 6"/>
+  <w:LsdException Locked="false" Priority="69" Name="Medium Grid 3 Accent 6"/>
+  <w:LsdException Locked="false" Priority="70" Name="Dark List Accent 6"/>
+  <w:LsdException Locked="false" Priority="71" Name="Colorful Shading Accent 6"/>
+  <w:LsdException Locked="false" Priority="72" Name="Colorful List Accent 6"/>
+  <w:LsdException Locked="false" Priority="73" Name="Colorful Grid Accent 6"/>
+  <w:LsdException Locked="false" Priority="19" QFormat="true"
+   Name="Subtle Emphasis"/>
+  <w:LsdException Locked="false" Priority="21" QFormat="true"
+   Name="Intense Emphasis"/>
+  <w:LsdException Locked="false" Priority="31" QFormat="true"
+   Name="Subtle Reference"/>
+  <w:LsdException Locked="false" Priority="32" QFormat="true"
+   Name="Intense Reference"/>
+  <w:LsdException Locked="false" Priority="33" QFormat="true" Name="Book Title"/>
+  <w:LsdException Locked="false" Priority="37" SemiHidden="true"
+   UnhideWhenUsed="true" Name="Bibliography"/>
+  <w:LsdException Locked="false" Priority="39" SemiHidden="true"
+   UnhideWhenUsed="true" QFormat="true" Name="TOC Heading"/>
+ </w:LatentStyles>
+</xml><![endif]-->
+
+  <style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;
+	mso-font-charset:2;
+	mso-generic-font-family:auto;
+	mso-font-pitch:variable;
+	mso-font-signature:0 268435456 0 0 -2147483648 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;
+	mso-font-charset:1;
+	mso-generic-font-family:roman;
+	mso-font-format:other;
+	mso-font-pitch:variable;
+	mso-font-signature:0 0 0 0 0 0;}
+@font-face
+	{font-family:Tahoma;
+	panose-1:2 11 6 4 3 5 4 4 2 4;
+	mso-font-charset:0;
+	mso-generic-font-family:swiss;
+	mso-font-pitch:variable;
+	mso-font-signature:-520081665 -1073717157 41 0 66047 0;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+h1
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 1 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:1;
+	font-size:24.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h2
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 2 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:2;
+	font-size:18.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h4
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 4 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:4;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+h5
+	{mso-style-unhide:no;
+	mso-style-qformat:yes;
+	mso-style-link:"Heading 5 Char";
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	mso-outline-level:5;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:minor-fareast;
+	font-weight:bold;}
+a:link, span.MsoHyperlink
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+a:visited, span.MsoHyperlinkFollowed
+	{mso-style-unhide:no;
+	color:blue;
+	text-decoration:underline;
+	text-underline:single;}
+p
+	{mso-style-unhide:no;
+	mso-margin-top-alt:auto;
+	margin-right:0in;
+	mso-margin-bottom-alt:auto;
+	margin-left:0in;
+	mso-pagination:widow-orphan;
+	font-size:12.0pt;
+	font-family:"Times New Roman","serif";
+	mso-fareast-font-family:"Times New Roman";}
+p.MsoAcetate, li.MsoAcetate, div.MsoAcetate
+	{mso-style-unhide:no;
+	mso-style-link:"Balloon Text Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-fareast-font-family:"Times New Roman";}
+span.Heading1Char
+	{mso-style-name:"Heading 1 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 1";
+	mso-ansi-font-size:14.0pt;
+	mso-bidi-font-size:14.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#365F91;
+	mso-themecolor:accent1;
+	mso-themeshade:191;
+	font-weight:bold;}
+span.Heading2Char
+	{mso-style-name:"Heading 2 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 2";
+	mso-ansi-font-size:13.0pt;
+	mso-bidi-font-size:13.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;}
+span.Heading4Char
+	{mso-style-name:"Heading 4 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 4";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#4F81BD;
+	mso-themecolor:accent1;
+	font-weight:bold;
+	font-style:italic;}
+span.Heading5Char
+	{mso-style-name:"Heading 5 Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Heading 5";
+	mso-ansi-font-size:12.0pt;
+	mso-bidi-font-size:12.0pt;
+	font-family:"Cambria","serif";
+	mso-ascii-font-family:Cambria;
+	mso-ascii-theme-font:major-latin;
+	mso-fareast-font-family:"Times New Roman";
+	mso-fareast-theme-font:major-fareast;
+	mso-hansi-font-family:Cambria;
+	mso-hansi-theme-font:major-latin;
+	mso-bidi-font-family:"Times New Roman";
+	mso-bidi-theme-font:major-bidi;
+	color:#243F60;
+	mso-themecolor:accent1;
+	mso-themeshade:127;}
+span.BalloonTextChar
+	{mso-style-name:"Balloon Text Char";
+	mso-style-unhide:no;
+	mso-style-locked:yes;
+	mso-style-link:"Balloon Text";
+	mso-ansi-font-size:8.0pt;
+	mso-bidi-font-size:8.0pt;
+	font-family:"Tahoma","sans-serif";
+	mso-ascii-font-family:Tahoma;
+	mso-hansi-font-family:Tahoma;
+	mso-bidi-font-family:Tahoma;}
+span.SpellE
+	{mso-style-name:"";
+	mso-spl-e:yes;}
+span.GramE
+	{mso-style-name:"";
+	mso-gram-e:yes;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	mso-default-props:yes;
+	font-size:10.0pt;
+	mso-ansi-font-size:10.0pt;
+	mso-bidi-font-size:10.0pt;}
+@page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.25in 1.0in 1.25in;
+	mso-header-margin:.5in;
+	mso-footer-margin:.5in;
+	mso-paper-source:0;}
+div.WordSection1
+	{page:WordSection1;}
+ /* List Definitions */
+ @list l0
+	{mso-list-id:173888629;
+	mso-list-template-ids:-1861561194;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:448360425;
+	mso-list-template-ids:-1195592860;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l1:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l2
+	{mso-list-id:1631520847;
+	mso-list-template-ids:-1164387198;}
+@list l2:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l2:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l2:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l3
+	{mso-list-id:1878662909;
+	mso-list-template-ids:724878184;}
+@list l3:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l3:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l3:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4
+	{mso-list-id:1908833161;
+	mso-list-template-ids:956847002;}
+@list l4:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Symbol;}
+@list l4:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:1.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l4:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:1.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;
+	mso-ansi-font-size:10.0pt;
+	font-family:Wingdings;}
+@list l4:level4
+	{mso-level-tab-stop:2.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level5
+	{mso-level-tab-stop:2.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level6
+	{mso-level-tab-stop:3.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level7
+	{mso-level-tab-stop:3.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level8
+	{mso-level-tab-stop:4.0in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+@list l4:level9
+	{mso-level-tab-stop:4.5in;
+	mso-level-number-position:left;
+	text-indent:-.25in;}
+ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+  </style><!--[if gte mso 10]>
+<style>
+ /* Style Definitions */
+ table.MsoNormalTable
+	{mso-style-name:"Table Normal";
+	mso-tstyle-rowband-size:0;
+	mso-tstyle-colband-size:0;
+	mso-style-noshow:yes;
+	mso-style-priority:99;
+	mso-style-qformat:yes;
+	mso-style-parent:"";
+	mso-padding-alt:0in 5.4pt 0in 5.4pt;
+	mso-para-margin:0in;
+	mso-para-margin-bottom:.0001pt;
+	mso-pagination:widow-orphan;
+	font-size:10.0pt;
+	font-family:"Times New Roman","serif";}
+</style>
+<![endif]--><!--[if gte mso 9]><xml>
+ <o:shapedefaults v:ext="edit" spidmax="5122"/>
+</xml><![endif]--><!--[if gte mso 9]><xml>
+ <o:shapelayout v:ext="edit">
+  <o:idmap v:ext="edit" data="1"/>
+ </o:shapelayout></xml><![endif]-->
+</head>
+
+
+<body style="" lang="EN-US" link="blue" vlink="blue">
+
+
+<div class="WordSection1">
+
+<h1 style="text-align: right;" align="right"><span style=""><img id="_x0000_i1025" src="../TestStandLogo.jpg" height="65" width="273"></span><span style=""><o:p></o:p></span></h1>
+
+
+<h5 style="text-align: right;" align="right"><span style="">Test Case Scenario<br>
+
+National Instruments Confidential<o:p></o:p></span></h5>
+
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0in 0in 1pt;">
+
+<h1 style="border: medium none ; padding: 0in;"><!-- ---------------- --><!--  Test Case Title --><!-- ---------------- --><span style="">C\C++ DLL Adapter <o:p></o:p></span></h1>
+
+
+</div>
+
+
+<h4><span style="">Adapters<o:p></o:p></span></h4>
+
+
+<p class="MsoNormal"><br style="">
+
+<!--[if !supportLineBreakNewLine]--><br style="">
+
+<!--[endif]--><o:p></o:p></p>
+
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0in 0in 1pt;"><!-- ----------------------- --><!--  Test Case Description  --><!-- ----------------------- -->
+
+<h2 style="border: medium none ; padding: 0in;"><span style="">Test Description <o:p></o:p></span></h2>
+
+
+</div>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<p>This test is for testing the various features of the C/C++ DLL Adapter. You
+need to test using the <span class="SpellE">SpecifyModule</span> dialog as well
+as the Module panel in the Step Settings pane of the sequence editor. There are
+additional tests for testing the functionality of the Module panel itself.<o:p></o:p></p>
+
+
+<div style="border-style: none none solid; border-color: -moz-use-text-color -moz-use-text-color windowtext; border-width: medium medium 1pt; padding: 0in 0in 1pt;">
+
+<h2 style="border: medium none ; padding: 0in;"><!-- --------------------- --><!--  Test Case Procedure  --><!-- --------------------- --><span style="">Test Procedure <o:p></o:p></span></h2>
+
+
+</div>
+
+
+<p class="MsoNormal"><b style="">Note:</b> As of
+TestStand 2010 Measurement Studio is no longer required for debugging or
+create/edit code operation.<span style="">&nbsp; </span>You
+should run these tests on a machine without Measurement Studio to verify that
+it is no longer required.</p>
+
+
+<ul type="disc">
+
+ <li class="MsoNormal" style=""><span style="font-weight: bold;">C/C++ DLL Adapter Debugging</span> </li>
+
+ 
+  <ul type="circle">
+
+  <li class="MsoNormal" style="">Setup</li>
+    <ol>
+      <li class="MsoNormal" style="">Use DLLs from &lt;TestStand Public&gt;\Examples directory.</li>
+      <li class="MsoNormal">(Optional) Use VS.NET 2005 to
+       create a C DLL and/or C++ DLL with static entry points</li>
+      <li class="MsoNormal">(Optional) Use CVI to create a C
+       DLL with C entry points</li>
+    </ol>
+
+  
+    <ul type="square">
+
+   
+   
+  
+    </ul>
+
+  <li class="MsoNormal" style="">Basic functionality</li>
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Test with calling
+       VS.NET DLL entry point </li>
+      <li class="MsoNormal">Verify step into and
+       step over work as expected </li>
+      <li class="MsoNormal">Verify step into
+       followed by step out stops on next step in sequence</li>
+      <li class="MsoNormal">Verify step into
+       followed by continue resumes executing the sequence</li>
+      <li class="MsoNormal">Verify prompt if
+       attempt to stop debugging or exit VS.NET</li>
+      <li class="MsoNormal">Repeat above with
+       VS.NET debugger already attached to SeqEdit.exe (specify <span class="SpellE">SeqEdit</span> as the debugging .exe for the VS.NET DLL)</li>
+      <li class="MsoNormal">Verify CVI debugging
+       functionality works properly (in CVI, specify <span class="SpellE">SeqEdit</span>
+       as the debugging .exe for the CVI DLL)</li>
+      <li class="MsoNormal">Verify no attempt is made
+       to launch VS.NET debugger when calling VS.NET entry point</li>
+      <li class="MsoNormal">Verify
+       developing/debugging/rebuilding process works intuitively for VS.NET DLL
+       steps</li>
+      <li class="MsoNormal">Things to think about
+       include switching of top level application and performance</li>
+    </ol>
+    <ul type="square">
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+    </ul>
+
+  <li class="MsoNormal" style="">Corner and failure
+      cases </li>
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Test with native
+       debugging disabled in VS.NET</li>
+      <li class="MsoNormal">Kill
+       VSDebuggingController.exe at various stages of debugged execution</li>
+      <li class="MsoNormal">Set various types of
+       breakpoints at <span class="SpellE">verious</span> places (especially the
+       first line) in the VS.NET DLL entry point and verify it is not removed</li>
+      <li class="MsoNormal">Try multiple
+       executions or threads calling different functions and calling the same
+       functions</li>
+      <li class="MsoNormal">Try stepping into a
+       CVI-created function while debugging from VS.NET</li>
+      <li class="MsoNormal">Try stepping into a
+       release-compiled VS.NET DLL</li>
+      <li class="MsoNormal">Move or rename the
+       source file containing the VS.NET DLL entry point</li>
+      <li class="MsoNormal">Test throwing an
+       exception from code you stepped into </li>
+      <li class="MsoNormal">Verify no debugging
+       functionality with VS.NET 2002</li>
+    </ol>
+    <ul type="square">
+
+   
+   
+   
+   
+   
+   
+   
+   
+  
+    </ul>
+
+ 
+  </ul>
+
+ <li class="MsoNormal" style=""><span style="font-weight: bold;">Test Create/Edit Code in
+     Visual Studio .NET for C/C++ DLL Adapter</span> </li>
+
+ 
+  <ul type="circle">
+
+  <li class="MsoNormal" style="">Create Code</li>
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Use the sequence file
+       in //TestStand/Tests/TS Automated Tests/3.0/Interactive/CreateCode<span class="SpellE"></span> for
+       testing.</li>
+      <li class="MsoNormal">Verify that the
+       browse buttons browse for the correct type of file and that the edit
+       controls are correctly updated when a file is selected</li>
+      <li class="MsoNormal">Test Create Code
+       using various source, project, and solution files.</li>
+      <li class="MsoNormal">Verify that if no
+       solution file is provided, an appropriate solution is used (TS 3.0 Beta
+       2 requires a solution to be specified).</li>
+      <li class="MsoNormal">Verify that if the
+       solution file is already open in a Visual Studio environment, that
+       environment is used for code generation.</li>
+      <li class="MsoNormal">Verify that error
+       messages are displayed if the files do not exist or are not the correct
+       type.</li>
+      <li class="MsoNormal">Verify that an error
+       message is displayed if a function name is not provided on the module
+       tab.</li>
+      <li class="MsoNormal">Test functionality
+       when the desired function already exists in source.</li>
+      <li class="MsoNormal">Verify that a replace/insert
+       above/insert below dialog <span class="GramE">is</span> displayed and that
+       the correct action is taken depending on the user's choice.</li>
+      <li class="MsoNormal">Verify that the code
+       template is correctly read and that any includes/imports, parameters
+       types and names, and function body are transferred to the new function.</li>
+      <li class="MsoNormal">Verify that the
+       function name and parameters are updated in the module dialog after the
+       function is created.</li>
+      <li class="MsoNormal">Verify that create
+       code for an array only puts the dimension size in the code for dimension
+       sizes that are constant. For example, if you have a dimension with a
+       size expression of Locals.foo, create code should omit the dimension
+       size instead of using Locals.foo.</li>
+    </ol>
+    <ul type="square">
+
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+   
+  
+    </ul>
+
+  <li class="MsoNormal" style="">Edit Code</li>
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Test Edit Code using
+       various source, project, and solution files</li>
+      <li class="MsoNormal">Verify that if no
+       solution file is provided, an appropriate solution is used (TS 3.0 Beta
+       2 requires a solution to be specified).</li>
+      <li class="MsoNormal">Verify that if the
+       solution file is already open in a Visual Studio environment, that
+       environment is used for code generation.</li>
+      <li class="MsoNormal">Verify that an error
+       message is displayed if the function does not exist in the source.</li>
+      <li class="MsoNormal">Verify that the
+       project and source are opened and that the cursor is moved to the first
+       line of the correct function.</li>
+    </ol>
+    <ul type="square">
+
+   
+   
+   
+   
+  
+    </ul>
+
+  <li class="MsoNormal" style="">Verify Prototype (when
+      not using Visual Studio integration only)</li>
+
+ 
+  </ul>
+
+</ul>
+
+
+<ul type="disc">
+
+ 
+  <ul type="circle">
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Verify that Verify
+       Prototype doesn't compare the dimension size of the first dimension in
+       an array. For example, the C/C++ compiler treats parameters of type <span class="SpellE"><span class="GramE">ary</span></span><span class="GramE">[</span>][3],
+       <span class="SpellE">ary</span>[2][3], and <span class="SpellE">ary</span>[3][3]
+       as the same. </li>
+      <li class="MsoNormal">Test Verify Prototype
+       for <span class="SpellE">structs</span> and <span class="SpellE">enums</span>.
+       You have to use the 'struct' and 'enum' keyword in the source code. Test
+       both <span class="SpellE">structs</span> of type <span class="SpellE">tsErrorDataType</span>,
+       which corresponds to the TestStand Error container, as well as <span class="SpellE">structs</span> you define. </li>
+    </ol>
+    <ul type="square">
+
+   
+  
+    </ul>
+
+ 
+  </ul>
+
+</ul>
+
+
+<ul type="disc">
+
+ <li class="MsoNormal" style=""><span style="font-weight: bold;">Test 3.0 C/C++ DLL Adapter
+     Features</span> </li>
+
+ 
+  <ul type="circle">
+
+  
+  </ul>
+  <ol>
+    <li class="MsoNormal">Type discovery: Using
+      Visual Studio.NET, create DLLs that use various C++ <span class="SpellE">datatypes</span>.
+      In <span class="SpellE">SpecifyModule</span> dialog, check if the
+      functions/static methods appear in the dialog with the correct types. Use
+      DLLs and projects in Tests\3.0\<span class="SpellE">CppAdapter</span>\<span class="SpellE">CppDialogTest</span>.</li>
+    <li class="MsoNormal">Parameter passing:
+      Test passing all supported <span class="SpellE">MeasurementStudio</span> <span class="SpellE">datatypes</span> using all parameter-passing variations:
+      by-Value, by-Pointer, by-Reference, by-const-Pointer, <span class="GramE">by</span>-const-reference.
+      Don&rsquo;t spend much time on this because this is part of the automated
+      tests in Tests\3.0\<span class="SpellE">CppAdapter</span>. However, you
+      should verify that you can configure steps to call some of these
+      functions and that they run as expected.</li>
+    <li class="MsoNormal">Verify that when using
+      <span class="SpellE">MStudio</span> <span class="SpellE">datatypes</span>
+      (for example <span class="SpellE">CString</span>) with a DLL that was not
+      created with <span class="SpellE">MeasurementStudio</span>, we report useful
+      warning message that explains how to correct the problem. Test this when
+      running as well as when specifying module in dialog. [This warning is not
+      provided with the Module Panel in the step settings pane.]</li>
+    <li class="MsoNormal">Verify that if user
+      specifies argument values that have incorrect type, we display a useful
+      and accurate error message. For example, <span class="SpellE">CNiScalarVector</span>
+      expects a 1-d array of Numbers (or Booleans).</li>
+    <li class="MsoNormal">Test that specify
+      module dialog and step settings pane recognizes functions and method
+      names when typing in the Function <span class="SpellE">combobox</span>.
+      Verify that namespaces are recognized. Try nesting namespaces.</li>
+    <li class="MsoNormal">Test functions that
+      have enum parameters. Verify that the enum name appears in the dialog and
+      that we pass the correct values (dialog will not display possible enumeration
+      values unless you have a type library because that information is not
+      available <span class="SpellE">form</span> the DLL).</li>
+    <li class="MsoNormal">Verify that
+      "const" <span class="SpellE">MStudio</span> <span class="SpellE">datatypes</span>
+      actually pass by value and do not modify the argument passed.</li>
+    <li class="MsoNormal">Verify that "<span class="SpellE">int</span>" parameters appear differently from "long"
+      parameters. Same with unsigned <span class="SpellE">int</span>, unsigned
+      long.</li>
+    <li class="MsoNormal">Verify that the
+      function call in the specify module dialog and step settings pane looks
+      correct with all parameter passing. For example, if pass-by-pointer then
+      we add a "&amp;" before the argument.</li>
+  </ol>
+  <ul type="circle">
+
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+  </ul>
+
+ <li class="MsoNormal" style=""><a href="../StandardTest/Adapter.html">Standard Test for Adapters</a></li>
+
+ <li class="MsoNormal" style=""><a href="../StandardTest/Dialogs.html">Standard Test for Dialogs</a></li>
+
+ <li class="MsoNormal" style="font-weight: bold;">CARs</li>
+
+ 
+  <ul type="circle">
+
+  <li class="MsoNormal" style="">Validate CARs <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=379312">379312</a>
+      and <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=379299">379299</a>.</li>
+
+  
+    <ul type="square">
+
+   
+    </ul>
+    <ol>
+      <li class="MsoNormal">Create a custom step
+       type with a default prototype that returns an integer.<span style="">&nbsp; </span>In this step type&rsquo;s return
+       value parameter, set the default values of the <span class="SpellE">ResultAct</span>
+       to 1.<span style="">&nbsp; </span>Set the default Flags <span class="SpellE">subproperty</span> (not to be confused with the flags of a
+       property) to have the 2 bit set (preserving the other bits).<span style="">&nbsp; </span>For <span class="SpellE">ResultAct</span>
+       and Flag properties, set the &ldquo;Not Editable&rdquo; flag.</li>
+      <li class="MsoNormal">Note:<span style="">&nbsp; </span>&ldquo;Not <span class="GramE">Editable</span>&rdquo;
+       is set for a <span class="SpellE">subproperty</span> by right-clicking on
+       the property and selecting &ldquo;Properties&hellip;&rdquo; <span style="font-family: Wingdings;"><span style="">&agrave;</span></span> &ldquo;Advanced&rdquo; <span style="font-family: Wingdings;"><span style="">&agrave;</span></span> &ldquo;Flags&rdquo; <span style="font-family: Wingdings;"><span style="">&agrave;</span></span> &ldquo;Type Flags&hellip;&rdquo; <span style="font-family: Wingdings;"><span style="">&agrave;</span></span> and <span class="SpellE">seting</span>
+       &ldquo;<span class="SpellE">PropFlags_NotEditable</span>&rdquo; for both
+       the &ldquo;Instance Default Flags&rdquo; and &ldquo;Flags Not Editable
+       in Instances.&rdquo;</li>
+
+   <li class="MsoNormal">Create instances of
+       each of these custom step types in the Sequence Editor and validate the
+       following for the return values:</li>
+
+   
+      <ol start="1" type="1">
+
+    <li class="MsoNormal" style="">&ldquo;Set <span class="SpellE">Error.Code</span>&rdquo; is checked.<span style="">&nbsp; </span>(This field is controlled by the
+        0x2 bit of Flags.)</li>
+
+    <li class="MsoNormal" style="">&ldquo;Result
+        Action&rdquo; is &ldquo;If Value &lt; 0 Set <span class="SpellE">Error.Occurred</span>
+        to True.&rdquo;</li>
+
+    <li class="MsoNormal" style="">The &ldquo;Category&rdquo;,
+        &ldquo;Type&rdquo;, &ldquo;Result Action&rdquo;, and &ldquo;Set <span class="SpellE">Error.Code</span>&rdquo; fields should be read-only.<span style="">&nbsp; </span>For other parameters these
+        fields should not be read-only.</li>
+
+    <li class="MsoNormal" style="">Add a parameter to
+        the prototype, then refresh the prototype, removing the parameter you
+        just added.<span style="">&nbsp; </span>Verify #1, #2,
+        and #3 above.</li>
+
+    <li class="MsoNormal" style="">Change to a
+        different prototype that returns void.<span style="">&nbsp; </span>Then change to a third prototype
+        that returns int.<span style="">&nbsp; </span>Verify
+        #1, #2, and #3 above.</li>
+
+   
+      </ol>
+
+   <li class="MsoNormal">Create two new custom
+       step types similar to the ones above, but in these make either the Flags
+       <span class="SpellE">subproperty</span> or the <span class="SpellE">ResultAct</span>
+       <span class="SpellE">subpropery</span> (but not both simultaneously) not
+       editable.</li>
+
+   
+      <ol start="1" type="1">
+
+    <li class="MsoNormal" style="">With just the Flags
+        not editable:</li>
+
+    
+        <ol start="1" type="1">
+
+     <li class="MsoNormal" style="">Verify that none of
+         the fields &ldquo;Category&rdquo;, &ldquo;Type&rdquo;, or &ldquo;Set <span class="SpellE">Error.Code</span>&rdquo; can be modified.</li>
+
+     <li class="MsoNormal" style="">Verify that the
+         &ldquo;Result Action&rdquo; field can be changed.</li>
+
+    
+        </ol>
+
+    <li class="MsoNormal" style="">With just the Result
+        Action not editable:</li>
+
+    
+        <ol start="1" type="1">
+
+     <li class="MsoNormal" style="">Verify that the
+         &ldquo;Category&rdquo;, &ldquo;Type,&rdquo; and &ldquo;Set <span class="SpellE">Error.Code</span>&rdquo; fields can be modified.</li>
+
+     <li class="MsoNormal" style="">Verify that the
+         &ldquo;Result Action&rdquo; field cannot be changed.</li>
+
+     <li class="MsoNormal" style="">Verify that when
+         you change the &ldquo;Category&rdquo; to &ldquo;Void&rdquo; and then
+         back to &ldquo;Numeric&rdquo; that the &ldquo;Result Action&rdquo;
+         remains unchanged and not editable.</li>
+
+    
+        </ol>
+
+   
+      </ol>
+
+   <li class="MsoNormal">Do some free-form
+       testing.</li>
+
+  
+    </ol>
+
+ 
+  </ul>
+
+</ul>
+
+
+<p class="MsoNormal"><o:p>&nbsp;</o:p></p>
+
+
+<!-- ---------------- --><!--      FOOTER      --><!-- ---------------- --><!--#include virtual="../footer.html"--><!-- ---------------- --><!--  Challenge       --><!-- ---------------- -->
+
+<h5><u><span style="">Challenge<span class="GramE">:</span><br>
+
+<br>
+
+</span></u><span style="">If you think
+you can come up with a better test case please don't hesitate and update this
+one.<br>
+
+<br>
+
+Also while you're testing please think about how to automate this test and do
+it. Please follow these guidelines: <a href="../WritingAutomatedTests.doc"><span class="GramE">Writing Automated Tests For</span> TestStand</a> <o:p></o:p></span></h5>
+
+
+</div>
+
+
+
+</body>
+</html>

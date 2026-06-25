@@ -1,0 +1,144 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body>
+
+<!-- ---------------- -->
+<!--      HEADER      -->
+<!-- ---------------- -->
+
+<!--#include virtual="../header.html"-->
+
+<!-- ---------------- -->
+<!--  TestStand LOGO  -->
+<!-- ---------------- -->
+
+<h1 align=right>
+<img width=273 height=65 src="../TestStandLogo.jpg">
+<h5><b>Test Case Scenario<br>National Instruments Confidential</b></h5>
+</h1>
+
+<!-- ---------------- -->
+<!--  Test Case Title -->
+<!-- ---------------- -->
+
+<TITLE>Sequence Adapter</TITLE>
+<h1 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Sequence Adapter
+</h1>
+<h4>Adapters</h4>
+<br>
+
+<!-- ----------------------- -->
+<!--  Test Case Description  -->
+<!-- ----------------------- -->
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Description
+</h2>
+</div>
+<br>
+<p>
+Test all possible options. Look at the adapter documentation to help you better understand all the options available.
+</p>
+
+<!-- --------------------- -->
+<!--  Test Case Procedure  -->
+<!-- --------------------- -->
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Procedure
+</h2>
+</div>
+<br>
+
+<p>
+<ul>
+<li>
+Test passing numeric, string, boolean, and object parameters. </li>
+<li>
+Test passing user defined types like UUT</li>
+<li>
+test passing arrays of all types</li>
+<li>
+Test passing by value and by reference</li>
+<li>
+Test typechecking feature</li>
+<li>
+Test parameter error reporting</li>
+
+<li><A HREF="../StandardTest/Adapter.html">Standard Test for Adapters</A></li>
+<li><A HREF="../StandardTest/Dialogs.html">Standard Test for Dialogs</A></li>
+
+<li>CARs
+<ul>
+		<li>CAR <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=50951">50951</a>
+		-- Test the flags in the Sequence Call Advanced Settings
+		dialog that overlap with the Additional Execution Type
+		Mask Settings.	Make sure that the behavior is the
+		logical OR of the checkboxes and the flags.
+		<ul>
+				<li>"Use Single-Threaded Aparentment" checkbox vs. ExecTypeMask_UseSTA (This was the item from the CAR.)</li>
+				<li>"Initially Suspended" checkbox vs. ExecTypeMask_InitiallySuspended</li>
+				<li>"Initially Hidden and Disable Tracing" vs. ExecTypeMask_InitiallyHidden and ExecTypeMask_TracingInitiallyOff</li>
+				<li>"Close Window When Done" vs. ExecTypeMask_CloseWindowWhenDone</li>
+				<li>"Restartable" vs. ExecTypeMask_NotRestartable (Note, this one is checked by default and the flag is equivalent to unchecking it.)</li>
+		</ul>
+		</li>
+		<li>CAR <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=638961">638961</a>:
+			Revalidate CAR 638961.  (There are full steps to reproduce in the CAR.)  Specifically, make sure that if you
+			reorder the parameters in a target sequence file, when you open the calling step in an OI, "Specify Module...",
+			and OK all the way back to the sequence, that file is modified and the call works properly.  You should also get
+			a warning dialog, much as you would if the number of parameters had changed.
+			<p>
+			The root cause of this CAR was that we were not treating the order of the actual arguments as important.  (We were
+			not passing kRequireIdenticalStructure to IsEqualTo()).  Before the fix, we were updating the prototype when the
+			order changed, but not the actual args.  With the fix, we update both.
+			<p>
+			Briefly test around the fix.  For example, verify that changing a parameter name without changing the order,
+			adding a parameter, removing a paremeter, etc. work as expected.  Verify that when nothing is changed, pressing
+			OK (without making other changes) does not caues the file to be marked dirty.  Also, although neither the CAR
+			nor the fix involved the step settings panel in the Sequence Editor, make sure the Sequence Editor does not
+			have the bug as well.
+		</li>
+
+</ul>
+</li>
+
+</ul>
+
+</p>
+
+<!-- ---------------- -->
+<!--      FOOTER      -->
+<!-- ---------------- -->
+
+
+<!--#include virtual="../footer.html"-->
+
+<!-- ---------------- -->
+<!--  Challenge       -->
+<!-- ---------------- -->
+
+<br>
+<h5>
+<u>Challenge:<br><br></u>
+<b>
+If you think you can come up with a better test case
+please don't hesitate and update this one.<br><br>
+Also while you're testing please think about how to automate this test and do it. Please 
+follow these guidelines: <A HREF="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</A>
+</b>
+</h5>
+
+
+</body>
+<HTML>

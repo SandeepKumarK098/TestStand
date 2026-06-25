@@ -1,0 +1,102 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body>
+
+<!-- ---------------- -->
+<!--      HEADER      -->
+<!-- ---------------- -->
+
+<!--#include virtual="../header.html"-->
+
+<!-- ---------------- -->
+<!--  TestStand LOGO  -->
+<!-- ---------------- -->
+
+<h1 align=right>
+<img width=273 height=65 src="../TestStandLogo.jpg">
+<h5><b>Test Case Scenario<br>National Instruments Confidential</b></h5>
+</h1>
+
+<!-- ---------------- -->
+<!--  Test Case Title -->
+<!-- ---------------- -->
+
+<TITLE>ActiveX/COM Adapter</TITLE>
+<h1 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+ActiveX/COM Adapter
+</h1>
+<h4>Adapters</h4>
+<br>
+
+<!-- ----------------------- -->
+<!--  Test Case Description  -->
+<!-- ----------------------- -->
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Description
+</h2>
+</div>
+<br>
+<p>
+Test all possible options. Look at the adapter documentation to help you better understand all the options available. 
+</p>
+
+<!-- --------------------- -->
+<!--  Test Case Procedure  -->
+<!-- --------------------- -->
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Procedure
+</h2>
+</div>
+<br>
+
+<p>
+<ul>
+<li>
+Make sure custom only interfaces work (need to write these with VC)</li>
+<li>
+Make sure the Engine.InternalOption setting InternalOption_ForceAutomationAdapterToUseDispatchForDualInterfaces works. You must verify that dispatch is being used instead of custom interface. This is easiest to do with VC written server. Set breakpoints, see how call is made (i.e. through invoke or through direct call to custom interface).</li>
+<li>
+Try numerous different data types</li>
+</ul></li>
+<li><A HREF="../StandardTest/Adapter.html">Standard Test for Adapters</A></li>
+<li><A HREF="../StandardTest/Dialogs.html">Standard Test for Dialogs</A></li>
+</ul>
+
+</p>
+
+<!-- ---------------- -->
+<!--      FOOTER      -->
+<!-- ---------------- -->
+
+
+<!--#include virtual="../footer.html"-->
+
+<!-- ---------------- -->
+<!--  Challenge       -->
+<!-- ---------------- -->
+
+<br>
+<h5>
+<u>Challenge:<br><br></u>
+<b>
+If you think you can come up with a better test case
+please don't hesitate and update this one.<br><br>
+Also while you're testing please think about how to automate this test and do it. Please 
+follow these guidelines: <A HREF="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</A>
+</b>
+</h5>
+
+
+</body>
+<HTML>
