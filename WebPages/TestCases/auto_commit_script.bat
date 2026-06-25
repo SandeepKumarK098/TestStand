@@ -28,3 +28,4 @@ git push -u origin master
 echo.
 echo Done. Pushed as "Commit %num%".
 pause
+exit
