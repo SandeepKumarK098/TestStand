@@ -1,0 +1,111 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body>
+
+<!-- ---------------- -->
+<!--      HEADER      -->
+<!-- ---------------- -->
+
+<!--#include virtual="../header.html"-->
+
+<!-- ---------------- -->
+<!--  TestStand LOGO  -->
+<!-- ---------------- -->
+
+<h1 align=right>
+<img width=273 height=65 src="../TestStandLogo.jpg">
+<h5><b>Test Case Scenario<br>National Instruments Confidential</b></h5>
+</h1>
+
+<!-- ---------------- -->
+<!--  Test Case Title -->
+<!-- ---------------- -->
+
+<TITLE>Converting LV and CVI Toolkit sequences</TITLE>
+<h1 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Converting LV and CVI Toolkit sequences
+</h1>
+<h4>Backwards Compatibility</h4>
+<br>
+
+<!-- ----------------------- -->
+<!--  Test Case Description  -->
+<!-- ----------------------- -->
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Description
+</h2>
+</div>
+<br>
+<p>
+Verify that a new TestStand release can work with converted LV and CVI Toolkit sequences.
+</p>
+
+<!-- --------------------- -->
+<!--  Test Case Procedure  -->
+<!-- --------------------- -->
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Procedure
+</h2>
+</div>
+<br>
+
+<p>
+<ul>
+<li>
+Install the CVI and LV Toolkils:
+	<ul>
+	<li>\\nirvana\niinstallers\Old\CVI\Toolkits\TestExec\2.0.1
+	<li>\\nirvana\niinstallers\Old\LabVIEW Toolsets\TestExecutive
+	</ul>
+<p>
+On Vista you should install them to a directory that's writeable (not in C:\Program Files)
+<p>
+<li>
+Acquire a suite of CVI and LV toolkit sequences. You can use the example sequences that come with the toolkits.</li>
+<p>
+<li>
+Convert the toolkit sequences. If you're using the examples from the CVI and LV toolkits, it's best to save the converted sequences to the same directory as the original sequences so you don't break the relative paths.</li>
+<p>
+<li>
+Verify that they run and all options were converted correctly. </li>
+</ul></li>
+</ul>
+
+</p>
+
+<!-- ---------------- -->
+<!--      FOOTER      -->
+<!-- ---------------- -->
+
+
+<!--#include virtual="../footer.html"-->
+
+<!-- ---------------- -->
+<!--  Challenge       -->
+<!-- ---------------- -->
+
+<br>
+<h5>
+<u>Challenge:<br><br></u>
+<b>
+If you think you can come up with a better test case
+please don't hesitate and update this one.<br><br>
+Also while you're testing please think about how to automate this test and do it. Please 
+follow these guidelines: <A HREF="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</A>
+</b>
+</h5>
+
+
+</body>
+<HTML>

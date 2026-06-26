@@ -1,0 +1,107 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body>
+
+<!-- ---------------- -->
+<!--      HEADER      -->
+<!-- ---------------- -->
+
+<!--#include virtual="../header.html"-->
+
+<!-- ---------------- -->
+<!--  TestStand LOGO  -->
+<!-- ---------------- -->
+
+<h1 align=right>
+<img width=273 height=65 src="../TestStandLogo.jpg">
+<h5><b>Test Case Scenario<br>National Instruments Confidential</b></h5>
+</h1>
+
+<!-- ---------------- -->
+<!--  Test Case Title -->
+<!-- ---------------- -->
+
+<TITLE>API Changes</TITLE>
+<h1 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+API Changes
+</h1>
+<h4>Backwards Compatibility</h4>
+<br>
+
+<!-- ----------------------- -->
+<!--  Test Case Description  -->
+<!-- ----------------------- -->
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Description
+</h2>
+</div>
+<br>
+<p>
+Make sure that all API changes are backwards compatible.
+</p>
+
+<!-- --------------------- -->
+<!--  Test Case Procedure  -->
+<!-- --------------------- -->
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Procedure
+</h2>
+</div>
+<br>
+
+<p>
+Run the type library diffing tool located here:
+<p>
+//TestStand/Users/Jimmy/TypeLibDiff/Debug/TypeLibDiff.exe
+<p>
+Enable the 'Show Binary Changing Differences Only' option. Diff each of the type libraries for the following APIs for the current version of TestStand with their corresponding type library from
+the previous version of TestStand:
+<p>
+<ol>
+<li>Core TestStand API (teapi.dll)
+<li>Adapters API (TsAdpApi.tlb)
+<li>UI Controls API (tsui.dll)
+<li>UI Controls Support API (tsuisupp.dll)
+<li>Session Manager API (TsSEManager.dll)
+</ol>
+<p>
+The Type Libarary Differ shows additions in blue and deletions in red and struck out. Additions are OK but
+any deletions should have a good reason and should be investigated.
+</p>
+
+<!-- ---------------- -->
+<!--      FOOTER      -->
+<!-- ---------------- -->
+
+
+<!--#include virtual="../footer.html"-->
+
+<!-- ---------------- -->
+<!--  Challenge       -->
+<!-- ---------------- -->
+
+<br>
+<h5>
+<u>Challenge:<br><br></u>
+<b>
+If you think you can come up with a better test case
+please don't hesitate and update this one.<br><br>
+Also while you're testing please think about how to automate this test and do it. Please 
+follow these guidelines: <A HREF="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</A>
+</b>
+</h5>
+
+
+</body>
+<HTML>
