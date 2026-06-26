@@ -1,0 +1,4 @@
+C:\Perforce\TestStand\WebPages\TestCases\VisualStudioIntegration\Media\CSharp\VS2012\VS2012\bin\Debug\VS2012.dll
+C:\Perforce\TestStand\WebPages\TestCases\VisualStudioIntegration\Media\CSharp\VS2012\VS2012\bin\Debug\VS2012.pdb
+C:\Perforce\TestStand\WebPages\TestCases\VisualStudioIntegration\Media\CSharp\VS2012\VS2012\obj\Debug\VS2012.dll
+C:\Perforce\TestStand\WebPages\TestCases\VisualStudioIntegration\Media\CSharp\VS2012\VS2012\obj\Debug\VS2012.pdb
