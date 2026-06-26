@@ -1,0 +1,49 @@
+[ProjectWindow_Data]
+ProjectExplorer.ClassicPosition[String] = "64,38,464,368"
+
+[AB_Cache_{521C4E6D-27D0-4AEE-80F2-8CA32C2D4E39}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "6f7bbe7c3095d35388c66c262336906d"
+Cache_MyCompChksum[String] = "dfc66b26554df4c33e0e8ffb216f707c"
+Cache_GenFile_Count[Integer] = 5
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[0][Path] Line0002 = "ted/LVDLL/myDLL.dll"
+Cache_GenFile[1][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[1][Path] Line0002 = "ted/LVDLL/myDLL.aliases"
+Cache_GenFile[2][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[2][Path] Line0002 = "ted/LVDLL/myDLL.ini"
+Cache_GenFile[3][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[3][Path] Line0002 = "ted/LVDLL/myDLL.h"
+Cache_GenFile[4][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[4][Path] Line0002 = "ted/LVDLL/myDLL.lib"
+Cache_GenGUID_Count[Integer] = 5
+Cache_GenGUID[0][String] = "{4B5E5DB5-C546-4FC0-8718-106B2067DB68}"
+Cache_GenGUID[1][String] = ""
+Cache_GenGUID[2][String] = ""
+Cache_GenGUID[3][String] = "{CE1D9E29-C33E-444A-87B4-1E1414EB6665}"
+Cache_GenGUID[4][String] = "{43501973-DF82-4FB8-990B-27D1FEC9DDEA}"
+Cache_OutputDir[Path] = "/D/tsdev/Tests/LVBuildValidation/11.0/Automated/LVDLL"
+
+[AB_Cache_{ED72A946-A933-4C84-8AF2-E5374A128D58}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "6f7bbe7c3095d35388c66c262336906d"
+Cache_MyCompChksum[String] = "dfc66b26554df4c33e0e8ffb216f707c"
+Cache_GenFile_Count[Integer] = 5
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[0][Path] Line0002 = "ted/LVDLL/myDLL.dll"
+Cache_GenFile[1][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[1][Path] Line0002 = "ted/LVDLL/myDLL.aliases"
+Cache_GenFile[2][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[2][Path] Line0002 = "ted/LVDLL/myDLL.ini"
+Cache_GenFile[3][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[3][Path] Line0002 = "ted/LVDLL/myDLL.h"
+Cache_GenFile[4][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[4][Path] Line0002 = "ted/LVDLL/myDLL.lib"
+Cache_GenGUID_Count[Integer] = 5
+Cache_GenGUID[0][String] = "{4B5E5DB5-C546-4FC0-8718-106B2067DB68}"
+Cache_GenGUID[1][String] = ""
+Cache_GenGUID[2][String] = ""
+Cache_GenGUID[3][String] = "{CE1D9E29-C33E-444A-87B4-1E1414EB6665}"
+Cache_GenGUID[4][String] = "{43501973-DF82-4FB8-990B-27D1FEC9DDEA}"
+Cache_OutputDir[Path] = "/D/tsdev/Tests/LVBuildValidation/11.0/Automated/LVDLL"
+

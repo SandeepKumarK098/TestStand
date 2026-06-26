@@ -1,0 +1,2018 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.5.0.500
+CompatibleProdVersion = 3.5.0.0
+Version = 354
+Type = "SequenceFile"
+Path = "C:\\TSDev\\Users\\Carlos\\LVBuildValidation\\FlexLVAdapter30\\Plots\\TestPlotReferences.seq"
+ProductVersionString = "3.5 (3.5.0.500)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+SF = SequenceFileData
+Path = PathValue
+StepTypeSubstepsArray = Objs
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+DigitalWaveformGraphType = Obj
+Expression = ExprValue
+SequenceCall = StepType
+SeqCallStepAdditions = SeqCallModule
+Action = StepType
+FlexGStepAdditions = FGModule
+VIParameter = VIParameter
+PointType = Obj
+AlignmentType = Obj
+UserSpecifiedFontType = Obj
+Rectangletype = Obj
+VIParameterElement = VIParameterElement
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+Requirements = Obj
+%NAME = "Data"
+
+[SF]
+%HI: Seq = [1]
+%FLG: Seq = 4194304
+%FLG: FileGlobalDefaults = 4194304
+%FLG: ModelFile = 4194312
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 4194312
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 4194312
+Version = "0.0.0.0"
+%FLG: Version = 4194312
+BatchSync = 1
+%FLG: BatchSync = 4194312
+%FLG: SFGlobalsScope = 4194312
+%FLG: Type = 4194312
+%FLG: ModelOption = 4194312
+%FLG: Requirements = 4194305
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [7]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+Plot = Str
+WaveformPlot = Str
+XYPlot = Str
+DigitalWaveformGraph = "TYPE, DigitalWaveformGraphType"
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Main]
+%[0] = Step
+%TYPE: %[0] = "SequenceCall"
+%[1] = Step
+%TYPE: %[1] = "SequenceCall"
+%[2] = Step
+%TYPE: %[2] = "SequenceCall"
+%[3] = Step
+%TYPE: %[3] = "SequenceCall"
+%[4] = Step
+%TYPE: %[4] = "SequenceCall"
+%[5] = Step
+%TYPE: %[5] = "SequenceCall"
+%[6] = Step
+%TYPE: %[6] = "SequenceCall"
+%[7] = Step
+%TYPE: %[7] = "SequenceCall"
+
+[SF.Seq[0].Main[0].TS]
+Id = "ID#:5uhDDJ7bQECD0BnI0lRkvB"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[0].TS.SData]
+SFPath = "SmithPlot\\TestSmithPlotReferences.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Test Smith Plot References"
+
+[SF.Seq[0].Main[1].TS]
+Id = "ID#:uMpvDjE6ok6kbuu0BngbGC"
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[1].TS.SData]
+SFPath = "RadarPlot\\TestRadarPlotReferences.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Test Radar Plot References"
+
+[SF.Seq[0].Main[2].TS]
+Id = "ID#:KD5wNugjt0eZdrIBbjdQ7D"
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[2].TS.SData]
+SFPath = "WaveformAndXYPlot\\TestWaveformAndXYPlotReferences.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "Test Waveform And XY Plots"
+
+[SF.Seq[0].Main[3].TS]
+Id = "ID#:jBIQUeZgo0ujEI//Y0oKqC"
+
+[DEF, SF.Seq[0].Main[3].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[3].TS.SData]
+SFPath = "PolarPlot\\Test Polar Plot References.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "Test Polar Plot References"
+
+[SF.Seq[0].Main[4].TS]
+Id = "ID#:U0D4t/bduUiTyZVynkYKXD"
+
+[DEF, SF.Seq[0].Main[4].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[4].TS.SData]
+SFPath = "Picture\\Test Picture References.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "Test Picture References"
+
+[SF.Seq[0].Main[5].TS]
+Id = "ID#:he3SsR5Mfk+311xrFs50/D"
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[5].TS.SData]
+SFPath = "DistributionPlot\\Test Distribution Plot References.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "Test Distribution Plot References"
+
+[SF.Seq[0].Main[6].TS]
+Id = "ID#:/02bn6SsTUqu0zLPz+tk1B"
+
+[DEF, SF.Seq[0].Main[6].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[6].TS.SData]
+SFPath = "Min-MaxPlot\\TestMinMaxPlottReferences.seq"
+SeqName = "MainSequence"
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Test Min-Max Plot References"
+
+[SF.Seq[0].Main[7].TS]
+Id = "ID#:1wdF70I4JECYDx/YSoW5BA"
+
+[DEF, SF.Seq[0].Main[7].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[7].TS.SData]
+SeqName = "TestPlotDataTypes"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "Test Plot Data Types"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[DEF, SF.Seq[0].Requirements]
+Links = Strs
+
+[SF.Seq[0].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "TestPlotDataTypes"
+
+[SF.Seq[1]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [2]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[1].Locals]
+ResultList = Objs
+Point1 = "TYPE, PointType"
+Point2 = "TYPE, PointType"
+Alignment = "TYPE, AlignmentType"
+UserSpecifiedFont = "TYPE, UserSpecifiedFontType"
+DesiredFont = Num
+Rectangle = "TYPE, Rectangletype"
+TextToDraw = Str
+Picture = Str
+ExpectedPicture = Str
+Tmp1 = Num
+Tmp2 = Num
+
+[DEF, SF.Seq[1].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[1].Locals]
+TextToDraw = "TestStand Rules"
+
+[DEF, SF.Seq[1].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "Action"
+
+[SF.Seq[1].Main[0].TS]
+Id = "ID#:q/DXQchvGE+Qq5MdaTp5GB"
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, FlexGStepAdditions"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall]
+VIPath = "PlotDataTypesOut.vi"
+TDChecksum = -1906994614
+%HI: Parms = [5]
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0]]
+Label = "point 2"
+ArgVal = "Locals.Point2"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+Direction = 1
+ConnectorNumber = 1
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "x"
+ArgVal = "Locals.Point2.x"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "x"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "y"
+ArgVal = "Locals.Point2.y"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "y"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[0]]
+%NAME = "point 2"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1]]
+Label = "point"
+ArgVal = "Locals.Point1"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+Direction = 1
+ConnectorNumber = 5
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "x"
+ArgVal = "Locals.Point1.x"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "x"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "y"
+ArgVal = "Locals.Point1.y"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "y"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[1]]
+%NAME = "point"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2]]
+Label = "alignment"
+ArgVal = "Locals.Alignment"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+Direction = 1
+ConnectorNumber = 6
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+Label = "horizontal"
+ArgVal = "Locals.Alignment.horizontal"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+%NAME = "horizontal"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+Label = "vertical"
+ArgVal = "Locals.Alignment.vertical"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+%NAME = "vertical"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[2]]
+%NAME = "alignment"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[3]]
+Label = "desired font"
+ArgVal = "Locals.DesiredFont"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+Direction = 1
+ConnectorNumber = 7
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[3]]
+%NAME = "desired font"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4]]
+Label = "user-specified font"
+ArgVal = "Locals.UserSpecifiedFont"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [7]
+Direction = 1
+ConnectorNumber = 8
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+%[4] = "TYPE, VIParameterElement"
+%[5] = "TYPE, VIParameterElement"
+%[6] = "TYPE, VIParameterElement"
+%[7] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+Label = "Font Name:"
+ArgVal = "Locals.UserSpecifiedFont.FontName"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+%NAME = "Font Name:"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+Label = "Size"
+ArgVal = "Locals.UserSpecifiedFont.Size"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+%NAME = "Size"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+Label = "Strikeout?"
+ArgVal = "Locals.UserSpecifiedFont.Strikeout"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+%NAME = "Strikeout?"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+Label = "Italic?"
+ArgVal = "Locals.UserSpecifiedFont.Italic"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+%NAME = "Italic?"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[4]]
+Label = "Underline?"
+ArgVal = "Locals.UserSpecifiedFont.Underline"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[4]]
+%NAME = "Underline?"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[5]]
+Label = "Outline?"
+ArgVal = "Locals.UserSpecifiedFont.Outline"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[5]]
+%NAME = "Outline?"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[6]]
+Label = "Shadow?"
+ArgVal = "Locals.UserSpecifiedFont.Shadow"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[6]]
+%NAME = "Shadow?"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[7]]
+Label = "Bold?"
+ArgVal = "Locals.UserSpecifiedFont.Bold"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[7]]
+%NAME = "Bold?"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[4]]
+%NAME = "user-specified font"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5]]
+Label = "rect"
+ArgVal = "Locals.Rectangle"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[0]]
+Label = "left"
+ArgVal = "Locals.Rectangle.left"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[0]]
+%NAME = "left"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[1]]
+Label = "top"
+ArgVal = "Locals.Rectangle.top"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[1]]
+%NAME = "top"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[2]]
+Label = "right"
+ArgVal = "Locals.Rectangle.right"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[2]]
+%NAME = "right"
+
+[SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[3]]
+Label = "bottom"
+ArgVal = "Locals.Rectangle.bottom"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[3]]
+%NAME = "bottom"
+
+[DEF, SF.Seq[1].Main[0].TS.SData.ViCall.Parms[5]]
+%NAME = "rect"
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Get Data Types"
+
+[SF.Seq[1].Main[1].TS]
+Id = "ID#:/BTUg0tmT0mhn+PB3a4R7C"
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, FlexGStepAdditions"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall]
+VIPath = "PlotDataTypes.vi"
+TDChecksum = 42038686
+%HI: Parms = [7]
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+%[7] = "TYPE, VIParameter"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[0]]
+Label = "text"
+ArgVal = "Locals.TextToDraw"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+ConnectorNumber = 1
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[0]]
+%NAME = "text"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1]]
+Label = "alignment"
+ArgVal = "Locals.Alignment"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+ConnectorNumber = 3
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "horizontal"
+ArgVal = "Locals.Alignment.horizontal"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "horizontal"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "vertical"
+ArgVal = "Locals.Alignment.vertical"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "vertical"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[1]]
+%NAME = "alignment"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2]]
+Label = "point"
+ArgVal = "Locals.Point1"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+ConnectorNumber = 7
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+Label = "x"
+ArgVal = "Locals.Point1.x"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+%NAME = "x"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+Label = "y"
+ArgVal = "Locals.Point1.y"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+%NAME = "y"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[2]]
+%NAME = "point"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3]]
+Label = "point 2"
+ArgVal = "Locals.Point2"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [1]
+ConnectorNumber = 6
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+Label = "x"
+ArgVal = "Locals.Point2.x"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+%NAME = "x"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+Label = "y"
+ArgVal = "Locals.Point2.y"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+%NAME = "y"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[3]]
+%NAME = "point 2"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4]]
+Label = "rect"
+ArgVal = "Locals.Rectangle"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 5
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+Label = "left"
+ArgVal = "Locals.Rectangle.left"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+%NAME = "left"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+Label = "top"
+ArgVal = "Locals.Rectangle.top"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+%NAME = "top"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+Label = "right"
+ArgVal = "Locals.Rectangle.right"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+%NAME = "right"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+Label = "bottom"
+ArgVal = "Locals.Rectangle.bottom"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+%NAME = "bottom"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[4]]
+%NAME = "rect"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[5]]
+Label = "desired font"
+ArgVal = "Locals.DesiredFont"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+ConnectorNumber = 4
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[5]]
+%NAME = "desired font"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6]]
+Label = "user-specified font"
+ArgVal = "Locals.UserSpecifiedFont"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%HI: ArrayClusterEls = [7]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+%[4] = "TYPE, VIParameterElement"
+%[5] = "TYPE, VIParameterElement"
+%[6] = "TYPE, VIParameterElement"
+%[7] = "TYPE, VIParameterElement"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+Label = "Font Name:"
+ArgVal = "Locals.UserSpecifiedFont.FontName"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+%NAME = "Font Name:"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+Label = "Size"
+ArgVal = "Locals.UserSpecifiedFont.Size"
+Type = 0
+WireRequirement = 1
+NumType = 2
+DisplayType = "Number (I16)"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+%NAME = "Size"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+Label = "Strikeout?"
+ArgVal = "Locals.UserSpecifiedFont.Strikeout"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+%NAME = "Strikeout?"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+Label = "Italic?"
+ArgVal = "Locals.UserSpecifiedFont.Italic"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+%NAME = "Italic?"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[4]]
+Label = "Underline?"
+ArgVal = "Locals.UserSpecifiedFont.Underline"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[4]]
+%NAME = "Underline?"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[5]]
+Label = "Outline?"
+ArgVal = "Locals.UserSpecifiedFont.Outline"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[5]]
+%NAME = "Outline?"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[6]]
+Label = "Shadow?"
+ArgVal = "Locals.UserSpecifiedFont.Shadow"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[6]]
+%NAME = "Shadow?"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[7]]
+Label = "Bold?"
+ArgVal = "Locals.UserSpecifiedFont.Bold"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[7]]
+%NAME = "Bold?"
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[6]]
+%NAME = "user-specified font"
+
+[SF.Seq[1].Main[1].TS.SData.ViCall.Parms[7]]
+Label = "Picture"
+ArgVal = "Locals.Picture"
+Type = 1
+WireRequirement = 1
+StrPass = 1
+DisplayType = "Binary String"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[1].Main[1].TS.SData.ViCall.Parms[7]]
+%NAME = "Picture"
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "Create Picture"
+
+[SF.Seq[1].Main[2].TS]
+Id = "ID#:0EzV/bzw2Uq/vr+TeFtI6B"
+PostExpr = "Locals.Tmp1 = Len( Locals.Picture),\rLocals.Tmp2 = Len(Locals.ExpectedPicture)"
+StatusExpr = " Locals.ExpectedPicture == Locals.Picture ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[2].TS]
+SData = "TYPE, FlexGStepAdditions"
+
+[SF.Seq[1].Main[2].TS.SData.ViCall]
+VIPath = "Verify Data Types.vi"
+TDChecksum = 823049799
+%HI: Parms = [1]
+
+[DEF, SF.Seq[1].Main[2].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+
+[SF.Seq[1].Main[2].TS.SData.ViCall.Parms[0]]
+Label = "text"
+ArgVal = "Locals.TextToDraw"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+ConnectorNumber = 1
+
+[DEF, SF.Seq[1].Main[2].TS.SData.ViCall.Parms[0]]
+%NAME = "text"
+
+[SF.Seq[1].Main[2].TS.SData.ViCall.Parms[1]]
+Label = "Picture"
+ArgVal = "Locals.ExpectedPicture"
+Type = 1
+WireRequirement = 1
+StrPass = 1
+DisplayType = "Binary String"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[1].Main[2].TS.SData.ViCall.Parms[1]]
+%NAME = "Picture"
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Verify Picture"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[1].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[DEF, SF.Seq[1].Requirements]
+Links = Strs
+
+[SF.Seq[1].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Requirements]
+Links = Strs
+
+[SF.Requirements]
+%FLG: Links = 71303168
+
+[%TYPES]
+Path = "Path"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+DigitalWaveformGraphType = "DigitalWaveformGraphType"
+Expression = "Expression"
+SequenceCall = "SequenceCall"
+SeqCallStepAdditions = "SeqCallStepAdditions"
+Action = "Action"
+FlexGStepAdditions = "FlexGStepAdditions"
+VIParameter = "VIParameter"
+PointType = "PointType"
+AlignmentType = "AlignmentType"
+UserSpecifiedFontType = "UserSpecifiedFontType"
+Rectangletype = "Rectangletype"
+VIParameterElement = "VIParameterElement"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4718616
+%INSTOVRD = 4849688
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = "TYPE, Expression"
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Id = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = "TYPE, Expression"
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = "TYPE, Expression"
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = "TYPE, Expression"
+SwitchOperation = Num
+RouteGroupConnect = "TYPE, Expression"
+RouteGroupDisconnect = "TYPE, Expression"
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = "TYPE, Expression"
+FailActTarget = "TYPE, Expression"
+CustExpr = "TYPE, Expression"
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = "TYPE, Expression"
+CustFalseActTarget = "TYPE, Expression"
+LoopType = Str
+LoopWhile = "TYPE, Expression"
+LoopStatus = "TYPE, Expression"
+LoopIncrement = "TYPE, Expression"
+LoopInitialize = "TYPE, Expression"
+LoopOpt = Num
+PreExpr = "TYPE, Expression"
+PostExpr = "TYPE, Expression"
+StatusExpr = "TYPE, Expression"
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+Requirements = Obj
+%FLG: Requirements = 2097152
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: Id = 1
+%INSTOVRD: Id = 5046297
+%INSTOVRD: Icon = 5046296
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+%INSTOVRD: PreCond = 5046296
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046296
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046296
+Mode = "Normal"
+%INSTOVRD: Mode = 5046296
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046296
+%INSTOVRD: NoResult = 5046296
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046296
+%INSTOVRD: IgnoreRTE = 5046296
+%INSTOVRD: UseMutex = 5046296
+%INSTOVRD: MutexNameOrRef = 5046296
+%INSTOVRD: BatchSyncOpt = 5046296
+%INSTOVRD: SwitchEnabled = 5046296
+%INSTOVRD: VirtualDeviceName = 5046296
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046296
+%INSTOVRD: RouteGroupConnect = 5046296
+%INSTOVRD: RouteGroupDisconnect = 5046296
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046296
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046296
+ConnectionLifetime = 4
+%INSTOVRD: ConnectionLifetime = 5046296
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046296
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046296
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046296
+%INSTOVRD: PassActTarget = 5046296
+%INSTOVRD: FailActTarget = 5046296
+%INSTOVRD: CustExpr = 5046296
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046296
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046296
+%INSTOVRD: CustTrueActTarget = 5046296
+%INSTOVRD: CustFalseActTarget = 5046296
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046296
+%INSTOVRD: LoopWhile = 5046296
+%INSTOVRD: LoopStatus = 5046296
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046296
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046296
+%INSTOVRD: LoopOpt = 5046296
+%INSTOVRD: PreExpr = 5046296
+%INSTOVRD: PostExpr = 5046296
+%INSTOVRD: StatusExpr = 5046296
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046296
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046296
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046296
+%INSTOVRD: PrecondIntExe = 5046296
+%FLG: Requirements = 1
+%INSTFLG: Requirements = 2097153
+%INSTOVRD: Requirements = 7143449
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4456472
+%INSTOVRD = 4456472
+
+[DEF, TEInf.Requirements]
+Links = Strs
+
+[TEInf.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+%EXTDATA = True
+
+[Error.Code]
+%EXTDATA = True
+
+[EXTDATA, Error.Code, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Code, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "code"
+
+[EXTDATA, Error.Code, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "code"
+
+[Error.Msg]
+%EXTDATA = True
+
+[EXTDATA, Error.Msg, STRUCT]
+DataVersion = 1
+Type = 2
+StringBufferSize = 1024
+StringStorage = 1
+
+[EXTDATA, Error.Msg, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "source"
+
+[EXTDATA, Error.Msg, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "msg"
+
+[Error.Occurred]
+%EXTDATA = True
+
+[EXTDATA, Error.Occurred, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Occurred, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "status"
+
+[EXTDATA, Error.Occurred, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "occurred"
+
+[EXTDATA, Error, STRUCT]
+AllowStructPassing = True
+DataVersion = 1
+PackingOption = 8
+Type = 0
+
+[EXTDATA, Error, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[EXTDATA, Error, DNSTRUCT]
+AllowStructPassing = True
+DataVersion = 1
+StructMemberName = ""
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1125471749
+%VERSION = "3.1.0.100"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.1.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%INSTFLG = 4194304
+
+[DEF, DigitalWaveformGraphType]
+%LOCATION = "UserTypes"
+Element1 = Obj
+Array = Nums
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[DEF, DigitalWaveformGraphType.Element1]
+x0 = Num
+dX = Num
+Data = Nums
+Ports = Num
+
+[DigitalWaveformGraphType.Element1.x0]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Element1.x0, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "x0"
+
+[DigitalWaveformGraphType.Element1.dX]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Element1.dX, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "dX"
+
+[DigitalWaveformGraphType.Element1.Data]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Element1.Data, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Data"
+
+[DigitalWaveformGraphType.Element1.Ports]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Element1.Ports, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Ports"
+
+[DigitalWaveformGraphType.Element1]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Element1, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = "Element1"
+
+[DigitalWaveformGraphType]
+%LO: Array = [0][0]
+%TIMESTAMP = 1028133247
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.31"
+%EXTDATA = True
+
+[DigitalWaveformGraphType.Array]
+%EXTDATA = True
+
+[EXTDATA, DigitalWaveformGraphType.Array, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Array"
+
+[EXTDATA, DigitalWaveformGraphType, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[DEF, Expression]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Expression]
+%TIMESTAMP = 1125466619
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+
+[DEF, SequenceCall]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[SequenceCall]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"SC_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582619
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554438
+
+[SequenceCall.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"SC_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[SequenceCall.TS]
+Icon = "SeqAdp.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+StatusExpr Line0001 = "(Step.Result.Status == \"Done\" && (Step.TS.SData.ThreadOpt == 0 || Step.TS.SData.ThreadOpt == 3)) ? \"Passed\" : Step.R"
+StatusExpr Line0002 = "esult.Status"
+%INSTFLG: StatusExpr = 1
+%INSTOVRD: StatusExpr = 5046297
+%FLG: Requirements = 1
+
+[DEF, SequenceCall.TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, SequenceCall.TS.Requirements]
+Links = Strs
+
+[SequenceCall.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, SequenceCall.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[SequenceCall.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, SeqCallStepAdditions]
+%LOCATION = "StdTypes"
+SFPath = "TYPE, Path"
+SFPathExpr = "TYPE, Expression"
+SeqName = Str
+SeqNameExpr = "TYPE, Expression"
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+UseCurFile = Bool
+SpecifyByExpr = Bool
+Prototype = Obj
+%FLG: Prototype = 2097152
+UsePrototype = Bool
+SpecifyHostByExpr = Bool
+RemoteExecution = Bool
+RemoteHost = Str
+RemoteHostExpr = "TYPE, Expression"
+AutoWaitAsync = Bool
+CreateThreadSuspended = Bool
+AsyncThreadExpr = "TYPE, Expression"
+AsyncApartmentThreaded = Bool
+ThreadOpt = Num
+ExecModelOpt = Num
+ExecTypeMask = Num
+ExecTypeMaskExpr = "TYPE, Expression"
+ExecBreakOnEntryExpr = "TYPE, Expression"
+ExecModelPath = "TYPE, Path"
+ExecModelPathExpr = "TYPE, Expression"
+ExecSync = Bool
+Trace = Str
+IgnoreTerminate = Bool
+%ROOT_TYPE = True
+
+[SeqCallStepAdditions]
+%INSTFLG: ActualArgs = 2097152
+%INSTFLG: Prototype = 2097152
+AutoWaitAsync = True
+ExecModelOpt = 1
+ExecBreakOnEntryExpr = "False"
+Trace = "Don't Change"
+%TIMESTAMP = 1125467780
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[Action]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582610
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+%FLG: Requirements = 1
+
+[DEF, Action.TS.Requirements]
+Links = Strs
+
+[Action.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, FlexGStepAdditions]
+%LOCATION = "StdTypes"
+ViCall = VICall
+%ROOT_TYPE = True
+
+[DEF, FlexGStepAdditions.ViCall]
+VIPath = "TYPE, Path"
+RemoteVIPath = "TYPE, Path"
+ExpressVIName = Str
+VIType = Num
+ShowFrnPnl = Bool
+VIDescription = Str
+TDChecksum = Num
+AutoDetectLVRT = Bool
+RemoteHost = "TYPE, Expression"
+RemoteHostByExpr = Bool
+DupLabelsFound = Bool
+VI = Str
+Parms = Objs
+
+[FlexGStepAdditions.ViCall]
+TDChecksum = -1
+
+[DEF, FlexGStepAdditions.ViCall.Parms]
+%EPTYPE = "TYPE, VIParameter"
+%FLG: %EPTYPE = 131072
+
+[FlexGStepAdditions]
+%TIMESTAMP = 1125467593
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, VIParameter]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+DefaultArraySize = Str
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+UseDefaultValues = Bool
+PartiallySpecified = Bool
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+UserData = Obj
+%FLG: UserData = 2097152
+Direction = Num
+ConnectorNumber = Num
+LegacyClusterType = Num
+%ROOT_TYPE = True
+
+[VIParameter]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+DefaultArraySize = "[]"
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%INSTFLG: UserData = 2097152
+ConnectorNumber = -1
+%TIMESTAMP = 1125467593
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, PointType]
+%LOCATION = "UserTypes"
+x = Num
+y = Num
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[PointType.x]
+%EXTDATA = True
+
+[EXTDATA, PointType.x, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "x"
+
+[PointType.y]
+%EXTDATA = True
+
+[EXTDATA, PointType.y, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "y"
+
+[PointType]
+%TIMESTAMP = 1031779218
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.72"
+%EXTDATA = True
+
+[EXTDATA, PointType, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[DEF, AlignmentType]
+%LOCATION = "UserTypes"
+horizontal = Num
+vertical = Num
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[AlignmentType.horizontal]
+%EXTDATA = True
+
+[EXTDATA, AlignmentType.horizontal, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "horizontal"
+
+[AlignmentType.vertical]
+%EXTDATA = True
+
+[EXTDATA, AlignmentType.vertical, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "vertical"
+
+[AlignmentType]
+%TIMESTAMP = 1031779252
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.72"
+%EXTDATA = True
+
+[EXTDATA, AlignmentType, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[DEF, UserSpecifiedFontType]
+%LOCATION = "UserTypes"
+FontName = Str
+Size = Num
+Strikeout = Bool
+Italic = Bool
+Underline = Bool
+Outline = Bool
+Shadow = Bool
+Bold = Bool
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[UserSpecifiedFontType.FontName]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.FontName, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Font Name:"
+
+[UserSpecifiedFontType.Size]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Size, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Size"
+
+[UserSpecifiedFontType.Strikeout]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Strikeout, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Strikeout?"
+
+[UserSpecifiedFontType.Italic]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Italic, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Italic?"
+
+[UserSpecifiedFontType.Underline]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Underline, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Underline?"
+
+[UserSpecifiedFontType.Outline]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Outline, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Outline?"
+
+[UserSpecifiedFontType.Shadow]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Shadow, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Shadow?"
+
+[UserSpecifiedFontType.Bold]
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType.Bold, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Bold?"
+
+[UserSpecifiedFontType]
+%TIMESTAMP = 1031780010
+%VERSION = "0.0.0.2"
+%TYPELASTMOD = "3.0.0.72"
+%EXTDATA = True
+
+[EXTDATA, UserSpecifiedFontType, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[DEF, Rectangletype]
+%LOCATION = "UserTypes"
+left = Num
+top = Num
+right = Num
+bottom = Num
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[Rectangletype.left]
+%EXTDATA = True
+
+[EXTDATA, Rectangletype.left, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "left"
+
+[Rectangletype.top]
+%EXTDATA = True
+
+[EXTDATA, Rectangletype.top, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "top"
+
+[Rectangletype.right]
+%EXTDATA = True
+
+[EXTDATA, Rectangletype.right, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "right"
+
+[Rectangletype.bottom]
+%EXTDATA = True
+
+[EXTDATA, Rectangletype.bottom, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "bottom"
+
+[Rectangletype]
+%TIMESTAMP = 1031779349
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.72"
+%EXTDATA = True
+
+[EXTDATA, Rectangletype, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[DEF, VIParameterElement]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+DefaultArraySize = Str
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+UseDefaultValues = Bool
+PartiallySpecified = Bool
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+UserData = Obj
+%FLG: UserData = 2097152
+%ROOT_TYPE = True
+
+[VIParameterElement]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+DefaultArraySize = "[]"
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%INSTFLG: UserData = 2097152
+%TIMESTAMP = 1125467593
+%VERSION = "3.5.0.500"
+%TYPELASTMOD = "3.5.0.500"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+

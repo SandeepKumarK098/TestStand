@@ -1,0 +1,22 @@
+[DEF, %OBJROOT]
+PersistedBreakpointArray = Objs
+PersistedWatchpointArray = Objs
+
+[DEF, PersistedBreakpointArray]
+%NAME = ""
+
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 4.5.0.22
+CompatibleProdVersion = 4.5.0.0
+Version = 574
+Type = "TEPersisted"
+Path Line0001 = "D:\\Tests\\LV Shared\\LV Adapter Tests\\9.0\\LabVIEWProjects\\Execution\\UnderAutoPopulateFolder\\UnderAutoPopulateFolde"
+Path Line0002 = "r.opt"
+ProductVersionString = "4.5 (4.5.0.22)"
+Description = ""
+CharEncoding = ""
+
+[DEF, PersistedWatchpointArray]
+%NAME = ""
+

@@ -1,0 +1,87 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.1.0.67
+CompatibleProdVersion = 3.1.0.0
+Version = 304
+Type = "TSProjectFile"
+Path = "D:\\Tests\\3.1\\Express\\All Express.tpj"
+ProductVersionString = "3.1 (3.1.0.67)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+PF = Obj
+WorkSpaceObject = WorkSpaceObject
+Path = PathValue
+
+[DEF, PF]
+SccDbName = Str
+SccProjectName = Str
+SccProjectPath = Str
+SccProviderName = Str
+SccUseDefaultProvider = Bool
+Requirements = Obj
+ObjDisplayName = Str
+PrjObj = "TYPE, WorkSpaceObject"
+%NAME = "Data"
+
+[PF]
+%FLG: SccDbName = 8
+%FLG: SccProjectName = 8
+%FLG: SccProjectPath = 8
+%FLG: SccProviderName = 8
+SccUseDefaultProvider = True
+%FLG: SccUseDefaultProvider = 8
+%FLG: Requirements = 4194305
+ObjDisplayName = "All Express"
+
+[PF.PrjObj]
+%HI: Objs = [0]
+Type = 2
+Path = "All Express.tpj"
+
+[DEF, PF.PrjObj.Objs]
+%[0] = "TYPE, WorkSpaceObject"
+
+[PF.PrjObj.Objs[0]]
+Type = 4
+Path = "Call All Non-Hardware Express VIs.seq"
+
+[DEF, PF.PrjObj.Objs[0]]
+%NAME = "Call All Non-Hardware Express VIs.seq"
+
+[%TYPES]
+WorkSpaceObject = "WorkSpaceObject"
+Path = "Path"
+
+[DEF, WorkSpaceObject]
+%LOCATION = "StdTypes"
+Objs = Objs
+Type = Num
+Path = "TYPE, Path"
+CodeModSeqFilePath = "TYPE, Path"
+OwnedProjectFile = Obj
+%FLG: OwnedProjectFile = 2097152
+%ROOT_TYPE = True
+
+[WorkSpaceObject]
+Type = -1
+%TIMESTAMP = 1084573510
+%VERSION = "3.1.0.67"
+%TYPELASTMOD = "3.1.0.67"
+%MINPRODVER = "3.1.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+%INSTFLG = 524312
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1084573510
+%VERSION = "3.1.0.67"
+%TYPELASTMOD = "3.1.0.67"
+%MINPRODVER = "3.1.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+

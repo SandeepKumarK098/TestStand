@@ -1,0 +1,4008 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 2.0.0.130
+Version = 127
+Type = "SequenceFile"
+Path = "Z:\\TestExec\\Tests\\StepType\\Limit Steps\\testlimitsteps.seq"
+ProductVersionString = "2.0 beta 2"
+CharEncoding = "SBCS"
+
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+PassFailTest = StepType
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+NumericLimitTest = StepType
+StringValueTest = StepType
+EditSubstep = StepType
+NoneStepAdditions = Obj
+SequenceCall = StepType
+SeqCallStepAdditions = Obj
+NI_MultipleNumericLimitTest = StepType
+NI_LimitMeasurement = Obj
+PostSubstep = StepType
+StepTypeSubstepsArray = Objs
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Type = Num
+ModelOption = Num
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [1]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [32]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+seventeen = Num
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[0].Locals]
+seventeen = 17
+
+[DEF, SF.Seq[0].Main]
+%[0] = SequenceCall
+%TYPE: %[0] = "SequenceCall"
+%[1] = FlexCStep
+%TYPE: %[1] = "PassFailTest"
+%[2] = FlexCStep
+%TYPE: %[2] = "PassFailTest"
+%[3] = FlexCStep
+%TYPE: %[3] = "NumericLimitTest"
+%[4] = FlexCStep
+%TYPE: %[4] = "NumericLimitTest"
+%[5] = FlexCStep
+%TYPE: %[5] = "NumericLimitTest"
+%[6] = NoneStep
+%TYPE: %[6] = "PassFailTest"
+%[7] = FlexCStep
+%TYPE: %[7] = "NumericLimitTest"
+%[8] = NoneStep
+%TYPE: %[8] = "PassFailTest"
+%[9] = FlexCStep
+%TYPE: %[9] = "NumericLimitTest"
+%[10] = FlexCStep
+%TYPE: %[10] = "NumericLimitTest"
+%[11] = NoneStep
+%TYPE: %[11] = "PassFailTest"
+%[12] = FlexCStep
+%TYPE: %[12] = "NumericLimitTest"
+%[13] = FlexCStep
+%TYPE: %[13] = "NumericLimitTest"
+%[14] = FlexCStep
+%TYPE: %[14] = "NumericLimitTest"
+%[15] = NoneStep
+%TYPE: %[15] = "PassFailTest"
+%[16] = FlexCStep
+%TYPE: %[16] = "NumericLimitTest"
+%[17] = FlexCStep
+%TYPE: %[17] = "NumericLimitTest"
+%[18] = FlexCStep
+%TYPE: %[18] = "NumericLimitTest"
+%[19] = NoneStep
+%TYPE: %[19] = "PassFailTest"
+%[20] = FlexCStep
+%TYPE: %[20] = "NumericLimitTest"
+%[21] = NoneStep
+%TYPE: %[21] = "PassFailTest"
+%[22] = FlexCStep
+%TYPE: %[22] = "StringValueTest"
+%[23] = FlexCStep
+%TYPE: %[23] = "StringValueTest"
+%[24] = FlexCStep
+%TYPE: %[24] = "StringValueTest"
+%[25] = NoneStep
+%TYPE: %[25] = "PassFailTest"
+%[26] = FlexCStep
+%TYPE: %[26] = "StringValueTest"
+%[27] = FlexCStep
+%TYPE: %[27] = "StringValueTest"
+%[28] = NoneStep
+%TYPE: %[28] = "PassFailTest"
+%[29] = FlexCStep
+%TYPE: %[29] = "StringValueTest"
+%[30] = NoneStep
+%TYPE: %[30] = "PassFailTest"
+%[31] = NoneStep
+%TYPE: %[31] = "PassFailTest"
+%[32] = NoneStep
+%TYPE: %[32] = "NumericLimitTest"
+
+[SF.Seq[0].Main[0].TS]
+Adapter = "Sequence Adapter"
+Icon = ""
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData]
+SeqName = "MultiLimit - Funny Numbers"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Call Multilimit funny numbers"
+
+[SF.Seq[0].Main[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+StatusExpr = "Step.Result.PassFail ? \"Passed\" : \"Failed\" "
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[1].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnTrue"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[1].TS.SData.Call.Parms[1]]
+Name = "booleanValue"
+NumPass = 1
+ArgVal = "Step.Result.PassFail"
+ArgDisplayVal = "Step.Result.PassFail"
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "PF Test - Pass"
+
+[SF.Seq[0].Main[2].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+StatusExpr = "Step.Result.PassFail ? \"Passed\" : \"Failed\" "
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[2].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnFalse"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[2].TS.SData.Call.Parms[1]]
+Name = "booleanValue"
+NumPass = 1
+ArgVal = "Step.Result.PassFail"
+ArgDisplayVal = "Step.Result.PassFail"
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "PF Test - Fail"
+
+[SF.Seq[0].Main[3].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[3].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[3].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[3].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[3].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[3].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[3].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[3].Limits]
+Low = 1
+%FLG: High = 2048
+
+[SF.Seq[0].Main[3]]
+Comp = "EQ"
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "(EQ) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[4].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[4].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[4].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[4].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[4].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[4].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[4].Limits]
+Low = 1
+%FLG: High = 2048
+
+[SF.Seq[0].Main[4]]
+Comp = "NE"
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "(NE) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[5].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[5].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[5].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[5].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[5].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[5].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[5].Limits]
+Low = 1
+%FLG: High = 2048
+
+[SF.Seq[0].Main[5]]
+Comp = "EQ"
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "(EQ) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[6].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[6].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[6]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[7].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[7].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[7].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[7].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[7].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[7].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[7].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[7].Limits]
+Low = 1
+%FLG: High = 2048
+
+[SF.Seq[0].Main[7]]
+Comp = "NE"
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "(NE) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[8].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[8]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[8]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[9].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[9].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[9].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[9].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[9].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[9].Limits]
+%FLG: High = 2048
+
+[SF.Seq[0].Main[9]]
+Comp = "GT"
+
+[DEF, SF.Seq[0].Main[9]]
+%NAME = "(GT) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[10].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[10].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[10].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[10].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[10].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[10].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[10].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[10].Limits]
+%FLG: High = 2048
+
+[SF.Seq[0].Main[10]]
+Comp = "GT"
+
+[DEF, SF.Seq[0].Main[10]]
+%NAME = "(GT) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[11].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[11].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[11]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[11]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[12].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[12].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[12].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnNegativeOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[12].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[12].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[12].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[12].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[12].Limits]
+%FLG: High = 2048
+
+[SF.Seq[0].Main[12]]
+Comp = "LE"
+
+[DEF, SF.Seq[0].Main[12]]
+%NAME = "(LE) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[13].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[13].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[13].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[13].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[13].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[13].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[13].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[13].Limits]
+%FLG: High = 2048
+
+[SF.Seq[0].Main[13]]
+Comp = "LE"
+
+[DEF, SF.Seq[0].Main[13]]
+%NAME = "(LE) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[14].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[14].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[14].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[14].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[14].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[14].Limits]
+%FLG: High = 2048
+
+[SF.Seq[0].Main[14]]
+Comp = "LE"
+
+[DEF, SF.Seq[0].Main[14]]
+%NAME = "(LE) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[15].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[15].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[15]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[15]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[16].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[16].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[16].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[16].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[16].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[16].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[16].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[16]]
+Comp = "GTLT"
+
+[DEF, SF.Seq[0].Main[16]]
+%NAME = "(GTLT) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[17].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[17].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[17].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[17].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[17].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[17].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[17].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[17].Limits]
+Low = -10
+High = 1
+
+[SF.Seq[0].Main[17]]
+Comp = "GTLT"
+
+[DEF, SF.Seq[0].Main[17]]
+%NAME = "(GTLT) Num Limit Test - Pass"
+
+[SF.Seq[0].Main[18].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[18].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[18].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnZero"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[18].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[18].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[18].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[18].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[18]]
+Comp = "GTLT"
+
+[DEF, SF.Seq[0].Main[18]]
+%NAME = "(GTLT) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[19].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[19].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[19]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[19]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[20].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[20].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[20].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnOne"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[20].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[20].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[20].TS.SData.Call.Parms[1]]
+Name = "integerValue"
+NumPass = 1
+ArgVal = "Step.Result.Numeric"
+ArgDisplayVal = "Step.Result.Numeric"
+
+[SF.Seq[0].Main[20].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[20].Limits]
+Low = -10
+High = 1
+
+[SF.Seq[0].Main[20]]
+Comp = "GTLT"
+
+[DEF, SF.Seq[0].Main[20]]
+%NAME = "(GTLT) Num Limit Test - Fail"
+
+[SF.Seq[0].Main[21].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[21].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[21]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[21]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[22].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[22].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[22].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnFooString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[22].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[22].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[22].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[22].Limits]
+String = "Foo"
+
+[DEF, SF.Seq[0].Main[22]]
+%NAME = "No Case String Test - Pass"
+
+[SF.Seq[0].Main[23].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[23].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[23].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnfooString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[23].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[23].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[23].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[23].Limits]
+String = "Foo"
+
+[DEF, SF.Seq[0].Main[23]]
+%NAME = "No Case String Test - Pass"
+
+[SF.Seq[0].Main[24].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[24].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[24].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnBarString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[24].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[24].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[24].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[24].Limits]
+String = "Foo"
+
+[DEF, SF.Seq[0].Main[24]]
+%NAME = "No Case String Test - Fail"
+
+[SF.Seq[0].Main[25].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[25].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[25]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[25]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[26].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[26].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[26].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnFooString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[26].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[26].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[26].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[26].Limits]
+String = "Foo"
+
+[SF.Seq[0].Main[26]]
+Comp = "CaseSensitive"
+
+[DEF, SF.Seq[0].Main[26]]
+%NAME = "Case String Test - Pass"
+
+[SF.Seq[0].Main[27].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[27].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[27].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnfooString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[27].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[27].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[27].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[27].Limits]
+String = "Foo"
+
+[SF.Seq[0].Main[27]]
+Comp = "CaseSensitive"
+
+[DEF, SF.Seq[0].Main[27]]
+%NAME = "Case String Test - Fail"
+
+[SF.Seq[0].Main[28].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[28].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[28]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[28]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[29].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+StepFCSeqF = False
+
+[DEF, SF.Seq[0].Main[29].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[29].TS.SData.Call]
+LibPath = "testlimitstepslib.dll"
+Func = "ReturnBarString"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[29].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[SF.Seq[0].Main[29].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[SF.Seq[0].Main[29].TS.SData.Call.Parms[1]]
+Name = "stringValue"
+Type = 2
+StrPass = 2
+ArgVal = "Step.Result.String"
+ArgDisplayVal = "Step.Result.String"
+
+[SF.Seq[0].Main[29].Limits]
+String = "Foo"
+
+[SF.Seq[0].Main[29]]
+Comp = "CaseSensitive"
+
+[DEF, SF.Seq[0].Main[29]]
+%NAME = "Case String Test - Fail"
+
+[SF.Seq[0].Main[30].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[30].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[30]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[0].Main[30]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[0].Main[31].TS]
+Adapter = "None Adapter"
+PreCond Line0001 = "AnyOf(RunState.Sequence.Main[\"PF Test - Pass\"].Result.Status != \"Passed\", RunState.Sequence.Main[\"PF Test - Fail\"]"
+PreCond Line0002 = ".Result.Status != \"Failed\", RunState.Sequence.Main[\"(EQ) Num Limit Test - Pass\"].Result.Status != \"Passed\", RunSta"
+PreCond Line0003 = "te.Sequence.Main[\"(EQ) Num Limit Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"(NE) Num Limit Te"
+PreCond Line0004 = "st - Pass\"].Result.Status != \"Passed\", RunState.Sequence.Main[\"(NE) Num Limit Test - Fail\"].Result.Status != \"Fail"
+PreCond Line0005 = "ed\", RunState.Sequence.Main[\"(GT) Num Limit Test - Pass\"].Result.Status != \"Passed\", RunState.Sequence.Main[\"(GT) "
+PreCond Line0006 = "Num Limit Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"(LE) Num Limit Test - Pass\"].Result.Stat"
+PreCond Line0007 = "us != \"Passed\", RunState.Sequence.Main[\"(LE) Num Limit Test - Pass\"].Result.Status != \"Passed\", RunState.Sequence."
+PreCond Line0008 = "Main[\"(LE) Num Limit Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"(GTLT) Num Limit Test - Pass\"
+PreCond Line0009 = ""].Result.Status != \"Passed\", RunState.Sequence.Main[\"(GTLT) Num Limit Test - Pass\"].Result.Status != \"Passed\", Ru"
+PreCond Line0010 = "nState.Sequence.Main[\"(GTLT) Num Limit Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"(GTLT) Num "
+PreCond Line0011 = "Limit Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"No Case String Test - Pass\"].Result.Status !"
+PreCond Line0012 = "= \"Passed\", RunState.Sequence.Main[\"No Case String Test - Pass\"].Result.Status != \"Passed\", RunState.Sequence.Main"
+PreCond Line0013 = "[\"No Case String Test - Fail\"].Result.Status != \"Failed\", RunState.Sequence.Main[\"Case String Test - Pass\"].Result"
+PreCond Line0014 = ".Status != \"Passed\", RunState.Sequence.Main[\"Case String Test - Fail\"].Result.Status != \"Failed\", RunState.Sequenc"
+PreCond Line0015 = "e.Main[\"Case String Test - Fail\"].Result.Status != \"Failed\")"
+PreExpr = "Step.Result.PassFail = (False)"
+StatusExpr = "(False) ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[31].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[31]]
+DataSource = "False"
+
+[DEF, SF.Seq[0].Main[31]]
+%NAME = "Check previous step statuses"
+
+[SF.Seq[0].Main[32].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[0].Main[32].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[32].Result]
+%FLG: Units = 8192
+
+[SF.Seq[0].Main[32].Limits]
+Low = 17
+%FLG: High = 2048
+
+[SF.Seq[0].Main[32]]
+Comp = "EQ"
+DataSource = "Locals.seventeen"
+
+[DEF, SF.Seq[0].Main[32]]
+%NAME = "Test Data Source"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MultiLimit - Funny Numbers"
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [46]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[1].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[1].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[1].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "NI_MultipleNumericLimitTest"
+%[1] = NoneStep
+%TYPE: %[1] = "NI_MultipleNumericLimitTest"
+%[2] = NoneStep
+%TYPE: %[2] = "PassFailTest"
+%[3] = NoneStep
+%TYPE: %[3] = "NI_MultipleNumericLimitTest"
+%[4] = NoneStep
+%TYPE: %[4] = "PassFailTest"
+%[5] = NoneStep
+%TYPE: %[5] = "NI_MultipleNumericLimitTest"
+%[6] = NoneStep
+%TYPE: %[6] = "PassFailTest"
+%[7] = NoneStep
+%TYPE: %[7] = "NI_MultipleNumericLimitTest"
+%[8] = NoneStep
+%TYPE: %[8] = "PassFailTest"
+%[9] = NoneStep
+%TYPE: %[9] = "NI_MultipleNumericLimitTest"
+%[10] = NoneStep
+%TYPE: %[10] = "PassFailTest"
+%[11] = NoneStep
+%TYPE: %[11] = "NI_MultipleNumericLimitTest"
+%[12] = NoneStep
+%TYPE: %[12] = "PassFailTest"
+%[13] = NoneStep
+%TYPE: %[13] = "NI_MultipleNumericLimitTest"
+%[14] = NoneStep
+%TYPE: %[14] = "NI_MultipleNumericLimitTest"
+%[15] = NoneStep
+%TYPE: %[15] = "PassFailTest"
+%[16] = NoneStep
+%TYPE: %[16] = "NI_MultipleNumericLimitTest"
+%[17] = NoneStep
+%TYPE: %[17] = "PassFailTest"
+%[18] = NoneStep
+%TYPE: %[18] = "NI_MultipleNumericLimitTest"
+%[19] = NoneStep
+%TYPE: %[19] = "PassFailTest"
+%[20] = NoneStep
+%TYPE: %[20] = "NI_MultipleNumericLimitTest"
+%[21] = NoneStep
+%TYPE: %[21] = "PassFailTest"
+%[22] = NoneStep
+%TYPE: %[22] = "NI_MultipleNumericLimitTest"
+%[23] = NoneStep
+%TYPE: %[23] = "NI_MultipleNumericLimitTest"
+%[24] = NoneStep
+%TYPE: %[24] = "NI_MultipleNumericLimitTest"
+%[25] = NoneStep
+%TYPE: %[25] = "NI_MultipleNumericLimitTest"
+%[26] = NoneStep
+%TYPE: %[26] = "NI_MultipleNumericLimitTest"
+%[27] = NoneStep
+%TYPE: %[27] = "PassFailTest"
+%[28] = NoneStep
+%TYPE: %[28] = "NI_MultipleNumericLimitTest"
+%[29] = NoneStep
+%TYPE: %[29] = "NI_MultipleNumericLimitTest"
+%[30] = NoneStep
+%TYPE: %[30] = "NI_MultipleNumericLimitTest"
+%[31] = NoneStep
+%TYPE: %[31] = "PassFailTest"
+%[32] = NoneStep
+%TYPE: %[32] = "NI_MultipleNumericLimitTest"
+%[33] = NoneStep
+%TYPE: %[33] = "PassFailTest"
+%[34] = NoneStep
+%TYPE: %[34] = "NI_MultipleNumericLimitTest"
+%[35] = NoneStep
+%TYPE: %[35] = "PassFailTest"
+%[36] = NoneStep
+%TYPE: %[36] = "NI_MultipleNumericLimitTest"
+%[37] = NoneStep
+%TYPE: %[37] = "PassFailTest"
+%[38] = NoneStep
+%TYPE: %[38] = "NI_MultipleNumericLimitTest"
+%[39] = NoneStep
+%TYPE: %[39] = "PassFailTest"
+%[40] = NoneStep
+%TYPE: %[40] = "NI_MultipleNumericLimitTest"
+%[41] = NoneStep
+%TYPE: %[41] = "PassFailTest"
+%[42] = NoneStep
+%TYPE: %[42] = "NI_MultipleNumericLimitTest"
+%[43] = NoneStep
+%TYPE: %[43] = "PassFailTest"
+%[44] = NoneStep
+%TYPE: %[44] = "NI_MultipleNumericLimitTest"
+%[45] = NoneStep
+%TYPE: %[45] = "PassFailTest"
+%[46] = NoneStep
+%TYPE: %[46] = "NI_MultipleNumericLimitTest"
+
+[SF.Seq[1].Main[0].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[0].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[0].Result.Measurement[0].Limits]
+Low = 1
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[0].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[0].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[0]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[0].DataSourceArray]
+%[0] = ".1 +  .1 + .1 + .1 + .1 + .1 + .1 + .1 + .1 + .1"
+
+[SF.Seq[1].Main[0].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Floating Point Imprecision Test"
+
+[SF.Seq[1].Main[1].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[1].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[1].Result.Measurement[0].Limits]
+High = 10
+
+[SF.Seq[1].Main[1].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GELE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[1].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[1]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[1].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[1].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "GELE - Fail"
+
+[SF.Seq[1].Main[2].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[2].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[2]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[3].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[3].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[3].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+
+[SF.Seq[1].Main[3].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GELE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[3].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[3]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[3].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[3].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[3]]
+%NAME = "GELE non zero - Fail"
+
+[SF.Seq[1].Main[4].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[4].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[4]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[4]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[5].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[5].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[5].Result.Measurement[0].Limits]
+High = 10
+
+[SF.Seq[1].Main[5].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GELT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[5].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[5]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[5].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[5].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[5].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[5]]
+%NAME = "GELT - Fail"
+
+[SF.Seq[1].Main[6].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[6].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[6]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[6]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[7].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[7].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[7].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+
+[SF.Seq[1].Main[7].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GELT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[7].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[7]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[7].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[7].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[7].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[7]]
+%NAME = "GELT non zero - Fail"
+
+[SF.Seq[1].Main[8].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[8]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[8]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[9].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[9].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[9].Result.Measurement[0].Limits]
+High = 10
+
+[SF.Seq[1].Main[9].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GTLE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[9].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[9]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[9].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[9].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[9].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[9]]
+%NAME = "GTLE - Fail"
+
+[SF.Seq[1].Main[10].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[10].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[10]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[10]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[11].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[11].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[11].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+
+[SF.Seq[1].Main[11].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GTLE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[11].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[11]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[11].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[11].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[11].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[11]]
+%NAME = "GTLE non zero - Fail"
+
+[SF.Seq[1].Main[12].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[12].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[12]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[12]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[13].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[13].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[13].Result.Measurement[0].Limits]
+Low = 5
+%FLG: Low = 2048
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[13].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LOG"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[13].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[13]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[13].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[13].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[13].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[13]]
+%NAME = "No Comparison"
+
+[SF.Seq[1].Main[14].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[14].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[14].Result.Measurement[0].Limits]
+High = 10
+
+[SF.Seq[1].Main[14].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GTLT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[14].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[14]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[14].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[14].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[14].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[14]]
+%NAME = "GTLT - Fail"
+
+[SF.Seq[1].Main[15].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[15].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[15]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[15]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[16].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[16].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[16].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+
+[SF.Seq[1].Main[16].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GTLT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[16].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[16]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[16].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[16].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[16].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[16]]
+%NAME = "GTLT non zero - Fail"
+
+[SF.Seq[1].Main[17].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[17].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[17]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[17]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[18].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[18].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[18].Result.Measurement[0].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[18].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[18].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[18]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[18].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[18].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[18].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[18]]
+%NAME = "EQ - Fail"
+
+[SF.Seq[1].Main[19].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[19].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[19]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[19]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[20].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[20].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[20].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[20].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[20].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[20]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[20].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[20].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[20].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[20]]
+%NAME = "EQ non zero - Fail"
+
+[SF.Seq[1].Main[21].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[21].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[21]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[21]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[22].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[22].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[22].Result.Measurement[0].Limits]
+Low = Nan
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[22].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[22].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[22]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[22].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[22].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[22].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[22]]
+%NAME = "EQ nan"
+
+[SF.Seq[1].Main[23].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[23].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[23].Result.Measurement[0].Limits]
+Low = Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[23].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[23].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[23]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[23].DataSourceArray]
+%[0] = "inf"
+
+[SF.Seq[1].Main[23].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[23].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[23]]
+%NAME = "EQ inf"
+
+[SF.Seq[1].Main[24].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[24].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[24].Result.Measurement[0].Limits]
+Low = -Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[24].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[24].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[24]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[24].DataSourceArray]
+%[0] = "-inf"
+
+[SF.Seq[1].Main[24].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[24].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[24]]
+%NAME = "EQ -inf"
+
+[SF.Seq[1].Main[25].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[25].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[25].Result.Measurement[0].Limits]
+Low = Ind
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[25].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[25].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[25]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[25].DataSourceArray]
+%[0] = "ind"
+
+[SF.Seq[1].Main[25].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[25].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[25]]
+%NAME = "EQ ind"
+
+[SF.Seq[1].Main[26].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[26].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[26].Result.Measurement[0].Limits]
+Low = Nan
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[26].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "NE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[26].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[26]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[26].DataSourceArray]
+%[0] = "nan"
+
+[SF.Seq[1].Main[26].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[26].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[26]]
+%NAME = "NE nan - fail"
+
+[SF.Seq[1].Main[27].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[27].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[27]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[27]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[28].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[28].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[28].Result.Measurement[0].Limits]
+Low = Nan
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[28].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "NE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[28].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[28]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[28].DataSourceArray]
+%[0] = "0"
+
+[SF.Seq[1].Main[28].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[28].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[28]]
+%NAME = "NE 0 nan"
+
+[SF.Seq[1].Main[29].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[29].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[29].Result.Measurement[0].Limits]
+Low = Nan
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[29].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "NE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[29].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[29]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[29].DataSourceArray]
+%[0] = "5"
+
+[SF.Seq[1].Main[29].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[29].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[29]]
+%NAME = "NE non-zero nan"
+
+[SF.Seq[1].Main[30].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[30].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[30].Result.Measurement[0].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[30].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[30].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[30]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[30].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[30].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[30].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[30]]
+%NAME = "GT - Fail"
+
+[SF.Seq[1].Main[31].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[31].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[31]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[31]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[32].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[32].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[32].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[32].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[32].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[32]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[32].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[32].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[32].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[32]]
+%NAME = "GT non-zero - Fail"
+
+[SF.Seq[1].Main[33].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[33].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[33]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[33]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[34].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[34].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[34].Result.Measurement[0].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[34].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[34].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[34]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[34].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[34].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[34].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[34]]
+%NAME = "LT - Fail"
+
+[SF.Seq[1].Main[35].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[35].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[35]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[35]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[36].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[36].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[36].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[36].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[36].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[36]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[36].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[36].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[36].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[36]]
+%NAME = "LT non-zero - Fail"
+
+[SF.Seq[1].Main[37].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[37].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[37]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[37]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[38].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[38].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[38].Result.Measurement[0].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[38].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[38].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[38]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[38].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[38].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[38].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[38]]
+%NAME = "GE - Fail"
+
+[SF.Seq[1].Main[39].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[39].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[39]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[39]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[40].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[40].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[40].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[40].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[40].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[40]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[40].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[40].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[40].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[40]]
+%NAME = "GE non-zero - Fail"
+
+[SF.Seq[1].Main[41].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[41].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[41]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[41]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[42].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[42].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[42].Result.Measurement[0].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[42].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[42].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[42]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[42].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[42].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[42].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[42]]
+%NAME = "LE - Fail"
+
+[SF.Seq[1].Main[43].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[43].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[43]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[43]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[44].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [0]
+
+[DEF, SF.Seq[1].Main[44].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[44].Result.Measurement[0].Limits]
+Low = 5
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[44].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[44].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[44]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [0]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [0]
+
+[SF.Seq[1].Main[44].DataSourceArray]
+%[0] = "NAN"
+
+[SF.Seq[1].Main[44].TS]
+Adapter = "None Adapter"
+StepFCSeqF = False
+StatusExpr = "\"Failed\""
+
+[DEF, SF.Seq[1].Main[44].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[44]]
+%NAME = "LE non-zero - Fail"
+
+[SF.Seq[1].Main[45].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[45].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[45]]
+DataSource = "RunState.PreviousStep.Result.Status == \"FAILED\""
+
+[DEF, SF.Seq[1].Main[45]]
+%NAME = "Previous Step Must Fail"
+
+[SF.Seq[1].Main[46].Result]
+%LO: Measurement = [0]
+%HI: Measurement = [8]
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement]
+%[0] = "TYPE, NI_LimitMeasurement"
+%[1] = "TYPE, NI_LimitMeasurement"
+%[2] = "TYPE, NI_LimitMeasurement"
+%[3] = "TYPE, NI_LimitMeasurement"
+%[4] = "TYPE, NI_LimitMeasurement"
+%[5] = "TYPE, NI_LimitMeasurement"
+%[6] = "TYPE, NI_LimitMeasurement"
+%[7] = "TYPE, NI_LimitMeasurement"
+%[8] = "TYPE, NI_LimitMeasurement"
+
+[SF.Seq[1].Main[46].Result.Measurement[0].Limits]
+Low = Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[0]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "LE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[0]]
+%NAME = "Measurement 0"
+
+[SF.Seq[1].Main[46].Result.Measurement[1].Limits]
+Low = -Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[1]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[1]]
+%NAME = "Measurement 1"
+
+[SF.Seq[1].Main[46].Result.Measurement[2].Limits]
+Low = -Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[2]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[2]]
+%NAME = "Measurement 2"
+
+[SF.Seq[1].Main[46].Result.Measurement[3].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[3]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[3]]
+%NAME = "Measurement 3"
+
+[SF.Seq[1].Main[46].Result.Measurement[4].Limits]
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[4]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[4]]
+%NAME = "Measurement 4"
+
+[SF.Seq[1].Main[46].Result.Measurement[5].Limits]
+Low = -Inf
+High = Inf
+
+[SF.Seq[1].Main[46].Result.Measurement[5]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "GTLT"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[5]]
+%NAME = "Measurement 5"
+
+[SF.Seq[1].Main[46].Result.Measurement[6].Limits]
+Low = Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[6]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "EQ"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[6]]
+%NAME = "Measurement 6"
+
+[SF.Seq[1].Main[46].Result.Measurement[7].Limits]
+Low = Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[7]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "NE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[7]]
+%NAME = "Measurement 7"
+
+[SF.Seq[1].Main[46].Result.Measurement[8].Limits]
+Low = Inf
+High = 10
+%FLG: High = 2048
+
+[SF.Seq[1].Main[46].Result.Measurement[8]]
+%FLG: Limits = 4096
+%FLG: Units = 2048
+Comp = "NE"
+%FLG: Comp = 4096
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[DEF, SF.Seq[1].Main[46].Result.Measurement[8]]
+%NAME = "Measurement 8"
+
+[SF.Seq[1].Main[46]]
+%LO: NumericArray = [0]
+%HI: NumericArray = [8]
+%FLG: NumericArray = 0
+UseIndividualDataSources = True
+%LO: DataSourceArray = [0]
+%HI: DataSourceArray = [8]
+
+[SF.Seq[1].Main[46].DataSourceArray]
+%[0] = "INF"
+%[1] = "INF"
+%[2] = "INF"
+%[3] = "INF"
+%[4] = "INF"
+%[5] = "0"
+%[6] = "INF"
+%[7] = "-INF"
+%[8] = "0"
+
+[SF.Seq[1].Main[46].TS]
+Adapter = "None Adapter"
+StatusExpr = "\"Passed\""
+
+[DEF, SF.Seq[1].Main[46].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[46]]
+%NAME = "Multiple Numeric Limit Test"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[%TYPES]
+Path = "Path"
+PassFailTest = "PassFailTest"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+NumericLimitTest = "NumericLimitTest"
+StringValueTest = "StringValueTest"
+EditSubstep = "EditSubstep"
+NoneStepAdditions = "NoneStepAdditions"
+SequenceCall = "SequenceCall"
+SeqCallStepAdditions = "SeqCallStepAdditions"
+NI_MultipleNumericLimitTest = "NI_MultipleNumericLimitTest"
+NI_LimitMeasurement = "NI_LimitMeasurement"
+PostSubstep = "PostSubstep"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, PassFailTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[PassFailTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescrip"
+DescriptionFormat Line0002 = "tion\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.Result.PassFail"
+CodeTemplates = "PassFail_Template|PassFailVC++_Template|PassFailMFC_Template|PassFailHTB80_Template|PassFailHTB72_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, PassFailTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[PassFailTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, PassFailTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassFailTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditPassFailStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, PassFailTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[PassFailTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, PassFailTest.Substeps[0]]
+%NAME = "Edit"
+
+[PassFailTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, PassFailTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassFailTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+
+[DEF, PassFailTest.Result]
+Error = "TYPE, Error"
+Status = Str
+PassFail = Bool
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PassFailTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+PassFail = True
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJECTS]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+Adapter = Str
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Adapter = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+HasModule = Bool
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+LoadOpt = "PreloadWhenExecuted"
+UnloadOpt = "UnloadWithFile"
+Mode = "Normal"
+WindowActivation = "None"
+StepFCSeqF = True
+PassAct = "Next"
+FailAct = "Next"
+CustTrueAct = "Next"
+CustFalseAct = "Next"
+LoopType = "NoLooping"
+LoopIncrement = "RunState.LoopIndex += 1"
+LoopInitialize = "RunState.LoopIndex = 0"
+HasModule = True
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+%INSTFLG = 262168
+%INSTOVRD = 262168
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+NumEls = Str
+StrPass = Num
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+NumEls = "1024"
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, NumericLimitTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+Limits = Obj
+Comp = Str
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[NumericLimitTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "(step.result.status == \"\" ? \"\" : (\"{\" + Str(step.result.numeric) + \"}, \")) + ResStr(\"NI_STEPTYPES\", \"NUMERIC_"
+DescriptionFormat Line0002 = "LIMIT_DESCRIPTION_NAME\") + \", \" + \nSearchAndReplace( SearchAndReplace( ResStr(\"NI_SUBSTEPS\", Step.Comp + \"_EX\"),"
+DescriptionFormat Line0003 = " \"%hi\", Str(step.limits.high)), \"%low\", Str(step.limits.low)) +\n(Step.Result.Units == \"\" ? \"\" : \", \" + Step.R"
+DescriptionFormat Line0004 = "esult.Units) + \n((\"%ModuleDescription\" == \"\") ? \"\" : \", %ModuleDescription\")\n"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"NUM_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: Limits = 12288
+%INSTFLG: Limits = 12288
+Comp = "GELE"
+%FLG: Comp = 12288
+%INSTFLG: Comp = 12288
+DataSource = "Step.Result.Numeric"
+CodeTemplates Line0001 = "NumericLimit_Template|NumericLimitVC++_Template|NumericLimitMFC_Template|NumericLimitHTB80_Template|NumericLimitHTB72Tem"
+CodeTemplates Line0002 = "plate"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, NumericLimitTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[NumericLimitTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NumericLimitTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NumericLimitTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditNumericMeasurementStepNoStatusExpr"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, NumericLimitTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[NumericLimitTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"NUM_EDIT_STEP_MENU_NAME\")"
+
+[DEF, NumericLimitTest.Substeps[0]]
+%NAME = "Edit"
+
+[NumericLimitTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"NUM_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, NumericLimitTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[NumericLimitTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "CheckLimits(Step.DataSource == \"Step.Result.Numeric\" ? Step.Result.Numeric : (Step.Result.Numeric = Evaluate(Step.Data"
+StatusExpr Line0002 = "Source)), step.limits.high, step.limits.low, step.comp)"
+%INSTFLG: StatusExpr = 1
+
+[DEF, NumericLimitTest.Result]
+Error = "TYPE, Error"
+Status = Str
+Numeric = Num
+ReportText = Str
+Common = "TYPE, CommonResults"
+Units = Str
+
+[NumericLimitTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: Numeric = 9216
+%INSTFLG: Numeric = 9216
+%FLG: Units = 10240
+%INSTFLG: Units = 8192
+
+[DEF, NumericLimitTest.Limits]
+Low = Num
+High = Num
+
+[NumericLimitTest.Limits]
+High = 10
+
+[DEF, StringValueTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+Limits = Obj
+Comp = Str
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[StringValueTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"STRING_VALUE_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDes"
+DescriptionFormat Line0002 = "cription\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"STRING_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: Limits = 12288
+%INSTFLG: Limits = 12288
+Comp = "IgnoreCase"
+%FLG: Comp = 12288
+%INSTFLG: Comp = 12288
+DataSource = "Step.Result.String"
+CodeTemplates Line0001 = "StringValue_Template|StringValueVC++_Template|StringValueMFC_Template|StringValueHTB80_Template|StringValueHTB72_Templat"
+CodeTemplates Line0002 = "e"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660832
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, StringValueTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[StringValueTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, StringValueTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[StringValueTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStringMeasurementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, StringValueTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[StringValueTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"STRING_EDIT_STEP_MENU_NAME\")"
+
+[DEF, StringValueTest.Substeps[0]]
+%NAME = "Edit"
+
+[StringValueTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"STRING_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, StringValueTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[StringValueTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.String\" ? Step.Result.String = Evaluate(Step.DataSource) : False, (StrComp(Step.Result"
+StatusExpr Line0002 = ".String, Step.Limits.String, (Step.Comp == \"CaseSensitive\" ? 0 : 1)  ) == 0) ? \"Passed\" : \"Failed\""
+%INSTFLG: StatusExpr = 1
+
+[DEF, StringValueTest.Result]
+Error = "TYPE, Error"
+Status = Str
+String = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[StringValueTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: String = 9216
+%INSTFLG: String = 9216
+
+[DEF, StringValueTest.Limits]
+String = Str
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, SequenceCall]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[SequenceCall]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"SC_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660879
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[SequenceCall.Menu]
+Adapter = "Sequence Adapter"
+ItemName = "ResStr(\"NI_STEPTYPES\", \"SC_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[SequenceCall.TS]
+Icon = "NI_SeqCall.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "(Step.Result.Status == \"Done\" && (Step.TS.SData.ThreadOpt == 0 || Step.TS.SData.ThreadOpt == 3)) ? \"Passed\" : Step.R"
+StatusExpr Line0002 = "esult.Status"
+%INSTFLG: StatusExpr = 1
+
+[DEF, SequenceCall.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, SequenceCall.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[SequenceCall.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, SeqCallStepAdditions]
+%LOCATION = "StdTypes"
+SFPath = "TYPE, Path"
+SFPathExpr = Str
+SeqName = Str
+SeqNameExpr = Str
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+UseCurFile = Bool
+SpecifyByExpr = Bool
+Prototype = Obj
+%FLG: Prototype = 2097152
+UsePrototype = Bool
+SpecifyHostByExpr = Bool
+RemoteExecution = Bool
+RemoteHost = Str
+RemoteHostExpr = Str
+AutoWaitAsync = Bool
+CreateThreadSuspended = Bool
+AsyncThreadExpr = Str
+ThreadOpt = Num
+ExecModelOpt = Num
+ExecTypeMask = Num
+ExecTypeMaskExpr = Str
+ExecBreakOnEntryExpr = Str
+ExecModelPath = "TYPE, Path"
+ExecModelPathExpr = Str
+ExecSync = Bool
+Trace = Str
+IgnoreTerminate = Bool
+%ROOT_TYPE = True
+
+[SeqCallStepAdditions]
+AutoWaitAsync = True
+ExecModelOpt = 1
+ExecBreakOnEntryExpr = "False"
+Trace = "Don't Change"
+%TIMESTAMP = 981660879
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, NI_MultipleNumericLimitTest]
+%LOCATION = "StepTypes"
+Result = Obj
+InBuf = Str
+DataSource = Str
+NumericArray = Nums
+UseIndividualDataSources = Bool
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DataSourceArray = Strs
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[DEF, NI_MultipleNumericLimitTest.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+Measurement = Objs
+
+[NI_MultipleNumericLimitTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: Measurement = 8192
+%INSTFLG: Measurement = 8192
+
+[DEF, NI_MultipleNumericLimitTest.Result.Measurement]
+%EPTYPE = "TYPE, NI_LimitMeasurement"
+
+[NI_MultipleNumericLimitTest.Result.Measurement.%EPTYPE]
+%FLG: Limits = 0
+%FLG: Units = 0
+%FLG: Comp = 0
+%FLG: Data = 1024
+%FLG: Status = 0
+
+[NI_MultipleNumericLimitTest]
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.NumericArray"
+%FLG: NumericArray = 5120
+%LO: Substeps = [0]
+%HI: Substeps = [1]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"MULTI_NUMERIC_LIMIT_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %Mo"
+DescriptionFormat Line0002 = "duleDescription\") + \", Number of Measurements: \" +Str( GetNumElements( Step.Result.Measurement ))"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"MULTI_NUM_DEF_STEP_NAME\")"
+CodeTemplates Line0001 = "MultiNumericLimitArrayDataSource|MultiNumericLimitArrayDataSourceVC++|MultiNumericLimitArrayDataSourceMFC|MultiNumericLi"
+CodeTemplates Line0002 = "mitArrayDataSourceHTB80|MultiNumericLimitArrayDataSourceHTB72"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660832
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, NI_MultipleNumericLimitTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "PostSubstep"
+%[1] = FlexCStep
+%TYPE: %[1] = "EditSubstep"
+
+[NI_MultipleNumericLimitTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NI_MultipleNumericLimitTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "DoMultiNumericMeasEvaluation"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+
+[NI_MultipleNumericLimitTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[NI_MultipleNumericLimitTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[0]]
+%NAME = "Post"
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditMultiNumericMeasurementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[NI_MultipleNumericLimitTest.Substeps[1].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[NI_MultipleNumericLimitTest.Substeps[1]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"NUM_EDIT_STEP_MENU_NAME\")"
+
+[DEF, NI_MultipleNumericLimitTest.Substeps[1]]
+%NAME = "Edit"
+
+[NI_MultipleNumericLimitTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"MULTI_NUM_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, NI_MultipleNumericLimitTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[NI_MultipleNumericLimitTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.Numeric\" ? Step.Result.Numeric = Evaluate(Step.DataSource) : False, (Step.Result.Numer"
+StatusExpr Line0002 = "ic >= Step.Limits.Low && Step.Result.Numeric <= Step.Limits.High) ? \"Passed\" : \"Failed\""
+%INSTFLG: StatusExpr = 1
+
+[DEF, NI_LimitMeasurement]
+%LOCATION = "StdTypes"
+Limits = Obj
+Units = Str
+Comp = Str
+Data = Num
+Status = Str
+%ROOT_TYPE = True
+
+[DEF, NI_LimitMeasurement.Limits]
+Low = Num
+High = Num
+
+[NI_LimitMeasurement]
+%FLG: Limits = 4198400
+%FLG: Units = 4194304
+%FLG: Comp = 4198400
+%FLG: Data = 4195328
+%FLG: Status = 4194304
+%TIMESTAMP = 981660832
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, PostSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+
+[PostSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"POST_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 981660877
+%VERSION = "2.0.0.130"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[PostSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"POST_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "ExecSubsteps"
+
+[DEF, PostSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PostSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 655384
+

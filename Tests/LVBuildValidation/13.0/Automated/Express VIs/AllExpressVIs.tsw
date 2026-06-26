@@ -1,0 +1,59 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.1.0.67
+CompatibleProdVersion = 3.1.0.0
+Version = 304
+Type = "TSWorkspaceFile"
+Path = "D:\\Tests\\3.1\\Express\\AllExpressVIs.tsw"
+ProductVersionString = "3.1 (3.1.0.67)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+WF = Obj
+Path = PathValue
+
+[DEF, WF]
+SccDbName = Str
+SccProjectName = Str
+SccProjectPath = Str
+SccProviderName = Str
+SccUseDefaultProvider = Bool
+Projects = Objs
+ObjDisplayName = Str
+GUID = Str
+BuildFile = Str
+Requirements = Obj
+%NAME = "Data"
+
+[WF]
+%FLG: SccDbName = 8
+%FLG: SccProjectName = 8
+%FLG: SccProjectPath = 8
+%FLG: SccProviderName = 8
+SccUseDefaultProvider = True
+%FLG: SccUseDefaultProvider = 8
+%HI: Projects = [0]
+ObjDisplayName = "AllExpressVIs"
+%FLG: Requirements = 4194305
+
+[DEF, WF.Projects]
+%[0] = "TYPE, Path"
+
+[WF.Projects]
+%[0] = "All Express.tpj"
+
+[%TYPES]
+Path = "Path"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1084573510
+%VERSION = "3.1.0.67"
+%TYPELASTMOD = "3.1.0.67"
+%MINPRODVER = "3.1.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+

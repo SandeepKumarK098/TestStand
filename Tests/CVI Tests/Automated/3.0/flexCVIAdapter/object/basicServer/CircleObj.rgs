@@ -1,0 +1,24 @@
+HKCR
+{
+	BasicServer.CircleObj.1 = s 'CircleObj Class'
+	{
+		CLSID = s '{08DB8E0C-C1E4-4072-8380-2578089DA62C}'
+	}
+	BasicServer.CircleObj = s 'CircleObj Class'
+	{
+		CLSID = s '{08DB8E0C-C1E4-4072-8380-2578089DA62C}'
+		CurVer = s 'BasicServer.CircleObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {08DB8E0C-C1E4-4072-8380-2578089DA62C} = s 'CircleObj Class'
+		{
+			ProgID = s 'BasicServer.CircleObj.1'
+			VersionIndependentProgID = s 'BasicServer.CircleObj'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{E5C990E5-C0E3-43B0-8B00-2C4100C3E0F5}'
+			'TypeLib' = s '{1E5EA309-0946-4385-AFB3-61D8B1B90DC4}'
+		}
+	}
+}

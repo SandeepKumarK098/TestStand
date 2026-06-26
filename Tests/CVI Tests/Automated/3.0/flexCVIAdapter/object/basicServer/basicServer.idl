@@ -1,0 +1,62 @@
+// basicServer.idl : IDL source for basicServer.dll
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (basicServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+	[
+		object,
+		uuid(B874AEB3-23DD-41D3-BDD4-EF7C6AE4E705),
+		dual,
+		helpstring("ICircleObj Interface"),
+		pointer_default(unique)
+	]
+	interface ICircleObj : IDispatch
+	{
+		[id(1), helpstring("method enableFillColor")] HRESULT enableFillColor(BOOL enable);
+		[id(2), helpstring("method setCaption")] HRESULT setCaption(BSTR caption);
+		[id(3), helpstring("method getCaption")] HRESULT getCaption([in,out] BSTR* caption);
+	};
+	[
+		object,
+		uuid(1F1ACEC4-7282-4375-AAFB-141F42C55935),
+		dual,
+		helpstring("ICSquareObj Interface"),
+		pointer_default(unique)
+	]
+	interface ICSquareObj : IDispatch
+	{
+		[id(1), helpstring("method enableFillColor")] HRESULT enableFillColor(BOOL enable);
+		[id(2), helpstring("method setCaption")] HRESULT setCaption(BSTR caption);
+		[id(3), helpstring("method getCaption")] HRESULT getCaption([in,out] BSTR* caption);
+	};
+
+[
+	uuid(1E5EA309-0946-4385-AFB3-61D8B1B90DC4),
+	version(1.0),
+	helpstring("basicServer 1.0 Type Library")
+]
+library BASICSERVERLib
+{
+	importlib("stdole32.tlb");
+	importlib("stdole2.tlb");
+
+	[
+		uuid(08DB8E0C-C1E4-4072-8380-2578089DA62C),
+		helpstring("CircleObj Class")
+	]
+	coclass CircleObj
+	{
+		[default] interface ICircleObj;
+	};
+	[
+		uuid(7813836B-4718-4EC9-9C77-1354F4FA7CB6),
+		helpstring("CSquareObj Class")
+	]
+	coclass CSquareObj
+	{
+		[default] interface ICSquareObj;
+	};
+};

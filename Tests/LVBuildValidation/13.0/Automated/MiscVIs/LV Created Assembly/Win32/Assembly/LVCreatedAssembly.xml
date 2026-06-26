@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>LVCreatedAssembly</name>
+  </assembly>
+  <members>
+    <member name="M:LVCreatedAssembly.SimpleArithmetic.SetNumbersAndOperationMethod(LVCreatedAssembly.SimpleArithmetic,System.Double,System.Double,LVCreatedAssembly.LVEnum_1,NationalInstruments.LabVIEW.Interop.ErrorCluster,LVCreatedAssembly.SimpleArithmetic@,NationalInstruments.LabVIEW.Interop.ErrorCluster@)">
+      <summary></summary>
+      <returns>Void</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.Arithmetic(System.Double,System.Double,LVCreatedAssembly.LVEnum_2,System.Double@)">
+      <summary></summary>
+      <returns>System.Double</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.Cluster(System.Double,System.String,LVCreatedAssembly.LVCluster_1,LVCreatedAssembly.LVCluster_1@)">
+      <summary></summary>
+      <returns>Void</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.ConcatTwoStrings(System.String,System.String,System.String@)">
+      <summary></summary>
+      <returns>System.String</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.MultiplyTwoMatrixes(System.Double[,],System.Double[,],System.Double[,]@)">
+      <summary></summary>
+      <returns>System.Double[,]</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.SineWaveform(NationalInstruments.LabVIEW.Interop.DoubleWaveform@,NationalInstruments.LabVIEW.Interop.ErrorCluster@)">
+      <summary></summary>
+      <returns>NationalInstruments.LabVIEW.Interop.DoubleWaveform</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.AddNumericArrays(System.Double[*],System.Double[*],System.Double[*]@)">
+      <summary></summary>
+      <returns>System.Double[*]</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.DisplayWaveform(NationalInstruments.LabVIEW.Interop.DoubleWaveform)">
+      <summary></summary>
+      <returns>NationalInstruments.LabVIEW.Interop.DoubleWaveform</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.ConcatTwoArrayOfStrings(System.String[*],System.String[*],System.String[*]@)">
+      <summary></summary>
+      <returns>System.String[*]</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.VerifyWaveform(NationalInstruments.LabVIEW.Interop.DoubleWaveform,System.Boolean@)">
+      <summary></summary>
+      <returns>System.Boolean</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.GetLVAppAXReference(NationalInstruments.LabVIEW.Interop.LVReferenceNumber@,NationalInstruments.LabVIEW.Interop.ErrorCluster@)">
+      <summary></summary>
+      <returns>Void</returns>
+    </member>
+    <member name="M:LVCreatedAssembly.ExportedVIsClass.GetLVAppVersionAndName(NationalInstruments.LabVIEW.Interop.LVReferenceNumber,System.String@,System.String@,NationalInstruments.LabVIEW.Interop.ErrorCluster@)">
+      <summary></summary>
+      <returns>Void</returns>
+    </member>
+  </members>
+</doc>

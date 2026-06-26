@@ -1,0 +1,1380 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 2.0.0.130
+Version = 127
+Type = "SequenceFile"
+Path Line0001 = "Z:\\TestExec\\Tests\\Dialogs\\EditDlgs\\CreatingWaveformStepType\\CreatingWaveformStepType-CVIAdapter\\Solution\\Wavefor"
+Path Line0002 = "mStepType.seq"
+ProductVersionString = "2.0 beta 2"
+CharEncoding = "SBCS"
+
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+WaveformStepType_CVIAdapter = StepType
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+NoneStepAdditions = Obj
+ReportOptions = Obj
+UUT = Obj
+Statement = StepType
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+Goto = StepType
+Label = StepType
+StdCVIStepAdditions = Obj
+StepTypeSubstepsArray = Objs
+EditSubstep = StepType
+PostSubstep = StepType
+NI_CriticalFailureStackEntry = Obj
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Type = Num
+ModelOption = Num
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [2]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+%[2] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [0]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Main]
+%[0] = StdCVIStep
+%TYPE: %[0] = "WaveformStepType_CVIAdapter"
+
+[SF.Seq[0].Main[0].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData]
+ModulePath = "WaveformStepType.dll"
+FuncName = "GetWaveform"
+SeqContextType = 1
+ModuleSrcPath = "GetWaveform.c"
+ModulePrjPath = "WaveformStepType.prj"
+
+[SF.Seq[0].Main[0].Limits]
+High = 1
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Waveform"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "ReportOptions"
+
+[DEF, SF.Seq[1].Parameters]
+ReportOptions = "TYPE, ReportOptions"
+
+[SF.Seq[1].Parameters.ReportOptions]
+ResultFilterExpression = ""
+AddTimeAndDateToFileName = False
+ForceFileNameToBeUnique = False
+BodyGenerator = "Sequence"
+
+[SF.Seq[1].Parameters]
+%FLG: ReportOptions = 132
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [0]
+%FLG: GotoCleanupOnFail = 8
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT = "GetReportOptions calls this after reading the report options from disk  Override it to modify the options."
+
+[DEF, SF.Seq[1].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Statement"
+
+[SF.Seq[1].Main[0].TS]
+Adapter = "None Adapter"
+PostExpr = "Parameters.ReportOptions.BodyGenerator = \"Sequence\""
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Generate Report using Sequence"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+Type = 1
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[DEF, SF.Seq[2]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "ModifyReportEntry"
+
+[DEF, SF.Seq[2].Parameters]
+Result = Obj
+UUT = "TYPE, UUT"
+ReportEntry = Str
+ReportOptions = "TYPE, ReportOptions"
+Level = Num
+
+[SF.Seq[2].Parameters]
+%FLG: Result = 132
+%FLG: UUT = 132
+%FLG: ReportEntry = 132
+%FLG: ReportOptions = 4
+%FLG: Level = 128
+
+[SF.Seq[2].Parameters.ReportOptions]
+ResultFilterExpression = "true"
+BodyGenerator = "Sequence"
+
+[SF.Seq[2]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [8]
+%FLG: GotoCleanupOnFail = 8
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+%COMMENT Line0001 = "TestReport calls this for each result in result list.  Override it to modify the report section that TestReport generate"
+%COMMENT Line0002 = "s for each result."
+
+[DEF, SF.Seq[2].Locals]
+ResultList = Objs
+Indentation = Str
+DetailsIndentation = Str
+LabelStart = Str
+ValueStart = Str
+
+[DEF, SF.Seq[2].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[2].Main]
+%[0] = NoneStep
+%TYPE: %[0] = "Goto"
+%[1] = NoneStep
+%TYPE: %[1] = "Label"
+%[2] = NoneStep
+%TYPE: %[2] = "Statement"
+%[3] = NoneStep
+%TYPE: %[3] = "Statement"
+%[4] = NoneStep
+%TYPE: %[4] = "Statement"
+%[5] = NoneStep
+%TYPE: %[5] = "Goto"
+%[6] = NoneStep
+%TYPE: %[6] = "Label"
+%[7] = NoneStep
+%TYPE: %[7] = "Statement"
+%[8] = NoneStep
+%TYPE: %[8] = "Statement"
+
+[SF.Seq[2].Main[0].TS]
+Adapter = "None Adapter"
+PreCond = "Parameters.ReportOptions.Format == \"html\""
+CustTrueActTarget = "\"HTML Report\""
+
+[DEF, SF.Seq[2].Main[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[0]]
+%NAME = "Goto HTML Report"
+
+[SF.Seq[2].Main[1].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[2].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[1]]
+%NAME = "Text Report"
+
+[SF.Seq[2].Main[2].TS]
+Adapter = "None Adapter"
+PostExpr = "Locals.Indentation = Str(\"\", \"%\" + Str(Parameters.Level * 3) + \"s\")"
+
+[DEF, SF.Seq[2].Main[2].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[2]]
+%NAME = "Compute Indentation String"
+
+[SF.Seq[2].Main[3].TS]
+Adapter = "None Adapter"
+PostExpr = "Locals.DetailsIndentation = Locals.Indentation + \"     \""
+
+[DEF, SF.Seq[2].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[3]]
+%NAME = "Compute Details Indentation"
+
+[SF.Seq[2].Main[4].TS]
+Adapter = "None Adapter"
+PreCond Line0001 = "Parameters.ReportOptions.IncludeMeasurements && PropertyExists(\"Parameters.Result.RMSvalue\") &&  \nParameters.ReportOp"
+PreCond Line0002 = "tions.Format == \"txt\""
+PostExpr Line0001 = "Parameters.ReportEntry += Locals.DetailsIndentation + \"RMS Value:                \" + Str(Parameters.Result.RMSvalue) +"
+PostExpr Line0002 = " \"\\n\""
+
+[DEF, SF.Seq[2].Main[4].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[4]]
+%NAME = "Add RMS Value - Text"
+
+[SF.Seq[2].Main[5].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[2].Main[5].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[5]]
+%NAME = "Finish"
+
+[SF.Seq[2].Main[6].TS]
+Adapter = "None Adapter"
+
+[DEF, SF.Seq[2].Main[6].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[6]]
+%NAME = "HTML Report"
+
+[SF.Seq[2].Main[7].TS]
+Adapter = "None Adapter"
+PostExpr Line0001 = "Locals.LabelStart = \"<TR><TD BGCOLOR=\" +  Parameters.ReportOptions.Colors.LabelBg + \"><FONT SIZE=-1>\" , Locals.Value"
+PostExpr Line0002 = "Start = \"<TD BGCOLOR=\" +  Parameters.ReportOptions.Colors.ValueBg + \"><FONT SIZE=-1>\""
+
+[DEF, SF.Seq[2].Main[7].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[7]]
+%NAME = "Compute Label and Value HTML Prefix"
+
+[SF.Seq[2].Main[8].TS]
+Adapter = "None Adapter"
+PreCond Line0001 = "AllOf(Parameters.ReportOptions.IncludeMeasurements && PropertyExists(\"Parameters.Result.RMSvalue\"), Parameters.ReportO"
+PreCond Line0002 = "ptions.Format == \"html\")"
+PostExpr Line0001 = "Parameters.ReportEntry += Locals.LabelStart + \"RMS Value\" +  Locals.ValueStart + Str(Parameters.Result.RMSvalue) + \"\"
+PostExpr Line0002 = "\n\""
+
+[DEF, SF.Seq[2].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, SF.Seq[2].Main[8]]
+%NAME = "Add RMS Value - HTML"
+
+[DEF, SF.Seq[2].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[2].RTS]
+Type = 1
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+OptimizeNonReentrantCalls = True
+Priority = 2953567917
+
+[%TYPES]
+Path = "Path"
+WaveformStepType_CVIAdapter = "WaveformStepType_CVIAdapter"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+NoneStepAdditions = "NoneStepAdditions"
+ReportOptions = "ReportOptions"
+UUT = "UUT"
+Statement = "Statement"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+Goto = "Goto"
+Label = "Label"
+StdCVIStepAdditions = "StdCVIStepAdditions"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+EditSubstep = "EditSubstep"
+PostSubstep = "PostSubstep"
+NI_CriticalFailureStackEntry = "NI_CriticalFailureStackEntry"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, WaveformStepType_CVIAdapter]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+Limits = Obj
+Waveform = Nums
+Comp = Str
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[WaveformStepType_CVIAdapter]
+DescriptionFormat = "\"%adapter\""
+DefaultNameFormat = "\"Waveform\""
+%LO: Substeps = [0]
+%HI: Substeps = [1]
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: Limits = 12288
+%INSTFLG: Limits = 12288
+%LO: Waveform = [0]
+%HI: Waveform = [9]
+Comp = "GELT"
+%FLG: Comp = 12288
+%INSTFLG: Comp = 12288
+%TIMESTAMP = 952121119
+%FLG = 33554432
+%TYPE_FLG = 2
+
+[WaveformStepType_CVIAdapter.Menu]
+ItemName = "\"Waveform\""
+
+[DEF, WaveformStepType_CVIAdapter.Substeps]
+%[0] = StdCVIStep
+%TYPE: %[0] = "PostSubstep"
+%[1] = StdCVIStep
+%TYPE: %[1] = "EditSubstep"
+
+[WaveformStepType_CVIAdapter.Substeps[0].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, WaveformStepType_CVIAdapter.Substeps[0].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[WaveformStepType_CVIAdapter.Substeps[0].TS.SData]
+ModulePath = "WaveformStepType.dll"
+FuncName = "SetStatus"
+SeqContextType = 1
+ModuleSrcPath = "SetStatus.c"
+ModulePrjPath = "WaveformStepType.prj"
+
+[DEF, WaveformStepType_CVIAdapter.Substeps[0]]
+%NAME = "Post"
+
+[WaveformStepType_CVIAdapter.Substeps[1].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, WaveformStepType_CVIAdapter.Substeps[1].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[WaveformStepType_CVIAdapter.Substeps[1].TS.SData]
+ModulePath = "WaveformStepType.dll"
+FuncName = "EditLimits"
+SeqContextType = 1
+ModuleSrcPath = "EditLimitsDialog.c"
+ModulePrjPath = "WaveformStepType.prj"
+
+[WaveformStepType_CVIAdapter.Substeps[1]]
+MenuName = "\"Edit Limits\""
+
+[DEF, WaveformStepType_CVIAdapter.Substeps[1]]
+%NAME = "Edit"
+
+[DEF, WaveformStepType_CVIAdapter.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[WaveformStepType_CVIAdapter.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: StatusExpr = 1
+
+[DEF, WaveformStepType_CVIAdapter.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+RMSvalue = Num
+
+[WaveformStepType_CVIAdapter.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, WaveformStepType_CVIAdapter.Limits]
+Low = Num
+High = Num
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJECTS]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+Adapter = Str
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Adapter = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+HasModule = Bool
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+LoadOpt = "PreloadWhenExecuted"
+UnloadOpt = "UnloadWithFile"
+Mode = "Normal"
+WindowActivation = "None"
+StepFCSeqF = True
+PassAct = "Next"
+FailAct = "Next"
+CustTrueAct = "Next"
+CustFalseAct = "Next"
+LoopType = "NoLooping"
+LoopIncrement = "RunState.LoopIndex += 1"
+LoopInitialize = "RunState.LoopIndex = 0"
+HasModule = True
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+%INSTFLG = 262168
+%INSTOVRD = 262168
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, ReportOptions]
+%LOCATION = "UserTypes"
+IncludeLimits = Bool
+IncludeMeasurements = Bool
+IncludeArrayMeasurement = Num
+ArrayMeasurementFilter = Num
+ArrayMeasurementMax = Num
+IncludeTimes = Bool
+Format = Str
+NumericFormat = Str
+ResultFilterExpression = Str
+GeneratePath = Bool
+UseTemporaryFile = Bool
+UseSequenceFileNameAsPrefix = Bool
+AddTimeAndDateToFileName = Bool
+NewFileNameForEachUUT = Bool
+ForceFileNameToBeUnique = Bool
+AppendToFileIfItExists = Bool
+DirectoryType = Str
+Directory = Str
+BaseName = Str
+UseFormatForExtension = Bool
+Extension = Str
+ReportFilePath = Str
+DisableReportGeneration = Bool
+IncludeStepResults = Bool
+BodyGenerator = Str
+Colors = Obj
+DateAndTimeFormat = Str
+NewFileNameForEachBatch = Bool
+NewBatchFileNameForEachBatch = Bool
+NewFileNameForEachTestSocket = Bool
+StoreUUTReportWithBatchReport = Bool
+BatchBaseName = Str
+LabelSize = Num
+%ROOT_TYPE = True
+
+[ReportOptions]
+IncludeLimits = True
+IncludeMeasurements = True
+IncludeArrayMeasurement = 2
+ArrayMeasurementFilter = 3
+ArrayMeasurementMax = 100
+IncludeTimes = True
+Format = "html"
+NumericFormat = "%$.13f"
+ResultFilterExpression = "True"
+GeneratePath = True
+UseSequenceFileNameAsPrefix = True
+AddTimeAndDateToFileName = True
+ForceFileNameToBeUnique = True
+DirectoryType = "SequenceFileDirectory"
+BaseName = "Report"
+UseFormatForExtension = True
+IncludeStepResults = True
+BodyGenerator = "DLL"
+DateAndTimeFormat = "TimeFirst"
+StoreUUTReportWithBatchReport = True
+BatchBaseName = "BatchReport"
+LabelSize = 26
+%TIMESTAMP = 981660876
+%VERSION = "2.0.0.130"
+%FLG = 33554432
+
+[DEF, ReportOptions.Colors]
+LabelBg = Str
+ValueBg = Str
+UUTSeparator = Str
+HeaderSeparator = Str
+TableBorder = Str
+MainBg = Str
+SetupBg = Str
+CleanupBg = Str
+ReportTextBg = Str
+Terminated = Str
+Failed = Str
+Error = Str
+Passed = Str
+Skipped = Str
+Done = Str
+TerminatedBg = Str
+FailedBg = Str
+ErrorBg = Str
+PassedBg = Str
+SkippedBg = Str
+DoneBg = Str
+FailureStackLabelBg = Str
+FailureStackValueBg = Str
+BatchHeadingBg = Str
+
+[ReportOptions.Colors]
+LabelBg = "#FFFFFF"
+ValueBg = "#32FFFF"
+UUTSeparator = "#0000E0"
+HeaderSeparator = "#8000CC"
+TableBorder = "#000000"
+MainBg = "#00C4C4"
+SetupBg = "#FF8000"
+CleanupBg = "#ADD8E6"
+ReportTextBg = "#FF32CC"
+Terminated = "#000080"
+Failed = "#FF0000"
+Error = "#FF0000"
+Passed = "#008000"
+Skipped = "#FFFF00"
+Done = "#008000"
+TerminatedBg = "#0000FF"
+FailedBg = "#FF0000"
+ErrorBg = "#FF0000"
+PassedBg = "#00FF00"
+SkippedBg = "#FFFF00"
+DoneBg = "#00FFCC"
+FailureStackLabelBg = "#FF2020"
+FailureStackValueBg = "#D0D0D0"
+BatchHeadingBg = "#00C4C4"
+
+[DEF, UUT]
+%LOCATION = "UserTypes"
+SerialNumber = Str
+UUTLoopIndex = Num
+CriticalFailureStack = Objs
+BatchSerialNumber = Str
+TestSocketIndex = Num
+%ROOT_TYPE = True
+
+[DEF, UUT.CriticalFailureStack]
+%EPTYPE = "TYPE, NI_CriticalFailureStackEntry"
+
+[UUT]
+TestSocketIndex = -1
+%TIMESTAMP = 981660876
+%VERSION = "2.0.0.130"
+%FLG = 33554432
+
+[DEF, Statement]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Statement]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "LocalizeExpression(Step.TS.PostExpr)"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Statement.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Statement.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Statement.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Statement.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStatementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Statement.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Statement.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Statement.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Statement.Substeps[0]]
+%NAME = "Edit"
+
+[Statement.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Statement.TS]
+Icon = "Statement.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PostExpr = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Statement.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Statement.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Statement.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+NumEls = Str
+StrPass = Num
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+NumEls = "1024"
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, Goto]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Goto]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DESCR_PREFIX\", \"Goto\") + \" \" +  (Step.TS.CustTrueActTarget == \"\\\"<End>\\\"\" ? Re"
+DescriptionFormat Line0002 = "sStr(\"NI_SUBSTEPS\", \"END_STEP_NAME\", \"<END>\") : (Step.TS.CustTrueActTarget == \"\\\"<Cleanup>\\\"\" ? ResStr(\"NI_"
+DescriptionFormat Line0003 = "SUBSTEPS\", \"CLEANUP_STEP_NAME\", \"<CLEANUP>\") : LocalizeExpression(Step.TS.CustTrueActTarget)))"
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660875
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Goto.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Goto.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Goto.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Goto.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditGotoStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Goto.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Goto.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Goto.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Goto.Substeps[0]]
+%NAME = "Edit"
+
+[Goto.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Goto.TS]
+Icon = "goto.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+CustExpr = "True"
+%INSTFLG: CustExpr = 1
+CustTrueAct = "Goto"
+%INSTFLG: CustTrueAct = 1
+%INSTFLG: CustFalseAct = 1
+CustTrueActTarget = "\"<End>\""
+%INSTFLG: CustTrueActTarget = 1
+%INSTFLG: LoopType = 1
+%INSTFLG: LoopWhile = 1
+%INSTFLG: LoopStatus = 1
+%INSTFLG: LoopIncrement = 1
+%INSTFLG: LoopInitialize = 1
+%INSTFLG: LoopOpt = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Goto.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Goto.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Goto.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, Label]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+Description = Str
+%ROOT_TYPE = True
+
+[Label]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat = "Step.Description"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"LABEL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660876
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, Label.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[Label.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, Label.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Label.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditLabelStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Label.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Label.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[Label.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Label.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Label.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Label.Substeps[0]]
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"LABEL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, Label.Substeps[0]]
+%NAME = "Edit"
+
+[Label.Menu]
+Adapter = "None Adapter"
+ItemName = "ResStr(\"NI_STEPTYPES\", \"LABEL_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Label.TS]
+Adapter = "DLL Flexible Prototype Adapter"
+Icon = "label.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+NoResult = True
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+HasModule = False
+CanSpecifyModule = False
+
+[DEF, Label.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[DEF, Label.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Label.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StdCVIStepAdditions]
+%LOCATION = "StdTypes"
+ModulePath = "TYPE, Path"
+FuncName = Str
+ExtProtoParams = Str
+FuncProto = Num
+ModuleType = Num
+SeqContextType = Num
+ModuleSrcPath = "TYPE, Path"
+ModulePrjPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[StdCVIStepAdditions]
+ModuleType = 2
+%TIMESTAMP = 981650151
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 655384
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, PostSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+
+[PostSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"POST_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 981660877
+%VERSION = "2.0.0.130"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[PostSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"POST_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "ExecSubsteps"
+
+[DEF, PostSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PostSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, NI_CriticalFailureStackEntry]
+%LOCATION = "UserTypes"
+StepName = Str
+SequenceName = Str
+SequenceFileName = Str
+ResultId = Num
+%ROOT_TYPE = True
+
+[NI_CriticalFailureStackEntry]
+%TIMESTAMP = 981660876
+%VERSION = "2.0.0.130"
+%FLG = 33554432
+

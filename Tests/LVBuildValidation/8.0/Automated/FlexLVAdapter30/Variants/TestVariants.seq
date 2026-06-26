@@ -1,0 +1,1441 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.0.0.8371
+CompatibleProdVersion = 3.0.0.0
+Version = 168
+Type = "SequenceFile"
+Path = "Z:\\Tests\\3.0\\FlexLVAdapter\\Variants\\TestVariants.seq"
+ProductVersionString = "3.0b2 (3.0.0.8371)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeSubstepsArray = Objs
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexGStepAdditions = FGModule
+VIParameter = VIParameter
+VIParameterElement = VIParameterElement
+VariantParams = Obj
+ClusterType1 = Obj
+error_in = Obj
+NameValueType = Obj
+Type = Obj
+Expression = ExprValue
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [0]
+%FLG: Seq = 4194304
+%FLG: FileGlobalDefaults = 4194304
+%FLG: ModelFile = 4194312
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 4194312
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 4194312
+Version = "0.0.0.0"
+%FLG: Version = 4194312
+BatchSync = 1
+%FLG: BatchSync = 4194312
+%FLG: SFGlobalsScope = 4194312
+%FLG: Type = 4194312
+%FLG: ModelOption = 4194312
+
+[DEF, SF.Seq]
+%[0] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%LO: Main = [0]
+%HI: Main = [1]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+ArrayOfNumbers = Nums
+ArrayOfStrings = Strs
+ArrayOfBooleans = Bools
+Number = Num
+String = Str
+Boolean = Bool
+VariantParams_In = "TYPE, VariantParams"
+VariantParams_Out = "TYPE, VariantParams"
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[0].Locals.VariantParams_In]
+Number = 1111
+String = "Input String 1, 2, 3, 4, 5"
+Boolean = True
+%LO: ArrayOfNumbers = [0]
+%HI: ArrayOfNumbers = [4]
+%LO: ArrayOfStrings = [0]
+%HI: ArrayOfStrings = [4]
+%LO: ArrayOfBooleans = [0]
+%HI: ArrayOfBooleans = [4]
+
+[SF.Seq[0].Locals.VariantParams_In.ArrayOfNumbers]
+%[0] = 111.11
+%[1] = 222.22
+%[2] = 333.33
+%[3] = 444.44
+%[4] = 555.5500000000001
+
+[SF.Seq[0].Locals.VariantParams_In.ArrayOfStrings]
+%[0] = "String111.11"
+%[1] = "String222.22"
+%[2] = "String333.33"
+%[3] = "String444.44"
+%[4] = "String555.55"
+
+[SF.Seq[0].Locals.VariantParams_In.ArrayOfBooleans]
+%[0] = True
+%[1] = True
+%[2] = True
+
+[DEF, SF.Seq[0].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Action"
+
+[SF.Seq[0].Main[0].TS]
+Id = "6026360B-6249-4ED5-8497-9B801D6CD39D"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData.ViCall]
+VIPath = "Output Variants.vi"
+TDChecksum = -697637912
+%LO: Parms = [0]
+%HI: Parms = [11]
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+%[7] = "TYPE, VIParameter"
+%[8] = "TYPE, VIParameter"
+%[9] = "TYPE, VIParameter"
+%[10] = "TYPE, VIParameter"
+%[11] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0]]
+Label = "Boolean Array"
+ArgVal = "Locals.VariantParams_In.ArrayOfBooleans"
+Type = 5
+WireRequirement = 1
+ArrayType = 52
+DisplayType = "1D Array (Boolean)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 7
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "Boolean Array"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1]]
+Label = "Numeric"
+ArgVal = "Locals.VariantParams_In.Number"
+Type = 0
+WireRequirement = 1
+NumType = 3
+DisplayType = "Number (U16)"
+ConnectorNumber = 11
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1]]
+%NAME = "Numeric"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[2]]
+Label = "Boolean"
+ArgVal = "Locals.VariantParams_In.Boolean"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+ConnectorNumber = 10
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[2]]
+%NAME = "Boolean"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[3]]
+Label = "String"
+ArgVal = "Locals.VariantParams_In.String"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+ConnectorNumber = 9
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[3]]
+%NAME = "String"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4]]
+Label = "Numeric Array"
+ArgVal = "Locals.VariantParams_In.ArrayOfNumbers"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+ConnectorNumber = 8
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+%NAME = "Numeric Array"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5]]
+Label = "String Array"
+ArgVal = "Locals.VariantParams_In.ArrayOfStrings"
+Type = 5
+WireRequirement = 1
+ArrayType = 51
+DisplayType = "1D Array (ASCII String)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[0]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[0]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[1]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[1]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[2]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5].ArrayClusterEls[2]]
+%NAME = "String Array"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6]]
+Label = "Boolean Array Variant"
+ArgVal = "Locals.ArrayOfBooleans"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 5
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6]]
+%NAME = "Boolean Array Variant"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[7]]
+Label = "Numeric Variant"
+ArgVal = "Locals.Number"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[7]]
+%NAME = "Numeric Variant"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[8]]
+Label = "Boolean Variant"
+ArgVal = "Locals.Boolean"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[8]]
+%NAME = "Boolean Variant"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[9]]
+Label = "String Variant"
+ArgVal = "Locals.String"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[9]]
+%NAME = "String Variant"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[10]]
+Label = "Numeric Array Variant"
+ArgVal = "Locals.ArrayOfNumbers"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[10]]
+%NAME = "Numeric Array Variant"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[11]]
+Label = "String Array Variant"
+ArgVal = "Locals.ArrayOfStrings"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[11]]
+%NAME = "String Array Variant"
+
+[SF.Seq[0].Main[0]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Get Variant Variant Values"
+
+[SF.Seq[0].Main[1].TS]
+Id = "7786B106-5C80-4FD6-8ABC-1BC9051E9340"
+StatusExpr = "Locals.VariantParams_In == Locals.VariantParams_Out ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[1].TS.SData.ViCall]
+VIPath = "Input Variants.vi"
+ShowFrnPnl = True
+TDChecksum = 399807534
+%LO: Parms = [0]
+%HI: Parms = [12]
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+%[7] = "TYPE, VIParameter"
+%[8] = "TYPE, VIParameter"
+%[9] = "TYPE, VIParameter"
+%[10] = "TYPE, VIParameter"
+%[11] = "TYPE, VIParameter"
+%[12] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0]]
+Label = "Boolean Array Variant"
+ArgVal = "Locals.ArrayOfBooleans"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0]]
+%NAME = "Boolean Array Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1]]
+Label = "Numeric Variant"
+Caption = "Numeric Variant Caption"
+ArgVal = "Locals.Number"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1]]
+%NAME = "Numeric Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[2]]
+Label = "Boolean Variant"
+ArgVal = "Locals.Boolean"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 5
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[2]]
+%NAME = "Boolean Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[3]]
+Label = "String Variant"
+ArgVal = "Locals.String"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 9
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[3]]
+%NAME = "String Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[4]]
+Label = "Numeric Array Variant"
+ArgVal = "Locals.ArrayOfNumbers"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 11
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[4]]
+%NAME = "Numeric Array Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[5]]
+Label = "String Array Variant"
+ArgVal = "Locals.ArrayOfStrings"
+Type = 7
+WireRequirement = 1
+DisplayType = "Anything"
+ConnectorNumber = 12
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[5]]
+%NAME = "String Array Variant"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6]]
+Label = "Boolean Array"
+ArgVal = "Locals.VariantParams_Out.ArrayOfBooleans"
+Type = 5
+WireRequirement = 1
+ArrayType = 52
+DisplayType = "1D Array (Boolean)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+Label = "Boolean Array"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+%NAME = "Boolean Array"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6]]
+%NAME = "Boolean Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[7]]
+Label = "Numeric"
+ArgVal = "Locals.VariantParams_Out.Number"
+Type = 0
+WireRequirement = 1
+NumType = 5
+DisplayType = "Number (U32)"
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[7]]
+%NAME = "Numeric"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[8]]
+Label = "Boolean"
+ArgVal = "Locals.VariantParams_Out.Boolean"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[8]]
+%NAME = "Boolean"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9]]
+Label = "error out"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+Direction = 1
+ConnectorNumber = 8
+LegacyClusterType = 2
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[0]]
+Label = "status"
+ArgVal = "Step.Result.Error.Occurred"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[0]]
+%NAME = "status"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[1]]
+Label = "code"
+ArgVal = "Step.Result.Error.Code"
+Type = 0
+WireRequirement = 1
+NumType = 4
+DisplayType = "Number (I32)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[1]]
+%NAME = "code"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[2]]
+Label = "source"
+ArgVal = "Step.Result.Error.Msg"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9].ArrayClusterEls[2]]
+%NAME = "source"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9]]
+%NAME = "error out"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[10]]
+Label = "String"
+ArgVal = "Locals.VariantParams_Out.String"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 10
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[10]]
+%NAME = "String"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11]]
+Label = "Numeric Array"
+ArgVal = "Locals.VariantParams_Out.ArrayOfNumbers"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+Direction = 1
+ConnectorNumber = 15
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[0]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[0]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[1]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[1]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[2]]
+Label = "Numeric Array"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11].ArrayClusterEls[2]]
+%NAME = "Numeric Array"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[11]]
+%NAME = "Numeric Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12]]
+Label = "String Array"
+ArgVal = "Locals.VariantParams_Out.ArrayOfStrings"
+Type = 5
+WireRequirement = 1
+ArrayType = 51
+DisplayType = "1D Array (ASCII String)"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+Direction = 1
+ConnectorNumber = 14
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[0]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[0]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[1]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[1]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[2]]
+Label = "String Array"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12].ArrayClusterEls[2]]
+%NAME = "String Array"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[12]]
+%NAME = "String Array"
+
+[SF.Seq[0].Main[1]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Set Variant Values"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexGStepAdditions = "FlexGStepAdditions"
+VIParameter = "VIParameter"
+VIParameterElement = "VIParameterElement"
+VariantParams = "VariantParams"
+ClusterType1 = "ClusterType1"
+error_in = "error_in"
+NameValueType = "NameValueType"
+Type = "Type"
+Expression = "Expression"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1042482658
+%VERSION = "3.0.0.8322"
+%TYPELASTMOD = "3.0.0.8322"
+%MINPRODVER = "3.0.0.0"
+%TYPE_FLG = 33554446
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4849688
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = "TYPE, Expression"
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Id = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = "TYPE, Expression"
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = "TYPE, Expression"
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = "TYPE, Expression"
+SwitchOperation = Num
+RouteGroupConnect = "TYPE, Expression"
+RouteGroupDisconnect = "TYPE, Expression"
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = "TYPE, Expression"
+FailActTarget = "TYPE, Expression"
+CustExpr = "TYPE, Expression"
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = "TYPE, Expression"
+CustFalseActTarget = "TYPE, Expression"
+LoopType = Str
+LoopWhile = "TYPE, Expression"
+LoopStatus = "TYPE, Expression"
+LoopIncrement = "TYPE, Expression"
+LoopInitialize = "TYPE, Expression"
+LoopOpt = Num
+PreExpr = "TYPE, Expression"
+PostExpr = "TYPE, Expression"
+StatusExpr = "TYPE, Expression"
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: Id = 1
+%INSTOVRD: Id = 5046297
+%INSTOVRD: Icon = 5046296
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+%INSTOVRD: PreCond = 5046296
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046296
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046296
+Mode = "Normal"
+%INSTOVRD: Mode = 5046296
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046296
+%INSTOVRD: NoResult = 5046296
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046296
+%INSTOVRD: IgnoreRTE = 5046296
+%INSTOVRD: UseMutex = 5046296
+%INSTOVRD: MutexNameOrRef = 5046296
+%INSTOVRD: BatchSyncOpt = 5046296
+%INSTOVRD: SwitchEnabled = 5046296
+%INSTOVRD: VirtualDeviceName = 5046296
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046296
+%INSTOVRD: RouteGroupConnect = 5046296
+%INSTOVRD: RouteGroupDisconnect = 5046296
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046296
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046296
+ConnectionLifetime = 4
+%INSTOVRD: ConnectionLifetime = 5046296
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046296
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046296
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046296
+%INSTOVRD: PassActTarget = 5046296
+%INSTOVRD: FailActTarget = 5046296
+%INSTOVRD: CustExpr = 5046296
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046296
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046296
+%INSTOVRD: CustTrueActTarget = 5046296
+%INSTOVRD: CustFalseActTarget = 5046296
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046296
+%INSTOVRD: LoopWhile = 5046296
+%INSTOVRD: LoopStatus = 5046296
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046296
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046296
+%INSTOVRD: LoopOpt = 5046296
+%INSTOVRD: PreExpr = 5046296
+%INSTOVRD: PostExpr = 5046296
+%INSTOVRD: StatusExpr = 5046296
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046296
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046296
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046296
+%INSTOVRD: PrecondIntExe = 5046296
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4456472
+%INSTOVRD = 4456472
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%EXTDATA = True
+
+[Error.Code]
+%EXTDATA = True
+
+[EXTDATA, Error.Code, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Code, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "code"
+
+[EXTDATA, Error.Code, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "code"
+
+[Error.Msg]
+%EXTDATA = True
+
+[EXTDATA, Error.Msg, STRUCT]
+DataVersion = 1
+Type = 2
+StringBufferSize = 1024
+StringStorage = 1
+
+[EXTDATA, Error.Msg, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "source"
+
+[EXTDATA, Error.Msg, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "msg"
+
+[Error.Occurred]
+%EXTDATA = True
+
+[EXTDATA, Error.Occurred, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Occurred, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "status"
+
+[EXTDATA, Error.Occurred, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "occurred"
+
+[EXTDATA, Error, STRUCT]
+AllowStructPassing = True
+DataVersion = 1
+PackingOption = 8
+Type = 0
+
+[EXTDATA, Error, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[EXTDATA, Error, DNSTRUCT]
+AllowStructPassing = True
+DataVersion = 1
+StructMemberName = ""
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%INSTFLG = 4194304
+
+[DEF, FlexGStepAdditions]
+%LOCATION = "StdTypes"
+ViCall = VICall
+%ROOT_TYPE = True
+
+[DEF, FlexGStepAdditions.ViCall]
+VIPath = "TYPE, Path"
+RemoteVIPath = "TYPE, Path"
+ShowFrnPnl = Bool
+ViDescription = Str
+TDChecksum = Num
+AutoDetectLVRT = Bool
+RemoteHost = "TYPE, Expression"
+RemoteHostByExpr = Bool
+Parms = Objs
+
+[FlexGStepAdditions.ViCall]
+TDChecksum = -1
+
+[DEF, FlexGStepAdditions.ViCall.Parms]
+%EPTYPE = "TYPE, VIParameter"
+%FLG: %EPTYPE = 131072
+
+[FlexGStepAdditions]
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, VIParameter]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+Direction = Num
+ConnectorNumber = Num
+LegacyClusterType = Num
+UseDefaultValues = Bool
+%ROOT_TYPE = True
+
+[VIParameter]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+ConnectorNumber = -1
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, VIParameterElement]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+%ROOT_TYPE = True
+
+[VIParameterElement]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, VariantParams]
+%LOCATION = "UserTypes"
+Number = Num
+String = Str
+Boolean = Bool
+ArrayOfNumbers = Nums
+ArrayOfStrings = Strs
+ArrayOfBooleans = Bools
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[VariantParams]
+%TIMESTAMP = 1018283298
+%VERSION = "0.0.0.1"
+
+[DEF, ClusterType1]
+%LOCATION = "UserTypes"
+Numeric = Num
+Array = Objs
+Boolean = Bool
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[ClusterType1.Numeric]
+%EXTDATA = True
+
+[EXTDATA, ClusterType1.Numeric, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Numeric"
+
+[ClusterType1.Array]
+%EXTDATA = True
+
+[EXTDATA, ClusterType1.Array, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Array"
+
+[ClusterType1.Boolean]
+%EXTDATA = True
+
+[EXTDATA, ClusterType1.Boolean, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Boolean"
+
+[ClusterType1]
+%TIMESTAMP = 1018291347
+%VERSION = "0.0.0.1"
+%EXTDATA = True
+
+[EXTDATA, ClusterType1, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, error_in]
+%LOCATION = "UserTypes"
+status = Bool
+code = Num
+source = Str
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[error_in.status]
+%EXTDATA = True
+
+[EXTDATA, error_in.status, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "status"
+
+[error_in.code]
+%EXTDATA = True
+
+[EXTDATA, error_in.code, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "code"
+
+[error_in.source]
+%EXTDATA = True
+
+[EXTDATA, error_in.source, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "source"
+
+[error_in]
+%TIMESTAMP = 1018291366
+%VERSION = "0.0.0.1"
+%EXTDATA = True
+
+[EXTDATA, error_in, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, NameValueType]
+%LOCATION = "UserTypes"
+Name = Str
+ValueProp = Num
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[NameValueType.Name]
+%EXTDATA = True
+
+[EXTDATA, NameValueType.Name, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Name"
+
+[NameValueType.ValueProp]
+%EXTDATA = True
+
+[EXTDATA, NameValueType.ValueProp, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Value"
+
+[NameValueType]
+%TIMESTAMP = 1018291398
+%VERSION = "0.0.0.1"
+%EXTDATA = True
+
+[EXTDATA, NameValueType, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, Type]
+%LOCATION = "UserTypes"
+SubPropLevel1 = Obj
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[DEF, Type.SubPropLevel1]
+SubPropLevel2 = Obj
+
+[DEF, Type.SubPropLevel1.SubPropLevel2]
+Number = Num
+
+[Type.SubPropLevel1.SubPropLevel2]
+Number = 34
+
+[Type]
+%TIMESTAMP = 1018301605
+%VERSION = "0.0.0.1"
+
+[DEF, Expression]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Expression]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+

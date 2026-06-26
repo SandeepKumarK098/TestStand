@@ -1,0 +1,3792 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.0.0.8371
+CompatibleProdVersion = 3.0.0.0
+Version = 168
+Type = "SequenceFile"
+Path = "Z:\\Tests\\3.0\\FlexLVAdapter\\Waveforms\\waveformtests.seq"
+ProductVersionString = "3.0b2 (3.0.0.8371)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeSubstepsArray = Objs
+Expression = ExprValue
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexGStepAdditions = FGModule
+VIParameter = VIParameter
+PassFailTest = StepType
+EditSubstep = StepType
+FlexCStepAdditions = FCModule
+FCParameter = FCParameter
+a2_cluster = Obj
+LabVIEWAnalogWaveform = Obj
+VIParameterElement = VIParameterElement
+LabVIEWDigitalData = Obj
+LabVIEWDigitalWaveform = Obj
+mystep = StepType
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [0]
+%FLG: Seq = 4194304
+%FLG: FileGlobalDefaults = 4194304
+%FLG: ModelFile = 4194312
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 4194312
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 4194312
+Version = "0.0.0.0"
+%FLG: Version = 4194312
+BatchSync = 1
+%FLG: BatchSync = 4194312
+%FLG: SFGlobalsScope = 4194312
+%FLG: Type = 4194312
+%FLG: ModelOption = 4194312
+
+[DEF, SF.Seq]
+%[0] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%LO: Main = [0]
+%HI: Main = [9]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+a2 = "TYPE, a2_cluster"
+awave = "TYPE, LabVIEWAnalogWaveform"
+t0 = Str
+dt = Num
+Y = Nums
+a1 = Str
+waveform_array = Objs
+awave2 = "TYPE, LabVIEWAnalogWaveform"
+a1ok = Bool
+a2ok = Bool
+compsame = Bool
+DigitalY = "TYPE, LabVIEWDigitalData"
+digwaveform = "TYPE, LabVIEWDigitalWaveform"
+compdigwavefform = "TYPE, LabVIEWDigitalWaveform"
+digwaveformarray = Objs
+digwaveform2 = "TYPE, LabVIEWDigitalWaveform"
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Locals.waveform_array]
+%EPTYPE = "TYPE, LabVIEWAnalogWaveform"
+
+[SF.Seq[0].Locals]
+%LO: waveform_array = [0]
+%HI: waveform_array = [1]
+%LO: digwaveformarray = [0]
+%HI: digwaveformarray = [1]
+
+[DEF, SF.Seq[0].Locals.digwaveformarray]
+%EPTYPE = "TYPE, LabVIEWDigitalWaveform"
+
+[DEF, SF.Seq[0].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "PassFailTest"
+%[2] = Step
+%TYPE: %[2] = "PassFailTest"
+%[3] = Step
+%TYPE: %[3] = "PassFailTest"
+%[4] = Step
+%TYPE: %[4] = "Action"
+%[5] = Step
+%TYPE: %[5] = "PassFailTest"
+%[6] = Step
+%TYPE: %[6] = "PassFailTest"
+%[7] = Step
+%TYPE: %[7] = "PassFailTest"
+%[8] = Step
+%TYPE: %[8] = "PassFailTest"
+%[9] = Step
+%TYPE: %[9] = "mystep"
+
+[SF.Seq[0].Main[0].TS]
+Id = "ID#:L9hyEYcagE2tM9tWsN0R/B"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData.ViCall]
+VIPath = "Generate Analog Waveform in LV.vi"
+TDChecksum = -616221680
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0]]
+Label = "a2"
+ArgVal = "Locals.a2"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "String"
+ArgVal = "Locals.a2.String"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "String"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "Boolean"
+ArgVal = "Locals.a2.Boolean"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "Boolean"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Array"
+Type = 5
+WireRequirement = 1
+ArrayType = 55
+NumType = 11
+DisplayType = "1D Array (Container)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+%NAME = "Array"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts]
+Real = "TYPE, VIParameterElement"
+Imaginary = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Real]
+Label = "Real"
+Caption = "Real"
+ArgVal = "Locals.a2.Array.Real"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Imaginary]
+Label = "Imaginary"
+Caption = "Imaginary"
+ArgVal = "Locals.a2.Array.Imaginary"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[0]]
+%NAME = "a2"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1]]
+Label = "waveform out"
+ArgVal = "Locals.awave"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.awave.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.awave.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.awave.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.awave.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "1D Array (Container)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform out"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[2]]
+Label = "t0"
+ArgVal = "Locals.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[2]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[3]]
+Label = "dt"
+ArgVal = "Locals.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+Direction = 1
+ConnectorNumber = 8
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[3]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4]]
+Label = "Y"
+ArgVal = "Locals.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+Direction = 1
+ConnectorNumber = 10
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[4]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5]]
+Label = "a1"
+ArgVal = "Locals.a1"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 15
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[5]]
+%NAME = "a1"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6]]
+Label = "waveform array"
+ArgVal = "Locals.waveform_array"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+ClusterType = 23
+DisplayType = "1D Array (LabVIEWAnalogWaveform)"
+Direction = 1
+ConnectorNumber = 14
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6]]
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+%NAME = "waveform array"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto]
+signal out = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out]
+Label = "signal out"
+Type = 3
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[0]]
+Label = "t0"
+Type = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[1]]
+Label = "dt"
+Type = 0
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[2]]
+Label = "Y"
+Type = 5
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[3]]
+Label = "attributes"
+Type = 5
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[0].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[SF.Seq[0].Main[0]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Generate Analog Waveform"
+
+[SF.Seq[0].Main[1].TS]
+Id = "ID#:m7IBHng7iU6feTwHMmbeKA"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[1].TS.SData.ViCall]
+VIPath = "Verify Analog Waveform in LV.vi"
+TDChecksum = 1770315840
+%LO: Parms = [0]
+%HI: Parms = [9]
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+%[7] = "TYPE, VIParameter"
+%[8] = "TYPE, VIParameter"
+%[9] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0]]
+Label = "a2"
+ArgVal = "Locals.a2"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+ConnectorNumber = 5
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "String"
+ArgVal = "Locals.a2.String"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "String"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "Boolean"
+ArgVal = "Locals.a2.Boolean"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "Boolean"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Array"
+Type = 5
+WireRequirement = 1
+ArrayType = 55
+NumType = 11
+DisplayType = "1D Array (Container)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+%NAME = "Array"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts]
+Real = "TYPE, VIParameterElement"
+Imaginary = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Real]
+Label = "Real"
+Caption = "Real"
+ArgVal = "Locals.a2.Array.Real"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Imaginary]
+Label = "Imaginary"
+Caption = "Imaginary"
+ArgVal = "Locals.a2.Array.Imaginary"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[0]]
+%NAME = "a2"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1]]
+Label = "waveform in"
+ArgVal = "Locals.awave"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 9
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.awave.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.awave.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.awave.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.awave.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform in"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[2]]
+Label = "t0"
+ArgVal = "Locals.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+ConnectorNumber = 8
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[2]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[3]]
+Label = "dt"
+ArgVal = "Locals.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+ConnectorNumber = 7
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[3]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[4]]
+Label = "Y"
+ArgVal = "Locals.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[4]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[5]]
+Label = "a1"
+ArgVal = "Locals.a1"
+Type = 1
+WireRequirement = 1
+StrPass = 1
+DisplayType = "Binary String"
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[5]]
+%NAME = "a1"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6]]
+Label = "waveform out"
+ArgVal = "Locals.awave2"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.awave2.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.awave2.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.awave2.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.awave2.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[6]]
+%NAME = "waveform out"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[7]]
+Label = "Components equal"
+ArgVal = "Locals.compsame"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[7]]
+%NAME = "Components equal"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[8]]
+Label = "a1 equal"
+ArgVal = "Locals.a1ok"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[8]]
+%NAME = "a1 equal"
+
+[SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9]]
+Label = "a2 equal"
+ArgVal = "Locals.a2ok"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[1].TS.SData.ViCall.Parms[9]]
+%NAME = "a2 equal"
+
+[SF.Seq[0].Main[1]]
+%FLG: TS = 0
+DataSource = "Locals.a1ok and Locals.a2ok and Locals.compsame"
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Verify Analog Waveform"
+
+[SF.Seq[0].Main[2].TS]
+Id = "ID#:WSKnPxVCgk+AA3eFNlxMIA"
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[2].TS.SData.ViCall]
+VIPath = "Are Analog Waveforms Equal.vi"
+TDChecksum = -361493987
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0]]
+Label = "waveform"
+ArgVal = "Locals.waveform_array[0]"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.waveform_array[0].t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.waveform_array[0].dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.waveform_array[0].Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.waveform_array[0].attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[0]]
+%NAME = "waveform"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1]]
+Label = "waveform 2"
+ArgVal = "Locals.waveform_array[1]"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.waveform_array[1].t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.waveform_array[1].dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.waveform_array[1].Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.waveform_array[1].attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform 2"
+
+[SF.Seq[0].Main[2].TS.SData.ViCall.Parms[2]]
+Label = "waveforms equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[2].TS.SData.ViCall.Parms[2]]
+%NAME = "waveforms equal"
+
+[SF.Seq[0].Main[2]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "Test Array Equal"
+
+[SF.Seq[0].Main[3].TS]
+Id = "ID#:2KYsWcqQq0WGmxDyVdTptD"
+
+[DEF, SF.Seq[0].Main[3].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[3].TS.SData.ViCall]
+VIPath = "Are Analog Waveforms Equal.vi"
+TDChecksum = -361493987
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0]]
+Label = "waveform"
+ArgVal = "Locals.awave"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.awave.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.awave.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.awave.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.awave.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[0]]
+%NAME = "waveform"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1]]
+Label = "waveform 2"
+ArgVal = "Locals.awave2"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.awave2.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.awave2.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.awave2.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.awave2.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform 2"
+
+[SF.Seq[0].Main[3].TS.SData.ViCall.Parms[2]]
+Label = "waveforms equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[3].TS.SData.ViCall.Parms[2]]
+%NAME = "waveforms equal"
+
+[SF.Seq[0].Main[3]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "Test waveform unchanged"
+
+[SF.Seq[0].Main[4].TS]
+Id = "ID#:W24GqTszokWRqrwV23+gxC"
+
+[DEF, SF.Seq[0].Main[4].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[4].TS.SData.ViCall]
+VIPath = "Generate Digital Waveform in LV.vi"
+TDChecksum = 2004738601
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[0]]
+Label = "Size"
+ArgVal = "500"
+Type = 0
+WireRequirement = 1
+NumType = 4
+DisplayType = "Number (I32)"
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[0]]
+%NAME = "Size"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1]]
+Label = "Y"
+ArgVal = "Locals.DigitalY"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+Direction = 1
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.DigitalY.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.DigitalY.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[1]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2]]
+Label = "digital waveform"
+ArgVal = "Locals.digwaveform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[2]]
+%NAME = "digital waveform"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3]]
+Label = "compressed digital waveform"
+ArgVal = "Locals.compdigwavefform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.compdigwavefform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.compdigwavefform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.compdigwavefform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.compdigwavefform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.compdigwavefform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.compdigwavefform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[3]]
+%NAME = "compressed digital waveform"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[4]]
+Label = "t0"
+ArgVal = "Locals.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 5
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[4]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[5]]
+Label = "dt"
+ArgVal = "Locals.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+Direction = 1
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[5]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6]]
+Label = "Digital Waveform array"
+ArgVal = "Locals.digwaveformarray"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+ClusterType = 24
+DisplayType = "1D Array (LabVIEWDigitalWaveform)"
+Direction = 1
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6]]
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+%NAME = "Digital Waveform array"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto]
+digital waveform = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform]
+Label = "digital waveform"
+Type = 3
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[0]]
+Label = "t0"
+Type = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[1]]
+Label = "dt"
+Type = 0
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2]]
+Label = "Y"
+Type = 3
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+Type = 5
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+Type = 5
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[3]]
+Label = "attributes"
+Type = 5
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[4].TS.SData.ViCall.Parms[6].ArrayClusterProto.digital waveform.ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[SF.Seq[0].Main[4]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "Generate Digital Waveform"
+
+[SF.Seq[0].Main[5].TS]
+Id = "ID#:CAWdm5E/rUKZ9sfCBH+OAC"
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[5].TS.SData.ViCall]
+VIPath = "Verify Digital Waveform in LV.vi"
+TDChecksum = 313408220
+%LO: Parms = [0]
+%HI: Parms = [5]
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0]]
+Label = "digital waveform"
+ArgVal = "Locals.digwaveform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 5
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[0]]
+%NAME = "digital waveform"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[1]]
+Label = "t0"
+ArgVal = "Locals.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[1]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[2]]
+Label = "dt"
+ArgVal = "Locals.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[2]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3]]
+Label = "Y"
+ArgVal = "Locals.DigitalY"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.DigitalY.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.DigitalY.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[3]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4]]
+Label = "digital waveform out"
+ArgVal = "Locals.digwaveform2"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform2.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform2.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform2.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform2.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform2.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform2.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[4]]
+%NAME = "digital waveform out"
+
+[SF.Seq[0].Main[5].TS.SData.ViCall.Parms[5]]
+Label = "Components Equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[5].TS.SData.ViCall.Parms[5]]
+%NAME = "Components Equal"
+
+[SF.Seq[0].Main[5]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "Verify Digital Waveform"
+
+[SF.Seq[0].Main[6].TS]
+Id = "ID#:daz9dpT+2kuuPXLect/ArB"
+
+[DEF, SF.Seq[0].Main[6].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[6].TS.SData.ViCall]
+VIPath = "Are Digital Waveforms Equal.vi"
+TDChecksum = 1994054269
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0]]
+Label = "waveform"
+ArgVal = "Locals.digwaveform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[0]]
+%NAME = "waveform"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1]]
+Label = "waveform 2"
+ArgVal = "Locals.digwaveform2"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform2.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform2.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform2.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform2.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform2.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform2.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform 2"
+
+[SF.Seq[0].Main[6].TS.SData.ViCall.Parms[2]]
+Label = "waveforms equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[6].TS.SData.ViCall.Parms[2]]
+%NAME = "waveforms equal"
+
+[SF.Seq[0].Main[6]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Test dig waveform unchanged"
+
+[SF.Seq[0].Main[7].TS]
+Id = "ID#:OtD1x/SU+UGhp5YVry1H2D"
+
+[DEF, SF.Seq[0].Main[7].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[7].TS.SData.ViCall]
+VIPath = "Are Digital Waveforms Equal.vi"
+TDChecksum = 1994054269
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0]]
+Label = "waveform"
+ArgVal = "Locals.digwaveform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[0]]
+%NAME = "waveform"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1]]
+Label = "waveform 2"
+ArgVal = "Locals.compdigwavefform"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.compdigwavefform.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.compdigwavefform.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.compdigwavefform.Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.compdigwavefform.Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.compdigwavefform.Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.compdigwavefform.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform 2"
+
+[SF.Seq[0].Main[7].TS.SData.ViCall.Parms[2]]
+Label = "waveforms equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[7].TS.SData.ViCall.Parms[2]]
+%NAME = "waveforms equal"
+
+[SF.Seq[0].Main[7]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "Test compressed dig waveform"
+
+[SF.Seq[0].Main[8].TS]
+Id = "ID#:O6+Kuw7JcUOWFa3sCuwlJC"
+
+[DEF, SF.Seq[0].Main[8].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[8].TS.SData.ViCall]
+VIPath = "Are Digital Waveforms Equal.vi"
+TDChecksum = 1994054269
+%LO: Parms = [0]
+%HI: Parms = [2]
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0]]
+Label = "waveform"
+ArgVal = "Locals.digwaveformarray[0]"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 2
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveformarray[0].t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveformarray[0].dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveformarray[0].Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveformarray[0].Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveformarray[0].Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveformarray[0].attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[0]]
+%NAME = "waveform"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1]]
+Label = "waveform 2"
+ArgVal = "Locals.digwaveformarray[1]"
+Type = 3
+WireRequirement = 1
+ClusterType = 24
+DisplayType = "LabVIEWDigitalWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+ConnectorNumber = 1
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Locals.digwaveformarray[1].t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Locals.digwaveformarray[1].dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Locals.digwaveformarray[1].Y"
+Type = 3
+WireRequirement = 1
+ClusterType = 22
+DisplayType = "LabVIEWDigitalData"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [1]
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+Label = "transitions"
+ArgVal = "Locals.digwaveformarray[1].Y.transitions"
+Type = 5
+WireRequirement = 1
+NumType = 5
+DisplayType = "1D Array (U32)"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[0]]
+%NAME = "transitions"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+Label = "data"
+ArgVal = "Locals.digwaveformarray[1].Y.data"
+Type = 5
+WireRequirement = 1
+NumType = 1
+DisplayType = "2D Array (U8)"
+%LO: ArrayClusterEls = [0][0]
+%HI: ArrayClusterEls = []
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2].ArrayClusterEls[1]]
+%NAME = "data"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Locals.digwaveformarray[1].attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform 2"
+
+[SF.Seq[0].Main[8].TS.SData.ViCall.Parms[2]]
+Label = "waveforms equal"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+Direction = 1
+ConnectorNumber = 0
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ViCall.Parms[2]]
+%NAME = "waveforms equal"
+
+[SF.Seq[0].Main[8]]
+%FLG: TS = 0
+
+[DEF, SF.Seq[0].Main[8]]
+%NAME = "Test array dig  waveforms"
+
+[SF.Seq[0].Main[9].TS]
+Id = "ID#:MssO1oG0zUaUhW49ft0AKB"
+
+[DEF, SF.Seq[0].Main[9].TS]
+SData = "TYPE, FlexGStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[9].TS.SData.ViCall]
+VIPath = "Generate Analog Waveform in LV.vi"
+TDChecksum = -616221680
+%LO: Parms = [0]
+%HI: Parms = [6]
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+%[3] = "TYPE, VIParameter"
+%[4] = "TYPE, VIParameter"
+%[5] = "TYPE, VIParameter"
+%[6] = "TYPE, VIParameter"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0]]
+Label = "a2"
+Type = 3
+WireRequirement = 1
+DisplayType = "Container"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [2]
+Direction = 1
+ConnectorNumber = 3
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+Label = "String"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[0]]
+%NAME = "String"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+Label = "Boolean"
+Type = 2
+WireRequirement = 1
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[1]]
+%NAME = "Boolean"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+Label = "Array"
+Type = 5
+WireRequirement = 1
+ArrayType = 55
+NumType = 11
+DisplayType = "1D Array (Container)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[2]]
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+%NAME = "Array"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts]
+Real = "TYPE, VIParameterElement"
+Imaginary = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Real]
+Label = "Real"
+Caption = "Real"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0].ArrayClusterEls[2].ComplexParts.Imaginary]
+Label = "Imaginary"
+Caption = "Imaginary"
+Type = 5
+WireRequirement = 1
+NumType = 11
+DisplayType = "Array (EXT)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[0]]
+%NAME = "a2"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1]]
+Label = "waveform out"
+ArgVal = "Step.Result.waveformreport"
+Type = 3
+WireRequirement = 1
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+Direction = 1
+ConnectorNumber = 4
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "t0"
+ArgVal = "Step.Result.waveformreport.t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "dt"
+ArgVal = "Step.Result.waveformreport.dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "Y"
+ArgVal = "Step.Result.waveformreport.Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "attributes"
+ArgVal = "Step.Result.waveformreport.attributes"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[1]]
+%NAME = "waveform out"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[2]]
+Label = "t0"
+Type = 1
+WireRequirement = 1
+StrPass = 3
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 6
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[2]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[3]]
+Label = "dt"
+Type = 0
+WireRequirement = 1
+DisplayType = "Number (DBL)"
+Direction = 1
+ConnectorNumber = 8
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[3]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[4]]
+Label = "Y"
+Type = 5
+WireRequirement = 1
+DisplayType = "1D Array (DBL)"
+Direction = 1
+ConnectorNumber = 10
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[4]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[5]]
+Label = "a1"
+Type = 1
+WireRequirement = 1
+DisplayType = "ASCII String"
+Direction = 1
+ConnectorNumber = 15
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[5]]
+%NAME = "a1"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6]]
+Label = "waveform array"
+Type = 5
+WireRequirement = 1
+ArrayType = 53
+ClusterType = 23
+DisplayType = "1D Array (LabVIEWAnalogWaveform)"
+Direction = 1
+ConnectorNumber = 14
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6]]
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+%NAME = "waveform array"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto]
+signal out = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out]
+Label = "signal out"
+Type = 3
+ClusterType = 23
+DisplayType = "LabVIEWAnalogWaveform"
+%LO: ArrayClusterEls = [0]
+%HI: ArrayClusterEls = [3]
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[0]]
+Label = "t0"
+Type = 1
+StrPass = 3
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[0]]
+%NAME = "t0"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[1]]
+Label = "dt"
+Type = 0
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[1]]
+%NAME = "dt"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[2]]
+Label = "Y"
+Type = 5
+DisplayType = "1D Array (DBL)"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[2]]
+%NAME = "Y"
+
+[SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[3]]
+Label = "attributes"
+Type = 5
+ArrayType = 53
+DisplayType = "Anything"
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ViCall.Parms[6].ArrayClusterProto.signal out.ArrayClusterEls[3]]
+%NAME = "attributes"
+
+[DEF, SF.Seq[0].Main[9]]
+%NAME = "Step"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+Expression = "Expression"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexGStepAdditions = "FlexGStepAdditions"
+VIParameter = "VIParameter"
+PassFailTest = "PassFailTest"
+EditSubstep = "EditSubstep"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+a2_cluster = "a2_cluster"
+LabVIEWAnalogWaveform = "LabVIEWAnalogWaveform"
+VIParameterElement = "VIParameterElement"
+LabVIEWDigitalData = "LabVIEWDigitalData"
+LabVIEWDigitalWaveform = "LabVIEWDigitalWaveform"
+mystep = "mystep"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1042482658
+%VERSION = "3.0.0.8322"
+%TYPELASTMOD = "3.0.0.8322"
+%MINPRODVER = "3.0.0.0"
+%TYPE_FLG = 33554446
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4849688
+
+[DEF, Expression]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Expression]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = "TYPE, Expression"
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Id = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = "TYPE, Expression"
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = "TYPE, Expression"
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = "TYPE, Expression"
+SwitchOperation = Num
+RouteGroupConnect = "TYPE, Expression"
+RouteGroupDisconnect = "TYPE, Expression"
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = "TYPE, Expression"
+FailActTarget = "TYPE, Expression"
+CustExpr = "TYPE, Expression"
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = "TYPE, Expression"
+CustFalseActTarget = "TYPE, Expression"
+LoopType = Str
+LoopWhile = "TYPE, Expression"
+LoopStatus = "TYPE, Expression"
+LoopIncrement = "TYPE, Expression"
+LoopInitialize = "TYPE, Expression"
+LoopOpt = Num
+PreExpr = "TYPE, Expression"
+PostExpr = "TYPE, Expression"
+StatusExpr = "TYPE, Expression"
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: Id = 1
+%INSTOVRD: Id = 5046297
+%INSTOVRD: Icon = 5046296
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+%INSTOVRD: PreCond = 5046296
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046296
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046296
+Mode = "Normal"
+%INSTOVRD: Mode = 5046296
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046296
+%INSTOVRD: NoResult = 5046296
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046296
+%INSTOVRD: IgnoreRTE = 5046296
+%INSTOVRD: UseMutex = 5046296
+%INSTOVRD: MutexNameOrRef = 5046296
+%INSTOVRD: BatchSyncOpt = 5046296
+%INSTOVRD: SwitchEnabled = 5046296
+%INSTOVRD: VirtualDeviceName = 5046296
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046296
+%INSTOVRD: RouteGroupConnect = 5046296
+%INSTOVRD: RouteGroupDisconnect = 5046296
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046296
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046296
+ConnectionLifetime = 4
+%INSTOVRD: ConnectionLifetime = 5046296
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046296
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046296
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046296
+%INSTOVRD: PassActTarget = 5046296
+%INSTOVRD: FailActTarget = 5046296
+%INSTOVRD: CustExpr = 5046296
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046296
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046296
+%INSTOVRD: CustTrueActTarget = 5046296
+%INSTOVRD: CustFalseActTarget = 5046296
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046296
+%INSTOVRD: LoopWhile = 5046296
+%INSTOVRD: LoopStatus = 5046296
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046296
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046296
+%INSTOVRD: LoopOpt = 5046296
+%INSTOVRD: PreExpr = 5046296
+%INSTOVRD: PostExpr = 5046296
+%INSTOVRD: StatusExpr = 5046296
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046296
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046296
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046296
+%INSTOVRD: PrecondIntExe = 5046296
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4456472
+%INSTOVRD = 4456472
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%EXTDATA = True
+
+[Error.Code]
+%EXTDATA = True
+
+[EXTDATA, Error.Code, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Code, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "code"
+
+[EXTDATA, Error.Code, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "code"
+
+[Error.Msg]
+%EXTDATA = True
+
+[EXTDATA, Error.Msg, STRUCT]
+DataVersion = 1
+Type = 2
+StringBufferSize = 1024
+StringStorage = 1
+
+[EXTDATA, Error.Msg, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "source"
+
+[EXTDATA, Error.Msg, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "msg"
+
+[Error.Occurred]
+%EXTDATA = True
+
+[EXTDATA, Error.Occurred, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Occurred, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "status"
+
+[EXTDATA, Error.Occurred, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "occurred"
+
+[EXTDATA, Error, STRUCT]
+AllowStructPassing = True
+DataVersion = 1
+PackingOption = 8
+Type = 0
+
+[EXTDATA, Error, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[EXTDATA, Error, DNSTRUCT]
+AllowStructPassing = True
+DataVersion = 1
+StructMemberName = ""
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%INSTFLG = 4194304
+
+[DEF, FlexGStepAdditions]
+%LOCATION = "StdTypes"
+ViCall = VICall
+%ROOT_TYPE = True
+
+[DEF, FlexGStepAdditions.ViCall]
+VIPath = "TYPE, Path"
+RemoteVIPath = "TYPE, Path"
+ShowFrnPnl = Bool
+ViDescription = Str
+TDChecksum = Num
+AutoDetectLVRT = Bool
+RemoteHost = "TYPE, Expression"
+RemoteHostByExpr = Bool
+Parms = Objs
+
+[FlexGStepAdditions.ViCall]
+TDChecksum = -1
+
+[DEF, FlexGStepAdditions.ViCall.Parms]
+%EPTYPE = "TYPE, VIParameter"
+%FLG: %EPTYPE = 131072
+
+[FlexGStepAdditions]
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, VIParameter]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+Direction = Num
+ConnectorNumber = Num
+LegacyClusterType = Num
+UseDefaultValues = Bool
+%ROOT_TYPE = True
+
+[VIParameter]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+ConnectorNumber = -1
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, PassFailTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+InBuf = Str
+DataSource = "TYPE, Expression"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[PassFailTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescrip"
+DescriptionFormat Line0002 = "tion\")"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.Result.PassFail"
+CodeTemplates Line0001 = "PassFailLabVIEW|PassFailCVI|PassFailVB.NET|PassFailCSharp.NET|PassFailC++.NET|PassFailVC++_Template|PassFailHTB80_Templa"
+CodeTemplates Line0002 = "te|PassFailHTB72_Template|PassFail_Template"
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1042482425
+%VERSION = "3.0.0.8230"
+%TYPELASTMOD = "3.0.0.8230"
+%MINPRODVER = "3.0.0.0"
+%TYPE_FLG = 33554446
+
+[DEF, PassFailTest.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, PassFailTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassFailTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditPassFailStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, PassFailTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "sequenceContext"
+Type = 4
+ArgVal = "ThisContext"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "reserved"
+ArgVal = "0"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[PassFailTest.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[PassFailTest.Substeps[0]]
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_EDIT_STEP_MENU_NAME\")"
+SupportsReadOnly = True
+
+[PassFailTest.Substeps[0].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, PassFailTest.Substeps[0]]
+%NAME = "Edit"
+
+[PassFailTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, PassFailTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassFailTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+%INSTOVRD: StatusExpr = 5046297
+
+[DEF, PassFailTest.Result]
+Error = "TYPE, Error"
+Status = Str
+PassFail = Bool
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PassFailTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+PassFail = True
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = "TYPE, Expression"
+SupportsReadOnly = Bool
+%ROOT_TYPE = True
+
+[EditSubstep]
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%INSTFLG: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1053034365
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554438
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[EditSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+ModulePrjPath = "TYPE, Path"
+ModuleWorkspacePath = "TYPE, Path"
+ModuleCreateSrcType = Num
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Parms = Objs
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call]
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 1053035829
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+StrPass = Num
+ElemPass = Num
+ArrayDimensionsSize = Objs
+StrSize = "TYPE, Expression"
+ResultAct = Num
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Flags = Num
+ArgValImag = "TYPE, Expression"
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+StrSize = "1024"
+%TIMESTAMP = 1053035829
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, FCParameter.ArrayDimensionsSize]
+%EPTYPE = "TYPE, Expression"
+%FLG: %EPTYPE = 131072
+
+[FCParameter.ArrayDimensionsSize]
+%EPTYPE = "1024"
+
+[DEF, a2_cluster]
+%LOCATION = "UserTypes"
+String = Str
+Boolean = Bool
+Array = Obj
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[a2_cluster.String]
+%EXTDATA = True
+
+[EXTDATA, a2_cluster.String, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "String"
+
+[a2_cluster.Boolean]
+%EXTDATA = True
+
+[EXTDATA, a2_cluster.Boolean, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Boolean"
+
+[DEF, a2_cluster.Array]
+Real = Nums
+Imaginary = Nums
+
+[a2_cluster.Array.Real]
+%EXTDATA = True
+
+[EXTDATA, a2_cluster.Array.Real, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Real"
+
+[a2_cluster.Array.Imaginary]
+%EXTDATA = True
+
+[EXTDATA, a2_cluster.Array.Imaginary, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Imaginary"
+
+[a2_cluster.Array]
+%EXTDATA = True
+
+[EXTDATA, a2_cluster.Array, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = "Array"
+
+[a2_cluster]
+%TIMESTAMP = 1050701432
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.8329"
+%EXTDATA = True
+
+[EXTDATA, a2_cluster, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, LabVIEWAnalogWaveform]
+%LOCATION = "StdTypes"
+t0 = Str
+dt = Num
+Y = Nums
+attributes = Objs
+%ROOT_TYPE = True
+
+[LabVIEWAnalogWaveform]
+%FLG: t0 = 4194304
+%INSTFLG: t0 = 4194304
+%FLG: dt = 4194304
+%INSTFLG: dt = 4194304
+%FLG: Y = 4194304
+%INSTFLG: Y = 4194304
+%FLG: attributes = 4194304
+%INSTFLG: attributes = 4194304
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%EXTDATA = True
+
+[LabVIEWAnalogWaveform.t0]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWAnalogWaveform.t0, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "t0"
+
+[LabVIEWAnalogWaveform.dt]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWAnalogWaveform.dt, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "dt"
+
+[LabVIEWAnalogWaveform.Y]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWAnalogWaveform.Y, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Y"
+
+[LabVIEWAnalogWaveform.attributes]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWAnalogWaveform.attributes, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "attributes"
+
+[EXTDATA, LabVIEWAnalogWaveform, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, VIParameterElement]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+%ROOT_TYPE = True
+
+[VIParameterElement]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, LabVIEWDigitalData]
+%LOCATION = "StdTypes"
+transitions = Nums
+data = Nums
+%ROOT_TYPE = True
+
+[LabVIEWDigitalData]
+%FLG: transitions = 4194304
+%INSTFLG: transitions = 4194304
+%LO: data = [0][0]
+%HI: data = []
+%FLG: data = 4194304
+%INSTFLG: data = 4194304
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%EXTDATA = True
+
+[LabVIEWDigitalData.transitions]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalData.transitions, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "transitions"
+
+[LabVIEWDigitalData.data]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalData.data, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "data"
+
+[EXTDATA, LabVIEWDigitalData, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, LabVIEWDigitalWaveform]
+%LOCATION = "StdTypes"
+t0 = Str
+dt = Num
+Y = Obj
+attributes = Objs
+%ROOT_TYPE = True
+
+[LabVIEWDigitalWaveform]
+%FLG: t0 = 4194304
+%INSTFLG: t0 = 4194304
+%FLG: dt = 4194304
+%INSTFLG: dt = 4194304
+%FLG: Y = 4194304
+%INSTFLG: Y = 4194304
+%FLG: attributes = 4194304
+%INSTFLG: attributes = 4194304
+%TIMESTAMP = 1053035522
+%VERSION = "3.0.0.8371"
+%TYPELASTMOD = "3.0.0.8371"
+%MINPRODVER = "3.0.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%EXTDATA = True
+
+[LabVIEWDigitalWaveform.t0]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalWaveform.t0, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "t0"
+
+[LabVIEWDigitalWaveform.dt]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalWaveform.dt, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "dt"
+
+[DEF, LabVIEWDigitalWaveform.Y]
+transitions = Nums
+data = Nums
+
+[LabVIEWDigitalWaveform.Y]
+%FLG: transitions = 4194304
+%INSTFLG: transitions = 4194304
+%LO: data = [0][0]
+%HI: data = []
+%FLG: data = 4194304
+%INSTFLG: data = 4194304
+%EXTDATA = True
+
+[LabVIEWDigitalWaveform.Y.transitions]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalWaveform.Y.transitions, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "transitions"
+
+[LabVIEWDigitalWaveform.Y.data]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalWaveform.Y.data, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "data"
+
+[EXTDATA, LabVIEWDigitalWaveform.Y, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "Y"
+
+[LabVIEWDigitalWaveform.attributes]
+%EXTDATA = True
+
+[EXTDATA, LabVIEWDigitalWaveform.attributes, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "attributes"
+
+[EXTDATA, LabVIEWDigitalWaveform, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+ClusterMemberLabelName = ""
+
+[DEF, mystep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+%ALWAYS_SAVE = True
+
+[mystep]
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "\"\""
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%INSTFLG: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1050767901
+%VERSION = "0.0.0.1"
+%TYPELASTMOD = "3.0.0.8329"
+%TYPE_FLG = 2
+
+[DEF, mystep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[mystep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274520
+ConnectionLifetime = 0
+
+[DEF, mystep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+waveformreport = "TYPE, LabVIEWAnalogWaveform"
+
+[mystep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%FLG: waveformreport = 9216
+

@@ -1,0 +1,53 @@
+[ProjectWindow_Data]
+ProjectExplorer.ClassicPosition[String] = "64,38,464,368"
+
+[AB_Cache_{C053152D-C44B-4AE9-A8F9-A40830AE0766}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "4b2146953bd74eb2b9a25dbc14f96e5e"
+Cache_GenFile_Count[Integer] = 5
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[0][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.dll"
+Cache_GenFile[1][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[1][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.aliase"
+Cache_GenFile[1][Path] Line0003 = "s"
+Cache_GenFile[2][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[2][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.ini"
+Cache_GenFile[3][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[3][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.h"
+Cache_GenFile[4][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[4][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.lib"
+Cache_GenGUID_Count[Integer] = 5
+Cache_GenGUID[0][String] = "{316D667D-2EC2-4AC8-8290-14CDCE4868CC}"
+Cache_GenGUID[1][String] = "{FAFE3A9F-C952-48F9-874C-4E7282C54BCC}"
+Cache_GenGUID[2][String] = "{B95E1E57-FD99-4CAA-ACAD-1CB25F7FBFC0}"
+Cache_GenGUID[3][String] = ""
+Cache_GenGUID[4][String] = ""
+Cache_OutputDir[Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Example"
+Cache_OutputDir[Path] Line0002 = "s/StructPassing/LabVIEW"
+
+[AB_Cache_{4DC0F257-64CD-4012-92D6-FE66D4D65A61}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "4b2146953bd74eb2b9a25dbc14f96e5e"
+Cache_GenFile_Count[Integer] = 5
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[0][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.dll"
+Cache_GenFile[1][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[1][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.aliase"
+Cache_GenFile[1][Path] Line0003 = "s"
+Cache_GenFile[2][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[2][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.ini"
+Cache_GenFile[3][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[3][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.h"
+Cache_GenFile[4][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Exampl"
+Cache_GenFile[4][Path] Line0002 = "es/StructPassing/LabVIEW/LVStructTest.lib"
+Cache_GenGUID_Count[Integer] = 5
+Cache_GenGUID[0][String] = "{316D667D-2EC2-4AC8-8290-14CDCE4868CC}"
+Cache_GenGUID[1][String] = "{FAFE3A9F-C952-48F9-874C-4E7282C54BCC}"
+Cache_GenGUID[2][String] = "{B95E1E57-FD99-4CAA-ACAD-1CB25F7FBFC0}"
+Cache_GenGUID[3][String] = ""
+Cache_GenGUID[4][String] = ""
+Cache_OutputDir[Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Example"
+Cache_OutputDir[Path] Line0002 = "s/StructPassing/LabVIEW"
+

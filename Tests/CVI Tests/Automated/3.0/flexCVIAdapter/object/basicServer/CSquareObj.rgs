@@ -1,0 +1,24 @@
+HKCR
+{
+	BasicServer.CSquareObj.1 = s 'CSquareObj Class'
+	{
+		CLSID = s '{7813836B-4718-4EC9-9C77-1354F4FA7CB6}'
+	}
+	BasicServer.CSquareObj = s 'CSquareObj Class'
+	{
+		CLSID = s '{7813836B-4718-4EC9-9C77-1354F4FA7CB6}'
+		CurVer = s 'BasicServer.CSquareObj.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {7813836B-4718-4EC9-9C77-1354F4FA7CB6} = s 'CSquareObj Class'
+		{
+			ProgID = s 'BasicServer.CSquareObj.1'
+			VersionIndependentProgID = s 'BasicServer.CSquareObj'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			val AppID = s '{E5C990E5-C0E3-43B0-8B00-2C4100C3E0F5}'
+			'TypeLib' = s '{1E5EA309-0946-4385-AFB3-61D8B1B90DC4}'
+		}
+	}
+}

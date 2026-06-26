@@ -1,0 +1,29 @@
+[ProjectWindow_Data]
+ProjectExplorer.ClassicPosition[String] = "64,38,464,368"
+
+[AB_Cache_{2CC3A801-A850-4A12-89B8-AC23E8CA04EB}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "0c705a935ab05623f22deaa8dc34f9bb"
+Cache_GenFile_Count[Integer] = 1
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[0][Path] Line0002 = "ted/MiscVIs/BlockDiagramRemoved/BlockDiagram"
+Cache_GenFile[0][Path] Line0003 = "Removed.vi"
+Cache_GenGUID_Count[Integer] = 1
+Cache_GenGUID[0][String] = "{B6DC8BB0-92EE-4AFE-9EDC-F10316FA0A30}"
+Cache_OutputDir[Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automat"
+Cache_OutputDir[Path] Line0002 = "ed/MiscVIs/BlockDiagramRemoved"
+
+[AB_Cache_{78F23C21-79F4-465D-8C0B-5FBD61CE85BB}]
+Cache_ProjSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_TargetSymbolChksum[String] = "7dea362b3fac8e00956a4952a3d4f474"
+Cache_MyCompChksum[String] = "0c705a935ab05623f22deaa8dc34f9bb"
+Cache_GenFile_Count[Integer] = 1
+Cache_GenFile[0][Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automa"
+Cache_GenFile[0][Path] Line0002 = "ted/MiscVIs/BlockDiagramRemoved/BlockDiagram"
+Cache_GenFile[0][Path] Line0003 = "Removed.vi"
+Cache_GenGUID_Count[Integer] = 1
+Cache_GenGUID[0][String] = "{B6DC8BB0-92EE-4AFE-9EDC-F10316FA0A30}"
+Cache_OutputDir[Path] Line0001 = "/D/tsdev/Tests/LVBuildValidation/11.0/Automat"
+Cache_OutputDir[Path] Line0002 = "ed/MiscVIs/BlockDiagramRemoved"
+

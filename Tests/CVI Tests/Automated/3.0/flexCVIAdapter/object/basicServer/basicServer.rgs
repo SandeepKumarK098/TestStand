@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{E5C990E5-C0E3-43B0-8B00-2C4100C3E0F5} = s 'basicServer'
+		'basicServer.EXE'
+		{
+			val AppID = s {E5C990E5-C0E3-43B0-8B00-2C4100C3E0F5}
+		}
+	}
+}

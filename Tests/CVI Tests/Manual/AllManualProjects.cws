@@ -1,0 +1,454 @@
+[Workspace Header]
+Version = 851
+Pathname = "/c/TSDev/Tests/CVI Tests/Manual/AllManualProjects.cws"
+CVI Dir = "/c/program files/national instruments/cvi85"
+CVI Shared Dir = "/C/Program Files/National Instruments/Shared/CVI"
+CVI Pub Local Dir = "/C/Documents and Settings/All Users/Application Data/National Instruments/CVI85"
+CVI Pub Global Dir = "/C/Documents and Settings/All Users/Application Data/National Instruments/CVI"
+IVI Standard Root Dir = "/C/Program Files/IVI Foundation/IVI"
+VXIplug&play Framework Dir = "/C/Program Files/IVI Foundation/VISA/winnt"
+Number of Projects = 5
+Active Project = 1
+Project 0001 = "Substeps/WaveformStepType.prj"
+Project 0001 Collapsed = True
+Project 0001 Folder Include Files Collapsed = True
+Project 0001 Folder Source Files Collapsed = True
+Project 0001 Folder User Interface Files Collapsed = True
+Project 0001 Folder Instrument Files Collapsed = True
+Project 0002 = "CreateCode/CVI/cvi.prj"
+Project 0002 Collapsed = True
+Project 0003 = "CVIDLG/CVIdlg.prj"
+Project 0003 Collapsed = True
+Project 0003 Folder Source Files Collapsed = True
+Project 0003 Folder User Interface Files Collapsed = True
+Project 0003 Folder Include Files Collapsed = True
+Project 0004 = "CVIDLG/dialog1.prj"
+Project 0004 Collapsed = True
+Project 0005 = "CVIDLG/dialog2.prj"
+Project 0005 Collapsed = True
+Drag Bar Left = 542
+Window Top = 97
+Window Left = -1513
+Window Bottom = 771
+Window Right = -313
+Maximized = False
+Maximized Children = True
+Max Number Of Errors = 20
+Track Include File Dependencies = True
+Prompt For Missing Includes = True
+Stop On First Error File = False
+Bring Up Err Win For Warnings = True
+Show Build Dialog = False
+Save Changes Before Running = "Always"
+Hide Windows = False
+Global Hot Key = False
+Break At First Statement = False
+Sort Type = "File Name"
+Number of Opened Files = 0
+Window Confinement Region Enabled = True
+MainColumnWidth = 523
+FileDateColumnWidth = 70
+FileSizeColumnWidth = 70
+StatusColumnWidth = 70
+
+[Project Header 0001]
+Version = 851
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = True
+Force Rebuild = False
+
+[Project Header 0002]
+Version = 851
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = True
+Force Rebuild = False
+
+[Project Header 0003]
+Version = 851
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Release"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = True
+Force Rebuild = False
+
+[Project Header 0004]
+Version = 851
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = True
+Force Rebuild = False
+
+[Project Header 0005]
+Version = 851
+Don't Update DistKit = False
+Platform Code = 4
+Build Configuration = "Debug"
+Warn User If Debugging Release = 1
+Batch Build Release = False
+Batch Build Debug = True
+Force Rebuild = False
+
+[File 0001]
+Path = "/C/Program Files/National Instruments/Shared/CVI/instr/TestStand/API/tsapicvi.fp"
+File Type = "Function Panel"
+Disk Date = 3373994079
+In Projects = "1,2,4,5,"
+
+[File 0002]
+Path = "/C/Program Files/National Instruments/Shared/CVI/instr/TestStand/API/tsutil.fp"
+File Type = "Function Panel"
+Disk Date = 3375876663
+In Projects = "1,2,5,"
+
+[File 0003]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/EditLimitsDialog.c"
+File Type = "CSource"
+Disk Date = 3378735599
+In Projects = "1,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0004]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/EditLimitsDialog.h"
+File Type = "Include"
+Disk Date = 3378735599
+In Projects = "1,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0005]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/EditLimitsDialog.uir"
+File Type = "User Interface Resource"
+Disk Date = 3378735600
+In Projects = "1,"
+
+[File 0006]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/GetWaveform.c"
+File Type = "CSource"
+Disk Date = 3378735600
+In Projects = "1,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0007]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/SetStatus.c"
+File Type = "CSource"
+Disk Date = 3378735600
+In Projects = "1,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0008]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/Substeps/Waveform.uir"
+File Type = "User Interface Resource"
+Disk Date = 3378735600
+In Projects = "1,"
+
+[File 0009]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CreateCode/CVI/cvi.c"
+File Type = "CSource"
+Disk Date = 3378921073
+In Projects = "2,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0010]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/CVIdlg.c"
+File Type = "CSource"
+Disk Date = 3378735599
+In Projects = "3,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0011]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/CVIdlg.uir"
+File Type = "User Interface Resource"
+Disk Date = 3378735599
+In Projects = "3,"
+
+[File 0012]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/exportFunc.h"
+File Type = "Include"
+Disk Date = 3378735599
+In Projects = "3,"
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0013]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/dialog1.c"
+File Type = "CSource"
+Disk Date = 3378740476
+In Projects = "4,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[File 0014]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/dialog1.uir"
+File Type = "User Interface Resource"
+Disk Date = 3378735599
+In Projects = "4,"
+
+[File 0015]
+Path = "/c/TSDev/Tests/CVI Tests/Manual/CVIDLG/dialog2.c"
+File Type = "CSource"
+Disk Date = 3378735599
+In Projects = "5,"
+Window Top = -16281
+Window Height = -16281
+Source Window State = "0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,"
+
+[Build Options 0001]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0001]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0001]
+External Process Path = "/c/TestStand/Bin/SeqEdit.exe"
+
+[Command Line Args 0001]
+Command Line Args = ""
+
+[Build Options 0002]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0002]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0002]
+External Process Path = ""
+
+[Command Line Args 0002]
+Command Line Args = ""
+
+[Build Options 0003]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Debugging Level = "Standard"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0003]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0003]
+External Process Path = ""
+
+[Command Line Args 0003]
+Command Line Args = ""
+
+[Build Options 0004]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Debugging Level = "No Run-time Checking"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0004]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0004]
+External Process Path = "/z/testexec/bin/dSeqEdit.exe"
+
+[Command Line Args 0004]
+Command Line Args = ""
+
+[Build Options 0005]
+Generate Browse Info = True
+Enable Uninitialized Locals Runtime Warning = True
+Execution Trace = "Disabled"
+Debugging Level = "No Run-time Checking"
+Break On Library Errors = True
+Break On First Chance Exceptions = False
+Execution Target Address = "Local desktop computer"
+Execution Target Port = 0
+Execution Target Type = 0
+
+[SCC Options 0005]
+Use global settings = True
+SCC Provider = ""
+SCC Project = ""
+Local Path = ""
+Auxiliary Path = ""
+Perform Same Action For .h File As For .uir File = "Ask"
+Perform Same Action For .cds File As For .prj File = "Ask"
+Username = ""
+Comment = ""
+Use Default Username = False
+Use Default Comment = False
+Suppress CVI Error Messages = False
+Always show confirmation dialog = True
+
+[DLL Debugging Support 0005]
+External Process Path = "/z/testexec/bin/dSeqEdit.exe"
+
+[Command Line Args 0005]
+Command Line Args = ""
+
+[User-Defined Tokens]
+Token 1 = "ViStatus"
+Token 2 = "ViAStatus"
+Token 3 = "ViPStatus"
+Token 4 = "ViBoolean"
+Token 5 = "ViABoolean"
+Token 6 = "ViPBoolean"
+Token 7 = "ViChar"
+Token 8 = "ViAChar"
+Token 9 = "ViPChar"
+Token 10 = "ViByte"
+Token 11 = "ViAByte"
+Token 12 = "ViPByte"
+Token 13 = "ViInt8"
+Token 14 = "ViAInt8"
+Token 15 = "ViPInt8"
+Token 16 = "ViUInt8"
+Token 17 = "ViAUInt8"
+Token 18 = "ViPUInt8"
+Token 19 = "ViInt16"
+Token 20 = "ViAInt16"
+Token 21 = "ViPInt16"
+Token 22 = "ViUInt16"
+Token 23 = "ViAUInt16"
+Token 24 = "ViPUInt16"
+Token 25 = "ViInt32"
+Token 26 = "ViAInt32"
+Token 27 = "ViPInt32"
+Token 28 = "ViUInt32"
+Token 29 = "ViAUInt32"
+Token 30 = "ViPUInt32"
+Token 31 = "ViReal32"
+Token 32 = "ViAReal32"
+Token 33 = "ViPReal32"
+Token 34 = "ViReal64"
+Token 35 = "ViAReal64"
+Token 36 = "ViPReal64"
+Token 37 = "ViBuf"
+Token 38 = "ViPBuf"
+Token 39 = "ViString"
+Token 40 = "ViAString"
+Token 41 = "ViPString"
+Token 42 = "ViRsrc"
+Token 43 = "ViARsrc"
+Token 44 = "ViPRsrc"
+Token 45 = "ViKeyId"
+Token 46 = "ViPKeyId"
+Token 47 = "ViClass"
+Token 48 = "ViPClass"
+Token 49 = "ViAddr"
+Token 50 = "ViAAddr"
+Token 51 = "ViPAddr"
+Token 52 = "ViVersion"
+Token 53 = "ViAVersion"
+Token 54 = "ViPVersion"
+Token 55 = "ViAccessMode"
+Token 56 = "ViJobId"
+Token 57 = "ViPJobId"
+Token 58 = "ViJobStatus"
+Token 59 = "ViPJobStatus"
+Token 60 = "ViEventType"
+Token 61 = "ViPEventType"
+Token 62 = "ViFilterType"
+Token 63 = "ViPFilterType"
+Token 64 = "ViBusAddress"
+Token 65 = "ViPBusAddress"
+Token 66 = "ViBusSize"
+Token 67 = "ViHndlr"
+Token 68 = "ViObject"
+Token 69 = "ViSession"
+Token 70 = "ViPSession"
+Token 71 = "ViEvent"
+Token 72 = "ViPEvent"
+Token 73 = "ViEventFilter"
+Token 74 = "ViFindList"
+Token 75 = "ViPFindList"
+Token 76 = "ViAttrState"
+Token 77 = "ViPAttrState"
+Token 78 = "ViAttr"
+

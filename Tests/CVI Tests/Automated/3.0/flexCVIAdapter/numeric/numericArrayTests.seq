@@ -1,0 +1,1667 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.0.0.36
+CompatibleProdVersion = 3.0.0.0
+Version = 160
+Type = "SequenceFile"
+Path = "C:\\TSDev\\Tests\\3.0\\flexCVIAdapter\\numeric\\numericArrayTests.seq"
+ProductVersionString = "3.0"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeSubstepsArray = Objs
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+FlexCVIStepAdditions = FCVIModule
+FCVIParameter = FCVIParameter
+PassFailTest = StepType
+EditSubstep = StepType
+FlexCStepAdditions = FCModule
+FCParameter = FCParameter
+Label = StepType
+NoneStepAdditions = NoneModule
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Type = Num
+ModelOption = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [0]
+%FLG: Seq = 4194304
+%FLG: FileGlobalDefaults = 4194304
+%FLG: ModelFile = 4194312
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 4194312
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 4194312
+Version = "0.0.0.0"
+%FLG: Version = 4194312
+BatchSync = 1
+%FLG: BatchSync = 4194312
+%FLG: SFGlobalsScope = 4194312
+%FLG: Type = 4194312
+%FLG: ModelOption = 4194312
+
+[DEF, SF.Seq]
+%[0] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%LO: Main = [0]
+%HI: Main = [28]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+result = Num
+array = Nums
+strArray = Strs
+smallArray = Nums
+bigArray = Nums
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[0].Locals]
+%LO: array = [0]
+%HI: array = [2]
+%LO: strArray = [0]
+%HI: strArray = [9]
+%LO: smallArray = [0]
+%HI: smallArray = [1]
+%LO: bigArray = [0]
+%HI: bigArray = [3]
+
+[SF.Seq[0].Locals.array]
+%[1] = 32
+
+[SF.Seq[0].Locals.smallArray]
+%[0] = 1
+%[1] = 2
+
+[SF.Seq[0].Locals.bigArray]
+%[0] = 1
+%[1] = 2
+%[2] = 3
+%[3] = 4
+
+[DEF, SF.Seq[0].Main]
+%[0] = Step
+%TYPE: %[0] = "Label"
+%[1] = Step
+%TYPE: %[1] = "Label"
+%[2] = Step
+%TYPE: %[2] = "Action"
+%[3] = Step
+%TYPE: %[3] = "PassFailTest"
+%[4] = Step
+%TYPE: %[4] = "Action"
+%[5] = Step
+%TYPE: %[5] = "PassFailTest"
+%[6] = Step
+%TYPE: %[6] = "Label"
+%[7] = Step
+%TYPE: %[7] = "Action"
+%[8] = Step
+%TYPE: %[8] = "PassFailTest"
+%[9] = Step
+%TYPE: %[9] = "Action"
+%[10] = Step
+%TYPE: %[10] = "PassFailTest"
+%[11] = Step
+%TYPE: %[11] = "Label"
+%[12] = Step
+%TYPE: %[12] = "Action"
+%[13] = Step
+%TYPE: %[13] = "PassFailTest"
+%[14] = Step
+%TYPE: %[14] = "Action"
+%[15] = Step
+%TYPE: %[15] = "PassFailTest"
+%[16] = Step
+%TYPE: %[16] = "Label"
+%[17] = Step
+%TYPE: %[17] = "Action"
+%[18] = Step
+%TYPE: %[18] = "PassFailTest"
+%[19] = Step
+%TYPE: %[19] = "Label"
+%[20] = Step
+%TYPE: %[20] = "Action"
+%[21] = Step
+%TYPE: %[21] = "PassFailTest"
+%[22] = Step
+%TYPE: %[22] = "Label"
+%[23] = Step
+%TYPE: %[23] = "Action"
+%[24] = Step
+%TYPE: %[24] = "PassFailTest"
+%[25] = Step
+%TYPE: %[25] = "Action"
+%[26] = Step
+%TYPE: %[26] = "PassFailTest"
+%[27] = Step
+%TYPE: %[27] = "Action"
+%[28] = Step
+%TYPE: %[28] = "PassFailTest"
+
+[SF.Seq[0].Main[0].TS]
+Id = "ID#:IzjIeh/O2U6cCnmUfh30jA"
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "SINGLE DIMENSION TESTING"
+
+[SF.Seq[0].Main[1].TS]
+Id = "ID#:Yb4ijtZQ+UOgHII0u5r0dB"
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Test 8 Bit Integer Array values"
+
+[SF.Seq[0].Main[2].TS]
+Id = "ID#:HuU0v67IikGeCkRgF+toaA"
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[2].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Signed8BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[2].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[2].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[2].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 0
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[2].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[2].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "Signed8BitIntegerValues"
+
+[SF.Seq[0].Main[3].TS]
+Id = "ID#:T06JkSGsvEGFpAS0BayD6A"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[3]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == -128 &&\rLocals.array[2] == 127"
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "Signed8BitIntegerValuesTest"
+
+[SF.Seq[0].Main[4].TS]
+Id = "ID#:Y+3zKxNgeUGAtD6W0LKfbB"
+
+[DEF, SF.Seq[0].Main[4].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[4].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Unsigned8BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[4].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[4].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[4].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 1
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[4].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[4].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "Unsigned8BitIntegerValues"
+
+[SF.Seq[0].Main[5].TS]
+Id = "ID#:Ct2b7UIEi0ySuhDW2LUZFB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[5]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == 0 &&\rLocals.array[2] == 255"
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "Unsigned8BitIntegerValuesTest"
+
+[SF.Seq[0].Main[6].TS]
+Id = "ID#:OrLhLl/gykiiLts6V6eD5A"
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Test 16 Bit Integer Array values"
+
+[SF.Seq[0].Main[7].TS]
+Id = "ID#:ZVE04aDqK0+p/VV1sTABgD"
+
+[DEF, SF.Seq[0].Main[7].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[7].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Signed16BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[7].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[7].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[7].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 2
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[7].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[7].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "Signed16BitIntegerValues"
+
+[SF.Seq[0].Main[8].TS]
+Id = "ID#:0/VSaKI2k0CqORxUf6qYXB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[8]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == -32768 &&\rLocals.array[2] == 32767"
+
+[DEF, SF.Seq[0].Main[8]]
+%NAME = "Signed16BitIntegerValuesTest"
+
+[SF.Seq[0].Main[9].TS]
+Id = "ID#:AwX4Z9V0rEeA0AETGUN+AD"
+
+[DEF, SF.Seq[0].Main[9].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[9].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Unsigned16BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[9].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[9].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[9].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 3
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[9].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[9].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[9]]
+%NAME = "Unsigned16BitIntegerValues"
+
+[SF.Seq[0].Main[10].TS]
+Id = "ID#:JoyONhFSJEWwzh7PgorcIA"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[10].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[10]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == 0 &&\rLocals.array[2] == 65535"
+
+[DEF, SF.Seq[0].Main[10]]
+%NAME = "Unsigned16BitIntegerValuesTest"
+
+[SF.Seq[0].Main[11].TS]
+Id = "ID#:li0wNKflJEmOQVQ2HeS4vC"
+
+[DEF, SF.Seq[0].Main[11]]
+%NAME = "Test 32  Bit Integer Array values"
+
+[SF.Seq[0].Main[12].TS]
+Id = "ID#:HlGf5QPUqk2ZKNtEeUgrVC"
+
+[DEF, SF.Seq[0].Main[12].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[12].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Signed32BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[12].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[12].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[12].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[12].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[12].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[12]]
+%NAME = "Signed32BitIntegerValues"
+
+[SF.Seq[0].Main[13].TS]
+Id = "ID#:cjq0JaoKCkSFWVCmOsXwVA"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[13].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[13]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == -2147483648 &&\rLocals.array[2] == 2147483647"
+
+[DEF, SF.Seq[0].Main[13]]
+%NAME = "Signed32BitIntegerValuesTest"
+
+[SF.Seq[0].Main[14].TS]
+Id = "ID#:mWyDeDXvIUGdk2a/bope3D"
+
+[DEF, SF.Seq[0].Main[14].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[14].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "Unsigned32BitIntegerSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[14].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[14].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[14].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 5
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[14].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[14].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[14]]
+%NAME = "Unsigned32BitIntegerValues"
+
+[SF.Seq[0].Main[15].TS]
+Id = "ID#:mEirl2A1yUC9nM0EWhnwQC"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[15].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[15]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] == 0 &&\rLocals.array[2] == 4294967295"
+
+[DEF, SF.Seq[0].Main[15]]
+%NAME = "Unsigned32BitIntegerValuesTest"
+
+[SF.Seq[0].Main[16].TS]
+Id = "ID#:p/uckl2jF066ZqTW200fgD"
+
+[DEF, SF.Seq[0].Main[16]]
+%NAME = "Test 32  Bit real Array values"
+
+[SF.Seq[0].Main[17].TS]
+Id = "ID#:tagfYIUla0OWrbPWruyNcC"
+
+[DEF, SF.Seq[0].Main[17].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[17].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "S32BitFloatSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[17].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[17].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[17].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 6
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[17].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[17].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[17]]
+%NAME = "Signed32BitRealValues"
+
+[SF.Seq[0].Main[18].TS]
+Id = "ID#:vf0yetZBWE+xYT5Yu+0eaB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[18].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[18]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] <= -3.40282E+38 &&\rLocals.array[2] >= 3.40282E+38"
+
+[DEF, SF.Seq[0].Main[18]]
+%NAME = "Signed32BitRealValuesTest"
+
+[SF.Seq[0].Main[19].TS]
+Id = "ID#:/2myLrX95E+D6aelym40XC"
+
+[DEF, SF.Seq[0].Main[19]]
+%NAME = "Test 64  Bit real Array values"
+
+[SF.Seq[0].Main[20].TS]
+Id = "ID#:yEst7Y0VlUSt3rOIgEOYQA"
+
+[DEF, SF.Seq[0].Main[20].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[20].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "S64BitDoubleSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[20].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[20].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[20].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 7
+ArgVal = "Locals.array"
+
+[SF.Seq[0].Main[20].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[20].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[20]]
+%NAME = "Signed64BitRealValues"
+
+[SF.Seq[0].Main[21].TS]
+Id = "ID#:IYHixmdaNU+em0WjFRWnRB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[21].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[21]]
+DataSource = "Locals.result == 1 &&\rLocals.array[0] <= -1.79769E+308 &&\rLocals.array[2] >= 1.79769E+308"
+
+[DEF, SF.Seq[0].Main[21]]
+%NAME = "Signed64BitRealValuesTest"
+
+[SF.Seq[0].Main[22].TS]
+Id = "ID#:or4T2d0sH0uv4PhXK/AO3C"
+
+[DEF, SF.Seq[0].Main[22]]
+%NAME = "Test Array Size and Type"
+
+[SF.Seq[0].Main[23].TS]
+Id = "ID#:/SvyhLL62EiCTFujxPbCxD"
+IgnoreRTE = True
+
+[DEF, SF.Seq[0].Main[23].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[23].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "S64BitDoubleSingleArrayValues"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[23].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[23].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[23].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 7
+ArgVal = "Locals.strArray"
+
+[SF.Seq[0].Main[23].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[23].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[SF.Seq[0].Main[23]]
+%COMMENT = "This step is designed to fail."
+
+[DEF, SF.Seq[0].Main[23]]
+%NAME = "pass a wrong array type"
+
+[SF.Seq[0].Main[24].TS]
+Id = "ID#:5mtiNVuV9USIMTo0HKJVXB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[24].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[24]]
+DataSource = "RunState.PreviousStep.Result.Status == \"Error\""
+%COMMENT = "Verify that the previous step really failed."
+
+[DEF, SF.Seq[0].Main[24]]
+%NAME = "Test that the previous step really failed"
+
+[SF.Seq[0].Main[25].TS]
+Id = "ID#:kxTCvXFRjEGu+dxZz0an6B"
+IgnoreRTE = True
+
+[DEF, SF.Seq[0].Main[25].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[25].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "TestSingleArraySize"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[25].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[25].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[25].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 0
+ArgVal = "Locals.smallArray"
+
+[SF.Seq[0].Main[25].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[25].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[25]]
+%NAME = "check Smaller Array Size"
+
+[SF.Seq[0].Main[26].TS]
+Id = "ID#:KFws/DUbAkGKmd6wvJ60aD"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[26].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[26]]
+DataSource = "Locals.smallArray[0] == 0 &&\rLocals.smallArray[1] == 2"
+
+[DEF, SF.Seq[0].Main[26]]
+%NAME = "Test Smaller Array Size Values"
+
+[SF.Seq[0].Main[27].TS]
+Id = "ID#:QtSer/0pFECDOh9JRf0k5C"
+IgnoreRTE = True
+
+[DEF, SF.Seq[0].Main[27].TS]
+SData = "TYPE, FlexCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[27].TS.SData.Call]
+LibPath = "numericTest.dll"
+Func = "TestSingleArraySize"
+%LO: Parms = [0]
+%HI: Parms = [1]
+
+[DEF, SF.Seq[0].Main[27].TS.SData.Call.Parms]
+%[0] = "TYPE, FCVIParameter"
+%[1] = "TYPE, FCVIParameter"
+
+[SF.Seq[0].Main[27].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+NumType = 0
+ArgVal = "Locals.result"
+
+[SF.Seq[0].Main[27].TS.SData.Call.Parms[1]]
+Name = "arg1"
+Type = 1
+NumType = 0
+ArgVal = "Locals.bigArray"
+
+[SF.Seq[0].Main[27].TS.SData.Call.Parms[1].ArrayDimensionsSize]
+%[0] = "3"
+
+[SF.Seq[0].Main[27].TS.SData]
+ModuleSrcPath = "numericTests.c"
+ModulePrjPath = "numericTests.prj"
+
+[DEF, SF.Seq[0].Main[27]]
+%NAME = "check Bigger Array Size"
+
+[SF.Seq[0].Main[28].TS]
+Id = "ID#:M+xK2s6eLUG2OdlDsHKSmB"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[28].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[28]]
+DataSource = "Locals.bigArray[0] == 3 &&\rLocals.bigArray[1] == 2  &&\rLocals.bigArray[2] == 1 &&\rLocals.bigArray[3] == 4"
+
+[DEF, SF.Seq[0].Main[28]]
+%NAME = "Test Bigger Array Size Values"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[0].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+FlexCVIStepAdditions = "FlexCVIStepAdditions"
+FCVIParameter = "FCVIParameter"
+PassFailTest = "PassFailTest"
+EditSubstep = "EditSubstep"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+Label = "Label"
+NoneStepAdditions = "NoneStepAdditions"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+%INSTFLG: DescriptionFormat = 524312
+%INSTOVRD: DescriptionFormat = 524312
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%INSTFLG: DefaultNameFormat = 524312
+%INSTOVRD: DefaultNameFormat = 524312
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates = "Default_Template|DefaultHTB72_Template|DefaultHTB80_Template|DefaultVC++_Template|DefaultMFC_Template"
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1022876022
+%VERSION = "3.0.0.14"
+%TYPE_FLG = 33554438
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4849688
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJROOT]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Id = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = Str
+SwitchOperation = Num
+RouteGroupConnect = Str
+RouteGroupDisconnect = Str
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: Id = 1
+%INSTOVRD: Id = 5046297
+%INSTOVRD: Icon = 5046297
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+%INSTOVRD: PreCond = 5046297
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046297
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046297
+Mode = "Normal"
+%INSTOVRD: Mode = 5046297
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046297
+%INSTOVRD: NoResult = 5046297
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046297
+%INSTOVRD: IgnoreRTE = 5046297
+%INSTOVRD: UseMutex = 5046297
+%INSTOVRD: MutexNameOrRef = 5046297
+%INSTOVRD: BatchSyncOpt = 5046297
+%INSTOVRD: SwitchEnabled = 5046297
+%INSTOVRD: VirtualDeviceName = 5046297
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046297
+%INSTOVRD: RouteGroupConnect = 5046297
+%INSTOVRD: RouteGroupDisconnect = 5046297
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046297
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046297
+%INSTOVRD: ConnectionLifetime = 5046297
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046297
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046297
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046297
+%INSTOVRD: PassActTarget = 5046297
+%INSTOVRD: FailActTarget = 5046297
+%INSTOVRD: CustExpr = 5046297
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046297
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046297
+%INSTOVRD: CustTrueActTarget = 5046297
+%INSTOVRD: CustFalseActTarget = 5046297
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046297
+%INSTOVRD: LoopWhile = 5046297
+%INSTOVRD: LoopStatus = 5046297
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046297
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046297
+%INSTOVRD: LoopOpt = 5046297
+%INSTOVRD: PreExpr = 5046297
+%INSTOVRD: PostExpr = 5046297
+%INSTOVRD: StatusExpr = 5046297
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%INSTOVRD: PrecondIntExe = 5046297
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194328
+%TYPE_FLG = 33554432
+%INSTFLG = 4456472
+%INSTOVRD = 4456472
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%INSTFLG = 4194304
+
+[DEF, FlexCVIStepAdditions]
+%LOCATION = "StdTypes"
+Call = FCVIExtCall
+ModuleSrcPath = "TYPE, Path"
+AlwaysRunInProcess = Num
+ModulePrjPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCVIStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+ModuleType = Num
+
+[FlexCVIStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+ModuleType = 2
+
+[DEF, FlexCVIStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCVIParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCVIParameter"
+
+[FlexCVIStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCVIStepAdditions]
+%TIMESTAMP = 1028320624
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, FCVIParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+StrPass = Num
+ElemPass = Num
+ArrayDimensions = Num
+ArrayDimensionsSize = Strs
+StrSize = Str
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCVIParameter]
+Name = "_notNamed"
+NumType = 4
+ArrayDimensions = 1
+%LO: ArrayDimensionsSize = [0]
+%HI: ArrayDimensionsSize = [15]
+StrSize = "1024"
+%TIMESTAMP = 1028320624
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[FCVIParameter.ArrayDimensionsSize]
+%[0] = "1024"
+%[1] = "1024"
+%[2] = "1024"
+%[3] = "1024"
+%[4] = "1024"
+%[5] = "1024"
+%[6] = "1024"
+%[7] = "1024"
+%[8] = "1024"
+%[9] = "1024"
+%[10] = "1024"
+%[11] = "1024"
+%[12] = "1024"
+%[13] = "1024"
+%[14] = "1024"
+%[15] = "1024"
+
+[DEF, PassFailTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[PassFailTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescrip"
+DescriptionFormat Line0002 = "tion\")"
+%INSTFLG: DescriptionFormat = 524312
+%INSTOVRD: DescriptionFormat = 524312
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DEF_STEP_NAME\")"
+%INSTFLG: DefaultNameFormat = 524312
+%INSTOVRD: DefaultNameFormat = 524312
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.Result.PassFail"
+CodeTemplates = "PassFail_Template|PassFailVC++_Template|PassFailMFC_Template|PassFailHTB80_Template|PassFailHTB72_Template"
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1022876003
+%VERSION = "3.0.0.14"
+%TYPE_FLG = 33554438
+
+[DEF, PassFailTest.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, PassFailTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassFailTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditPassFailStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, PassFailTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[PassFailTest.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[PassFailTest.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_EDIT_STEP_MENU_NAME\")"
+
+[PassFailTest.Substeps[0].Result]
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, PassFailTest.Substeps[0]]
+%NAME = "Edit"
+
+[PassFailTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, PassFailTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassFailTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+
+[DEF, PassFailTest.Result]
+Error = "TYPE, Error"
+Status = Str
+PassFail = Bool
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PassFailTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+PassFail = True
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 4194328
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1028319100
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 4194304
+%TYPE_FLG = 33554438
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[EditSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 1028320624
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+StrPass = Num
+ElemPass = Num
+ArrayDimensions = Num
+ArrayDimensionsSize = Strs
+StrSize = Str
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+ArgValImag = Str
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+ArrayDimensions = 1
+%LO: ArrayDimensionsSize = [0]
+%HI: ArrayDimensionsSize = [15]
+StrSize = "1024"
+%TIMESTAMP = 1028320624
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 24
+%TYPE_FLG = 33554432
+
+[FCParameter.ArrayDimensionsSize]
+%[0] = "1024"
+%[1] = "1024"
+%[2] = "1024"
+%[3] = "1024"
+%[4] = "1024"
+%[5] = "1024"
+%[6] = "1024"
+%[7] = "1024"
+%[8] = "1024"
+%[9] = "1024"
+%[10] = "1024"
+%[11] = "1024"
+%[12] = "1024"
+%[13] = "1024"
+%[14] = "1024"
+%[15] = "1024"
+
+[DEF, Label]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+Description = Str
+%ROOT_TYPE = True
+
+[Label]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "Step.Description"
+%INSTFLG: DescriptionFormat = 524312
+%INSTOVRD: DescriptionFormat = 524312
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"LABEL_DEF_STEP_NAME\")"
+%INSTFLG: DefaultNameFormat = 524312
+%INSTOVRD: DefaultNameFormat = 524312
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%TIMESTAMP = 1022876827
+%VERSION = "3.0.0.14"
+%TYPE_FLG = 33554438
+
+[DEF, Label.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, Label.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[Label.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditLabelStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, Label.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Label.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[Label.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[Label.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[Label.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Label.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[Label.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"LABEL_EDIT_STEP_MENU_NAME\")"
+
+[Label.Substeps[0].Result]
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, Label.Substeps[0]]
+%NAME = "Edit"
+
+[Label.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"LABEL_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Label.TS]
+Icon = "label.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143449
+NoResult = True
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+CanSpecifyModule = False
+
+[DEF, Label.TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[DEF, Label.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Label.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 1028320331
+%VERSION = "3.0.0.36"
+%TYPELASTMOD = "3.0.0.36"
+%FLG = 24
+%TYPE_FLG = 33554432
+

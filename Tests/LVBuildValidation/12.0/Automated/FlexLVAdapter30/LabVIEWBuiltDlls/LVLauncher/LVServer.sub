@@ -1,0 +1,495 @@
+FPAttributeValueFile
+
+n  TypeLibGUID="{9A872073-0A06-11D1-90B7-00A024CE2744}" 
+
+n  TypeLibLCID="1033" 
+
+n  HelpFile="AXPROP.CHM" 
+
+n  TypeLibVersion="5.2" 
+
+n  SubType="COA" 
+
+n  SubVersion="1" 
+
+v enum_LabVIEWEnum_AppKindEnum DataType="i" 
+ LabVIEWConst_eInvalidAppKind (0)
+  ""
+
+ LabVIEWConst_eDevSysKind (1)
+  ""
+
+ LabVIEWConst_eRunTimeSysKind (2)
+  ""
+
+ LabVIEWConst_eStudEdKind (3)
+  ""
+
+ LabVIEWConst_eEmbeddedKind (4)
+  ""
+
+
+v enum_LabVIEWEnum_AppTargOSEnum DataType="i" 
+ LabVIEWConst_eInvalidTargOS (0)
+  ""
+
+ LabVIEWConst_eMacOS (1)
+  ""
+
+ LabVIEWConst_eWin31OS (2)
+  ""
+
+ LabVIEWConst_eWin95NTOS (3)
+  ""
+
+ LabVIEWConst_eSolaris1OS (4)
+  ""
+
+ LabVIEWConst_eSolaris2OS (5)
+  ""
+
+ LabVIEWConst_eHPUXOS (6)
+  ""
+
+ LabVIEWConst_ePowerMaxOS (7)
+  ""
+
+ LabVIEWConst_eLinuxOS (8)
+  ""
+
+ LabVIEWConst_eIrixOS (9)
+  ""
+
+ LabVIEWConst_eRhapsodyOS (10)
+  ""
+
+ LabVIEWConst_eBeOS (11)
+  ""
+
+ LabVIEWConst_eAIXOS (12)
+  ""
+
+ LabVIEWConst_eOSF1OS (13)
+  ""
+
+ LabVIEWConst_eVxWorksOS (14)
+  ""
+
+ LabVIEWConst_ePharlapOS (15)
+  ""
+
+ LabVIEWConst_eCarbonOS (16)
+  ""
+
+
+v enum_LabVIEWEnum_AppTargCPUEnum DataType="i" 
+ LabVIEWConst_eInvalidTargCPU (0)
+  ""
+
+ LabVIEWConst_eMotorola68kCPU (1)
+  ""
+
+ LabVIEWConst_ePowerPCCPU (2)
+  ""
+
+ LabVIEWConst_eIntelx86CPU (3)
+  ""
+
+ LabVIEWConst_eSPARCCPU (4)
+  ""
+
+ LabVIEWConst_ePARISCCPU (5)
+  ""
+
+ LabVIEWConst_eMIPSCPU (6)
+  ""
+
+ LabVIEWConst_eAlphaCPU (7)
+  ""
+
+
+v CABooleanValueSet DataType="i" 
+ VTRUE (-1)
+  ""
+
+ VFALSE (0)
+  ""
+
+
+v enum_LabVIEWEnum_VIPriorityEnum DataType="i" 
+ LabVIEWConst_ePriInvalid (0)
+  ""
+
+ LabVIEWConst_ePriBackground (1)
+  ""
+
+ LabVIEWConst_ePriNormal (2)
+  ""
+
+ LabVIEWConst_ePriAboveNormal (3)
+  ""
+
+ LabVIEWConst_ePriHigh (4)
+  ""
+
+ LabVIEWConst_ePriCritical (5)
+  ""
+
+ LabVIEWConst_ePriSubroutine (6)
+  ""
+
+
+v enum_LabVIEWEnum_ExecStateEnum DataType="i" 
+ LabVIEWConst_eBad (0)
+  ""
+
+ LabVIEWConst_eIdle (1)
+  ""
+
+ LabVIEWConst_eRunTopLevel (2)
+  ""
+
+ LabVIEWConst_eRunning (3)
+  ""
+
+
+v enum_LabVIEWEnum_VIExecSysEnum DataType="i" 
+ LabVIEWConst_eESysInvalid (0)
+  ""
+
+ LabVIEWConst_eESysUserInterface (1)
+  ""
+
+ LabVIEWConst_eESysNormal (2)
+  ""
+
+ LabVIEWConst_eESysInstrIO (3)
+  ""
+
+ LabVIEWConst_eESysDAQ (4)
+  ""
+
+ LabVIEWConst_eESysOther1 (5)
+  ""
+
+ LabVIEWConst_eESysOther2 (6)
+  ""
+
+ LabVIEWConst_eESysSameAsCaller (7)
+  ""
+
+
+v enum_LabVIEWEnum_VITypeEnum DataType="i" 
+ LabVIEWConst_eInvalidVIType (0)
+  ""
+
+ LabVIEWConst_eStandardVIType (1)
+  ""
+
+ LabVIEWConst_eControlVIType (2)
+  ""
+
+ LabVIEWConst_eGlobalVIType (3)
+  ""
+
+ LabVIEWConst_ePolymorphicVIType (4)
+  ""
+
+ LabVIEWConst_eConfigurationVIType (5)
+  ""
+
+
+0 LabVIEW_GetProperty 3 5 false g
+0 LabVIEW_SetProperty 3 5 false s
+
+1 all "_Application"  Name="App"  HelpContext="10002" 
+ "Application DispInterface"
+
+2 all "AppName" LabVIEW_AppAppName  HelpContext="10511"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Application:Name"
+
+2 all "UserName" LabVIEW_AppUserName  HelpContext="10512"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Application:User Name"
+
+2 all "Version" LabVIEW_AppVersion  HelpContext="10513"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Application:Version Number"
+
+2 all "AppKind" LabVIEW_AppAppKind  HelpContext="10514"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_AppKindEnum" g enum_LabVIEWEnum_AppKindEnum 
+ "Application:Kind"
+
+2 all "AppTargetOS" LabVIEW_AppAppTargetOS  HelpContext="10515"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_AppTargOSEnum" g enum_LabVIEWEnum_AppTargOSEnum 
+ "Application:Target Operating System"
+
+2 all "AppTargetCPU" LabVIEW_AppAppTargetCPU  HelpContext="10516"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_AppTargCPUEnum" g enum_LabVIEWEnum_AppTargCPUEnum 
+ "Application:Target CPU"
+
+2 all "OSName" LabVIEW_AppOSName  HelpContext="10517"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Operating System:Name"
+
+2 all "OSVersion" LabVIEW_AppOSVersion  HelpContext="10518"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Operating System:Version Number"
+
+2 all "ExportedVIs" LabVIEW_AppExportedVIs  HelpContext="10519"  CVIVartype="CAVT_VARIANT" VARIANT g 
+ "Application:Exported VIs In Memory"
+
+2 all "PrintSetupFileWrapText" LabVIEW_AppPrintSetupFileWrapText  HelpContext="10520"  CVIVartype="CAVT_LONG" long gs 
+ "Printing:File Wrap Text Length"
+
+2 all "PrintSetupPNGCompressLevel" LabVIEW_AppPrintSetupPNGCompressLevel  HelpContext="10521"  CVIVartype="CAVT_LONG" long gs 
+ "Printing:PNG Compression Level"
+
+2 all "PrintSetupJPEGQuality" LabVIEW_AppPrintSetupJPEGQuality  HelpContext="10522"  CVIVartype="CAVT_LONG" long gs 
+ "Printing:JPEG Quality"
+
+2 all "PrintSetupCustomConnector" LabVIEW_AppPrintSetupCustomConnector  HelpContext="10523"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Connector?"
+
+2 all "PrintSetupCustomDescription" LabVIEW_AppPrintSetupCustomDescription  HelpContext="10524"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Description?"
+
+2 all "PrintSetupCustomPanel" LabVIEW_AppPrintSetupCustomPanel  HelpContext="10525"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Panel?"
+
+2 all "PrintSetupCustomPanelBorder" LabVIEW_AppPrintSetupCustomPanelBorder  HelpContext="10526"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Panel Border?"
+
+2 all "PrintSetupCustomControls" LabVIEW_AppPrintSetupCustomControls  HelpContext="10527"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Controls?"
+
+2 all "PrintSetupCustomControlDesc" LabVIEW_AppPrintSetupCustomControlDesc  HelpContext="10528"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Control Descriptions?"
+
+2 all "PrintSetupCustomControlTypes" LabVIEW_AppPrintSetupCustomControlTypes  HelpContext="10529"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Control Types?"
+
+2 all "PrintSetupCustomDiagram" LabVIEW_AppPrintSetupCustomDiagram  HelpContext="10530"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Diagram?"
+
+2 all "PrintSetupCustomDiagramHidden" LabVIEW_AppPrintSetupCustomDiagramHidden  HelpContext="10531"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Diagram Hidden?"
+
+2 all "PrintSetupCustomDiagramRepeat" LabVIEW_AppPrintSetupCustomDiagramRepeat  HelpContext="10532"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Diagram Repeat?"
+
+2 all "PrintSetupCustomSubVIs" LabVIEW_AppPrintSetupCustomSubVIs  HelpContext="10533"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom SubVIs?"
+
+2 all "PrintSetupCustomHierarchy" LabVIEW_AppPrintSetupCustomHierarchy  HelpContext="10534"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom Hierarchy?"
+
+2 all "PrintSetupCustomHistory" LabVIEW_AppPrintSetupCustomHistory  HelpContext="10535"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Printing:Custom History?"
+
+2 all "ApplicationDirectory" LabVIEW_AppApplicationDirectory  HelpContext="10536"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Application:Directory Path"
+
+2 all "AllVIsInMemory" LabVIEW_AppAllVIsInMemory  HelpContext="10537"  CVIVartype="CAVT_VARIANT" VARIANT g 
+ "Application:All VIs In Memory"
+
+2 all "AutomaticClose" LabVIEW_AppAutomaticClose  HelpContext="10538"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Automatic Close"
+
+2 all "_ParentWindowForDialogs" LabVIEW_App_ParentWindowForDialogs  HelpContext="10539"  CVIVartype="CAVT_LONG" long gs 
+ "Application:Parent Window For Dialogs"
+
+2 all "ShowFPTipStrips" LabVIEW_AppShowFPTipStrips  HelpContext="10540"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Application:Show FP Tip Strips"
+
+1 all "Generic"  Name="Generic"  HelpContext="10001" 
+ "Generic DispInterface"
+
+2 all "ClassID" LabVIEW_GenericClassID  HelpContext="10500"  CVIVartype="CAVT_LONG" long g 
+ "Class ID"
+
+2 all "Owner" LabVIEW_GenericOwner  HelpContext="10501"  CVIVartype="CAVT_OBJHANDLE" LabVIEWObj_Generic g 
+ "Owner"
+
+2 all "OwningVI" LabVIEW_GenericOwningVI  HelpContext="10502"  CVIVartype="CAVT_OBJHANDLE" LabVIEWObj_VirtualInstr g 
+ "Owning VI"
+
+2 all "ClassName" LabVIEW_GenericClassName  HelpContext="10503"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Class Name"
+
+1 all "VirtualInstrument"  Name="VirtualInstr"  HelpContext="10003" 
+ "VI DispInterface"
+
+2 all "Name" LabVIEW_VirtualInstrName  HelpContext="10547"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "VI Name"
+
+2 all "Path" LabVIEW_VirtualInstrPath  HelpContext="10548"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "VI Path"
+
+2 all "Description" LabVIEW_VirtualInstrDescription  HelpContext="10549"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "VI Description"
+
+2 all "HistoryText" LabVIEW_VirtualInstrHistoryText  HelpContext="10550"  CVIVartype="CAVT_CSTRING" "char *" g 
+ "History:Entire Text"
+
+2 all "FPTitleBarVisible" LabVIEW_VirtualInstrFPTitleBarVisible  HelpContext="10551"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Title Bar Visible"
+
+2 all "FPWinClosable" LabVIEW_VirtualInstrFPWinClosable  HelpContext="10552"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Closeable"
+
+2 all "FPResizable" LabVIEW_VirtualInstrFPResizable  HelpContext="10553"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Resizeable"
+
+2 all "FPAllowRTPopup" LabVIEW_VirtualInstrFPAllowRTPopup  HelpContext="10554"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Allow Runtime PopUp"
+
+2 all "FPHiliteReturnButton" LabVIEW_VirtualInstrFPHiliteReturnButton  HelpContext="10555"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Highlight Return Button"
+
+2 all "FPSizeToScreen" LabVIEW_VirtualInstrFPSizeToScreen  HelpContext="10556"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Size To Screen"
+
+2 all "FPAutoCenter" LabVIEW_VirtualInstrFPAutoCenter  HelpContext="10557"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Auto Center"
+
+2 all "FPShowScrollBars" LabVIEW_VirtualInstrFPShowScrollBars  HelpContext="10558"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Show Scroll Bars"
+
+2 all "FPShowMenuBar" LabVIEW_VirtualInstrFPShowMenuBar  HelpContext="10559"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Show Menu Bar"
+
+2 all "TBVisible" LabVIEW_VirtualInstrTBVisible  HelpContext="10560"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Tool Bar:Visible"
+
+2 all "TBShowRunButton" LabVIEW_VirtualInstrTBShowRunButton  HelpContext="10561"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Tool Bar:Show Run Button"
+
+2 all "TBShowFreeRunButton" LabVIEW_VirtualInstrTBShowFreeRunButton  HelpContext="10562"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Tool Bar:Show Free Run Button"
+
+2 all "TBShowAbortButton" LabVIEW_VirtualInstrTBShowAbortButton  HelpContext="10563"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Tool Bar:Show Abort Button"
+
+2 all "AllowDebugging" LabVIEW_VirtualInstrAllowDebugging  HelpContext="10564"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Allow Debugging"
+
+2 all "FPIsDialog" LabVIEW_VirtualInstrFPIsDialog  HelpContext="10565"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Is Dialog"
+
+2 all "ShowFPOnLoad" LabVIEW_VirtualInstrShowFPOnLoad  HelpContext="10566"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Show Front Panel On Load"
+
+2 all "ShowFPOnCall" LabVIEW_VirtualInstrShowFPOnCall  HelpContext="10567"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Show Front Panel On Call"
+
+2 all "CloseFPAfterCall" LabVIEW_VirtualInstrCloseFPAfterCall  HelpContext="10568"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Close After Call"
+
+2 all "RunOnOpen" LabVIEW_VirtualInstrRunOnOpen  HelpContext="10569"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Run When Opened"
+
+2 all "IsReentrant" LabVIEW_VirtualInstrIsReentrant  HelpContext="10570"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Is Reentrant"
+
+2 all "ExecPriority" LabVIEW_VirtualInstrExecPriority  HelpContext="10571"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_VIPriorityEnum" gs enum_LabVIEWEnum_VIPriorityEnum 
+ "Execution:Priority"
+
+2 all "HistUseDefaults" LabVIEW_VirtualInstrHistUseDefaults  HelpContext="10572"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "History:Use Defaults"
+
+2 all "HistAddCommentsAtSave" LabVIEW_VirtualInstrHistAddCommentsAtSave  HelpContext="10573"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "History:Always Add Comments At Save"
+
+2 all "HistPromptAtClose" LabVIEW_VirtualInstrHistPromptAtClose  HelpContext="10574"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "History:Prompt for Comments At Close"
+
+2 all "HistPromptForCommentsAtSave" LabVIEW_VirtualInstrHistPromptForCommentsAtSave  HelpContext="10575"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "History:Prompt for Comments At Save"
+
+2 all "HistRecordAppComments" LabVIEW_VirtualInstrHistRecordAppComments  HelpContext="10576"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "History:Record Application Comments"
+
+2 all "HelpDocumentTag" LabVIEW_VirtualInstrHelpDocumentTag  HelpContext="10577"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Help:Document Tag"
+
+2 all "HelpDocumentPath" LabVIEW_VirtualInstrHelpDocumentPath  HelpContext="10578"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Help:Document Path"
+
+2 all "FPWinOpen" LabVIEW_VirtualInstrFPWinOpen  HelpContext="10579"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Open"
+
+2 all "FPWinIsFrontMost" LabVIEW_VirtualInstrFPWinIsFrontMost  HelpContext="10580"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Is Frontmost"
+
+2 all "FPWinBounds" LabVIEW_VirtualInstrFPWinBounds  HelpContext="10581"  CVIVartype="CAVT_VARIANT" VARIANT gs 
+ "Front Panel Window:Window Bounds"
+
+2 all "VIModificationBitSet" LabVIEW_VirtualInstrVIModificationBitSet  HelpContext="10582"  CVIVartype="CAVT_LONG" long g 
+ "Modifications:VI Modifications Bitset"
+
+2 all "FPModificationBitSet" LabVIEW_VirtualInstrFPModificationBitSet  HelpContext="10583"  CVIVartype="CAVT_LONG" long g 
+ "Modifications:Front Panel Mods Bitset"
+
+2 all "BDModificationBitSet" LabVIEW_VirtualInstrBDModificationBitSet  HelpContext="10584"  CVIVartype="CAVT_LONG" long g 
+ "Modifications:Block Diagram Mods Bitset"
+
+2 all "CodeSize" LabVIEW_VirtualInstrCodeSize  HelpContext="10585"  CVIVartype="CAVT_LONG" long g 
+ "Metrics:Code Size"
+
+2 all "DataSize" LabVIEW_VirtualInstrDataSize  HelpContext="10586"  CVIVartype="CAVT_LONG" long g 
+ "Metrics:Total Data Size"
+
+2 all "FPSize" LabVIEW_VirtualInstrFPSize  HelpContext="10587"  CVIVartype="CAVT_LONG" long g 
+ "Metrics:Size of Front Panel"
+
+2 all "BDSize" LabVIEW_VirtualInstrBDSize  HelpContext="10588"  CVIVartype="CAVT_LONG" long g 
+ "Metrics:Size of Block Diagram"
+
+2 all "Callers" LabVIEW_VirtualInstrCallers  HelpContext="10589"  CVIVartype="CAVT_VARIANT" VARIANT g 
+ "Callers' Names"
+
+2 all "Callees" LabVIEW_VirtualInstrCallees  HelpContext="10590"  CVIVartype="CAVT_VARIANT" VARIANT g 
+ "Callees' Names"
+
+2 all "LogFilePath" LabVIEW_VirtualInstrLogFilePath  HelpContext="10591"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Auto Logging:Log File Path"
+
+2 all "LogAtFinish" LabVIEW_VirtualInstrLogAtFinish  HelpContext="10592"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Auto Logging:Log at Finish"
+
+2 all "PrintLogFileAtFinish" LabVIEW_VirtualInstrPrintLogFileAtFinish  HelpContext="10593"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Auto Logging:Print at Finish"
+
+2 all "FPWinOrigin" LabVIEW_VirtualInstrFPWinOrigin  HelpContext="10594"  CVIVartype="CAVT_VARIANT" VARIANT gs 
+ "Front Panel Window:Origin"
+
+2 all "FPWinTitle" LabVIEW_VirtualInstrFPWinTitle  HelpContext="10595"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Front Panel Window:Title"
+
+2 all "SuspendOnCall" LabVIEW_VirtualInstrSuspendOnCall  HelpContext="10596"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Execution:Suspend On Call"
+
+2 all "FPWinPanelBounds" LabVIEW_VirtualInstrFPWinPanelBounds  HelpContext="10597"  CVIVartype="CAVT_VARIANT" VARIANT gs 
+ "Front Panel Window:Panel Bounds"
+
+2 all "ExecState" LabVIEW_VirtualInstrExecState  HelpContext="10598"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_ExecStateEnum" g enum_LabVIEWEnum_ExecStateEnum 
+ "Execution:State"
+
+2 all "EditMode" LabVIEW_VirtualInstrEditMode  HelpContext="10599"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Edit Mode On Open"
+
+2 all "PreferredExecSystem" LabVIEW_VirtualInstrPreferredExecSystem  HelpContext="10600"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_VIExecSysEnum" gs enum_LabVIEWEnum_VIExecSysEnum 
+ "Execution:Preferred Exec System"
+
+2 all "FPWinCustomTitle" LabVIEW_VirtualInstrFPWinCustomTitle  HelpContext="10601"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Custom Title"
+
+2 all "VIType" LabVIEW_VirtualInstrVIType  HelpContext="10602"  CVIVartype="CAVT_LONG" "enum LabVIEWEnum_VITypeEnum" g enum_LabVIEWEnum_VITypeEnum 
+ "VI Type"
+
+2 all "RevisionNumber" LabVIEW_VirtualInstrRevisionNumber  HelpContext="10603"  CVIVartype="CAVT_LONG" long g 
+ "History:Revision Number"
+
+2 all "_ConPaneTD" LabVIEW_VirtualInstr_ConPaneTD  HelpContext="10604"  CVIVartype="CAVT_VARIANT" VARIANT g 
+ "Connector Pane Type Descriptor"
+
+2 all "FPKeepWinProps" LabVIEW_VirtualInstrFPKeepWinProps  HelpContext="10607"  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Front Panel Window:Keep Window Proportions"
+
+2 all "RunTimeMenuPath" LabVIEW_VirtualInstrRunTimeMenuPath  HelpContext="10608"  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Run-Time Menu Path"
+

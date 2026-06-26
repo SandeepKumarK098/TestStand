@@ -1,0 +1,5520 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 3.5.0.410
+CompatibleProdVersion = 3.5.0.0
+Version = 354
+Type = "SequenceFile"
+Path = "C:\\TSdev\\Users\\Carlos\\LVBuildValidation\\Examples\\SequenceBuilderTool\\LabVIEW\\Sequence Builder.seq"
+ProductVersionString = "3.5 (3.5.0.410)"
+CharEncoding = "SBCS"
+
+[DEF, %OBJROOT]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+AutomationStepAdditions = AutomationModule
+AutomationParameter = AutomationParameter
+FlexCStepAdditions = FCModule
+FCParameter = FCParameter
+NoneStepAdditions = NoneModule
+Label = StepType
+Goto = StepType
+Statement = StepType
+SequenceCall = StepType
+SeqCallStepAdditions = SeqCallModule
+MessagePopup = StepType
+StepTypeSubstepsArray = Objs
+EditSubstep = StepType
+PostSubstep = StepType
+SequenceArgument = Argument
+Expression = ExprValue
+FlexGStepAdditions = FGModule
+VIParameter = VIParameter
+VIParameterElement = VIParameterElement
+NI_MsgBoxFontData = Obj
+NI_MsgBoxFileData = Obj
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Type = Num
+ModelOption = Num
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+Requirements = Obj
+%NAME = "Data"
+
+[SF]
+%HI: Seq = [7]
+%FLG: Seq = 4194304
+%FLG: FileGlobalDefaults = 4194304
+%FLG: ModelFile = 4194312
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 4194312
+UnloadOpt = "UseStepUnloadOpt"
+%FLG: UnloadOpt = 4194312
+%FLG: Type = 4194312
+ModelOption = 1
+%FLG: ModelOption = 4194312
+Version = "3.5.0.410"
+%FLG: Version = 4194312
+BatchSync = 1
+%FLG: BatchSync = 4194312
+%FLG: SFGlobalsScope = 4194312
+%FLG: Requirements = 4194305
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+%[2] = Sequence
+%[3] = Sequence
+%[4] = Sequence
+%[5] = Sequence
+%[6] = Sequence
+%[7] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "MainSequence"
+
+[SF.Seq[0]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [12]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+ManualSelect = Bool
+TemplateFilePath = Str
+ListOfSteps = Strs
+TemplateFileRef = Ref
+TemplateMainSequenceRef = Ref
+Option = Str
+NewSequenceFilePath = Str
+NewSequenceFileRef = Ref
+OKButton = Bool
+SeqFilePath = Str
+PathLen = Num
+Directory = Str
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "Statement"
+%[3] = Step
+%TYPE: %[3] = "Statement"
+%[4] = Step
+%TYPE: %[4] = "Statement"
+%[5] = Step
+%TYPE: %[5] = "Action"
+%[6] = Step
+%TYPE: %[6] = "Action"
+%[7] = Step
+%TYPE: %[7] = "MessagePopup"
+%[8] = Step
+%TYPE: %[8] = "SequenceCall"
+%[9] = Step
+%TYPE: %[9] = "SequenceCall"
+%[10] = Step
+%TYPE: %[10] = "MessagePopup"
+%[11] = Step
+%TYPE: %[11] = "Statement"
+%[12] = Step
+%TYPE: %[12] = "SequenceCall"
+
+[SF.Seq[0].Main[0].TS]
+Id = "ID#:0le1PYV20UidjsjuQkBBpA"
+Mode = "Skip"
+CustExpr = "Locals.OKButton == False"
+CustTrueAct = "Terminate"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[0].Main[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 216
+MemberName = "DisplayOpenFileDialog"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 144
+%HI: Parameters = [11]
+
+[DEF, SF.Seq[0].Main[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+%[8] = "TYPE, AutomationParameter"
+%[9] = "TYPE, AutomationParameter"
+%[10] = "TYPE, AutomationParameter"
+%[11] = "TYPE, AutomationParameter"
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.OKButton"
+ArgDisplayVal = "Locals.OKButton"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[1]]
+Name = "dlgTitle"
+ArgVal = "\"Select Template Sequence File\""
+ArgDisplayVal = "\"Select Template Sequence File\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[2]]
+Name = "okButtonText"
+ArgVal = "\"\""
+ArgDisplayVal = "\"\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[3]]
+Name = "initialPath"
+ArgVal Line0001 = "Left(RunState.SequenceFile.Path, (Find(RunState.SequenceFile.Path, \"\\\\\", 0, true, true) +1))  + \"Template Sequence."
+ArgVal Line0002 = "seq\""
+ArgDisplayVal Line0001 = "Left(RunState.SequenceFile.Path, (Find(RunState.SequenceFile.Path, \"\\\\\", 0, true, true) +1))  + \"Template Sequence."
+ArgDisplayVal Line0002 = "seq\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[4]]
+Name = "modalToAppMainWind"
+ArgVal = "True"
+ArgDisplayVal = "True"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[5]]
+Name = "selectedPath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[6]]
+Name = "absolutePath"
+ArgVal = "Locals.TemplateFilePath"
+ArgDisplayVal = "Locals.TemplateFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[7]]
+Name = "openFileDialogFlags"
+ArgVal = "0x83"
+ArgDisplayVal = "0x83"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[8]]
+Name = "defaultExtension"
+ArgVal = "\"seq\""
+ArgDisplayVal = "\"seq\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[9]]
+Name = "win32Flags"
+ArgVal = "0x1004"
+ArgDisplayVal = "0x1004"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[10]]
+Name = "fileFilter"
+ArgVal = "\"\""
+ArgDisplayVal = "\"\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[0].TS.SData.Call.Parameters[11]]
+Name = "currentSequenceFile"
+ArgVal = "RunState.SequenceFile"
+ArgDisplayVal = "RunState.SequenceFile"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Select Template Sequence File_Copy"
+
+[SF.Seq[0].Main[1].TS]
+Id = "ID#:Zc13zO0NY0eAY7BmLVxCND"
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[0].Main[1].TS.SData.Call]
+ObjectVariable = "RunState.SequenceFile"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "NI TestStand API 3.5"
+Interface = "{9F2DBE40-1DBC-11D3-AFA0-006097B79EF5}"
+InterfaceName = "PropertyObjectFile"
+Member = 108
+MemberName = "Path"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 64
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[0].Main[1].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[0].Main[1].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.SeqFilePath"
+ArgDisplayVal = "Locals.SeqFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "GetPath"
+
+[SF.Seq[0].Main[2].TS]
+Id = "ID#:2wZ9I42Q702vbx907r/B0D"
+PostExpr = "Locals.PathLen = Len( Locals.SeqFilePath)"
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "Compose Template Path"
+
+[SF.Seq[0].Main[3].TS]
+Id = "ID#:AY0FkVUp0k+AJ+DhPcXcfA"
+PostExpr = "Locals.Directory = Left(Locals.SeqFilePath,(Locals.PathLen-20))"
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "Statement"
+
+[SF.Seq[0].Main[4].TS]
+Id = "ID#:jLR52006uESXdGG3vUfOfD"
+PostExpr = "Locals.TemplateFilePath = Locals.Directory+\"Template Sequence.seq\""
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "Statement_2"
+
+[SF.Seq[0].Main[5].TS]
+Id = "ID#:PxZK2EZ/10+1GdxtfQttTA"
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[0].Main[5].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 10
+MemberName = "GetSequenceFile"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 32
+%HI: Parameters = [2]
+
+[DEF, SF.Seq[0].Main[5].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+
+[SF.Seq[0].Main[5].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.TemplateFileRef"
+ArgDisplayVal = "Locals.TemplateFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[0].Main[5].TS.SData.Call.Parameters[1]]
+Name = "SequenceFilePath"
+ArgVal = "Locals.TemplateFilePath"
+ArgDisplayVal = "Locals.TemplateFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[0].Main[5].TS.SData.Call.Parameters[2]]
+Name = "getSeqFileFlags"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "Get Template Sequence File Reference"
+
+[SF.Seq[0].Main[6].TS]
+Id = "ID#:aVUieGy5T0uxlPy7JL7HdD"
+
+[DEF, SF.Seq[0].Main[6].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[0].Main[6].TS.SData.Call]
+ObjectVariable = "Locals.TemplateFileRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "SequenceFile"
+MemberType = 1
+Member = 2
+MemberName = "GetSequenceByName"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 32
+%HI: Parameters = [1]
+
+[DEF, SF.Seq[0].Main[6].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+
+[SF.Seq[0].Main[6].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.TemplateMainSequenceRef"
+ArgDisplayVal = "Locals.TemplateMainSequenceRef"
+Type = 9
+DisplayType = "Sequence (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[0].Main[6].TS.SData.Call.Parameters[1]]
+Name = "sequenceNameParam"
+ArgVal = "\"MainSequence\""
+ArgDisplayVal = "\"MainSequence\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Get Template MainSequence Reference"
+
+[SF.Seq[0].Main[7].TS]
+Id = "ID#:LUV7jjyHxU+4b+ZJgpKO2A"
+PostExpr = "Step.Result.ButtonHit == 1 ? (Locals.ManualSelect = True) : (Locals.ManualSelect = False)"
+
+[SF.Seq[0].Main[7]]
+TitleExpr = "\"Option\""
+MessageExpr Line0001 = "\"Please choose if you would like to manually select which steps to include\nor if you would like this tool to load the "
+MessageExpr Line0002 = "information from an *.ini file.\""
+Button1Label = "\"Manually Select\""
+Button2Label = "\"Load *.ini file\""
+DefaultResponse = "<Obsolete, Use DefaultResponseExpr>"
+DefaultResponseExpr = "\"\""
+TimerButton = 2
+TimeToWait = 1
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "Manual or Ini Selection"
+
+[SF.Seq[0].Main[8].TS]
+Id = "ID#:eBxV/3xxV0iyw/Z003kjzD"
+LoadOpt = "DynamicLoad"
+
+[DEF, SF.Seq[0].Main[8].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[8].TS.SData]
+SFPathExpr = "RunState.SequenceFile"
+SeqNameExpr = "Locals.ManualSelect == True ? (\"Manually Select Steps\") : (\"Load List of Steps From File\")"
+SpecifyByExpr = True
+%FLG: Prototype = 262144
+UsePrototype = True
+
+[DEF, SF.Seq[0].Main[8].TS.SData]
+ActualArgs = Arguments
+Prototype = Obj
+
+[DEF, SF.Seq[0].Main[8].TS.SData.ActualArgs]
+TemplateFilePath = "TYPE, SequenceArgument"
+ListOfSteps = "TYPE, SequenceArgument"
+TemplateFileRef = "TYPE, SequenceArgument"
+TemplateMainSequenceRef = "TYPE, SequenceArgument"
+Directory = "TYPE, SequenceArgument"
+
+[SF.Seq[0].Main[8].TS.SData.ActualArgs.TemplateFilePath]
+UseDef = False
+Expr = "Locals.TemplateFilePath"
+ParamType = 2
+
+[SF.Seq[0].Main[8].TS.SData.ActualArgs.ListOfSteps]
+UseDef = False
+Expr = "Locals.ListOfSteps"
+ParamType = 256
+
+[SF.Seq[0].Main[8].TS.SData.ActualArgs.TemplateFileRef]
+UseDef = False
+Expr = "Locals.TemplateFileRef"
+ParamType = 2048
+
+[SF.Seq[0].Main[8].TS.SData.ActualArgs.TemplateMainSequenceRef]
+UseDef = False
+Expr = "Locals.TemplateMainSequenceRef"
+ParamType = 2048
+
+[SF.Seq[0].Main[8].TS.SData.ActualArgs.Directory]
+UseDef = False
+Expr = "Locals.Directory"
+ParamType = 2
+
+[DEF, SF.Seq[0].Main[8].TS.SData.Prototype]
+TemplateFilePath = Str
+ListOfSteps = Strs
+TemplateFileRef = Ref
+TemplateMainSequenceRef = Ref
+Directory = Str
+
+[SF.Seq[0].Main[8].TS.SData.Prototype]
+%FLG: TemplateFilePath = 4
+%FLG: ListOfSteps = 4
+%FLG: TemplateFileRef = 4
+%FLG: TemplateMainSequenceRef = 4
+%FLG: Directory = 4
+
+[DEF, SF.Seq[0].Main[8]]
+%NAME = "Get Template File Name and List of Steps"
+
+[SF.Seq[0].Main[9].TS]
+Id = "ID#:s9YaRtXahEmbyOeeJBBstC"
+
+[DEF, SF.Seq[0].Main[9].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[9].TS.SData]
+SeqName = "Build New Sequence"
+UseCurFile = True
+
+[DEF, SF.Seq[0].Main[9].TS.SData]
+ActualArgs = Arguments
+
+[DEF, SF.Seq[0].Main[9].TS.SData.ActualArgs]
+arg0 = "TYPE, SequenceArgument"
+arg1 = "TYPE, SequenceArgument"
+arg2 = "TYPE, SequenceArgument"
+arg3 = "TYPE, SequenceArgument"
+
+[SF.Seq[0].Main[9].TS.SData.ActualArgs.arg0]
+UseDef = False
+Expr = "Locals.ListOfSteps"
+
+[SF.Seq[0].Main[9].TS.SData.ActualArgs.arg1]
+UseDef = False
+Expr = "Locals.TemplateFileRef"
+
+[SF.Seq[0].Main[9].TS.SData.ActualArgs.arg2]
+UseDef = False
+Expr = "Locals.TemplateMainSequenceRef"
+
+[SF.Seq[0].Main[9].TS.SData.ActualArgs.arg3]
+UseDef = False
+Expr = "Locals.NewSequenceFileRef"
+
+[DEF, SF.Seq[0].Main[9]]
+%NAME = "Build New Sequence"
+
+[SF.Seq[0].Main[10].TS]
+Id = "ID#:AOEioQJhB0+20NANCVAvGB"
+
+[SF.Seq[0].Main[10].Result]
+%FLG: Response = 8192
+
+[SF.Seq[0].Main[10]]
+TitleExpr = "\"Execute and Save Options\""
+MessageExpr Line0001 = "\"Please select one of the options below.  If selecting a save option please fill in the\" + \"\\n\" + \"pathname for th"
+MessageExpr Line0002 = "e saved file in the response text box below before selecting your option.\""
+Button1Label = "\"Execute Only\""
+Button2Label = "\"Save and Execute\""
+Button3Label = "\"Save Only\""
+ShowResponse = True
+MaxResponseLength = 64
+DefaultResponse = "<Obsolete, Use DefaultResponseExpr>"
+DefaultResponseExpr = "\"C:\\\\Build 1.seq\""
+TimerButton = 1
+TimeToWait = 1
+Modal = True
+
+[DEF, SF.Seq[0].Main[10]]
+%NAME = "Select Execute and Save Options"
+
+[SF.Seq[0].Main[11].TS]
+Id = "ID#:DRA+HxR70U2o0yMwr6LmyA"
+PostExpr Line0001 = "( RunState.Sequence.Main[\"Select Execute and Save Options\"].Result.ButtonHit == 1) ? ( Locals.Option = \"Execute Only\"
+PostExpr Line0002 = "") : ((RunState.Sequence.Main[\"Select Execute and Save Options\"].Result.ButtonHit == 2) ? ( Locals.Option = \"Save and"
+PostExpr Line0003 = " Execute\", Locals.NewSequenceFilePath = RunState.Sequence.Main[\"Select Execute and Save Options\"].Result.Response ) :"
+PostExpr Line0004 = " ( Locals.Option = \"Save Only\", Locals.NewSequenceFilePath = RunState.Sequence.Main[\"Select Execute and Save Options\"
+PostExpr Line0005 = ""].Result.Response ))"
+
+[DEF, SF.Seq[0].Main[11]]
+%NAME = "Determine Selected Option"
+
+[SF.Seq[0].Main[12].TS]
+Id = "ID#:bdN0j9E0EkWoLnAfUVmMwA"
+LoadOpt = "DynamicLoad"
+
+[DEF, SF.Seq[0].Main[12].TS]
+SData = "TYPE, SeqCallStepAdditions"
+
+[SF.Seq[0].Main[12].TS.SData]
+SFPathExpr = "RunState.SequenceFile"
+SeqNameExpr = "Locals.Option"
+SpecifyByExpr = True
+%FLG: Prototype = 262144
+UsePrototype = True
+
+[DEF, SF.Seq[0].Main[12].TS.SData]
+ActualArgs = Arguments
+Prototype = Obj
+
+[DEF, SF.Seq[0].Main[12].TS.SData.ActualArgs]
+arg0 = "TYPE, SequenceArgument"
+arg1 = "TYPE, SequenceArgument"
+
+[SF.Seq[0].Main[12].TS.SData.ActualArgs.arg0]
+UseDef = False
+Expr = "Locals.NewSequenceFileRef"
+
+[SF.Seq[0].Main[12].TS.SData.ActualArgs.arg1]
+UseDef = False
+Expr = "Locals.NewSequenceFilePath"
+
+[DEF, SF.Seq[0].Main[12].TS.SData.Prototype]
+NewSequenceFileRef = Ref
+NewSequenceFilePath = Str
+
+[SF.Seq[0].Main[12].TS.SData.Prototype]
+%FLG: NewSequenceFileRef = 4
+%FLG: NewSequenceFilePath = 4
+
+[DEF, SF.Seq[0].Main[12]]
+%NAME = "Peform Selected Option"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[0].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[0].Requirements]
+Links = Strs
+
+[SF.Seq[0].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Build New Sequence"
+
+[DEF, SF.Seq[1].Parameters]
+ListOfSteps = Strs
+TemplateFileRef = Ref
+TemplateMainSequenceRef = Ref
+NewSequenceFileRef = Ref
+
+[SF.Seq[1].Parameters]
+%FLG: ListOfSteps = 4
+%FLG: TemplateFileRef = 4
+%FLG: TemplateMainSequenceRef = 4
+%FLG: NewSequenceFileRef = 4
+
+[SF.Seq[1]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [7]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [0]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[1].Locals]
+ResultList = Objs
+NewMainSequenceRef = Ref
+SelectedStepRef = Ref
+Index = Num
+ClonedStepRef = Ref
+
+[DEF, SF.Seq[1].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[1].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "Label"
+%[3] = Step
+%TYPE: %[3] = "Action"
+%[4] = Step
+%TYPE: %[4] = "Action"
+%[5] = Step
+%TYPE: %[5] = "Action"
+%[6] = Step
+%TYPE: %[6] = "Statement"
+%[7] = Step
+%TYPE: %[7] = "Goto"
+
+[SF.Seq[1].Main[0].TS]
+Id = "ID#:pSg+lzxSTk2jrZU/qHOY9C"
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Main[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 11
+MemberName = "NewSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 36
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[1].Main[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Main[0].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Create a New Sequence File"
+
+[SF.Seq[1].Main[1].TS]
+Id = "ID#:bHXt2F3cpUev4bkL/2facD"
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Main[1].TS.SData.Call]
+ObjectVariable = "Parameters.NewSequenceFileRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "SequenceFile"
+MemberType = 1
+Member = 2
+MemberName = "GetSequenceByName"
+HasMemberInfo = True
+Locale = 1033
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 32
+%HI: Parameters = [1]
+
+[DEF, SF.Seq[1].Main[1].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Main[1].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.NewMainSequenceRef"
+ArgDisplayVal = "Locals.NewMainSequenceRef"
+Type = 9
+DisplayType = "Sequence (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[1].Main[1].TS.SData.Call.Parameters[1]]
+Name = "sequenceNameParam"
+ArgVal = "\"MainSequence\""
+ArgDisplayVal = "\"MainSequence\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "Get MainSequence of New Sequence File"
+
+[SF.Seq[1].Main[2].TS]
+Id = "ID#:alv1soQGzEmek+lodboY9B"
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Begin Loop"
+
+[SF.Seq[1].Main[3].TS]
+Id = "ID#:viLSbevKFUWxh1keB+UWVB"
+
+[DEF, SF.Seq[1].Main[3].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Main[3].TS.SData.Call]
+ObjectVariable = "Parameters.TemplateMainSequenceRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "Sequence"
+MemberType = 1
+Member = 3
+MemberName = "GetStepByName"
+HasMemberInfo = True
+Locale = 1033
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 36
+%HI: Parameters = [2]
+
+[DEF, SF.Seq[1].Main[3].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Main[3].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.SelectedStepRef"
+ArgDisplayVal = "Locals.SelectedStepRef"
+Type = 9
+DisplayType = "Step (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B86DE3E1-C234-11D0-939C-0020AF68E893}"
+
+[SF.Seq[1].Main[3].TS.SData.Call.Parameters[1]]
+Name = "stepName"
+ArgVal = "Parameters.ListOfSteps[Locals.Index]"
+ArgDisplayVal = "Parameters.ListOfSteps[Locals.Index]"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[1].Main[3].TS.SData.Call.Parameters[2]]
+Name = "stepGroupParam"
+ArgVal = "1"
+ArgDisplayVal = "StepGroup_Main"
+Type = 3
+DisplayType = "StepGroups (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[1].Main[3]]
+%NAME = "Get Selected Step By Name"
+
+[SF.Seq[1].Main[4].TS]
+Id = "ID#:QX4GEamMCkutkAI7ZY/reB"
+
+[DEF, SF.Seq[1].Main[4].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Main[4].TS.SData.Call]
+ObjectVariable = "Locals.SelectedStepRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{8D8769A0-09C0-11D1-93BD-0020AF68E893}"
+InterfaceName = "PropertyObject"
+MemberType = 1
+Member = 571
+MemberName = "Clone"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 140
+%HI: Parameters = [2]
+
+[DEF, SF.Seq[1].Main[4].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Main[4].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.ClonedStepRef"
+ArgDisplayVal = "Locals.ClonedStepRef"
+Type = 9
+DisplayType = "PropertyObject (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{8D8769A0-09C0-11D1-93BD-0020AF68E893}"
+
+[SF.Seq[1].Main[4].TS.SData.Call.Parameters[1]]
+Name = "lookupString"
+ArgVal = "\"\""
+ArgDisplayVal = "\"\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[1].Main[4].TS.SData.Call.Parameters[2]]
+Name = "options"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[1].Main[4]]
+%NAME = "Clone Selected Step"
+
+[SF.Seq[1].Main[5].TS]
+Id = "ID#:0OkCCwTTyk+z5B2MoOx4NC"
+
+[DEF, SF.Seq[1].Main[5].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Main[5].TS.SData.Call]
+ObjectVariable = "Locals.NewMainSequenceRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "Sequence"
+MemberType = 1
+Member = 4
+MemberName = "InsertStep"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [2]
+
+[DEF, SF.Seq[1].Main[5].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Main[5].TS.SData.Call.Parameters[0]]
+Name = "stepToInsert"
+ArgVal = "Locals.ClonedStepRef"
+ArgDisplayVal = "Locals.ClonedStepRef"
+Type = 9
+DisplayType = "Step (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B86DE3E1-C234-11D0-939C-0020AF68E893}"
+
+[SF.Seq[1].Main[5].TS.SData.Call.Parameters[1]]
+Name = "index"
+ArgVal = "Locals.Index"
+ArgDisplayVal = "Locals.Index"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[1].Main[5].TS.SData.Call.Parameters[2]]
+Name = "stepGroupParam"
+ArgVal = "1"
+ArgDisplayVal = "StepGroup_Main"
+Type = 3
+DisplayType = "StepGroups (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[1].Main[5]]
+%NAME = "Insert Cloned Step in New Sequence File"
+
+[SF.Seq[1].Main[6].TS]
+Id = "ID#:prkAoRWX9Eij0rg00zW52A"
+PostExpr = "Locals.Index ++"
+
+[DEF, SF.Seq[1].Main[6]]
+%NAME = "Increment Index"
+
+[SF.Seq[1].Main[7].TS]
+Id = "ID#:3iXVYK7QDk6iaPMtmvS37B"
+PreCond = "Locals.Index < GetNumElements( Parameters.ListOfSteps )"
+CustTrueActTarget = "\"Begin Loop\""
+
+[DEF, SF.Seq[1].Main[7]]
+%NAME = "Goto Begin Loop"
+
+[DEF, SF.Seq[1].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+
+[SF.Seq[1].Cleanup[0].TS]
+Id = "ID#:XkqEdmsj+kykhM31k7jB1D"
+
+[DEF, SF.Seq[1].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[1].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[1].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[1].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.TemplateFileRef"
+ArgDisplayVal = "Parameters.TemplateFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[1].Cleanup[0]]
+%NAME = "Release Template File Ref"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[1].Requirements]
+Links = Strs
+
+[SF.Seq[1].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[2]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Execute Only"
+
+[DEF, SF.Seq[2].Parameters]
+NewSequenceFileRef = Ref
+NewSequenceFilePath = Str
+
+[SF.Seq[2].Parameters]
+%FLG: NewSequenceFileRef = 4
+%FLG: NewSequenceFilePath = 4
+
+[SF.Seq[2]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [2]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [0]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[2].Locals]
+ResultList = Objs
+ProcessModelRef = Ref
+ExecutionRef = Ref
+
+[DEF, SF.Seq[2].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[2].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "Action"
+
+[SF.Seq[2].Main[0].TS]
+Id = "ID#:kKsf0FzWZ0yXPFIbKwaLiD"
+
+[DEF, SF.Seq[2].Main[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[2].Main[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 288
+MemberName = "GetStationModelSequenceFile"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 260
+%HI: Parameters = [1]
+
+[DEF, SF.Seq[2].Main[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+
+[SF.Seq[2].Main[0].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.ProcessModelRef"
+ArgDisplayVal = "Locals.ProcessModelRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[2].Main[0].TS.SData.Call.Parameters[1]]
+Name = "modelDescriptionString"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[DEF, SF.Seq[2].Main[0]]
+%NAME = "Get Station Process Model"
+
+[SF.Seq[2].Main[1].TS]
+Id = "ID#:Wt+gnP0pEUyKtaSFEVQKQB"
+
+[DEF, SF.Seq[2].Main[1].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[2].Main[1].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "NI TestStand API 3.5"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 110
+MemberName = "NewExecution"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 76
+%HI: Parameters = [8]
+
+[DEF, SF.Seq[2].Main[1].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+%[8] = "TYPE, AutomationParameter"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.ExecutionRef"
+ArgDisplayVal = "Locals.ExecutionRef"
+Type = 9
+DisplayType = "Execution (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+IID = "{7DC7E990-18DC-11D1-93BE-0020AF68E893}"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[1]]
+Name = "sequenceFileParam"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[2]]
+Name = "sequenceNameParam"
+ArgVal = "\"Single Pass\""
+ArgDisplayVal = "\"Single Pass\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[3]]
+Name = "processModelParam"
+ArgVal = "Locals.ProcessModelRef"
+ArgDisplayVal = "Locals.ProcessModelRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[4]]
+Name = "breakAtFirstStep"
+ArgVal = "False"
+ArgDisplayVal = "False"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[5]]
+Name = "executionTypeMaskParam"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[6]]
+Name = "sequenceArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[7]]
+Name = "editArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[SF.Seq[2].Main[1].TS.SData.Call.Parameters[8]]
+Name = "InteractiveArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[2].Main[1]]
+%NAME = "Execute New Sequence File"
+
+[SF.Seq[2].Main[2].TS]
+Id = "ID#:9lUAcpehhk2tX/qqK0E1BA"
+
+[DEF, SF.Seq[2].Main[2].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[2].Main[2].TS.SData.Call]
+ObjectVariable = "Locals.ExecutionRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{7DC7E990-18DC-11D1-93BE-0020AF68E893}"
+InterfaceName = "Execution"
+MemberType = 1
+Member = 12
+MemberName = "WaitForEnd"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 68
+%HI: Parameters = [3]
+
+[DEF, SF.Seq[2].Main[2].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parameters[1]]
+Name = "millisecondTimeOut"
+ArgVal = "-1"
+ArgDisplayVal = "-1"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parameters[2]]
+Name = "processWindowsMsgs"
+ArgVal = "-1"
+ArgDisplayVal = "-1"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[2].Main[2].TS.SData.Call.Parameters[3]]
+Name = "callingExecution"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[2].Main[2]]
+%NAME = "Wait for Execution to Complete"
+
+[DEF, SF.Seq[2].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+
+[SF.Seq[2].Cleanup[0].TS]
+Id = "ID#:6/hYNcVPk0Sl4kVSKjid6D"
+
+[DEF, SF.Seq[2].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[2].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[2].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[2].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[2].Cleanup[0]]
+%NAME = "Release New Sequence File Ref"
+
+[DEF, SF.Seq[2].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[2].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[2].Requirements]
+Links = Strs
+
+[SF.Seq[2].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[3]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Save and Execute"
+
+[DEF, SF.Seq[3].Parameters]
+NewSequenceFileRef = Ref
+NewSequenceFilePath = Str
+
+[SF.Seq[3].Parameters]
+%FLG: NewSequenceFileRef = 4
+%FLG: NewSequenceFilePath = 4
+
+[SF.Seq[3]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [6]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [0]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[3].Locals]
+ResultList = Objs
+ProcessModelRef = Ref
+ExecutionRef = Ref
+FoundFile = Bool
+
+[DEF, SF.Seq[3].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[3].Main]
+%[0] = Step
+%TYPE: %[0] = "Label"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "MessagePopup"
+%[3] = Step
+%TYPE: %[3] = "Action"
+%[4] = Step
+%TYPE: %[4] = "Action"
+%[5] = Step
+%TYPE: %[5] = "Action"
+%[6] = Step
+%TYPE: %[6] = "Action"
+
+[SF.Seq[3].Main[0].TS]
+Id = "ID#:E+BS9BzIok2RRsfLUqvmtD"
+
+[DEF, SF.Seq[3].Main[0]]
+%NAME = "Does File Exist"
+
+[SF.Seq[3].Main[1].TS]
+Id = "ID#:ntC+JktQ50qwIf3N4FExgB"
+
+[DEF, SF.Seq[3].Main[1].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Main[1].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 260
+MemberName = "FindFile"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 216
+%HI: Parameters = [7]
+
+[DEF, SF.Seq[3].Main[1].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.FoundFile"
+ArgDisplayVal = "Locals.FoundFile"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[1]]
+Name = "fileToFind"
+ArgVal = "Parameters.NewSequenceFilePath"
+ArgDisplayVal = "Parameters.NewSequenceFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[2]]
+Name = "absolutePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[3]]
+Name = "userCancelled"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[4]]
+Name = "promptOption"
+ArgVal = "3"
+ArgDisplayVal = "FindFile_PromptDisable"
+Type = 3
+DisplayType = "FindFilePromptOptions (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[5]]
+Name = "srchListOption"
+ArgVal = "3"
+ArgDisplayVal = "FindFile_AddDirToSrchList_No"
+Type = 3
+DisplayType = "FindFileSearchListOptions (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[6]]
+Name = "isCommand"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[1].TS.SData.Call.Parameters[7]]
+Name = "currentSequenceFile"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[3].Main[1]]
+%NAME = "Check Does File Exist"
+
+[SF.Seq[3].Main[2].TS]
+Id = "ID#:DahK0jA1gUm+Qg+QHV5I6B"
+PreCond = "Locals.FoundFile"
+CustExpr = "Step.Result.ButtonHit == 2 && Step.Result.Response != \"\""
+CustTrueAct = "Goto"
+CustTrueActTarget = "\"Does File Exist\""
+PostExpr Line0001 = "Parameters.NewSequenceFilePath =  Step.Result.Response == \"\"  ?   Parameters.NewSequenceFilePath : Step.Result.Respons"
+PostExpr Line0002 = "e"
+
+[SF.Seq[3].Main[2].Result]
+%FLG: Response = 8192
+
+[SF.Seq[3].Main[2]]
+TitleExpr = "\"Warning:  File Already Exists\""
+MessageExpr Line0001 = "\"The following file already exists.\\n\" +\nParameters.NewSequenceFilePath +\n\n\"\\n\\nYou can click the OK button to "
+MessageExpr Line0002 = "overwrite the file,\nenter another path below and click the OK button, or\nclick the Do Not Save Sequence button to skip"
+MessageExpr Line0003 = " saving and continue.\""
+Button1Label = "\"Do Not Save Sequence\""
+Button2Label = "\"OK\""
+ShowResponse = True
+Modal = True
+
+[DEF, SF.Seq[3].Main[2]]
+%NAME = "Warning: Overwrite File"
+
+[SF.Seq[3].Main[3].TS]
+Id = "ID#:4SjRuhl3qk6Q723ajGFHDC"
+PreCond = "RunState.PreviousStep.Result.ButtonHit != 1"
+
+[DEF, SF.Seq[3].Main[3].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Main[3].TS.SData.Call]
+ObjectVariable = "Parameters.NewSequenceFileRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "SequenceFile"
+MemberType = 1
+Member = 7
+MemberName = "Save"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 52
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[3].Main[3].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Main[3].TS.SData.Call.Parameters[0]]
+Name = "pathString"
+ArgVal = "Parameters.NewSequenceFilePath"
+ArgDisplayVal = "Parameters.NewSequenceFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[3].Main[3]]
+%NAME = "Save New Sequence File_Copy"
+
+[SF.Seq[3].Main[4].TS]
+Id = "ID#:h7+VszWlzEyeEYeOpJ7oGA"
+
+[DEF, SF.Seq[3].Main[4].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Main[4].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 288
+MemberName = "GetStationModelSequenceFile"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 260
+%HI: Parameters = [1]
+
+[DEF, SF.Seq[3].Main[4].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Main[4].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.ProcessModelRef"
+ArgDisplayVal = "Locals.ProcessModelRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[3].Main[4].TS.SData.Call.Parameters[1]]
+Name = "modelDescriptionString"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[DEF, SF.Seq[3].Main[4]]
+%NAME = "Get Station Process Model"
+
+[SF.Seq[3].Main[5].TS]
+Id = "ID#:DOZqR7m5ykCRxUT9b1EmhC"
+
+[DEF, SF.Seq[3].Main[5].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Main[5].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 110
+MemberName = "NewExecution"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 76
+%HI: Parameters = [8]
+
+[DEF, SF.Seq[3].Main[5].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+%[8] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.ExecutionRef"
+ArgDisplayVal = "Locals.ExecutionRef"
+Type = 9
+DisplayType = "Execution (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+IID = "{7DC7E990-18DC-11D1-93BE-0020AF68E893}"
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[1]]
+Name = "sequenceFileParam"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[2]]
+Name = "sequenceNameParam"
+ArgVal = "\"Test UUTs\""
+ArgDisplayVal = "\"Test UUTs\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[3]]
+Name = "processModelParam"
+ArgVal = "Locals.ProcessModelRef"
+ArgDisplayVal = "Locals.ProcessModelRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[4]]
+Name = "breakAtFirstStep"
+ArgVal = "False"
+ArgDisplayVal = "False"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[5]]
+Name = "executionTypeMaskParam"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[6]]
+Name = "sequenceArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[7]]
+Name = "editArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[SF.Seq[3].Main[5].TS.SData.Call.Parameters[8]]
+Name = "InteractiveArgsParam"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[3].Main[5]]
+%NAME = "Execute New Sequence File"
+
+[SF.Seq[3].Main[6].TS]
+Id = "ID#:vK4c1PaE70C3agwFJuz5BA"
+
+[DEF, SF.Seq[3].Main[6].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Main[6].TS.SData.Call]
+ObjectVariable = "Locals.ExecutionRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{7DC7E990-18DC-11D1-93BE-0020AF68E893}"
+InterfaceName = "Execution"
+MemberType = 1
+Member = 12
+MemberName = "WaitForEnd"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 68
+%HI: Parameters = [3]
+
+[DEF, SF.Seq[3].Main[6].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Main[6].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[3].Main[6].TS.SData.Call.Parameters[1]]
+Name = "millisecondTimeOut"
+ArgVal = "-1"
+ArgDisplayVal = "-1"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[6].TS.SData.Call.Parameters[2]]
+Name = "processWindowsMsgs"
+ArgVal = "-1"
+ArgDisplayVal = "-1"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[3].Main[6].TS.SData.Call.Parameters[3]]
+Name = "callingExecution"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[3].Main[6]]
+%NAME = "Wait for Execution to Complete"
+
+[DEF, SF.Seq[3].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+
+[SF.Seq[3].Cleanup[0].TS]
+Id = "ID#:mNtcwnAAnU2419a4C9WthC"
+
+[DEF, SF.Seq[3].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[3].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[3].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[3].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[3].Cleanup[0]]
+%NAME = "Release New Sequence File Ref"
+
+[DEF, SF.Seq[3].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[3].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[3].Requirements]
+Links = Strs
+
+[SF.Seq[3].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[4]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Save Only"
+
+[DEF, SF.Seq[4].Parameters]
+NewSequenceFileRef = Ref
+NewSequenceFilePath = Str
+
+[SF.Seq[4].Parameters]
+%FLG: NewSequenceFileRef = 4
+%FLG: NewSequenceFilePath = 4
+
+[SF.Seq[4]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [3]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [0]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[4].Locals]
+ResultList = Objs
+FoundFile = Bool
+
+[DEF, SF.Seq[4].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[4].Main]
+%[0] = Step
+%TYPE: %[0] = "Label"
+%[1] = Step
+%TYPE: %[1] = "Action"
+%[2] = Step
+%TYPE: %[2] = "MessagePopup"
+%[3] = Step
+%TYPE: %[3] = "Action"
+
+[SF.Seq[4].Main[0].TS]
+Id = "ID#:DkuEhf0KMEeGNun0ZnlTHA"
+
+[DEF, SF.Seq[4].Main[0]]
+%NAME = "Does File Exist"
+
+[SF.Seq[4].Main[1].TS]
+Id = "ID#:jgEeCsip50CN9LbA3jbwAB"
+
+[DEF, SF.Seq[4].Main[1].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[4].Main[1].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 260
+MemberName = "FindFile"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 216
+%HI: Parameters = [7]
+
+[DEF, SF.Seq[4].Main[1].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.FoundFile"
+ArgDisplayVal = "Locals.FoundFile"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[1]]
+Name = "fileToFind"
+ArgVal = "Parameters.NewSequenceFilePath"
+ArgDisplayVal = "Parameters.NewSequenceFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[2]]
+Name = "absolutePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[3]]
+Name = "userCancelled"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[4]]
+Name = "promptOption"
+ArgVal = "3"
+ArgDisplayVal = "FindFile_PromptDisable"
+Type = 3
+DisplayType = "FindFilePromptOptions (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[5]]
+Name = "srchListOption"
+ArgVal = "3"
+ArgDisplayVal = "FindFile_AddDirToSrchList_No"
+Type = 3
+DisplayType = "FindFileSearchListOptions (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[6]]
+Name = "isCommand"
+ArgVal = "0"
+ArgDisplayVal = "0"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[4].Main[1].TS.SData.Call.Parameters[7]]
+Name = "currentSequenceFile"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[4].Main[1]]
+%NAME = "Check Does File Exist"
+
+[SF.Seq[4].Main[2].TS]
+Id = "ID#:fE0Ra0pSSkyW57loVYDfCD"
+PreCond = "Locals.FoundFile"
+CustExpr = "Step.Result.ButtonHit == 2 && Step.Result.Response != \"\""
+CustTrueAct = "Goto"
+CustTrueActTarget = "\"Does File Exist\""
+PostExpr Line0001 = "Parameters.NewSequenceFilePath =  Step.Result.Response == \"\"  ?   Parameters.NewSequenceFilePath : Step.Result.Respons"
+PostExpr Line0002 = "e"
+
+[SF.Seq[4].Main[2].Result]
+%FLG: Response = 8192
+
+[SF.Seq[4].Main[2]]
+TitleExpr = "\"Warning:  File Already Exists\""
+MessageExpr Line0001 = "\"The following file already exists.\\n\" +\nParameters.NewSequenceFilePath +\n\n\"\\n\\nYou can click the OK button to "
+MessageExpr Line0002 = "overwrite the file,\nenter another path below and click the OK button, or\nclick the Do Not Save Sequence button to skip"
+MessageExpr Line0003 = " saving and continue.\""
+Button1Label = "\"Do Not Save Sequence\""
+Button2Label = "\"OK\""
+ShowResponse = True
+Modal = True
+
+[DEF, SF.Seq[4].Main[2]]
+%NAME = "Warning: Overwrite File"
+
+[SF.Seq[4].Main[3].TS]
+Id = "ID#:HmSkiKpbdUiSQCfaJXxhWA"
+PreCond = "RunState.PreviousStep.Result.ButtonHit != 1"
+
+[DEF, SF.Seq[4].Main[3].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[4].Main[3].TS.SData.Call]
+ObjectVariable = "Parameters.NewSequenceFileRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "SequenceFile"
+MemberType = 1
+Member = 7
+MemberName = "Save"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 52
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[4].Main[3].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[4].Main[3].TS.SData.Call.Parameters[0]]
+Name = "pathString"
+ArgVal = "Parameters.NewSequenceFilePath"
+ArgDisplayVal = "Parameters.NewSequenceFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[4].Main[3]]
+%NAME = "Save New Sequence File_Copy"
+
+[DEF, SF.Seq[4].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+
+[SF.Seq[4].Cleanup[0].TS]
+Id = "ID#:V6z/6YTlVUKRmeTX/3XwLC"
+
+[DEF, SF.Seq[4].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[4].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[4].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[4].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.NewSequenceFileRef"
+ArgDisplayVal = "Parameters.NewSequenceFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[4].Cleanup[0]]
+%NAME = "Release New Sequence File Ref"
+
+[DEF, SF.Seq[4].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[4].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[4].Requirements]
+Links = Strs
+
+[SF.Seq[4].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[5]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Manually Select Steps"
+
+[DEF, SF.Seq[5].Parameters]
+TemplateFilePath = Str
+ListOfSteps = Strs
+TemplateFileRef = Ref
+TemplateMainSequenceRef = Ref
+Directory = Str
+
+[SF.Seq[5].Parameters]
+%FLG: TemplateFilePath = 4
+%FLG: ListOfSteps = 4
+%FLG: TemplateFileRef = 4
+%FLG: TemplateMainSequenceRef = 4
+%FLG: Directory = 4
+
+[SF.Seq[5]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [7]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [1]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[5].Locals]
+ResultList = Objs
+OKButton = Bool
+NumTemplateSteps = Num
+TemplateStepNames = Strs
+Index = Num
+TemplateStepRef = Ref
+
+[DEF, SF.Seq[5].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[5].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Statement"
+%[2] = Step
+%TYPE: %[2] = "Label"
+%[3] = Step
+%TYPE: %[3] = "Action"
+%[4] = Step
+%TYPE: %[4] = "Action"
+%[5] = Step
+%TYPE: %[5] = "Goto"
+%[6] = Step
+%TYPE: %[6] = "Action"
+%[7] = Step
+%TYPE: %[7] = "MessagePopup"
+
+[SF.Seq[5].Main[0].TS]
+Id = "ID#:6uUPcel0hkGFil/sIE60WD"
+
+[DEF, SF.Seq[5].Main[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[5].Main[0].TS.SData.Call]
+ObjectVariable = "Parameters.TemplateMainSequenceRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "Sequence"
+MemberType = 1
+Member = 1
+MemberName = "GetNumSteps"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 28
+%HI: Parameters = [1]
+
+[DEF, SF.Seq[5].Main[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.NumTemplateSteps"
+ArgDisplayVal = "Locals.NumTemplateSteps"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[5].Main[0].TS.SData.Call.Parameters[1]]
+Name = "stepGroupParam"
+ArgVal = "1"
+ArgDisplayVal = "StepGroup_Main"
+Type = 3
+DisplayType = "StepGroups (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[5].Main[0]]
+%NAME = "Get Number of Steps in MainSequence"
+
+[SF.Seq[5].Main[1].TS]
+Id = "ID#:Qlz2NeZC20aLXoAXg4gffB"
+PostExpr = "SetNumElements( Locals.TemplateStepNames, Locals.NumTemplateSteps )"
+
+[DEF, SF.Seq[5].Main[1]]
+%NAME = "Set Array Dimensions"
+
+[SF.Seq[5].Main[2].TS]
+Id = "ID#:B2MyaNmAp0mEfuXtalw4nA"
+
+[DEF, SF.Seq[5].Main[2]]
+%NAME = "Begin Loop"
+
+[SF.Seq[5].Main[3].TS]
+Id = "ID#:tI0HPK2ISEuMq432NgS25A"
+
+[DEF, SF.Seq[5].Main[3].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[5].Main[3].TS.SData.Call]
+ObjectVariable = "Parameters.TemplateMainSequenceRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B2794EF7-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "Sequence"
+MemberType = 1
+Member = 2
+MemberName = "GetStep"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 32
+%HI: Parameters = [2]
+
+[DEF, SF.Seq[5].Main[3].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+
+[SF.Seq[5].Main[3].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.TemplateStepRef"
+ArgDisplayVal = "Locals.TemplateStepRef"
+Type = 9
+DisplayType = "Step (Object Reference)"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+IID = "{B86DE3E1-C234-11D0-939C-0020AF68E893}"
+
+[SF.Seq[5].Main[3].TS.SData.Call.Parameters[1]]
+Name = "index"
+ArgVal = "Locals.Index"
+ArgDisplayVal = "Locals.Index"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[5].Main[3].TS.SData.Call.Parameters[2]]
+Name = "stepGroupParam"
+ArgVal = "1"
+ArgDisplayVal = "StepGroup_Main"
+Type = 3
+DisplayType = "StepGroups (Number (Signed 32-bit Integer))"
+TypeValid = True
+Direction = 1
+
+[DEF, SF.Seq[5].Main[3]]
+%NAME = "Get Step Reference"
+
+[SF.Seq[5].Main[4].TS]
+Id = "ID#:700kRo4Fh0eonUb/awbJ/C"
+
+[DEF, SF.Seq[5].Main[4].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[5].Main[4].TS.SData.Call]
+ObjectVariable = "Locals.TemplateStepRef"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+Interface = "{B86DE3E1-C234-11D0-939C-0020AF68E893}"
+InterfaceName = "Step"
+Member = 87
+MemberName = "Name"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 296
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[5].Main[4].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[5].Main[4].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+ArgVal = "Locals.TemplateStepNames[ Locals.Index ]"
+ArgDisplayVal = "Locals.TemplateStepNames[ Locals.Index ]"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[DEF, SF.Seq[5].Main[4]]
+%NAME = "Get Step Name"
+
+[SF.Seq[5].Main[5].TS]
+Id = "ID#:yRiRVGQmKk6JocJ9k5sYxB"
+PreCond = "Locals.Index < (Locals.NumTemplateSteps - 1)"
+CustTrueActTarget = "\"Begin Loop\""
+PostExpr = "Locals.Index ++"
+
+[DEF, SF.Seq[5].Main[5]]
+%NAME = "Goto Begin Loop"
+
+[SF.Seq[5].Main[6].TS]
+Id = "ID#:MRUI1jQbUU+Nor++G0NdWD"
+
+[DEF, SF.Seq[5].Main[6].TS]
+SData = "TYPE, FlexGStepAdditions"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall]
+VIPath = "Display and Select Steps.vi"
+ShowFrnPnl = True
+%HI: Parms = [2]
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[0]]
+Label = "Sequence Context"
+ArgVal = "ThisContext"
+Type = 4
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Object Reference"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[0]]
+%NAME = "Sequence Context"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1]]
+Label = "Test Data"
+Type = 3
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Container"
+%HI: ArrayClusterEls = [3]
+Direction = 1
+LegacyClusterType = 1
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "PASS/FAIL Flag"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "PASS/FAIL Flag"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "Numeric Measurement"
+ArgVal = "Step.Result.Numeric"
+Type = 0
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "Numeric Measurement"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "String Measurement"
+ArgVal = "Step.Result.String"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "String Measurement"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "Report Text"
+ArgVal = "Step.Result.ReportText"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "Report Text"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[1]]
+%NAME = "Test Data"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2]]
+Label = "error out"
+ArgVal = "Step.Result.Error"
+Type = 3
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Container"
+%HI: ArrayClusterEls = [2]
+Direction = 1
+LegacyClusterType = 2
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+Label = "status"
+ArgVal = "Step.Result.Error.Occurred"
+Type = 2
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+%NAME = "status"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+Label = "code"
+ArgVal = "Step.Result.Error.Code"
+Type = 0
+WireRequirement = 1
+DefaultArraySize = ""
+NumType = 4
+DisplayType = "Number (I32)"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+%NAME = "code"
+
+[SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+Label = "source"
+ArgVal = "Step.Result.Error.Msg"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+%NAME = "source"
+
+[DEF, SF.Seq[5].Main[6].TS.SData.ViCall.Parms[2]]
+%NAME = "error out"
+
+[DEF, SF.Seq[5].Main[6]]
+%NAME = "Display and Select List of Steps"
+
+[SF.Seq[5].Main[7].TS]
+Id = "ID#:Pct9X1cTika5cZ1yRPLUJC"
+PreCond = "GetNumElements( Parameters.ListOfSteps ) == 0"
+CustExpr = "Step.Result.ButtonHit == 1"
+CustTrueAct = "Goto"
+CustFalseAct = "Goto"
+CustTrueActTarget = "\"<Cleanup>\""
+CustFalseActTarget = "\"Display and Select List of Steps\""
+
+[SF.Seq[5].Main[7]]
+TitleExpr = "\"No Selected Steps\""
+MessageExpr = "\"No steps were selected from the list of steps.\""
+Button1Label = "\"Stop\""
+Button2Label = "\"Display Steps Again\""
+
+[DEF, SF.Seq[5].Main[7]]
+%NAME = "No Steps Selected"
+
+[DEF, SF.Seq[5].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Label"
+
+[SF.Seq[5].Cleanup[0].TS]
+Id = "ID#:apyv6ZxcEE6gmuYzghF13C"
+PreCond = "RunState.SequenceError.Code != 0"
+
+[DEF, SF.Seq[5].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[5].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[5].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.TemplateFileRef"
+ArgDisplayVal = "Parameters.TemplateFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[5].Cleanup[0]]
+%NAME = "Release Template File Ref"
+
+[SF.Seq[5].Cleanup[1].TS]
+Id = "ID#:6LdflFu/oUqLa6hxxXxLtA"
+PreCond Line0001 = "AllOf(RunState.Sequence.Main[\"No Steps Selected\"].Result.Status != \"\" && RunState.Sequence.Main[\"No Steps Selected\"
+PreCond Line0002 = ""].Result.Status != \"Skipped\", RunState.Sequence.Main[\"No Steps Selected\"].Result.ButtonHit == 1)"
+CustExpr = "True"
+CustTrueAct = "Terminate"
+
+[DEF, SF.Seq[5].Cleanup[1]]
+%NAME = "Stop Tool if No Steps Selected"
+
+[DEF, SF.Seq[5].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[5].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[DEF, SF.Seq[5].Requirements]
+Links = Strs
+
+[SF.Seq[5].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[6]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "Load List of Steps From File"
+
+[DEF, SF.Seq[6].Parameters]
+TemplateFilePath = Str
+ListOfSteps = Strs
+TemplateFileRef = Ref
+TemplateMainSequenceRef = Ref
+Directory = Str
+
+[SF.Seq[6].Parameters]
+%FLG: TemplateFilePath = 4
+%FLG: ListOfSteps = 4
+%FLG: TemplateFileRef = 4
+%FLG: TemplateMainSequenceRef = 4
+%FLG: Directory = 4
+
+[SF.Seq[6]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [12]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%HI: Cleanup = [1]
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[6].Locals]
+ResultList = Objs
+IniFilePath = Str
+TextString = Str
+IndexA = Num
+StartIndex = Num
+IndexB = Num
+StringLength = Num
+Element = Num
+OKButton = Bool
+
+[DEF, SF.Seq[6].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[6].Main]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Statement"
+%[2] = Step
+%TYPE: %[2] = "Action"
+%[3] = Step
+%TYPE: %[3] = "MessagePopup"
+%[4] = Step
+%TYPE: %[4] = "Label"
+%[5] = Step
+%TYPE: %[5] = "Statement"
+%[6] = Step
+%TYPE: %[6] = "Statement"
+%[7] = Step
+%TYPE: %[7] = "Statement"
+%[8] = Step
+%TYPE: %[8] = "Statement"
+%[9] = Step
+%TYPE: %[9] = "Statement"
+%[10] = Step
+%TYPE: %[10] = "Statement"
+%[11] = Step
+%TYPE: %[11] = "Statement"
+%[12] = Step
+%TYPE: %[12] = "Goto"
+
+[SF.Seq[6].Main[0].TS]
+Id = "ID#:Y+BclKAVgUOpET1rp0gfjD"
+Mode = "Skip"
+
+[DEF, SF.Seq[6].Main[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[6].Main[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 216
+MemberName = "DisplayOpenFileDialog"
+HasMemberInfo = True
+HasReturnValue = True
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 144
+%HI: Parameters = [11]
+
+[DEF, SF.Seq[6].Main[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+%[1] = "TYPE, AutomationParameter"
+%[2] = "TYPE, AutomationParameter"
+%[3] = "TYPE, AutomationParameter"
+%[4] = "TYPE, AutomationParameter"
+%[5] = "TYPE, AutomationParameter"
+%[6] = "TYPE, AutomationParameter"
+%[7] = "TYPE, AutomationParameter"
+%[8] = "TYPE, AutomationParameter"
+%[9] = "TYPE, AutomationParameter"
+%[10] = "TYPE, AutomationParameter"
+%[11] = "TYPE, AutomationParameter"
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[0]]
+Name = "Return Value"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsServerOptional = True
+IsByRef = True
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[1]]
+Name = "dlgTitle"
+ArgVal = "\"Select *.INI File\""
+ArgDisplayVal = "\"Select *.INI File\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[2]]
+Name = "okButtonText"
+ArgVal = "\"\""
+ArgDisplayVal = "\"\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[3]]
+Name = "initialPath"
+ArgVal Line0001 = "Left(RunState.SequenceFile.Path, (Find(RunState.SequenceFile.Path, \"\\\\\", 0, true, true) +1))  + \"Build Sequence.ini"
+ArgVal Line0002 = "\""
+ArgDisplayVal Line0001 = "Left(RunState.SequenceFile.Path, (Find(RunState.SequenceFile.Path, \"\\\\\", 0, true, true) +1))  + \"Build Sequence.ini"
+ArgDisplayVal Line0002 = "\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[4]]
+Name = "modalToAppMainWind"
+ArgVal = "True"
+ArgDisplayVal = "True"
+Type = 11
+DisplayType = "Boolean"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[5]]
+Name = "selectedPath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[6]]
+Name = "absolutePath"
+ArgVal = "Locals.IniFilePath"
+ArgDisplayVal = "Locals.IniFilePath"
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 2
+IsUserOptional = True
+IsByRef = True
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[7]]
+Name = "openFileDialogFlags"
+ArgVal = "0x83"
+ArgDisplayVal = "0x83"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[8]]
+Name = "defaultExtension"
+ArgVal = "\"ini\""
+ArgDisplayVal = "\"ini\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[9]]
+Name = "win32Flags"
+ArgVal = "0x1004"
+ArgDisplayVal = "0x1004"
+Type = 3
+DisplayType = "Number (Signed 32-bit Integer)"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[10]]
+Name = "fileFilter"
+ArgVal = "\"\""
+ArgDisplayVal = "\"\""
+Type = 8
+DisplayType = "String"
+TypeValid = True
+Direction = 1
+
+[SF.Seq[6].Main[0].TS.SData.Call.Parameters[11]]
+Name = "currentSequenceFile"
+Type = 12
+DisplayType = "Variant"
+TypeValid = True
+Direction = 1
+IsUserOptional = True
+IsServerOptional = True
+
+[DEF, SF.Seq[6].Main[0]]
+%NAME = "Select Ini File to Read_Copy"
+
+[SF.Seq[6].Main[1].TS]
+Id = "ID#:VA7tMtCsaEyh9gTDsNZFJB"
+PostExpr = "Locals.IniFilePath = Parameters.Directory+\"Build Sequence.ini\""
+
+[DEF, SF.Seq[6].Main[1]]
+%NAME = "Statement"
+
+[SF.Seq[6].Main[2].TS]
+Id = "ID#:sPq7mrAwwEae03QaaoP0sA"
+
+[DEF, SF.Seq[6].Main[2].TS]
+SData = "TYPE, FlexGStepAdditions"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall]
+VIPath = "Read Steps From File.vi"
+%HI: Parms = [2]
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms]
+%[0] = "TYPE, VIParameter"
+%[1] = "TYPE, VIParameter"
+%[2] = "TYPE, VIParameter"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[0]]
+Label = "Sequence Context"
+ArgVal = "ThisContext"
+Type = 4
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Object Reference"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[0]]
+%NAME = "Sequence Context"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1]]
+Label = "Test Data"
+Type = 3
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Container"
+%HI: ArrayClusterEls = [3]
+Direction = 1
+LegacyClusterType = 1
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+%[3] = "TYPE, VIParameterElement"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+Label = "PASS/FAIL Flag"
+ArgVal = "Step.Result.PassFail"
+Type = 2
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[0]]
+%NAME = "PASS/FAIL Flag"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+Label = "Numeric Measurement"
+ArgVal = "Step.Result.Numeric"
+Type = 0
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Number (DBL)"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[1]]
+%NAME = "Numeric Measurement"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+Label = "String Measurement"
+ArgVal = "Step.Result.String"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[2]]
+%NAME = "String Measurement"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+Label = "Report Text"
+ArgVal = "Step.Result.ReportText"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1].ArrayClusterEls[3]]
+%NAME = "Report Text"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[1]]
+%NAME = "Test Data"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2]]
+Label = "error out"
+ArgVal = "Step.Result.Error"
+Type = 3
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Container"
+%HI: ArrayClusterEls = [2]
+Direction = 1
+LegacyClusterType = 2
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls]
+%[0] = "TYPE, VIParameterElement"
+%[1] = "TYPE, VIParameterElement"
+%[2] = "TYPE, VIParameterElement"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+Label = "status"
+ArgVal = "Step.Result.Error.Occurred"
+Type = 2
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "Boolean"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[0]]
+%NAME = "status"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+Label = "code"
+ArgVal = "Step.Result.Error.Code"
+Type = 0
+WireRequirement = 1
+DefaultArraySize = ""
+NumType = 4
+DisplayType = "Number (I32)"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[1]]
+%NAME = "code"
+
+[SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+Label = "source"
+ArgVal = "Step.Result.Error.Msg"
+Type = 1
+WireRequirement = 1
+DefaultArraySize = ""
+DisplayType = "ASCII String"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2].ArrayClusterEls[2]]
+%NAME = "source"
+
+[DEF, SF.Seq[6].Main[2].TS.SData.ViCall.Parms[2]]
+%NAME = "error out"
+
+[DEF, SF.Seq[6].Main[2]]
+%NAME = "Read Text From File"
+
+[SF.Seq[6].Main[3].TS]
+Id = "ID#:Mi+FNxtsCEO2Q0yI2zk0hB"
+PreCond = "Find( Locals.TextString, \"\\\"\" ) != 0"
+PassAct = "Goto"
+PassActTarget = "\"<Cleanup>\""
+CustExpr = "True"
+CustTrueAct = "Goto"
+CustTrueActTarget = "\"<Cleanup>\""
+
+[SF.Seq[6].Main[3]]
+TitleExpr = "\"No Steps Found\""
+MessageExpr Line0001 = "\"No steps were found in the *.ini file or the file did not have the proper formatting.\nFormatting should appear as\n\n"
+MessageExpr Line0002 = "\\\"Step One\\\"\n\\\"Step Two\\\"\n\\\"Step Three\\\"\""
+
+[DEF, SF.Seq[6].Main[3]]
+%NAME = "No Steps Found"
+
+[SF.Seq[6].Main[4].TS]
+Id = "ID#:HwXi1YxEB0qOEUGt0L1rQC"
+
+[DEF, SF.Seq[6].Main[4]]
+%NAME = "Begin Loop"
+
+[SF.Seq[6].Main[5].TS]
+Id = "ID#:0EqvxyBD5EivSBUc6/jHUA"
+PostExpr = "Locals.StringLength = Len( Locals.TextString )"
+
+[DEF, SF.Seq[6].Main[5]]
+%NAME = "Get Length of Text String"
+
+[SF.Seq[6].Main[6].TS]
+Id = "ID#:0W3cItmMu0+YO3O0dJVdBC"
+PostExpr = "Locals.IndexA = Find( Locals.TextString, \"\\\"\")"
+
+[DEF, SF.Seq[6].Main[6]]
+%NAME = "Get IndexA"
+
+[SF.Seq[6].Main[7].TS]
+Id = "ID#:uYwmr0TPjU+2lA6nu1NqGC"
+PostExpr = "Locals.IndexB = Find( Locals.TextString, \"\\\"\", Locals.IndexA + 1)"
+
+[DEF, SF.Seq[6].Main[7]]
+%NAME = "Get Index B"
+
+[SF.Seq[6].Main[8].TS]
+Id = "ID#:jZhG+zdngUegBDMKdCpezB"
+PostExpr Line0001 = "SetNumElements(Parameters.ListOfSteps, Locals.Element + 1), Parameters.ListOfSteps[Locals.Element] = Left(Locals.TextStr"
+PostExpr Line0002 = "ing, (Locals.IndexB - Locals.IndexA + 1))"
+
+[DEF, SF.Seq[6].Main[8]]
+%NAME = "Add Step Name to ListOfSteps"
+
+[SF.Seq[6].Main[9].TS]
+Id = "ID#:fZBe6i6QCUCnvjpmjpSKaC"
+PostExpr Line0001 = "Len(Locals.TextString) != (Locals.IndexB - Locals.IndexA +1) ? (Locals.TextString = Right(Locals.TextString, (Locals.Str"
+PostExpr Line0002 = "ingLength - (Locals.IndexB - Locals.IndexA +2)))) : (Locals.TextString = \"\")"
+
+[DEF, SF.Seq[6].Main[9]]
+%NAME = "Remove Step Name From Text String"
+
+[SF.Seq[6].Main[10].TS]
+Id = "ID#:601SnNDtl0WyOfkUR+yNpD"
+PostExpr = "Parameters.ListOfSteps[Locals.Element] = SearchAndReplace(Parameters.ListOfSteps[Locals.Element], \"\\\"\", \"\")"
+
+[DEF, SF.Seq[6].Main[10]]
+%NAME = "Remove Quotes Around Step Name"
+
+[SF.Seq[6].Main[11].TS]
+Id = "ID#:b7NayncIdUqMHjP5xQA2BC"
+PostExpr = "Locals.Element++"
+
+[DEF, SF.Seq[6].Main[11]]
+%NAME = "Increment Element Number"
+
+[SF.Seq[6].Main[12].TS]
+Id = "ID#:Xvw3k1BEQU2XzLg7C2oGOC"
+PreCond = "Find(Locals.TextString, \"\\\"\") != -1"
+CustTrueActTarget = "\"Begin Loop\""
+
+[DEF, SF.Seq[6].Main[12]]
+%NAME = "Goto Begin Loop"
+
+[DEF, SF.Seq[6].Cleanup]
+%[0] = Step
+%TYPE: %[0] = "Action"
+%[1] = Step
+%TYPE: %[1] = "Label"
+
+[SF.Seq[6].Cleanup[0].TS]
+Id = "ID#:p9Omcb6SQEexeubK7dXpWA"
+PreCond = "RunState.SequenceError.Code != 0"
+
+[DEF, SF.Seq[6].Cleanup[0].TS]
+SData = "TYPE, AutomationStepAdditions"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call]
+ObjectVariable = "RunState.Engine"
+Server = "{B2794EF3-C0B6-11D0-939C-0020AF68E893}"
+ServerName = "TestStand API 2.0"
+CoClass = "{B2794EF6-C0B6-11D0-939C-0020AF68E893}"
+CoClassName = "Engine"
+Interface = "{B2794EF5-C0B6-11D0-939C-0020AF68E893}"
+InterfaceName = "IEngine"
+MemberType = 1
+Member = 12
+MemberName = "ReleaseSequenceFile"
+HasMemberInfo = True
+Locale = 1033
+TypeLibVersion = "1.0"
+InterfaceType = 1
+VTableOffset = 40
+%HI: Parameters = [0]
+
+[DEF, SF.Seq[6].Cleanup[0].TS.SData.Call.Parameters]
+%[0] = "TYPE, AutomationParameter"
+
+[SF.Seq[6].Cleanup[0].TS.SData.Call.Parameters[0]]
+Name = "sequenceFileToRelease"
+ArgVal = "Parameters.TemplateFileRef"
+ArgDisplayVal = "Parameters.TemplateFileRef"
+Type = 9
+DisplayType = "SequenceFile (Object Reference)"
+TypeValid = True
+Direction = 1
+IID = "{B2794EF9-C0B6-11D0-939C-0020AF68E893}"
+
+[DEF, SF.Seq[6].Cleanup[0]]
+%NAME = "Release Template File Ref"
+
+[SF.Seq[6].Cleanup[1].TS]
+Id = "ID#:0Y0xLSNZ7k27/3q9NSTjwB"
+PreCond Line0001 = "RunState.Sequence.Main[\"No Steps Found\"].Result.Status != \"\" && RunState.Sequence.Main[\"No Steps Found\"].Result.St"
+PreCond Line0002 = "atus != \"Skipped\""
+CustExpr = "True"
+CustTrueAct = "Terminate"
+
+[DEF, SF.Seq[6].Cleanup[1]]
+%NAME = "Stop Tool if No Steps Found"
+
+[DEF, SF.Seq[6].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+
+[SF.Seq[6].RTS]
+%FLG: Type = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+EPNameExpr = "\"Unnamed Entry Point\""
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+%FLG: ShowEPAlways = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+
+[DEF, SF.Seq[6].Requirements]
+Links = Strs
+
+[SF.Seq[6].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Seq[7]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+StoreResults = Bool
+RecordResults = Bool
+RTS = Obj
+Requirements = Obj
+%NAME = "SequenceFileLoad"
+
+[SF.Seq[7]]
+%FLG: Parameters = 4456448
+%FLG: Locals = 4194304
+%HI: Main = [0]
+%FLG: Main = 4194304
+%FLG: Setup = 4194304
+%FLG: Cleanup = 4194304
+%FLG: GotoCleanupOnFail = 4194312
+StoreResults = True
+RecordResults = True
+%FLG: RecordResults = 4194312
+%FLG: RTS = 4456456
+%FLG: Requirements = 4456456
+
+[DEF, SF.Seq[7].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[7].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[7].Main]
+%[0] = Step
+%TYPE: %[0] = "MessagePopup"
+
+[SF.Seq[7].Main[0].TS]
+Id = "ID#:325xevMtokCwUn3lu5I96A"
+Mode = "Skip"
+
+[SF.Seq[7].Main[0]]
+TitleExpr = "\"Explanation\""
+MessageExpr Line0001 = "\"This example acts as a tool for programmatically creating and executing new test\nsequences.  This tool clones prewrit"
+MessageExpr Line0002 = "ten and configured test steps located in a template\nsequence to create a new test sequence.  \n\nFor more info, please "
+MessageExpr Line0003 = "see the readme.txt file.\nNOTE: This sequence requires the LabVIEW development system to run.\""
+
+[DEF, SF.Seq[7].Main[0]]
+%NAME = "Description"
+
+[DEF, SF.Seq[7].RTS]
+Type = Num
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+CopyStepsOnOverriding = Bool
+OptimizeNonReentrantCalls = Bool
+Priority = Num
+ShowEPAlways = Bool
+ShowEPForEditorOnly = Bool
+AllowIntExeOfEP = Bool
+
+[SF.Seq[7].RTS]
+%FLG: Type = 4194304
+%FLG: EPNameExpr = 4194304
+EPEnabledExpr = "True"
+%FLG: EPEnabledExpr = 4194304
+%FLG: EPMenuHint = 4194304
+%FLG: EPIgnoreClient = 4194304
+%FLG: EPInitiallyHidden = 4194304
+EPCheckToSaveTitledFile = True
+%FLG: EPCheckToSaveTitledFile = 4194304
+ShowEPForFileWin = True
+%FLG: ShowEPForFileWin = 4194304
+%FLG: ShowEPForExeWin = 4194304
+CopyStepsOnOverriding = True
+%FLG: CopyStepsOnOverriding = 4194304
+OptimizeNonReentrantCalls = True
+%FLG: OptimizeNonReentrantCalls = 4194304
+Priority = 2953567917
+%FLG: Priority = 4194304
+%FLG: ShowEPAlways = 4194304
+%FLG: ShowEPForEditorOnly = 4194304
+%FLG: AllowIntExeOfEP = 4194304
+
+[DEF, SF.Seq[7].Requirements]
+Links = Strs
+
+[SF.Seq[7].Requirements]
+%FLG: Links = 71303168
+
+[DEF, SF.Requirements]
+Links = Strs
+
+[SF.Requirements]
+%FLG: Links = 71303168
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+AutomationStepAdditions = "AutomationStepAdditions"
+AutomationParameter = "AutomationParameter"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+NoneStepAdditions = "NoneStepAdditions"
+Label = "Label"
+Goto = "Goto"
+Statement = "Statement"
+SequenceCall = "SequenceCall"
+SeqCallStepAdditions = "SeqCallStepAdditions"
+MessagePopup = "MessagePopup"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+EditSubstep = "EditSubstep"
+PostSubstep = "PostSubstep"
+SequenceArgument = "SequenceArgument"
+Expression = "Expression"
+FlexGStepAdditions = "FlexGStepAdditions"
+VIParameter = "VIParameter"
+VIParameterElement = "VIParameterElement"
+NI_MsgBoxFontData = "NI_MsgBoxFontData"
+NI_MsgBoxFileData = "NI_MsgBoxFileData"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[Action]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582610
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+%FLG: Requirements = 1
+
+[DEF, Action.TS.Requirements]
+Links = Strs
+
+[Action.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = "TYPE, Expression"
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4718616
+%INSTOVRD = 4718616
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Id = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = "TYPE, Expression"
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = "TYPE, Expression"
+BatchSyncOpt = Num
+SwitchEnabled = Bool
+VirtualDeviceName = "TYPE, Expression"
+SwitchOperation = Num
+RouteGroupConnect = "TYPE, Expression"
+RouteGroupDisconnect = "TYPE, Expression"
+MulticonnectMode = Num
+OperationOrder = Num
+ConnectionLifetime = Num
+WaitForDebounce = Bool
+PassAct = Str
+FailAct = Str
+PassActTarget = "TYPE, Expression"
+FailActTarget = "TYPE, Expression"
+CustExpr = "TYPE, Expression"
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = "TYPE, Expression"
+CustFalseActTarget = "TYPE, Expression"
+LoopType = Str
+LoopWhile = "TYPE, Expression"
+LoopStatus = "TYPE, Expression"
+LoopIncrement = "TYPE, Expression"
+LoopInitialize = "TYPE, Expression"
+LoopOpt = Num
+PreExpr = "TYPE, Expression"
+PostExpr = "TYPE, Expression"
+StatusExpr = "TYPE, Expression"
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+Requirements = Obj
+%FLG: Requirements = 2097152
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: Id = 1
+%INSTOVRD: Id = 5046297
+%INSTOVRD: Icon = 5046296
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+%INSTOVRD: PreCond = 5046296
+LoadOpt = "PreloadWhenExecuted"
+%INSTOVRD: LoadOpt = 5046296
+UnloadOpt = "UnloadWithFile"
+%INSTOVRD: UnloadOpt = 5046296
+Mode = "Normal"
+%INSTOVRD: Mode = 5046296
+WindowActivation = "None"
+%INSTOVRD: WindowActivation = 5046296
+%INSTOVRD: NoResult = 5046296
+StepFCSeqF = True
+%INSTOVRD: StepFCSeqF = 5046296
+%INSTOVRD: IgnoreRTE = 5046296
+%INSTOVRD: UseMutex = 5046296
+%INSTOVRD: MutexNameOrRef = 5046296
+%INSTOVRD: BatchSyncOpt = 5046296
+%INSTOVRD: SwitchEnabled = 5046296
+%INSTOVRD: VirtualDeviceName = 5046296
+SwitchOperation = 1
+%INSTOVRD: SwitchOperation = 5046296
+%INSTOVRD: RouteGroupConnect = 5046296
+%INSTOVRD: RouteGroupDisconnect = 5046296
+MulticonnectMode = 1
+%INSTOVRD: MulticonnectMode = 5046296
+OperationOrder = 2
+%INSTOVRD: OperationOrder = 5046296
+ConnectionLifetime = 4
+%INSTOVRD: ConnectionLifetime = 5046296
+WaitForDebounce = True
+%INSTOVRD: WaitForDebounce = 5046296
+PassAct = "Next"
+%INSTOVRD: PassAct = 5046296
+FailAct = "Next"
+%INSTOVRD: FailAct = 5046296
+%INSTOVRD: PassActTarget = 5046296
+%INSTOVRD: FailActTarget = 5046296
+%INSTOVRD: CustExpr = 5046296
+CustTrueAct = "Next"
+%INSTOVRD: CustTrueAct = 5046296
+CustFalseAct = "Next"
+%INSTOVRD: CustFalseAct = 5046296
+%INSTOVRD: CustTrueActTarget = 5046296
+%INSTOVRD: CustFalseActTarget = 5046296
+LoopType = "NoLooping"
+%INSTOVRD: LoopType = 5046296
+%INSTOVRD: LoopWhile = 5046296
+%INSTOVRD: LoopStatus = 5046296
+LoopIncrement = "RunState.LoopIndex += 1"
+%INSTOVRD: LoopIncrement = 5046296
+LoopInitialize = "RunState.LoopIndex = 0"
+%INSTOVRD: LoopInitialize = 5046296
+%INSTOVRD: LoopOpt = 5046296
+%INSTOVRD: PreExpr = 5046296
+%INSTOVRD: PostExpr = 5046296
+%INSTOVRD: StatusExpr = 5046296
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046296
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046296
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046296
+%INSTOVRD: PrecondIntExe = 5046296
+%FLG: Requirements = 1
+%INSTFLG: Requirements = 2097153
+%INSTOVRD: Requirements = 7143449
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4456472
+%INSTOVRD = 4456472
+
+[DEF, TEInf.Requirements]
+Links = Strs
+
+[TEInf.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+%EXTDATA = True
+
+[Error.Code]
+%EXTDATA = True
+
+[EXTDATA, Error.Code, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Code, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "code"
+
+[EXTDATA, Error.Code, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "code"
+
+[Error.Msg]
+%EXTDATA = True
+
+[EXTDATA, Error.Msg, STRUCT]
+DataVersion = 1
+Type = 2
+StringBufferSize = 1024
+StringStorage = 1
+
+[EXTDATA, Error.Msg, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "source"
+
+[EXTDATA, Error.Msg, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "msg"
+
+[Error.Occurred]
+%EXTDATA = True
+
+[EXTDATA, Error.Occurred, STRUCT]
+DataVersion = 1
+Type = 6
+
+[EXTDATA, Error.Occurred, CLUST]
+DataVersion = 1
+ClusterMemberLabelName = "status"
+
+[EXTDATA, Error.Occurred, DNSTRUCT]
+DataVersion = 1
+StructMemberName = "occurred"
+
+[EXTDATA, Error, STRUCT]
+AllowStructPassing = True
+DataVersion = 1
+PackingOption = 8
+Type = 0
+
+[EXTDATA, Error, CLUST]
+AllowClusterPassing = True
+DataVersion = 1
+
+[EXTDATA, Error, DNSTRUCT]
+AllowStructPassing = True
+DataVersion = 1
+StructMemberName = ""
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 1123532520
+%VERSION = "3.1.0.100"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.1.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554432
+%INSTFLG = 4194304
+
+[DEF, AutomationStepAdditions]
+%LOCATION = "StdTypes"
+Call = AutomationCall
+%ROOT_TYPE = True
+
+[DEF, AutomationStepAdditions.Call]
+ObjectVariable = "TYPE, Expression"
+Server = Str
+ServerName = Str
+CreateObject = Num
+CreateFromFilePath = "TYPE, Path"
+CoClass = Str
+CoClassName = Str
+Interface = Str
+InterfaceName = Str
+RemoteMachine = "TYPE, Expression"
+RemoteMachineByExpr = Bool
+UseLoadSpec = Bool
+MakeCall = Bool
+MemberType = Num
+Member = Num
+MemberName = Str
+HasMemberInfo = Bool
+Locale = Num
+HasReturnValue = Bool
+TypeLibLocale = Num
+TypeLibVersion = Str
+InterfaceType = Num
+VTableOffset = Num
+Parameters = Objs
+
+[AutomationStepAdditions.Call]
+CreateObject = 3
+MakeCall = True
+MemberType = 2
+InterfaceType = 2
+
+[DEF, AutomationStepAdditions.Call.Parameters]
+%EPTYPE = "TYPE, AutomationParameter"
+%FLG: %EPTYPE = 131072
+
+[AutomationStepAdditions]
+%TIMESTAMP = 1123528366
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, AutomationParameter]
+%LOCATION = "StdTypes"
+Name = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+DisplayType = Str
+TypeValid = Bool
+Direction = Num
+IsUserOptional = Bool
+IsServerOptional = Bool
+IsByRef = Bool
+IsSafeArray = Bool
+IID = Str
+UseDefault = Bool
+UserData = Obj
+%FLG: UserData = 2097152
+%ROOT_TYPE = True
+
+[AutomationParameter]
+Name = "_notNamed"
+%INSTFLG: UserData = 2097152
+%TIMESTAMP = 1123528366
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+ModulePrjPath = "TYPE, Path"
+ModuleWorkspacePath = "TYPE, Path"
+ModuleCreateSrcType = Num
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Parms = Objs
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call]
+%HI: Parms = [0]
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 1123528406
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+StrPass = Num
+ElemPass = Num
+ArrayDimensionsSize = Objs
+StrSize = "TYPE, Expression"
+ResultAct = Num
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Flags = Num
+UserData = Obj
+%FLG: UserData = 2097152
+ArgValImag = "TYPE, Expression"
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+StrSize = "1024"
+%INSTFLG: UserData = 2097152
+%TIMESTAMP = 1123528406
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, FCParameter.ArrayDimensionsSize]
+%EPTYPE = "TYPE, Expression"
+%FLG: %EPTYPE = 131072
+
+[FCParameter.ArrayDimensionsSize]
+%EPTYPE = "1024"
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 1123528876
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, Label]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+Description = Str
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[Label]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "Step.Description"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"LABEL_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582636
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[DEF, Label.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, Label.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[Label.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditLabelStep"
+%HI: Parms = [3]
+
+[DEF, Label.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Label.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[Label.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+
+[Label.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "reserved"
+ArgVal = "0"
+
+[Label.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Label.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[DEF, Label.Substeps[0].TS.Requirements]
+Links = Strs
+
+[Label.Substeps[0].TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[Label.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"LABEL_EDIT_STEP_MENU_NAME\")"
+SupportsReadOnly = True
+
+[Label.Substeps[0].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, Label.Substeps[0]]
+%NAME = "Edit"
+
+[Label.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"LABEL_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Label.TS]
+Icon = "label.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+NoResult = True
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+CanSpecifyModule = False
+%FLG: Requirements = 1
+
+[DEF, Label.TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, Label.TS.Requirements]
+Links = Strs
+
+[Label.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Label.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Label.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, Goto]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[Goto]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat Line0001 = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DESCR_PREFIX\", \"Goto\") + \" \" + \n  TargetName(RunState.Sequence, Step.TS.CustTrueAct"
+DescriptionFormat Line0002 = "Target, true, true, -1, RunState.StepGroup)\n"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"GOTO_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582644
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[DEF, Goto.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, Goto.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[Goto.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditGotoStep"
+%HI: Parms = [3]
+
+[DEF, Goto.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Goto.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "object"
+Type = 4
+ArgVal = "ThisContext"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "reserved"
+ArgVal = "0"
+
+[Goto.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Goto.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[DEF, Goto.Substeps[0].TS.Requirements]
+Links = Strs
+
+[Goto.Substeps[0].TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[Goto.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_EDIT_STEP_MENU_NAME\")"
+SupportsReadOnly = True
+
+[Goto.Substeps[0].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, Goto.Substeps[0]]
+%NAME = "Edit"
+
+[Goto.Menu]
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"GOTO_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Goto.TS]
+Icon = "goto.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+%INSTFLG: PassAct = 1
+%INSTOVRD: PassAct = 5046297
+%INSTFLG: FailAct = 1
+%INSTOVRD: FailAct = 5046297
+%INSTFLG: PassActTarget = 1
+%INSTOVRD: PassActTarget = 5046297
+%INSTFLG: FailActTarget = 1
+%INSTOVRD: FailActTarget = 5046297
+CustExpr = "True"
+%INSTFLG: CustExpr = 1
+%INSTOVRD: CustExpr = 5046297
+CustTrueAct = "Goto"
+%INSTFLG: CustTrueAct = 1
+%INSTOVRD: CustTrueAct = 5046297
+%INSTFLG: CustFalseAct = 1
+%INSTOVRD: CustFalseAct = 5046297
+CustTrueActTarget = "\"<End>\""
+%INSTFLG: CustTrueActTarget = 1
+%INSTOVRD: CustTrueActTarget = 5046297
+%INSTFLG: LoopType = 1
+%INSTOVRD: LoopType = 5046297
+%INSTFLG: LoopWhile = 1
+%INSTOVRD: LoopWhile = 5046297
+%INSTFLG: LoopStatus = 1
+%INSTOVRD: LoopStatus = 5046297
+%INSTFLG: LoopIncrement = 1
+%INSTOVRD: LoopIncrement = 5046297
+%INSTFLG: LoopInitialize = 1
+%INSTOVRD: LoopInitialize = 5046297
+%INSTFLG: LoopOpt = 1
+%INSTOVRD: LoopOpt = 5046297
+CanSpecifyModule = False
+%FLG: Requirements = 1
+
+[DEF, Goto.TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, Goto.TS.Requirements]
+Links = Strs
+
+[Goto.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Goto.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Goto.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, Statement]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[Statement]
+%HI: Substeps = [0]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "LocalizeExpression(Step.TS.PostExpr)"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582628
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[DEF, Statement.Substeps]
+%[0] = Step
+%TYPE: %[0] = "EditSubstep"
+
+[DEF, Statement.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[Statement.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStatementStep"
+%HI: Parms = [3]
+
+[DEF, Statement.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[Statement.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "reserved"
+ArgVal = "0"
+
+[Statement.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[Statement.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[DEF, Statement.Substeps[0].TS.Requirements]
+Links = Strs
+
+[Statement.Substeps[0].TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[Statement.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_EDIT_STEP_MENU_NAME\")"
+SupportsReadOnly = True
+
+[Statement.Substeps[0].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, Statement.Substeps[0]]
+%NAME = "Edit"
+
+[Statement.Menu]
+ItemName = "ResStr(\"NI_SUBSTEPS\", \"STATEMENT_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[Statement.TS]
+Icon = "Statement.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+CanSpecifyModule = False
+%FLG: Requirements = 1
+
+[DEF, Statement.TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, Statement.TS.Requirements]
+Links = Strs
+
+[Statement.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, Statement.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Statement.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, SequenceCall]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[SequenceCall]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"SC_DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1113582619
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.150"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554438
+
+[SequenceCall.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"SC_MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[SequenceCall.TS]
+Icon = "SeqAdp.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+StatusExpr Line0001 = "(Step.Result.Status == \"Done\" && (Step.TS.SData.ThreadOpt == 0 || Step.TS.SData.ThreadOpt == 3)) ? \"Passed\" : Step.R"
+StatusExpr Line0002 = "esult.Status"
+%INSTFLG: StatusExpr = 1
+%INSTOVRD: StatusExpr = 5046297
+%FLG: Requirements = 1
+
+[DEF, SequenceCall.TS]
+SData = "TYPE, SeqCallStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, SequenceCall.TS.Requirements]
+Links = Strs
+
+[SequenceCall.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, SequenceCall.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[SequenceCall.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, SeqCallStepAdditions]
+%LOCATION = "StdTypes"
+SFPath = "TYPE, Path"
+SFPathExpr = "TYPE, Expression"
+SeqName = Str
+SeqNameExpr = "TYPE, Expression"
+ActualArgs = Arguments
+%FLG: ActualArgs = 2097152
+UseCurFile = Bool
+SpecifyByExpr = Bool
+Prototype = Obj
+%FLG: Prototype = 2097152
+UsePrototype = Bool
+SpecifyHostByExpr = Bool
+RemoteExecution = Bool
+RemoteHost = Str
+RemoteHostExpr = "TYPE, Expression"
+AutoWaitAsync = Bool
+CreateThreadSuspended = Bool
+AsyncThreadExpr = "TYPE, Expression"
+AsyncApartmentThreaded = Bool
+ThreadOpt = Num
+ExecModelOpt = Num
+ExecTypeMask = Num
+ExecTypeMaskExpr = "TYPE, Expression"
+ExecBreakOnEntryExpr = "TYPE, Expression"
+ExecModelPath = "TYPE, Path"
+ExecModelPathExpr = "TYPE, Expression"
+ExecSync = Bool
+Trace = Str
+IgnoreTerminate = Bool
+%ROOT_TYPE = True
+
+[SeqCallStepAdditions]
+%INSTFLG: ActualArgs = 2097152
+%INSTFLG: Prototype = 2097152
+AutoWaitAsync = True
+ExecModelOpt = 1
+ExecBreakOnEntryExpr = "False"
+Trace = "Don't Change"
+%TIMESTAMP = 1123528879
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, MessagePopup]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+TitleExpr = "TYPE, Expression"
+MessageExpr = "TYPE, Expression"
+MsgFontData = "TYPE, NI_MsgBoxFontData"
+Button1Label = "TYPE, Expression"
+Button2Label = "TYPE, Expression"
+Button3Label = "TYPE, Expression"
+Button4Label = "TYPE, Expression"
+Button5Label = "TYPE, Expression"
+Button6Label = "TYPE, Expression"
+ButtonFontData = Objs
+ShowResponse = Bool
+NumberLines = Num
+MaxResponseLength = Num
+RespFontData = "TYPE, NI_MsgBoxFontData"
+DefaultResponse = Str
+DefaultResponseExpr = "TYPE, Expression"
+FileData = "TYPE, NI_MsgBoxFileData"
+ActiveCtrl = Num
+DefaultButton = Num
+CancelButton = Num
+TimerButton = Num
+TimeToWait = Num
+Position = Obj
+CenterDialog = Bool
+Modal = Bool
+Floating = Bool
+CtrlArrangement = Num
+ButtonLocation = Num
+ButtonAlignment = Num
+ResizeDialog = Num
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+%ROOT_TYPE = True
+
+[MessagePopup]
+%HI: Substeps = [1]
+%INSTFLG: Substeps = 524312
+%INSTOVRD: Substeps = 655384
+DescriptionFormat = "LocalizeExpression(Step.TitleExpr)"
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"MSG_BOX_STEP_TYPE\", \"DEF_STEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%INSTFLG: Menu = 524312
+%INSTOVRD: Menu = 524312
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+TitleExpr = "\"untitled\""
+%FLG: TitleExpr = 262144
+MessageExpr = "\"Your message here\""
+Button1Label = "\"OK\""
+Button2Label = "\"\""
+Button3Label = "\"\""
+Button4Label = "\"\""
+Button5Label = "\"\""
+Button6Label = "\"\""
+%HI: ButtonFontData = [5]
+NumberLines = 1
+MaxResponseLength = 4096
+%FLG: DefaultResponse = 24
+%INSTFLG: DefaultResponse = 8
+ActiveCtrl = 1
+DefaultButton = 1
+CancelButton = 1
+CenterDialog = True
+%FLG: CodeTemplates = 4194328
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+%TIMESTAMP = 1121796736
+%VERSION = "3.5.0.150"
+%TYPELASTMOD = "3.5.0.365"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554446
+
+[DEF, MessagePopup.Substeps]
+%[0] = Step
+%TYPE: %[0] = "PostSubstep"
+%[1] = Step
+%TYPE: %[1] = "EditSubstep"
+
+[DEF, MessagePopup.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[MessagePopup.Substeps[0].TS.SData.Call]
+LibPath = "msgbox.dll"
+Func = "DisplayTimerMsgImgPopup"
+%HI: Parms = [2]
+
+[DEF, MessagePopup.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[MessagePopup.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "buttonArraySize"
+ArgVal = "6"
+
+[MessagePopup.Substeps[0].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[DEF, MessagePopup.Substeps[0].TS.Requirements]
+Links = Strs
+
+[MessagePopup.Substeps[0].TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[MessagePopup.Substeps[0]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+
+[MessagePopup.Substeps[0].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, MessagePopup.Substeps[0]]
+%NAME = "Post"
+
+[DEF, MessagePopup.Substeps[1].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[MessagePopup.Substeps[1].TS.SData.Call]
+LibPath = "msgbox.dll"
+Func = "EditMessageBoxStep"
+%HI: Parms = [4]
+
+[DEF, MessagePopup.Substeps[1].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+%[4] = "TYPE, FCParameter"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+ResultAct = 1
+Flags = 2
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ObjType = 1
+ArgVal = "ThisContext"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[2]]
+Name = "engine"
+Type = 4
+ObjType = 1
+ArgVal = "RunState.Engine"
+ArgDisplayVal = "RunState.Engine"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[3]]
+Name = "reserved"
+ArgVal = "0"
+
+[MessagePopup.Substeps[1].TS.SData.Call.Parms[4]]
+Name = "changed"
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[MessagePopup.Substeps[1].TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+ConnectionLifetime = 0
+
+[DEF, MessagePopup.Substeps[1].TS.Requirements]
+Links = Strs
+
+[MessagePopup.Substeps[1].TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[MessagePopup.Substeps[1]]
+%INSTFLG: TS = 262168
+%INSTOVRD: TS = 262168
+MenuName = "ResStr(\"MSG_BOX_STEP_TYPE\", \"EDIT_STEP_NAME\")"
+SupportsReadOnly = True
+
+[MessagePopup.Substeps[1].Result]
+%INSTOVRD: Error = 4194304
+%INSTFLG: ReportText = 0
+%INSTOVRD: Common = 4194304
+
+[DEF, MessagePopup.Substeps[1]]
+%NAME = "Edit"
+
+[MessagePopup.Menu]
+ItemName = "ResStr(\"MSG_BOX_STEP_TYPE\", \"MENU_ITEM_NAME\")"
+Group = "NI_Miscellaneous"
+
+[MessagePopup.TS]
+Icon = "MsgBox.ico"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7143448
+ConnectionLifetime = 0
+LoopIncrement = ""
+LoopInitialize = ""
+CanSpecifyModule = False
+%FLG: Requirements = 1
+
+[DEF, MessagePopup.TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+Requirements = Obj
+%FLG: Requirements = 2097152
+
+[DEF, MessagePopup.TS.Requirements]
+Links = Strs
+
+[MessagePopup.TS.Requirements]
+%FLG: Links = 71303168
+%INSTFLG: Links = 71303168
+%INSTOVRD: Links = 72286233
+
+[DEF, MessagePopup.Result]
+Error = "TYPE, Error"
+Status = Str
+ButtonHit = Num
+Response = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[MessagePopup.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ButtonHit = 8192
+%INSTFLG: ButtonHit = 8192
+%FLG: Response = 10240
+%INSTFLG: Response = 10240
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+%INSTOVRD: Common = 4194304
+
+[DEF, MessagePopup.ButtonFontData]
+%EPTYPE = "TYPE, NI_MsgBoxFontData"
+
+[DEF, MessagePopup.Position]
+Top = "TYPE, Expression"
+Left = "TYPE, Expression"
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194328
+%TYPE_FLG = 33554436
+%INSTFLG = 4718616
+%INSTOVRD = 4849688
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = "TYPE, Expression"
+SupportsReadOnly = Bool
+%ROOT_TYPE = True
+
+[EditSubstep]
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%INSTFLG: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554438
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[EditSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+
+[DEF, PostSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, Expression"
+%FLG: DescriptionFormat = 524288
+DefaultNameFormat = "TYPE, Expression"
+%FLG: DefaultNameFormat = 524288
+BlockStartTypes = Str
+%FLG: BlockStartTypes = 524288
+BlockEndTypes = Str
+%FLG: BlockEndTypes = 524288
+AppliesToBlockStructure = Bool
+%FLG: AppliesToBlockStructure = 524288
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+%ROOT_TYPE = True
+
+[PostSubstep]
+DescriptionFormat = "\"%ModuleDescription\""
+%FLG: DescriptionFormat = 4194328
+%INSTFLG: DescriptionFormat = 4718616
+%INSTOVRD: DescriptionFormat = 4718616
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"POST_DEF_SUBSTEP_NAME\")"
+%FLG: DefaultNameFormat = 4194328
+%INSTFLG: DefaultNameFormat = 4718616
+%INSTOVRD: DefaultNameFormat = 4718616
+%FLG: BlockStartTypes = 4194328
+%FLG: BlockEndTypes = 4194328
+%FLG: AppliesToBlockStructure = 4194328
+CodeTemplates Line0001 = "DefaultLabVIEW|DefaultCVI|DefaultVB.NET|DefaultCSharp.NET|DefaultC++.NET|DefaultVC++_Template|DefaultHTB72_Template|Defa"
+CodeTemplates Line0002 = "ultHTB80_Template|Default_Template"
+%FLG: CodeTemplates = 4194328
+%INSTFLG: TS = 4456472
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%TYPE_FLG = 33554438
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[PostSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"POST_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "ExecSubsteps"
+
+[DEF, PostSubstep.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PostSubstep.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+
+[DEF, PostSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PostSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: ReportText = 4194304
+%INSTFLG: ReportText = 4194304
+
+[DEF, SequenceArgument]
+%LOCATION = "StdTypes"
+UseDef = Bool
+Expr = "TYPE, Expression"
+ParamType = Num
+UserData = Obj
+%FLG: UserData = 2097152
+%ROOT_TYPE = True
+
+[SequenceArgument]
+UseDef = True
+%INSTFLG: UserData = 2097152
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, Expression]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Expression]
+%TIMESTAMP = 1123527681
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 4194304
+%TYPE_FLG = 33554436
+
+[DEF, FlexGStepAdditions]
+%LOCATION = "StdTypes"
+ViCall = VICall
+%ROOT_TYPE = True
+
+[DEF, FlexGStepAdditions.ViCall]
+VIPath = "TYPE, Path"
+RemoteVIPath = "TYPE, Path"
+ExpressVIName = Str
+VIType = Num
+ShowFrnPnl = Bool
+VIDescription = Str
+TDChecksum = Num
+AutoDetectLVRT = Bool
+RemoteHost = "TYPE, Expression"
+RemoteHostByExpr = Bool
+DupLabelsFound = Bool
+VI = Str
+Parms = Objs
+
+[FlexGStepAdditions.ViCall]
+TDChecksum = -1
+
+[DEF, FlexGStepAdditions.ViCall.Parms]
+%EPTYPE = "TYPE, VIParameter"
+%FLG: %EPTYPE = 131072
+
+[FlexGStepAdditions]
+%TIMESTAMP = 1123528688
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, VIParameter]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+DefaultArraySize = Str
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+UseDefaultValues = Bool
+PartiallySpecified = Bool
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+UserData = Obj
+%FLG: UserData = 2097152
+Direction = Num
+ConnectorNumber = Num
+LegacyClusterType = Num
+%ROOT_TYPE = True
+
+[VIParameter]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+DefaultArraySize = "[]"
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%INSTFLG: UserData = 2097152
+ConnectorNumber = -1
+%TIMESTAMP = 1123528688
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, VIParameterElement]
+%LOCATION = "StdTypes"
+Label = Str
+Caption = Str
+ArgVal = "TYPE, Expression"
+ArgDisplayVal = "TYPE, Expression"
+Type = Num
+WireRequirement = Num
+ArrayType = Num
+DefaultArraySize = Str
+ClusterType = Num
+NumType = Num
+ReferenceType = Num
+StrPass = Num
+DisplayType = Str
+UseDefaultValues = Bool
+PartiallySpecified = Bool
+ComplexParts = Obj
+%FLG: ComplexParts = 2097152
+ArrayClusterProto = Obj
+%FLG: ArrayClusterProto = 2097152
+ArrayClusterEls = Objs
+UserData = Obj
+%FLG: UserData = 2097152
+%ROOT_TYPE = True
+
+[VIParameterElement]
+Label = "_notNamed"
+Type = 8
+WireRequirement = 2
+ArrayType = 50
+DefaultArraySize = "[]"
+ClusterType = 20
+NumType = 7
+%INSTFLG: ComplexParts = 2097152
+%INSTFLG: ArrayClusterProto = 2097152
+%INSTFLG: UserData = 2097152
+%TIMESTAMP = 1123528688
+%VERSION = "3.5.0.410"
+%TYPELASTMOD = "3.5.0.410"
+%MINPRODVER = "3.5.0.0"
+%FLG = 24
+%TYPE_FLG = 33554436
+
+[DEF, NI_MsgBoxFontData]
+%LOCATION = "UserTypes"
+Size = Num
+FontColor = Num
+BackColor = Num
+Bold = Bool
+Underline = Bool
+Strikethru = Bool
+Italics = Bool
+Name = Str
+Conform = Bool
+%ROOT_TYPE = True
+
+[NI_MsgBoxFontData]
+FontColor = -1
+BackColor = -1
+Conform = True
+%TIMESTAMP = 1121796736
+%VERSION = "3.5.0.151"
+%TYPELASTMOD = "3.5.0.365"
+%MINPRODVER = "3.5.0.0"
+%FLG = 8
+%TYPE_FLG = 33554436
+
+[DEF, NI_MsgBoxFileData]
+%LOCATION = "UserTypes"
+Path = Str
+ShowFile = Bool
+Data = Str
+Source = Num
+Name = Str
+%ROOT_TYPE = True
+
+[NI_MsgBoxFileData]
+%TIMESTAMP = 1121796714
+%VERSION = "3.5.0.151"
+%TYPELASTMOD = "3.5.0.365"
+%MINPRODVER = "3.5.0.0"
+%FLG = 8
+%TYPE_FLG = 33554436
+

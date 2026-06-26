@@ -1,0 +1,1528 @@
+[__Header__]
+ProductName = "TestStand"
+ProductVersion = 2.0.0.130
+Version = 127
+Type = "SequenceFile"
+Path = "Z:\\TestExec\\Tests\\CVIAdp\\CVIAdpTestDll.seq"
+ProductVersionString = "2.0 beta 2"
+CharEncoding = "SBCS"
+
+[DEF, %OBJECTS]
+SF = SequenceFileData
+Path = PathValue
+Action = StepType
+StepTypeDescFmt = Str
+StepTypeDefNameFmt = Str
+StepTypeMenu = Obj
+TEInf = Obj
+Error = Obj
+CommonResults = Obj
+StdCVIStepAdditions = Obj
+PassFailTest = StepType
+FlexCStepAdditions = Obj
+FCParameter = FCParameter
+NoneStepAdditions = Obj
+NumericLimitTest = StepType
+StringValueTest = StepType
+StepTypeSubstepsArray = Objs
+EditSubstep = StepType
+
+[DEF, SF]
+Seq = Objs
+FileGlobalDefaults = Obj
+ModelFile = "TYPE, Path"
+LoadOpt = Str
+UnloadOpt = Str
+Type = Num
+ModelOption = Num
+Version = Str
+BatchSync = Num
+SFGlobalsScope = Num
+%NAME = "Data"
+
+[SF]
+%LO: Seq = [0]
+%HI: Seq = [1]
+%FLG: ModelFile = 8
+LoadOpt = "UseStepLoadOpt"
+%FLG: LoadOpt = 8
+UnloadOpt = "UnloadAfterSequenceExecution"
+%FLG: UnloadOpt = 8
+%FLG: Type = 8
+%FLG: ModelOption = 8
+Version = "0.0.0.0"
+%FLG: Version = 8
+BatchSync = 1
+%FLG: BatchSync = 8
+%FLG: SFGlobalsScope = 8
+
+[DEF, SF.Seq]
+%[0] = Sequence
+%[1] = Sequence
+
+[DEF, SF.Seq[0]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "TestData DLL Test"
+
+[SF.Seq[0]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [17]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[0].Locals]
+ResultList = Objs
+
+[DEF, SF.Seq[0].Locals.ResultList]
+%EPTYPE = TEResult
+
+[DEF, SF.Seq[0].Main]
+%[0] = StdCVIStep
+%TYPE: %[0] = "Action"
+%[1] = NoneStep
+%TYPE: %[1] = "PassFailTest"
+%[2] = StdCVIStep
+%TYPE: %[2] = "Action"
+%[3] = NoneStep
+%TYPE: %[3] = "PassFailTest"
+%[4] = StdCVIStep
+%TYPE: %[4] = "Action"
+%[5] = StdCVIStep
+%TYPE: %[5] = "PassFailTest"
+%[6] = NoneStep
+%TYPE: %[6] = "PassFailTest"
+%[7] = StdCVIStep
+%TYPE: %[7] = "PassFailTest"
+%[8] = NoneStep
+%TYPE: %[8] = "PassFailTest"
+%[9] = NoneStep
+%TYPE: %[9] = "PassFailTest"
+%[10] = StdCVIStep
+%TYPE: %[10] = "NumericLimitTest"
+%[11] = NoneStep
+%TYPE: %[11] = "PassFailTest"
+%[12] = StdCVIStep
+%TYPE: %[12] = "NumericLimitTest"
+%[13] = NoneStep
+%TYPE: %[13] = "PassFailTest"
+%[14] = StdCVIStep
+%TYPE: %[14] = "StringValueTest"
+%[15] = NoneStep
+%TYPE: %[15] = "PassFailTest"
+%[16] = StdCVIStep
+%TYPE: %[16] = "StringValueTest"
+%[17] = NoneStep
+%TYPE: %[17] = "PassFailTest"
+
+[SF.Seq[0].Main[0].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[0].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[0].TS.SData]
+ModulePath = "E:\\testexec\\Tests\\CVIAdp\\CVIAdpTest.dll"
+FuncName = "TestActionStructurePacking"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[0].Main[0]]
+%NAME = "Action - set out buffer"
+
+[SF.Seq[0].Main[1].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[1]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[1]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[2].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[2].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[2].TS.SData]
+ModulePath = "E:\\testexec\\Tests\\CVIAdp\\CVIAdpTest.dll"
+FuncName = "TestActionStructurePackingChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[0].Main[2]]
+%NAME = "Action - set out buffer, change with seq context"
+
+[SF.Seq[0].Main[3].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[3]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"changed via sequence context\""
+
+[DEF, SF.Seq[0].Main[3]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[4].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[4].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[4].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestActionStructurePackingPassParams"
+ExtProtoParams = "parameters"
+FuncProto = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[0].Main[4]]
+%NAME = "Action - pass parameter"
+
+[SF.Seq[0].Main[5].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[5].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[5].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestPassFailStructurePackingPass"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[0].Main[5]]
+%NAME = "Pass/Fail Test - test pass"
+
+[SF.Seq[0].Main[6].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[6].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[6]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[6]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[7].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[7].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[7].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestPassFailStructurePackingFail"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[0].Main[7]]
+%COMMENT = "This step is supposed to fail.  Its failure does NOT cause sequence failure."
+
+[DEF, SF.Seq[0].Main[7]]
+%NAME = "Pass/Fail Test - test fail"
+
+[SF.Seq[0].Main[8].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[8].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[8]]
+DataSource = "!RunState.PreviousStep.Result.PassFail"
+
+[DEF, SF.Seq[0].Main[8]]
+%NAME = "Check Result"
+
+[SF.Seq[0].Main[9].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[9].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[9]]
+DataSource = "RunState.Sequence.Main[\"Pass/Fail Test - test fail\"].Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[9]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[10].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[10].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[10].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestNumLimStructurePacking"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[0].Main[10].Limits]
+Low = 0.08
+%FLG: High = 2048
+
+[SF.Seq[0].Main[10]]
+Comp = "EQ"
+
+[DEF, SF.Seq[0].Main[10]]
+%NAME = "Numeric Limit Test"
+
+[SF.Seq[0].Main[11].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[11].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[11]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[11]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[12].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[12].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[12].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestNumLimStructurePackingChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[0].Main[12].Limits]
+Low = 0.39
+%FLG: High = 2048
+
+[SF.Seq[0].Main[12]]
+Comp = "EQ"
+
+[DEF, SF.Seq[0].Main[12]]
+%NAME = "Numeric Limit Test, change with seq context"
+
+[SF.Seq[0].Main[13].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[13].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[13]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[13]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[14].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[14].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[14].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestStringValueStructurePacking"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[0].Main[14].Limits]
+String = "String value from test."
+
+[SF.Seq[0].Main[14]]
+Comp = "CaseSensitive"
+
+[DEF, SF.Seq[0].Main[14]]
+%NAME = "String Value Test"
+
+[SF.Seq[0].Main[15].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[15].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[15]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[15]]
+%NAME = "Check Out Buffer"
+
+[SF.Seq[0].Main[16].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[0].Main[16].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[16].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestStringValueStructurePackingChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[0].Main[16].Limits]
+String = "changed via sequence context"
+
+[SF.Seq[0].Main[16]]
+Comp = "CaseSensitive"
+
+[DEF, SF.Seq[0].Main[16]]
+%NAME = "String Value Test, change with seq context"
+
+[SF.Seq[0].Main[17].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[0].Main[17].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[0].Main[17]]
+DataSource = "RunState.PreviousStep.Result.ReportText == \"testData->outBuffer\""
+
+[DEF, SF.Seq[0].Main[17]]
+%NAME = "Check Out Buffer"
+
+[DEF, SF.Seq[0].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[0].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[DEF, SF.Seq[1]]
+Parameters = Obj
+Locals = Obj
+Main = Objs
+Setup = Objs
+Cleanup = Objs
+GotoCleanupOnFail = Bool
+RecordResults = Bool
+RTS = Obj
+%NAME = "TestError DLL Test"
+
+[SF.Seq[1]]
+%FLG: Parameters = 262144
+%LO: Main = [0]
+%HI: Main = [12]
+%LO: Cleanup = [0]
+%HI: Cleanup = [0]
+%FLG: GotoCleanupOnFail = 8
+RecordResults = True
+%FLG: RecordResults = 8
+%FLG: RTS = 262152
+
+[DEF, SF.Seq[1].Locals]
+ResultList = Objs
+RunningInteractively = Bool
+
+[DEF, SF.Seq[1].Locals.ResultList]
+%EPTYPE = TEResult
+
+[SF.Seq[1].Locals.RunningInteractively]
+%COMMENT Line0001 = "Set this to true if you are running this sequence manually. This is the only way to test setting error.occurred to TRUE."
+%COMMENT Line0002 = "  If you want to do this, set a breakpoint in cleanup.  When the error occurrs, choose Run Cleanup and verify that the C"
+%COMMENT Line0003 = "leanup step passes."
+
+[DEF, SF.Seq[1].Main]
+%[0] = StdCVIStep
+%TYPE: %[0] = "Action"
+%[1] = NoneStep
+%TYPE: %[1] = "PassFailTest"
+%[2] = StdCVIStep
+%TYPE: %[2] = "Action"
+%[3] = NoneStep
+%TYPE: %[3] = "PassFailTest"
+%[4] = StdCVIStep
+%TYPE: %[4] = "Action"
+%[5] = NoneStep
+%TYPE: %[5] = "PassFailTest"
+%[6] = StdCVIStep
+%TYPE: %[6] = "Action"
+%[7] = NoneStep
+%TYPE: %[7] = "PassFailTest"
+%[8] = StdCVIStep
+%TYPE: %[8] = "Action"
+%[9] = NoneStep
+%TYPE: %[9] = "PassFailTest"
+%[10] = StdCVIStep
+%TYPE: %[10] = "Action"
+%[11] = StdCVIStep
+%TYPE: %[11] = "Action"
+%[12] = StdCVIStep
+%TYPE: %[12] = "Action"
+
+[SF.Seq[1].Main[0].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[0].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[0].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestErrorMsgStructurePacking"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[0]]
+%NAME = "Action - set error message"
+
+[SF.Seq[1].Main[1].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[1].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[1]]
+DataSource = "RunState.PreviousStep.Result.Error.Msg == \"testError->errorMessage\""
+
+[DEF, SF.Seq[1].Main[1]]
+%NAME = "Check Error Message"
+
+[SF.Seq[1].Main[2].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[2].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[2].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestErrorMsgStructurePackingChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[2]]
+%NAME = "Action - set error message, change with seq context"
+
+[SF.Seq[1].Main[3].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[3].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[3]]
+DataSource = "RunState.PreviousStep.Result.Error.Msg == \"changed via sequence context\""
+
+[DEF, SF.Seq[1].Main[3]]
+%NAME = "Check Error Message"
+
+[SF.Seq[1].Main[4].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[4].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[4].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestPlusErrorCodeStructurePacking"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[4]]
+%NAME = "Action - set positive error code"
+
+[SF.Seq[1].Main[5].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[5].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[5]]
+DataSource = "RunState.PreviousStep.Result.Error.Code == 88"
+
+[DEF, SF.Seq[1].Main[5]]
+%NAME = "Check Error Code"
+
+[SF.Seq[1].Main[6].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[6].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[6].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestMinusErrorCodeStructurePacking"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[6]]
+%NAME = "Action - set negative error code"
+
+[SF.Seq[1].Main[7].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[7].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[7]]
+DataSource = "RunState.PreviousStep.Result.Error.Code == -99"
+
+[DEF, SF.Seq[1].Main[7]]
+%NAME = "Check Error Code"
+
+[SF.Seq[1].Main[8].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[8].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[8].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestMinusErrorCodeStructurePackingChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[8]]
+%NAME = "Action - set negative error code, change with seq context"
+
+[SF.Seq[1].Main[9].TS]
+Adapter = "None Adapter"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Main[9].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[9]]
+DataSource = "RunState.PreviousStep.Result.Error.Code == -88.99"
+
+[DEF, SF.Seq[1].Main[9]]
+%NAME = "Check Error Code"
+
+[SF.Seq[1].Main[10].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[10].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[10].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestErrorOccurredStructurePackingTrueChangeViaSeqContext"
+SeqContextType = 1
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[10]]
+%NAME = "Action - set error occurred true, change with seq context"
+
+[SF.Seq[1].Main[11].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+
+[DEF, SF.Seq[1].Main[11].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[11].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestErrorOccurredStructurePackingFalse"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[DEF, SF.Seq[1].Main[11]]
+%NAME = "Action - set error occurred false"
+
+[SF.Seq[1].Main[12].TS]
+Adapter = "C/CVI Std Prototype Adapter"
+PreCond = "Locals.RunningInteractively"
+StepFCSeqF = False
+
+[DEF, SF.Seq[1].Main[12].TS]
+SData = "TYPE, StdCVIStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Main[12].TS.SData]
+ModulePath = "CVIAdpTest.dll"
+FuncName = "TestErrorOccurredStructurePackingTrue"
+ModuleSrcPath = "CVIAdpTest.c"
+ModulePrjPath = "CVIAdpTest.prj"
+
+[SF.Seq[1].Main[12]]
+%COMMENT Line0001 = "This step is supposed to fail.  Its failure does NOT cause sequence failure.  You should select run cleanup. There is a "
+%COMMENT Line0002 = "step in the cleanup that verifies that the error.occurred in this step is TRUE."
+
+[DEF, SF.Seq[1].Main[12]]
+%NAME = "Action - set error occurred true"
+
+[DEF, SF.Seq[1].Cleanup]
+%[0] = NoneStep
+%TYPE: %[0] = "PassFailTest"
+
+[SF.Seq[1].Cleanup[0].TS]
+Adapter = "None Adapter"
+PreCond Line0001 = "AllOf(RunState.Sequence.Main[\"Action - set error occurred true\"].Result.Status != \"\", RunState.Sequence.Main[\"Actio"
+PreCond Line0002 = "n - set error occurred true\"].Result.Status != \"Skipped\")"
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\""
+
+[DEF, SF.Seq[1].Cleanup[0].TS]
+SData = "TYPE, NoneStepAdditions"
+%FLG: SData = 2097152
+
+[SF.Seq[1].Cleanup[0]]
+DataSource = "RunState.Sequence.Main[\"Action - set error occurred true\"].Result.Error.Occurred"
+
+[DEF, SF.Seq[1].Cleanup[0]]
+%NAME = "Check Error Occurred"
+
+[DEF, SF.Seq[1].RTS]
+Type = Num
+OptimizeNonReentrantCalls = Bool
+EPNameExpr = Str
+EPEnabledExpr = Str
+EPMenuHint = Str
+EPIgnoreClient = Bool
+EPInitiallyHidden = Bool
+EPCheckToSaveTitledFile = Bool
+ShowEPAlways = Bool
+ShowEPForFileWin = Bool
+ShowEPForExeWin = Bool
+ShowEPForEditorOnly = Bool
+CopyStepsOnOverriding = Bool
+Priority = Num
+AllowIntExeOfEP = Bool
+
+[SF.Seq[1].RTS]
+OptimizeNonReentrantCalls = True
+EPNameExpr = "\"Unnamed Entry Point\""
+EPEnabledExpr = "True"
+EPCheckToSaveTitledFile = True
+ShowEPForFileWin = True
+CopyStepsOnOverriding = True
+Priority = 2953567917
+
+[%TYPES]
+Path = "Path"
+Action = "Action"
+StepTypeDescFmt = "StepTypeDescFmt"
+StepTypeDefNameFmt = "StepTypeDefNameFmt"
+StepTypeMenu = "StepTypeMenu"
+TEInf = "TEInf"
+Error = "Error"
+CommonResults = "CommonResults"
+StdCVIStepAdditions = "StdCVIStepAdditions"
+PassFailTest = "PassFailTest"
+FlexCStepAdditions = "FlexCStepAdditions"
+FCParameter = "FCParameter"
+NoneStepAdditions = "NoneStepAdditions"
+NumericLimitTest = "NumericLimitTest"
+StringValueTest = "StringValueTest"
+StepTypeSubstepsArray = "StepTypeSubstepsArray"
+EditSubstep = "EditSubstep"
+
+[DEF, Path]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[Path]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, Action]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[Action]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"ACTION_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescripti"
+DescriptionFormat Line0002 = "on\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"ACTION_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+CodeTemplates = "Default_Template|DefaultHTB72_Template|DefaultHTB80_Template|DefaultVC++_Template|DefaultMFC_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[Action.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"ACTION_MENU_ITEM_NAME\")"
+Group = "Action"
+
+[DEF, Action.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[Action.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+%INSTFLG: PassAct = 1
+%INSTFLG: FailAct = 1
+%INSTFLG: PassActTarget = 1
+%INSTFLG: FailActTarget = 1
+
+[DEF, Action.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[Action.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+
+[DEF, StepTypeDescFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[%OBJECTS]
+StepTypeDescFmt = "\"%ModuleDescription\""
+StepTypeDefNameFmt = "\"\""
+
+[StepTypeDescFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeDefNameFmt]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeDefNameFmt]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, StepTypeMenu]
+%LOCATION = "StdTypes"
+Adapter = Str
+CanBeSubstepType = Bool
+CanOnlyBeSubstepType = Bool
+Category = Str
+ItemName = Str
+SingularItemName = Str
+SeparatorBeforeCategory = Bool
+SeparatorBeforeItemName = Bool
+Group = Str
+%ROOT_TYPE = True
+
+[StepTypeMenu]
+Category = "\"\""
+ItemName = "\"\""
+SingularItemName = "\"\""
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 524312
+
+[DEF, TEInf]
+%LOCATION = "StdTypes"
+Adapter = Str
+Icon = Str
+SData = Obj
+%FLG: SData = 2097152
+PreCond = Str
+LoadOpt = Str
+UnloadOpt = Str
+Mode = Str
+WindowActivation = Str
+NoResult = Bool
+StepFCSeqF = Bool
+IgnoreRTE = Bool
+UseMutex = Bool
+MutexNameOrRef = Str
+BatchSyncOpt = Num
+PassAct = Str
+FailAct = Str
+PassActTarget = Str
+FailActTarget = Str
+CustExpr = Str
+CustTrueAct = Str
+CustFalseAct = Str
+CustTrueActTarget = Str
+CustFalseActTarget = Str
+LoopType = Str
+LoopWhile = Str
+LoopStatus = Str
+LoopIncrement = Str
+LoopInitialize = Str
+LoopOpt = Num
+PreExpr = Str
+PostExpr = Str
+StatusExpr = Str
+HasModule = Bool
+CanSpecifyModule = Bool
+CanEditCode = Bool
+CanEditModulePrototype = Bool
+PrecondIntExe = Num
+%ROOT_TYPE = True
+
+[TEInf]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+LoadOpt = "PreloadWhenExecuted"
+UnloadOpt = "UnloadWithFile"
+Mode = "Normal"
+WindowActivation = "None"
+StepFCSeqF = True
+PassAct = "Next"
+FailAct = "Next"
+CustTrueAct = "Next"
+CustFalseAct = "Next"
+LoopType = "NoLooping"
+LoopIncrement = "RunState.LoopIndex += 1"
+LoopInitialize = "RunState.LoopIndex = 0"
+HasModule = True
+CanSpecifyModule = True
+%INSTOVRD: CanSpecifyModule = 5046297
+CanEditCode = True
+%INSTOVRD: CanEditCode = 5046297
+CanEditModulePrototype = True
+%INSTOVRD: CanEditModulePrototype = 5046297
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+%INSTFLG = 262168
+%INSTOVRD = 262168
+
+[DEF, Error]
+%LOCATION = "StdTypes"
+Code = Num
+Msg = Str
+Occurred = Bool
+%ROOT_TYPE = True
+
+[Error]
+%FLG: Code = 4194304
+%INSTFLG: Code = 4194304
+%FLG: Msg = 4194304
+%INSTFLG: Msg = 4194304
+%FLG: Occurred = 4194304
+%INSTFLG: Occurred = 4194304
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+
+[DEF, CommonResults]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[CommonResults]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748736
+%INSTFLG = 4194304
+%INSTOVRD = 4194304
+
+[DEF, StdCVIStepAdditions]
+%LOCATION = "StdTypes"
+ModulePath = "TYPE, Path"
+FuncName = Str
+ExtProtoParams = Str
+FuncProto = Num
+ModuleType = Num
+SeqContextType = Num
+ModuleSrcPath = "TYPE, Path"
+ModulePrjPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[StdCVIStepAdditions]
+ModuleType = 2
+%TIMESTAMP = 981650151
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, PassFailTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[PassFailTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDescrip"
+DescriptionFormat Line0002 = "tion\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+DataSource = "Step.Result.PassFail"
+CodeTemplates = "PassFail_Template|PassFailVC++_Template|PassFailMFC_Template|PassFailHTB80_Template|PassFailHTB72_Template"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, PassFailTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[PassFailTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, PassFailTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[PassFailTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditPassFailStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, PassFailTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[PassFailTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[PassFailTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_EDIT_STEP_MENU_NAME\")"
+
+[DEF, PassFailTest.Substeps[0]]
+%NAME = "Edit"
+
+[PassFailTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"PASSFAIL_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, PassFailTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[PassFailTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.PassFail\" ? Step.Result.PassFail = Evaluate(Step.DataSource) : False, Step.Result.Pass"
+StatusExpr Line0002 = "Fail ? \"Passed\" : \"Failed\" "
+%INSTFLG: StatusExpr = 1
+
+[DEF, PassFailTest.Result]
+Error = "TYPE, Error"
+Status = Str
+PassFail = Bool
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[PassFailTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+PassFail = True
+
+[DEF, FlexCStepAdditions]
+%LOCATION = "StdTypes"
+Call = ExternalCall
+ModuleSrcPath = "TYPE, Path"
+%ROOT_TYPE = True
+
+[DEF, FlexCStepAdditions.Call]
+LibPath = "TYPE, Path"
+Func = Str
+Conv = Num
+Parms = Objs
+
+[FlexCStepAdditions.Call]
+Conv = 1
+%LO: Parms = [0]
+%HI: Parms = [0]
+
+[DEF, FlexCStepAdditions.Call.Parms]
+%EPTYPE = "TYPE, FCParameter"
+%FLG: %EPTYPE = 131072
+%[0] = "TYPE, FCParameter"
+
+[FlexCStepAdditions.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+
+[FlexCStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, FCParameter]
+%LOCATION = "StdTypes"
+Name = Str
+Type = Num
+NumType = Num
+ObjType = Num
+StructType = Str
+NumPass = Num
+NumEls = Str
+StrPass = Num
+ResultAct = Num
+ArgVal = Str
+ArgDisplayVal = Str
+Flags = Num
+%ROOT_TYPE = True
+
+[FCParameter]
+Name = "_notNamed"
+NumType = 4
+NumEls = "1024"
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, NoneStepAdditions]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[NoneStepAdditions]
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554456
+
+[DEF, NumericLimitTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+Limits = Obj
+Comp = Str
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[NumericLimitTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "(step.result.status == \"\" ? \"\" : (\"{\" + Str(step.result.numeric) + \"}, \")) + ResStr(\"NI_STEPTYPES\", \"NUMERIC_"
+DescriptionFormat Line0002 = "LIMIT_DESCRIPTION_NAME\") + \", \" + \nSearchAndReplace( SearchAndReplace( ResStr(\"NI_SUBSTEPS\", Step.Comp + \"_EX\"),"
+DescriptionFormat Line0003 = " \"%hi\", Str(step.limits.high)), \"%low\", Str(step.limits.low)) +\n(Step.Result.Units == \"\" ? \"\" : \", \" + Step.R"
+DescriptionFormat Line0004 = "esult.Units) + \n((\"%ModuleDescription\" == \"\") ? \"\" : \", %ModuleDescription\")\n"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"NUM_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: Limits = 12288
+%INSTFLG: Limits = 12288
+Comp = "GELE"
+%FLG: Comp = 12288
+%INSTFLG: Comp = 12288
+DataSource = "Step.Result.Numeric"
+CodeTemplates Line0001 = "NumericLimit_Template|NumericLimitVC++_Template|NumericLimitMFC_Template|NumericLimitHTB80_Template|NumericLimitHTB72Tem"
+CodeTemplates Line0002 = "plate"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, NumericLimitTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[NumericLimitTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, NumericLimitTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[NumericLimitTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditNumericMeasurementStepNoStatusExpr"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, NumericLimitTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[1]]
+Type = 4
+ArgVal = "ThisContext"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[NumericLimitTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[NumericLimitTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"NUM_EDIT_STEP_MENU_NAME\")"
+
+[DEF, NumericLimitTest.Substeps[0]]
+%NAME = "Edit"
+
+[NumericLimitTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"NUM_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, NumericLimitTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[NumericLimitTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "CheckLimits(Step.DataSource == \"Step.Result.Numeric\" ? Step.Result.Numeric : (Step.Result.Numeric = Evaluate(Step.Data"
+StatusExpr Line0002 = "Source)), step.limits.high, step.limits.low, step.comp)"
+%INSTFLG: StatusExpr = 1
+
+[DEF, NumericLimitTest.Result]
+Error = "TYPE, Error"
+Status = Str
+Numeric = Num
+ReportText = Str
+Common = "TYPE, CommonResults"
+Units = Str
+
+[NumericLimitTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: Numeric = 9216
+%INSTFLG: Numeric = 9216
+%FLG: Units = 10240
+%INSTFLG: Units = 8192
+
+[DEF, NumericLimitTest.Limits]
+Low = Num
+High = Num
+
+[NumericLimitTest.Limits]
+High = 10
+
+[DEF, StringValueTest]
+%LOCATION = "StepTypes"
+Substeps = "TYPE, StepTypeSubstepsArray"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+TS = "TYPE, TEInf"
+Result = Obj
+Limits = Obj
+Comp = Str
+InBuf = Str
+DataSource = Str
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+%ROOT_TYPE = True
+
+[StringValueTest]
+%LO: Substeps = [0]
+%HI: Substeps = [0]
+DescriptionFormat Line0001 = "ResStr(\"NI_STEPTYPES\", \"STRING_VALUE_DESCRIPTION_NAME\") + ((\"%ModuleDescription\" == \"\") ? \"\" : \",  %ModuleDes"
+DescriptionFormat Line0002 = "cription\")"
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"STRING_DEF_STEP_NAME\")"
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%FLG: Limits = 12288
+%INSTFLG: Limits = 12288
+Comp = "IgnoreCase"
+%FLG: Comp = 12288
+%INSTFLG: Comp = 12288
+DataSource = "Step.Result.String"
+CodeTemplates Line0001 = "StringValue_Template|StringValueVC++_Template|StringValueMFC_Template|StringValueHTB80_Template|StringValueHTB72_Templat"
+CodeTemplates Line0002 = "e"
+%FLG: CodeTemplates = 24
+%TIMESTAMP = 981660832
+%VERSION = "2.0.0.130"
+%FLG = 33554433
+%TYPE_FLG = 2
+
+[DEF, StringValueTest.Substeps]
+%[0] = FlexCStep
+%TYPE: %[0] = "EditSubstep"
+
+[StringValueTest.Substeps[0].TS]
+Adapter = "DLL Flexible Prototype Adapter"
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 2097152
+
+[DEF, StringValueTest.Substeps[0].TS]
+SData = "TYPE, FlexCStepAdditions"
+%FLG: SData = 2097152
+
+[StringValueTest.Substeps[0].TS.SData.Call]
+LibPath = "CommonSubsteps.dll"
+Func = "EditStringMeasurementStep"
+%LO: Parms = [0]
+%HI: Parms = [3]
+
+[DEF, StringValueTest.Substeps[0].TS.SData.Call.Parms]
+%[0] = "TYPE, FCParameter"
+%[1] = "TYPE, FCParameter"
+%[2] = "TYPE, FCParameter"
+%[3] = "TYPE, FCParameter"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[0]]
+Name = "Return Value"
+Type = 3
+ObjType = 2
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[1]]
+Name = "context"
+Type = 4
+ArgVal = "ThisContext"
+ArgDisplayVal = "ThisContext"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[2]]
+Name = "readOnly"
+ArgVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+ArgDisplayVal = "!CurrentUserHasPrivilege(\"EditSequenceFiles\")"
+
+[StringValueTest.Substeps[0].TS.SData.Call.Parms[3]]
+Name = "changed"
+ObjType = 2
+NumPass = 1
+ArgVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+ArgDisplayVal = "RunState.InitialSelection.SelectedFile.ChangeCount"
+
+[StringValueTest.Substeps[0]]
+MenuName = "ResStr(\"NI_STEPTYPES\", \"STRING_EDIT_STEP_MENU_NAME\")"
+
+[DEF, StringValueTest.Substeps[0]]
+%NAME = "Edit"
+
+[StringValueTest.Menu]
+ItemName = "ResStr(\"NI_STEPTYPES\", \"STRING_MENU_ITEM_NAME\")"
+Group = "Tests"
+
+[DEF, StringValueTest.TS]
+SData = Obj
+%FLG: SData = 2097152
+
+[StringValueTest.TS]
+%INSTFLG: SData = 2097152
+%INSTOVRD: SData = 7274521
+StatusExpr Line0001 = "Step.DataSource != \"Step.Result.String\" ? Step.Result.String = Evaluate(Step.DataSource) : False, (StrComp(Step.Result"
+StatusExpr Line0002 = ".String, Step.Limits.String, (Step.Comp == \"CaseSensitive\" ? 0 : 1)  ) == 0) ? \"Passed\" : \"Failed\""
+%INSTFLG: StatusExpr = 1
+
+[DEF, StringValueTest.Result]
+Error = "TYPE, Error"
+Status = Str
+String = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[StringValueTest.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+%FLG: String = 9216
+%INSTFLG: String = 9216
+
+[DEF, StringValueTest.Limits]
+String = Str
+
+[DEF, StepTypeSubstepsArray]
+%LOCATION = "StdTypes"
+%ROOT_TYPE = True
+
+[StepTypeSubstepsArray]
+%TIMESTAMP = 981660883
+%VERSION = "2.0.0.130"
+%FLG = 37748760
+%INSTFLG = 524312
+%INSTOVRD = 655384
+
+[DEF, EditSubstep]
+%LOCATION = "StepTypes"
+DescriptionFormat = "TYPE, StepTypeDescFmt"
+DefaultNameFormat = "TYPE, StepTypeDefNameFmt"
+Menu = "TYPE, StepTypeMenu"
+Substeps = "TYPE, StepTypeSubstepsArray"
+CodeTemplates = Str
+%FLG: CodeTemplates = 524288
+TS = "TYPE, TEInf"
+Result = Obj
+MenuName = Str
+%ROOT_TYPE = True
+
+[EditSubstep]
+DefaultNameFormat = "ResStr(\"NI_STEPTYPES\", \"EDIT_DEF_SUBSTEP_NAME\")"
+CodeTemplates = "Default_Template"
+%FLG: CodeTemplates = 24
+%FLG: Result = 4194304
+%INSTFLG: Result = 4194304
+%TIMESTAMP = 981660880
+%VERSION = "2.0.0.130"
+%FLG = 37748737
+%TYPE_FLG = 2
+
+[EditSubstep.Menu]
+CanBeSubstepType = True
+CanOnlyBeSubstepType = True
+ItemName = "ResStr(\"NI_STEPTYPES\", \"EDIT_SUBSTEP_MENU_ITEM_NAME\")"
+Group = "EditSubsteps"
+
+[DEF, EditSubstep.Result]
+Error = "TYPE, Error"
+Status = Str
+ReportText = Str
+Common = "TYPE, CommonResults"
+
+[EditSubstep.Result]
+%FLG: Error = 4194304
+%INSTFLG: Error = 4194304
+%INSTOVRD: Error = 4194304
+%FLG: Status = 4194304
+%INSTFLG: Status = 4194304
+

@@ -1,0 +1,140 @@
+FPAttributeValueFile
+
+n  TypeLibGUID="{EAB22AC0-30C1-11CF-A7EB-0000C05BAE0B}" 
+
+n  TypeLibLCID="0" 
+
+n  TypeLibVersion="1.1" 
+
+n  SubType="COA" 
+
+n  SubVersion="1" 
+
+v enum_SHDocVwEnum_tagREADYSTATE DataType="i" 
+ SHDocVwConst_READYSTATE_UNINITIALIZED (0)
+  ""
+
+ SHDocVwConst_READYSTATE_LOADING (1)
+  ""
+
+ SHDocVwConst_READYSTATE_LOADED (2)
+  ""
+
+ SHDocVwConst_READYSTATE_INTERACTIVE (3)
+  ""
+
+ SHDocVwConst_READYSTATE_COMPLETE (4)
+  ""
+
+
+v CABooleanValueSet DataType="i" 
+ VTRUE (-1)
+  ""
+
+ VFALSE (0)
+  ""
+
+
+0 SHDocVw_GetProperty 3 5 false g
+0 SHDocVw_SetProperty 3 5 false s
+
+1 all "IWebBrowser2"  Name="IWebBrowser2" 
+ "Web Browser Interface for IE4."
+
+2 all "ReadyState" SHDocVw_IWebBrowser2ReadyState  CVIVartype="CAVT_LONG" "enum SHDocVwEnum_tagREADYSTATE" g enum_SHDocVwEnum_tagREADYSTATE 
+ ""
+
+2 all "HWND" SHDocVw_IWebBrowser2HWND  CVIVartype="CAVT_LONG" long g 
+ "Returns the HWND of the current IE window."
+
+2 all "Name" SHDocVw_IWebBrowser2Name  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Returns name of the application."
+
+2 all "Application" SHDocVw_IWebBrowser2Application  CVIVartype="CAVT_OBJHANDLE" CAObjHandle g 
+ "Returns the application automation object if accessible, this automation "
+ "object otherwise.."
+
+2 all "Parent" SHDocVw_IWebBrowser2Parent  CVIVartype="CAVT_OBJHANDLE" CAObjHandle g 
+ "Returns the automation object of the container/parent if one exists or "
+ "this automation object."
+
+2 all "Container" SHDocVw_IWebBrowser2Container  CVIVartype="CAVT_OBJHANDLE" CAObjHandle g 
+ "Returns the container/parent automation object, if any."
+
+2 all "Document" SHDocVw_IWebBrowser2Document  CVIVartype="CAVT_OBJHANDLE" CAObjHandle g 
+ "Returns the active Document automation object, if any."
+
+2 all "TopLevelContainer" SHDocVw_IWebBrowser2TopLevelContainer  CVIVartype="CAVT_BOOL" VBOOL g CABooleanValueSet 
+ "Returns True if this is the top level object."
+
+2 all "Type" SHDocVw_IWebBrowser2Type  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Returns the type of the contained document object."
+
+2 all "Left" SHDocVw_IWebBrowser2Left  CVIVartype="CAVT_LONG" long gs 
+ "The horizontal position (pixels) of the frame window relative to the "
+ "screen/container."
+
+2 all "Top" SHDocVw_IWebBrowser2Top  CVIVartype="CAVT_LONG" long gs 
+ "The vertical position (pixels) of the frame window relative to the "
+ "screen/container."
+
+2 all "Width" SHDocVw_IWebBrowser2Width  CVIVartype="CAVT_LONG" long gs 
+ "The horizontal dimension (pixels) of the frame window/object."
+
+2 all "Height" SHDocVw_IWebBrowser2Height  CVIVartype="CAVT_LONG" long gs 
+ "The vertical dimension (pixels) of the frame window/object."
+
+2 all "LocationName" SHDocVw_IWebBrowser2LocationName  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Gets the short (UI-friendly) name of the URL/file currently viewed."
+
+2 all "LocationURL" SHDocVw_IWebBrowser2LocationURL  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Gets the full URL/path currently viewed."
+
+2 all "Busy" SHDocVw_IWebBrowser2Busy  CVIVartype="CAVT_BOOL" VBOOL g CABooleanValueSet 
+ "Query to see if something is still in progress."
+
+2 all "FullName" SHDocVw_IWebBrowser2FullName  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Returns file specification of the application, including path."
+
+2 all "Path" SHDocVw_IWebBrowser2Path  CVIVartype="CAVT_CSTRING" "char *" g 
+ "Returns the path to the application."
+
+2 all "Visible" SHDocVw_IWebBrowser2Visible  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Determines whether the application is visible or hidden."
+
+2 all "StatusBar" SHDocVw_IWebBrowser2StatusBar  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Turn on or off the statusbar."
+
+2 all "StatusText" SHDocVw_IWebBrowser2StatusText  CVIVartype="CAVT_CSTRING" "char *" gs 
+ "Text of Status window."
+
+2 all "ToolBar" SHDocVw_IWebBrowser2ToolBar  CVIVartype="CAVT_LONG" long gs 
+ "Controls which toolbar is shown."
+
+2 all "MenuBar" SHDocVw_IWebBrowser2MenuBar  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls whether menubar is shown."
+
+2 all "FullScreen" SHDocVw_IWebBrowser2FullScreen  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Maximizes window and turns off statusbar, toolbar, menubar, and titlebar."
+
+2 all "Offline" SHDocVw_IWebBrowser2Offline  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls if the frame is offline (read from cache)"
+
+2 all "Silent" SHDocVw_IWebBrowser2Silent  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls if any dialog boxes can be shown"
+
+2 all "RegisterAsBrowser" SHDocVw_IWebBrowser2RegisterAsBrowser  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Registers OC as a top-level browser (for target name resolution)"
+
+2 all "RegisterAsDropTarget" SHDocVw_IWebBrowser2RegisterAsDropTarget  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Registers OC as a drop target for navigation"
+
+2 all "TheaterMode" SHDocVw_IWebBrowser2TheaterMode  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls if the browser is in theater mode"
+
+2 all "AddressBar" SHDocVw_IWebBrowser2AddressBar  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls whether address bar is shown"
+
+2 all "Resizable" SHDocVw_IWebBrowser2Resizable  CVIVartype="CAVT_BOOL" VBOOL gs CABooleanValueSet 
+ "Controls whether the window is resizable"
+
