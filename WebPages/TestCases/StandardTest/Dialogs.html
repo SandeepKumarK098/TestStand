@@ -1,0 +1,90 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body><!-- ---------------- --><!--      HEADER      --><!-- ---------------- --><!--#include virtual="../header.html"--><!-- ---------------- --><!--  TestStand LOGO  --><!-- ---------------- -->
+<h1 align="right" pbzloc="21"><img height="65" src="../TestStandLogo.jpg" width="273" /></h1>
+
+<h5><b>Test Case Scenario<br />
+National Instruments Confidential</b></h5>
+<!-- ---------------- --><!--  Test Case Title --><!-- ---------------- -->
+
+<h1 style="border-top: medium none; border-right: medium none; border-bottom: medium none; padding-bottom: 0in; padding-top: 0in; padding-left: 0in; border-left: medium none; padding-right: 0in; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0in 0in 1.0pt 0in">Standard Test for Dialogs</h1>
+
+<h4 pbzloc="32">This TPS is updated.Refer the new TPS&nbsp;at &nbsp;//TestStand/WebPages/TestCases/StandardTest/GUI Testing checklist.docx</h4>
+<br />
+<!-- ----------------------- --><!--  Test Case Description  --><!-- ----------------------- -->
+<div style="border-top: medium none; border-right: medium none; border-bottom: windowtext 0.75pt solid; padding-bottom: 1pt; padding-top: 0in; padding-left: 0in; border-left: medium none; padding-right: 0in">
+<h2 style="border-top: medium none; border-right: medium none; border-bottom: medium none; padding-bottom: 0in; padding-top: 0in; padding-left: 0in; border-left: medium none; padding-right: 0in; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0in 0in 1.0pt 0in">Test Description</h2>
+</div>
+<br pbzloc="9" />
+<p pbzloc="33">Standard test to apply for a dialog.<br />
+<br />
+Verify the FUNCTIONALITY of every action/option.</p>
+<!-- --------------------- --><!--  Test Case Procedure  --><!-- --------------------- -->
+
+<div style="border-top: medium none; border-right: medium none; border-bottom: windowtext 0.75pt solid; padding-bottom: 1pt; padding-top: 0in; padding-left: 0in; border-left: medium none; padding-right: 0in">
+<h2 pbzloc="30" style="border-top: medium none; border-right: medium none; border-bottom: medium none; padding-bottom: 0in; padding-top: 0in; padding-left: 0in; border-left: medium none; padding-right: 0in; mso-border-bottom-alt: solid windowtext .75pt; mso-padding-alt: 0in 0in 1.0pt 0in">Test Procedure</h2>
+</div>
+<br pbzloc="31" />
+<p pbzloc="28">&nbsp;------------Obsolette TPS----------------</p>
+
+<ul pbzloc="5">
+	<li pbzloc="29">Test that tip strips appear correctly strip when you move the mouse over list view fields that are too long to display without truncation.</li>
+	<li>Check title (and icon if appropriate)</li>
+	<li>Check tab order.</li>
+	<li>Check that dialog is opened with focus on an appropriate control</li>
+	<li pbzloc="11">Check &lt;Return&gt; hot key for OK, &lt;Esc&gt; for cancel. If a button is selected, &lt;Return&gt; hot key presses the currently selected button.</li>
+	<li>Check that all changes are canceled by the cancel button</li>
+	<li>Check that all controls are validated when changing properties pages or when leaving the dialog with OK</li>
+	<li>Check alignment of controls</li>
+	<li>Verify all controls are themed. In a .NET app, check any non-.NET subdialogs.</li>
+	<li>Check that all combo boxes are the right type (dropdown vs. droplist)</li>
+	<li>Check that appropriate controls are dimmed.</li>
+	<li pbzloc="13">Check that multi-line text controls have scroll bars</li>
+	<li pbzloc="10">If applicable, test that edit controls with paths have the correct absolute path shown below in a non-editable text indicator. Verify that &quot;.&quot; and &quot;..&quot; in path edit controls are collapsed in the absolute path.</li>
+	<li>Test in-place editing in list controls</li>
+	<li>Test that lack of needed user privileges dims all the appropriate controls</li>
+	<li>Test with large fonts</li>
+	<li>Check that changes are saved on ok and not on cancel.</li>
+	<li>Check that any modifications mark the associated file (if any) as modified</li>
+	<li>Verify that all expression fields use the expression edit control.</li>
+	<li pbzloc="3">Verify that the expression edit controls do error checking correctly. To do this, make sure the expression edit control gives an appropriate error in the tooltip when the control does not have focus and also make sure a message dialog reports an appropriate error before the dialog closes. Note that some dialogs only report syntax errors, but for the dialogs that check expressions for evaluation errors, make sure the types they expect the expression to evaluate to are appropriate.</li>
+	<li pbzloc="18">Check that expression controls that are one line high (i.e. look single-line), do <em>not</em> accept &lt;Ctrl+Enter&gt; for newlines.</li>
+	<li pbzloc="20">Check that the context is appropriate for all expression edit controls. To do this, hit &lt;Ctrl+Space&gt; in the expression edit control to bring up the auto completion window or bring up the Expression Browser dialog. Examine the properties listed to make sure the context is appropriate.</li>
+	<li pbzloc="15">Verify that every expression and floating point edit control supports the localized decimal point setting in the Station Options which may reference the Regional Settings in the control panel. To test, set the localized decimal point to comma, enter &quot;1,2;3&quot; in an expression, reset the localized decimal point to period, verify the expression contains &quot;1.2,3&quot;. Then set the decimal point back to comma, and verify that the expression is &quot;1,2;3&quot;.</li>
+	<li>If applicable, test that clicking the help button opens up the help file at an appropriate topic. Verify that &lt;F1&gt; opens the same topic. [The help button should be available in all non-trivial dialogs.]</li>
+	<li>If Read-Only is supported, test all controls in read-only mode. [Often, you can get read-only mode by opening dialogs while an execution is running.]</li>
+	<li>Check that the dialog doesn&#39;t leak any GDI resources. [To verify this, open the Task Manager and goto View-&gt;Select Columns and select the GDI Objects checkbox. Now you can see the GDI Objects for any process in the Task Manager. Now open and close the dialog multiple times (around 8-10) and make sure that the GDI Object usage is not steadily increasing for the Sequence Editor.]</li>
+	<li pbzloc="19">Check that that the dialog doesn&#39;t leak memory.</li>
+	<li>Verify that the dialog doesn&#39;t use too many system resources. Launch two Sequence Editors and have each one display the dialog and verify you don&#39;t run out of system resources.</li>
+	<li>Check that the dialog has atl key shorcuts and verify that they work. Verify that there are no duplicate shortcuts. Verify that a control&#39;s shortcut does <em>not</em> work when the control is invisible. In MFC, shortcuts for invisible labels, buttons, and check boxes are still active. [If the keyboard shortcuts are not visible, hit &lt;Alt&gt; to activate them on Win2k and XP.]
+	<ul>
+		<li pbzloc="14"><strong>Exception</strong>: &quot;Cancel&quot; buttons should not have alt-key shortcuts. This is because <a href="http://blogs.msdn.com/b/oldnewthing/archive/2008/05/08/8467905.aspx">ESC should already produce the same functionality as the cancel button</a>. There is no need to have two hotkeys for the same function. This confusion has come up a couple of times. See for example CAR <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=478257">478257</a> and CAR <a href="http://nippm.natinst.com/itg/web/knta/crt/RequestDetail.jsp?REQUEST_ID=390604">390604</a>. A couple of notes:
+		<ul pbzloc="1">
+			<li>Despite the above msdn blog post, we feel that &quot;OK&quot; should still have an accelerator because &lt;ENTER&gt; does not always mean &quot;OK.&quot; The meaning of &lt;ENTER&gt; depends on which widget in the dialog has the focus. The agrees with the typical behavior of Microsoft Applications.</li>
+			<li>There are a number of places in our code that we still incorrectly have the alt-c accelerator for &quot;Cancel.&quot; Do not create new CARs for existing features for this item alone. Removing an improper alt-c accelerator from a &quot;Cancel&quot; button should only be written as a CAR by itself for new features. Otherwise, do not worry about it unless you have something else to write a CAR about for the dialog. In that case, go ahead and add this as a clean-up item.</li>
+		</ul>
+		</li>
+	</ul>
+	</li>
+	<li>Verify that every context menu that you can bring up by right clicking can also be brought up with the keyboard using &lt;Shift+F10&gt; or the context menu key (the key to the left of the right Ctrl key). [This problem happens when you display a context menu in the WM_RBUTTONDOWN message instead of the WM_CONTEXTMENU message.]</li>
+	<li pbzloc="17">Verify that buttons that display context menus display the menu at the button at not at the mouse cursor. Verify this by using the keyboard to click the button (press space when the button has focus).</li>
+</ul>
+
+<p>&nbsp;</p>
+<!-- ---------------- --><!--      FOOTER      --><!-- ---------------- --><!--#include virtual="../footer.html"--><!-- ---------------- --><!--  Challenge       --><!-- ---------------- --><br />
+&nbsp;
+<h5><u>Challenge:</u><br />
+<br />
+<b>If you think you can come up with a better test case please don&#39;t hesitate and update this one.<br />
+<br />
+Also while you&#39;re testing please think about how to automate this test and do it. Please follow these guidelines: <a href="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</a> </b></h5>
+</body>
+</html>

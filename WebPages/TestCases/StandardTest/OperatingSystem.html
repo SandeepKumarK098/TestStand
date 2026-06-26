@@ -1,0 +1,121 @@
+<!-- =============================================== -->
+<!--               T e s t S t a n d                 -->
+<!-- =============================================== -->
+<!-- Copyright (c) National Instruments 1998-2003.   -->
+<!-- All Rights Reserved.                            -->
+<!-- =============================================== -->
+<!-- Test Case Scenario                              -->
+<!-- =============================================== -->
+
+<HTML>
+<body>
+
+<!-- ---------------- -->
+<!--      HEADER      -->
+<!-- ---------------- -->
+
+<!--#include virtual="../header.html"-->
+
+<!-- ---------------- -->
+<!--  TestStand LOGO  -->
+<!-- ---------------- -->
+
+<h1 align=right>
+<img width=273 height=65 src="../TestStandLogo.jpg">
+<h5><b>Test Case Scenario<br>National Instruments Confidential</b></h5>
+</h1>
+
+<!-- ---------------- -->
+<!--  Test Case Title -->
+<!-- ---------------- -->
+
+<TITLE>Standard Test for Operating System</TITLE>
+<h1 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Standard Test for Operating System
+</h1>
+<br>
+
+<!-- ----------------------- -->
+<!--  Test Case Description  -->
+<!-- ----------------------- -->
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Description
+</h2>
+</div>
+<br>
+<p>
+Install, run samples, create and run sequences, run operator interfaces, view reports on new OS.  Also, run LV and CVI computer and auto sequences.  Configure CVI to run in external process.  Run with TestUUTs for several uuts. Make sure all dialogs that should come to the front do come to the front<br>
+<br>
+All tests should be run on a release build installed via the installer.
+</p>
+
+<!-- --------------------- -->
+<!--  Test Case Procedure  -->
+<!-- --------------------- -->
+
+<div style='border:none;border-bottom:solid windowtext .75pt;padding:0in 0in 1.0pt 0in'>
+<h2 style='border:none;mso-border-bottom-alt:solid windowtext .75pt;padding:0in;mso-padding-alt:0in 0in 1.0pt 0in'>
+Test Procedure
+</h2>
+</div>
+<br>
+
+<p>
+<ul>
+<li>
+Run the following sanity checks:<ul>
+<li>
+Load and run /tests/alltests.seq</li>
+<li>
+Convert and run an old LV sequence</li>
+<li>
+Convert and run an old cvi sequence</li>
+<li>
+Run the text and html documentors on the model sequence file</li>
+<li>
+Run computer.seq in editor and all gui's</li>
+<li>
+Export/import limits from computer.seq to excel file</li>
+<li>
+Create LV test, step into</li>
+<li>
+Create CVI test, step into</li>
+<li>
+Load computer.seq from the previous version released to customers.  Verify that it handles NI type changes silently</li>
+<li>
+Verify that the build is a release build by making sure the sequence call specify module dialog does not have an asynchronous checkbox</li>
+<li>
+Load auto, computer. dllperf, lvperf,  cviperf, and beepforever.  run four instances of beepforever.  While the are running, open and close other files, run other files, create and run new files.  Finally, exit the sequence editor while they are running.</li>
+<li>
+Test the simple operator interfaces for CVI and LV</li>
+</ul></li>
+</ul>
+
+</p>
+
+<!-- ---------------- -->
+<!--      FOOTER      -->
+<!-- ---------------- -->
+
+
+<!--#include virtual="../footer.html"-->
+
+<!-- ---------------- -->
+<!--  Challenge       -->
+<!-- ---------------- -->
+
+<br>
+<h5>
+<u>Challenge:<br><br></u>
+<b>
+If you think you can come up with a better test case
+please don't hesitate and update this one.<br><br>
+Also while you're testing please think about how to automate this test and do it. Please 
+follow these guidelines: <A HREF="../WritingAutomatedTests.doc">Writing Automated Tests For TestStand</A>
+</b>
+</h5>
+
+
+</body>
+<HTML>
